@@ -1,0 +1,74 @@
+Source: melodic
+Section: net
+Priority: optional
+Maintainer: Thomas Dreibholz <dreibh@simula.no>
+Homepage: https://www.simula.no/
+Build-Depends: debhelper (>= 9),
+               exiftool,
+               gimp,
+               imagemagick,
+               libfile-fcntllock-perl,
+               python3-all,
+               python3-wand,
+               qtchooser,
+               qttools5-dev-tools
+Standards-Version: 3.9.7
+X-Python3-Version: >= 3.2
+Vcs-Git: https://github.com/dreibh/melodic.git
+Vcs-Browser: https://github.com/dreibh/melodic/tags
+
+Package: melodic-management
+Architecture: any
+Depends: nornet-management,
+         ${misc:Depends},
+         ${python3:Depends},
+         ${shlibs:Depends}
+Recommends: nttcp,
+            tshark
+Conflicts: landscape-common,
+           minidlna,
+           tntnet,
+           webfs
+Replaces: landscape-common
+Description: MELODIC Management Tools
+ This metapackage contains basic software for MELODIC system management.
+ The software installed provides a common working environment.
+ .
+ See https://www.simula.no for details on MELODIC!
+
+Package: melodic-development
+Architecture: any
+Depends: nornet-development,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: MELODIC Development Tools
+ This meta-package contains basic software for MELODIC development.
+ The software installed provides a common working environment.
+ .
+ See https://www.simula.no for details on MELODIC!
+
+Package: melodic-server
+Architecture: any
+Depends: ffmpeg,
+         grub2-common | grub,
+         melodic-management,
+         ntp,
+         openssh-server,
+         rsplib-services,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: MELODIC Server
+ This package contains the scripts to configure a MELODIC server.
+ .
+ See https://www.simula.no for details on MELODIC!
+
+Package: melodic-desktop
+Architecture: any
+Depends: melodic-management,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: neon-desktop | kubuntu-desktop | lubuntu-desktop | ubuntu-desktop
+Description: MELODIC Desktop
+ This meta-package contains the scripts to configure a MELODIC desktop.
+ .
+ See https://www.simula.no for details on MELODIC!

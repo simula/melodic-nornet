@@ -1,0 +1,3 @@
+version=3
+opts=filenamemangle=s/.+\/melodic-(\d\S*)\.tar\.gz/melodic-$1\.tar\.gz/ \
+  https://github.com/dreibh/melodic/tags .*/melodic-(\d\S*)\.tar\.gz

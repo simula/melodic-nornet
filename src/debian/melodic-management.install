@@ -1,0 +1,4 @@
+MELODIC-System-Info                            /usr/bin
+grub/??_melodic_management_theme               /etc/grub.d
+grub/Splash-MELODICManagement1-1024x768.jpeg   /boot
+melodic-version                                /etc/melodic
