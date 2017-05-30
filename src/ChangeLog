@@ -1,0 +1,933 @@
+commit 5009be99551c6c11e85265d92409a2d2e7697564
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu May 4 15:18:01 2017 +0200
+
+    Build file updates.
+
+ testbed/software/ChangeLog        | 924 +++++++++++++++++++++++++++++++++++++-
+ testbed/software/debian/changelog |   2 +-
+ 2 files changed, 924 insertions(+), 2 deletions(-)
+
+commit 2656688ab36ac604d09e0dc1e95c1d88f75d8b13
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu May 4 15:13:34 2017 +0200
+
+    Another update.
+
+ testbed/software/src/background/make-bootsplash | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 64b9ffddeda0c066a5f8aa3b1fc7d14c93aba977
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu May 4 15:01:32 2017 +0200
+
+    Script improvements.
+
+ testbed/software/src/background/make-desktop | 20 ++++++++++++++------
+ 1 file changed, 14 insertions(+), 6 deletions(-)
+
+commit cbdb1274cd74a2827b91d7680bdf2a27f4ef4d1a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu May 4 14:04:20 2017 +0200
+
+    Build script improvements.
+
+ testbed/software/debian/changelog |  4 +--
+ testbed/software/debian/control   |  2 +-
+ testbed/software/make-dist        | 55 +--------------------------------------
+ 3 files changed, 4 insertions(+), 57 deletions(-)
+
+commit c7858360c437b56d33d82ea4a1d14828b558d32d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu May 4 14:04:17 2017 +0200
+
+    A fix.
+
+ testbed/software/src/background/make-bootsplash | 22 +++++++++++++---------
+ 1 file changed, 13 insertions(+), 9 deletions(-)
+
+commit 8ac882248dda8233b0b288bbcb6861bf2e3ef8bb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu May 4 13:50:31 2017 +0200
+
+    Build script improvements.
+
+ testbed/software/debian/control                    |   1 +
+ testbed/software/make-dist                         | 123 +++++++-----
+ .../src/background/HENCSAT-Affiliation.png         | Bin 0 -> 797302 bytes
+ .../src/background/HENCSAT-InformationText.png     | Bin 501523 -> 0 bytes
+ .../src/background/HENCSAT-InformationText.xcf     | Bin 1007171 -> 0 bytes
+ testbed/software/src/background/HENCSAT-Name.png   | Bin 0 -> 466023 bytes
+ .../software/src/background/HENCSAT-Subtitle.png   | Bin 0 -> 1759068 bytes
+ testbed/software/src/background/HENCSAT-Title.png  | Bin 0 -> 2359290 bytes
+ testbed/software/src/background/HENCSAT-URL.png    | Bin 0 -> 839924 bytes
+ .../software/src/background/Input/HSClient1.jpeg   | Bin 0 -> 4007904 bytes
+ .../src/background/Input/HSController1.jpeg        | Bin 0 -> 3855756 bytes
+ .../src/background/Input/HSDevelopment1.jpeg       | Bin 0 -> 3201461 bytes
+ .../src/background/Input/HSManagement1.jpeg        | Bin 0 -> 7302031 bytes
+ .../software/src/background/Input/HSRouter1.jpeg   | Bin 0 -> 2088438 bytes
+ .../software/src/background/Input/HSServer1.jpeg   | Bin 0 -> 3142439 bytes
+ .../software/src/background/Input/exiftool.argfile |   3 +
+ testbed/software/src/background/Make-Background    |  62 ++++++
+ testbed/software/src/background/Make-Logo          |  78 ++++++++
+ testbed/software/src/background/Make-Mosaic        |  88 +++++++++
+ testbed/software/src/background/Make-Painting      |  57 ++++++
+ testbed/software/src/background/make-bootsplash    |  93 +++++++++
+ testbed/software/src/background/make-desktop       | 209 +++++++++++++++++++++
+ testbed/software/src/background/make-logo-texts    |  50 +++++
+ testbed/software/src/background/make-overlay       |  60 ++++++
+ .../background/original/Background-HSClient1.jpeg  | Bin 4007904 -> 0 bytes
+ .../original/Background-HSController1.jpeg         | Bin 3855756 -> 0 bytes
+ .../original/Background-HSDevelopment1.jpeg        | Bin 3201461 -> 0 bytes
+ .../original/Background-HSManagement1.jpeg         | Bin 7302031 -> 0 bytes
+ .../background/original/Background-HSRouter1.jpeg  | Bin 2088438 -> 0 bytes
+ .../background/original/Background-HSServer1.jpeg  | Bin 3142439 -> 0 bytes
+ .../src/background/original/exiftool.argfile       |   3 -
+ 31 files changed, 772 insertions(+), 55 deletions(-)
+
+commit ea4b10e6a438c13ff1e0e21e74d41dec7bb2ad6d
+Merge: 3c318d0 cff0c0a
+Author: hencsat <hencsat@ipc1.simula.nornet>
+Date:   Wed May 3 13:41:13 2017 +0200
+
+    Merge branch 'master' of https://git.ansur.no/simone/hencsat
+
+commit 3c318d01d5ec016e6a0fe7b8b6ddb68a8970322b
+Author: hencsat <hencsat@ipc1.simula.nornet>
+Date:   Wed May 3 13:40:42 2017 +0200
+
+    Updated script.
+
+ testbed/software/src/client1 | 2 +-
+ testbed/software/src/client2 | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 4977a25a3c3ba64d2559b94deb76b1f625b44171
+Merge: 0ce0ff3 82cd8d2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed May 3 09:41:35 2017 +0200
+
+    Merge branch 'master' of git.ansur.no:simone/hencsat
+
+commit 0ce0ff3bc73f05345060849ddf52d9372c1cc075
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed May 3 09:41:22 2017 +0200
+
+    Dependency update.
+
+ testbed/software/debian/changelog | 4 ++--
+ testbed/software/debian/control   | 3 +--
+ testbed/software/make-ppa         | 2 +-
+ 3 files changed, 4 insertions(+), 5 deletions(-)
+
+commit 95bdc67f94d57a8818c0bf2965132f20d4667222
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 2 17:52:14 2017 +0200
+
+    A small fix.
+
+ testbed/software/src/grub/22_hencsat_server_theme | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 82cd8d2bb34a37a14fc54c8fdd0a21fe77813154
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Apr 28 11:06:07 2017 +0200
+
+    Modified script for Odroids.
+
+ testbed/software/src/qos1 | 2 +-
+ testbed/software/src/qos2 | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 88bc204af819caedf3b316745213f6dcc7c91488
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Apr 10 09:46:38 2017 +0200
+
+    Dependency improvement.
+
+ testbed/software/debian/control | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 028137592312b9fccb13e966e47284ccfe46cf34
+Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
+Date:   Thu Apr 6 14:18:45 2017 +0200
+
+    Dependency update to work with the Odroids.
+
+ testbed/software/debian/changelog | 6 ++++++
+ testbed/software/debian/control   | 5 ++---
+ testbed/software/make-ppa         | 2 +-
+ 3 files changed, 9 insertions(+), 4 deletions(-)
+
+commit 9df6fcd47cefae7f362bc382eea5cb3e0844d6d4
+Merge: 4c7f280 edb4cae
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 24 16:29:28 2017 +0100
+
+    Merge branch 'master' of https://git.ansur.no/simone/hencsat
+
+commit 4c7f280c24f802d37a02d829ad78adf0b0b27499
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 24 16:29:17 2017 +0100
+
+    Label update.
+
+ testbed/software/src/qos1 | 2 +-
+ testbed/software/src/qos2 | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit a4e8f4aa07612143529ae41c12635e272e1651ae
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 24 12:53:29 2017 +0100
+
+    Version bump.
+
+ testbed/software/debian/changelog | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit a356ac3c18c4f487db06d077b377ef71182e132b
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 24 12:50:34 2017 +0100
+
+    Formatting fix.
+
+ testbed/software/src/HENCSAT-System-Info | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 4022567298494819367e0f6a151f01bddd4a96d7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 24 12:43:05 2017 +0100
+
+    Output fix.
+
+ testbed/software/src/HENCSAT-System-Info | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+commit 3e5164e102260110a361d455b25a16b0ca402bb7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 23 12:56:56 2017 +0100
+
+    Dependency fix.
+
+ testbed/software/debian/changelog | 4 ++--
+ testbed/software/debian/control   | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+commit 43fba9c001ff0108e147bcadb0a5f500819952cb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 23 12:43:19 2017 +0100
+
+    A small fix.
+
+ testbed/software/make-dist | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 3fd36f1cde72fffb7fc64a4da7b3a294dffa0240
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Mar 21 09:21:36 2017 +0100
+
+    Added description text.
+
+ testbed/software/hencsat.lsm | 20 +++++++++++++++++++-
+ 1 file changed, 19 insertions(+), 1 deletion(-)
+
+commit 3a9643295d3865b6c4f28f99b0b9938c23e0df3f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Mar 21 09:18:07 2017 +0100
+
+    Another dependency update.
+
+ testbed/software/debian/control | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 32a4699996843d03af74d898aa58ce23d16a5c08
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Mar 21 09:16:44 2017 +0100
+
+    Dependency update.
+
+ testbed/software/debian/control | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit b978f0d1397b0e0638987ba45891ec9efdad9629
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Mar 21 09:09:41 2017 +0100
+
+    Merged some NorNet packaging code.
+
+ testbed/software/debian/changelog |  4 ++--
+ testbed/software/make-dist        | 49 +++++++++++++++++++++------------------
+ 2 files changed, 28 insertions(+), 25 deletions(-)
+
+commit 2e20f96f50aeabc92ff78cc7635d3e125ac40f48
+Merge: abd53d8 ae1ef2b
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 17 12:16:38 2017 +0100
+
+    Merge branch 'master' of https://git.ansur.no/simone/hencsat
+
+commit abd53d8dc1ae73bc3eaa16938d710f506f341c53
+Merge: 846bd49 d6fd09a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 17 12:16:15 2017 +0100
+
+    Merge branch 'master' of https://git.ansur.no/simone/hencsat
+
+commit ae1ef2be0ca1ef42283a645a5f0da4c98e100237
+Merge: 2adb628 d6fd09a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 17 12:16:15 2017 +0100
+
+    Merge branch 'master' of https://git.ansur.no/simone/hencsat
+
+commit 846bd498ae57b00a30958744240fe83ad32cf024
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 17 12:15:53 2017 +0100
+
+    Added test script.
+
+ testbed/software/src/server | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 2adb628470a898cadceb3b8af074c7905fac8145
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 17 12:15:41 2017 +0100
+
+    Added test scripts.
+
+ testbed/software/src/client1 | 2 ++
+ testbed/software/src/client2 | 2 ++
+ 2 files changed, 4 insertions(+)
+
+commit 7091c4f76b254837bf92d574898c7bc8cacef570
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 17 11:35:32 2017 +0100
+
+    Some GUI improvements.
+
+ testbed/software/src/hencsat-qos-controller_de.ts | 38 ++++++++++++++---------
+ testbed/software/src/hencsat-qos-controller_nb.ts | 38 ++++++++++++++---------
+ testbed/software/src/run-translator               |  3 ++
+ testbed/software/src/update-translations          |  4 +--
+ 4 files changed, 52 insertions(+), 31 deletions(-)
+
+commit e9d80777381af9676564a3bbe6734922886fa29e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 17 11:24:07 2017 +0100
+
+    Added router access parameter handling.
+
+ testbed/software/src/HENCSAT-QoS-Controller | 48 ++++++++++++++++++++---------
+ testbed/software/src/qos1                   |  2 ++
+ testbed/software/src/qos2                   |  2 ++
+ 3 files changed, 38 insertions(+), 14 deletions(-)
+
+commit 56d2a2bdf11cced8b65714aa48bfb09b614823f2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 18:52:50 2017 +0100
+
+    Dependency update.
+
+ testbed/software/debian/changelog | 2 +-
+ testbed/software/debian/control   | 1 -
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+
+commit ca58cd3c4c51d8a1c1e22b60930990294fd871e0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 18:47:11 2017 +0100
+
+    Packaging fix.
+
+ testbed/software/debian/changelog | 2 +-
+ testbed/software/make-dist        | 1 -
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+
+commit 749e4d985a941577ac28a191e1d95306c1f8676f
+Merge: 4280e82 9f7e583
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 16:38:24 2017 +0100
+
+    Merge branch 'master' of https://git.ansur.no/simone/hencsat
+
+commit 9f7e5836bfa139a2e8a862639b80c0e3d8b6b1ef
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 16:36:39 2017 +0100
+
+    Some improvements of the user interface.
+
+ testbed/software/src/HENCSAT-QoS-Controller | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+commit bf1505ea199024eab666dc60d23ea0f79afe9d3e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 16:28:48 2017 +0100
+
+    Improved sudo handling in HENCSAT Router package.
+
+ testbed/software/debian/hencsat-router.examples | 1 +
+ testbed/software/debian/hencsat-router.postinst | 1 -
+ testbed/software/make-dist                      | 2 +-
+ testbed/software/src/sudoers.append             | 7 +++++++
+ 4 files changed, 9 insertions(+), 2 deletions(-)
+
+commit 4280e82ada03b74075bca089a7e6fa6d2a96ee98
+Merge: 7ca7241 1c7b514
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 16:28:25 2017 +0100
+
+    Merge branch 'master' of https://git.ansur.no/simone/hencsat
+
+commit 7ca7241dd6276d7193581bd380d64a82ac345af9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 16:28:06 2017 +0100
+
+    Fixed sudo handling.
+
+ testbed/software/src/HENCSAT-QoS-Setup | 34 ++++++++++++++++++----------------
+ 1 file changed, 18 insertions(+), 16 deletions(-)
+
+commit 1c7b51435aa98dfefbfe623943f809cd12d79c97
+Merge: 1a70ee4 d8fe35c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 16:09:52 2017 +0100
+
+    Merge branch 'master' of git.ansur.no:simone/hencsat
+
+commit 1a70ee46fde60477e7a939242c6ebb720058f808
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 16:09:42 2017 +0100
+
+    A fix.
+
+ testbed/software/src/HENCSAT-QoS-Controller | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit bf2ba60512bba86738ebec535b6ce36f1dc3deb1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 16:04:19 2017 +0100
+
+    Removed obsolete files.
+
+ .../software/src/grub/Splash-HSClient1-1024x768.jpeg   | Bin 238008 -> 0 bytes
+ .../src/grub/Splash-HSController1-1024x768.jpeg        | Bin 438216 -> 0 bytes
+ .../src/grub/Splash-HSDevelopment1-1024x768.jpeg       | Bin 349155 -> 0 bytes
+ .../src/grub/Splash-HSManagement1-1024x768.jpeg        | Bin 438022 -> 0 bytes
+ .../software/src/grub/Splash-HSRouter1-1024x768.jpeg   | Bin 145124 -> 0 bytes
+ .../software/src/grub/Splash-HSServer1-1024x768.jpeg   | Bin 174841 -> 0 bytes
+ 6 files changed, 0 insertions(+), 0 deletions(-)
+
+commit d8fe35c2c2950ad2981927b25a6aca9f2c3b297e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 16:03:48 2017 +0100
+
+    A small fix.
+
+ testbed/software/src/HENCSAT-QoS-Setup | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit f27f972c12d01adea1a2eb13f0a983aca0a40250
+Merge: f8be37f bd6d78c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 16:02:14 2017 +0100
+
+    Merge branch 'master' of git.ansur.no:simone/hencsat
+
+commit f8be37fff69b08112ee2dbba612a9149759991b6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 15:59:37 2017 +0100
+
+    Added parameter check.
+
+ testbed/software/src/HENCSAT-QoS-Setup | 18 ++++++++++++++----
+ 1 file changed, 14 insertions(+), 4 deletions(-)
+
+commit bd6d78ca78815497022dc5a3dee69b8c3e2b6249
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 15:57:10 2017 +0100
+
+    Some configuration improvements.
+
+ testbed/software/src/HENCSAT-QoS-Setup | 31 +++++++++++++++++--------------
+ 1 file changed, 17 insertions(+), 14 deletions(-)
+
+commit 14365383d82e0425c1db9189d085bcc4124a59d3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 15:32:12 2017 +0100
+
+    A fix.
+
+ testbed/software/src/HENCSAT-QoS-Setup | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit ee7aa804067a1b24849e471d10904a8f31a47190
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 15:31:23 2017 +0100
+
+    Improved router configuration.
+
+ testbed/software/src/HENCSAT-QoS-Controller | 87 ++++++++++++++++++++---------
+ 1 file changed, 60 insertions(+), 27 deletions(-)
+
+commit 5b85086956b5cf3c0d9a6af8d5159b5be9e49ee7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 14:54:31 2017 +0100
+
+    User interface improvements.
+
+ testbed/software/src/HENCSAT-QoS-Controller | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+commit 9300b88fc6ad1822acb529aadb329834b090a86e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 14:49:19 2017 +0100
+
+    Improved router configuration handling.
+
+ testbed/software/src/HENCSAT-QoS-Controller | 80 +++++++++++++++++++++++------
+ 1 file changed, 63 insertions(+), 17 deletions(-)
+
+commit 7238f9e0bd0be02d2a2560c2a4d75a893bd77810
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 13:28:48 2017 +0100
+
+    Some more shell handling code.
+
+ testbed/software/src/HENCSAT-QoS-Controller | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+commit 19b57c59b801212a72cb0164d60894f92d1838f5
+Merge: 0d42495 cd1b3de
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 13:18:54 2017 +0100
+
+    Merge branch 'master' of https://git.ansur.no/simone/hencsat
+
+commit 0d4249584c75fcec6f8cadcf07bb8ec4c21f1499
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 13:18:19 2017 +0100
+
+    Improved QoS setup script.
+
+ testbed/software/src/HENCSAT-QoS-Setup | 34 +++++++++++++++++++++++++++-------
+ 1 file changed, 27 insertions(+), 7 deletions(-)
+
+commit 18d80d23f4e4517d9010808d5ddccb08737fd2da
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 12:32:51 2017 +0100
+
+    Added first part of shell communication code.
+
+ testbed/software/src/HENCSAT-QoS-Controller | 26 +++++++++++++++++++++++++-
+ 1 file changed, 25 insertions(+), 1 deletion(-)
+
+commit 13a2595558d355bd579ab72613ccc51d2613565f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 12:01:41 2017 +0100
+
+    HENCSAT-QoS-Setup needs setuid setting.
+
+ testbed/software/debian/changelog               | 2 +-
+ testbed/software/debian/hencsat-router.postinst | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 63e3c11fc14edd90de25db33f22506ba05a39343
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 11:22:21 2017 +0100
+
+    Dependency improvements for the packages.
+
+ testbed/software/debian/control                 | 25 ++++++++++++++++++-------
+ testbed/software/debian/hencsat-desktop.install |  2 ++
+ testbed/software/make-dist                      |  1 -
+ 3 files changed, 20 insertions(+), 8 deletions(-)
+
+commit 45baf8ab1085ef9cd7ea7b3ffbc7b78c1b6e3be0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 11:12:54 2017 +0100
+
+    Packaging improvements.
+
+ testbed/software/make-dist | 64 ++++++++++++++++++++++++++++++++++++++--------
+ 1 file changed, 53 insertions(+), 11 deletions(-)
+
+commit da3d4cd46ddefe79fe2a68964683b4f93804ec32
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 16 11:12:41 2017 +0100
+
+    Some clean-ups.
+
+ .../src/background/Background-HSClient1.jpeg       | Bin 4007904 -> 0 bytes
+ .../src/background/Background-HSController1.jpeg   | Bin 3855756 -> 0 bytes
+ .../src/background/Background-HSDevelopment1.jpeg  | Bin 3201461 -> 0 bytes
+ .../src/background/Background-HSManagement1.jpeg   | Bin 7302031 -> 0 bytes
+ .../src/background/Background-HSRouter1.jpeg       | Bin 2088438 -> 0 bytes
+ .../src/background/Background-HSServer1.jpeg       | Bin 3142439 -> 0 bytes
+ testbed/software/src/background/exiftool.argfile   |   3 -
+ .../src/background/image-resize-with-cropping      |  62 +++++++++++++++++++++
+ .../background/original/Background-HSClient1.jpeg  | Bin 0 -> 4007904 bytes
+ .../original/Background-HSController1.jpeg         | Bin 0 -> 3855756 bytes
+ .../original/Background-HSDevelopment1.jpeg        | Bin 0 -> 3201461 bytes
+ .../original/Background-HSManagement1.jpeg         | Bin 0 -> 7302031 bytes
+ .../background/original/Background-HSRouter1.jpeg  | Bin 0 -> 2088438 bytes
+ .../background/original/Background-HSServer1.jpeg  | Bin 0 -> 3142439 bytes
+ .../src/background/original/exiftool.argfile       |   3 +
+ 15 files changed, 65 insertions(+), 3 deletions(-)
+
+commit cd1b3de91ae8331aef83567775ba6850baa1b596
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 18:50:40 2017 +0100
+
+    Dependency fix.
+
+ testbed/software/debian/changelog | 2 +-
+ testbed/software/debian/control   | 2 --
+ 2 files changed, 1 insertion(+), 3 deletions(-)
+
+commit 5426529b6be0f83adc40f41dcb0888487c32dd99
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 18:34:49 2017 +0100
+
+    A fix.
+
+ testbed/software/make-ppa | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit f027368ea64643f5572c095d0ff42d670d90e380
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 18:29:44 2017 +0100
+
+    Removed obsolete script.
+
+ testbed/software/src/setqos | 232 --------------------------------------------
+ 1 file changed, 232 deletions(-)
+
+commit d3dff2b946a0bfccf0d0dc22b4a5ea9841f28faa
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 18:21:49 2017 +0100
+
+    Some dependency updates.
+
+ testbed/software/debian/changelog           | 2 +-
+ testbed/software/debian/control             | 3 ++-
+ testbed/software/src/HENCSAT-QoS-Controller | 2 +-
+ 3 files changed, 4 insertions(+), 3 deletions(-)
+
+commit be1087bc63d14f373e2cacdb52679ed7996a20db
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 18:15:24 2017 +0100
+
+    Some fixes.
+
+ testbed/software/debian/control                   |  3 ++-
+ testbed/software/make-dist                        |  6 ++++++
+ testbed/software/src/HENCSAT-QoS-Controller       |  2 +-
+ testbed/software/src/hencsat-qos-controller_de.ts |  5 +++++
+ testbed/software/src/hencsat-qos-controller_nb.ts | 17 +++++++++++------
+ 5 files changed, 25 insertions(+), 8 deletions(-)
+
+commit 3f06ae9d1b5adf138d6048f51b26ff0a6c5ea228
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 18:00:36 2017 +0100
+
+    Packaging fixes.
+
+ testbed/software/debian/hencsat-controller.install |  1 +
+ testbed/software/make-dist                         |  2 +
+ testbed/software/src/HENCSAT-QoS-Controller        |  7 ++-
+ testbed/software/src/HENCSAT-QoS-Controller_de.ts  | 67 ----------------------
+ testbed/software/src/HENCSAT-QoS-Controller_no.ts  | 67 ----------------------
+ testbed/software/src/hencsat-qos-controller_de.ts  | 67 ++++++++++++++++++++++
+ testbed/software/src/hencsat-qos-controller_nb.ts  | 67 ++++++++++++++++++++++
+ testbed/software/src/update-translations           | 27 +++++++--
+ 8 files changed, 166 insertions(+), 139 deletions(-)
+
+commit 60e0abd066e86283552e34b557ab97db6080a332
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 17:07:00 2017 +0100
+
+    Updated packaging files to install the controller's files.
+
+ testbed/software/debian/control                    |  16 +++++
+ testbed/software/debian/hencsat-controller.install |   3 +
+ .../software/debian/hencsat-controller.postinst    |  13 ++++
+ testbed/software/debian/hencsat-controller.postrm  |  14 +++++
+ testbed/software/make-dist                         |   1 +
+ testbed/software/src/HENCSAT-QoS-Controller_de.ts  |  67 +++++++++++++++++++++
+ testbed/software/src/HENCSAT-QoS-Controller_no.ts  |  67 +++++++++++++++++++++
+ .../src/background/Background-HSController1.jpeg   | Bin 0 -> 3855756 bytes
+ testbed/software/src/background/make-it            |   2 +-
+ .../software/src/grub/25_hencsat_controller_theme  |  14 +++++
+ .../src/grub/Splash-HSController1-1024x768.jpeg    | Bin 0 -> 438216 bytes
+ testbed/software/src/update-translations           |  16 +++++
+ 12 files changed, 212 insertions(+), 1 deletion(-)
+
+commit 3c9658dccbb92e65e68d38a11975f3aa0d548b1f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 16:16:41 2017 +0100
+
+    Refinements of the user interface.
+
+ testbed/software/src/HENCSAT-QoS-Controller | 115 ++++++++++++++++++++++------
+ 1 file changed, 91 insertions(+), 24 deletions(-)
+
+commit c12cf2ac816dfdb87369f1f2a12aafd963e623ad
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 15:29:02 2017 +0100
+
+    Some updates.
+
+ testbed/software/src/HENCSAT-QoS-Controller | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+commit a9177e859da38a98a4dde26e1c0d077ee7dcd771
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 15:20:12 2017 +0100
+
+    Added initial version of HENCSAT-QoS-Controller.
+
+ testbed/software/src/HENCSAT-QoS-Controller | 167 ++++++++++++++++++++++++++++
+ 1 file changed, 167 insertions(+)
+
+commit ff33a3994b0c8df29adfff02b42a61089340a8d9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 12:56:13 2017 +0100
+
+    Updated dependencies.
+
+ testbed/software/debian/changelog | 2 +-
+ testbed/software/debian/control   | 2 ++
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+commit ca0e7584cf0cb73a33002743ade9fd1c4de493d2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 12:45:07 2017 +0100
+
+    Fixed permission.
+
+ testbed/software/debian/hencsat-router.init | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 997fcef2474071a79b51e74383cccc8e3cc03e6f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 12:40:04 2017 +0100
+
+    Added init script for the router.
+
+ testbed/software/debian/hencsat-router.init | 84 +++++++++++++++++++++++++++++
+ testbed/software/src/HENCSAT-QoS-Setup      |  2 +-
+ 2 files changed, 85 insertions(+), 1 deletion(-)
+
+commit 183eea8d49cf48a76e815d1409c438128b4fb806
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 12:29:03 2017 +0100
+
+    Updated packaging files.
+
+ testbed/software/debian/hencsat-router.examples | 1 +
+ testbed/software/debian/rules                   | 4 ++++
+ testbed/software/make-dist                      | 3 +++
+ 3 files changed, 8 insertions(+)
+
+commit feeadf442e1549256ddf12b74cf3d0ab955c5828
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 12:24:59 2017 +0100
+
+    Updated configuration file.
+
+ testbed/software/src/hencsat-router.conf.example | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 7fe48508ccab5d84bcf1175a9824af2242508727
+Merge: b6bd189 cb772f5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 12:24:23 2017 +0100
+
+    Merge branch 'master' of git.ansur.no:simone/hencsat
+
+commit b6bd18981c5f32d83d85bdbb12325511ddc79c5e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 12:24:14 2017 +0100
+
+    Updated packaging files.
+
+ testbed/software/debian/changelog               | 2 +-
+ testbed/software/debian/hencsat-router.install  | 1 +
+ testbed/software/debian/hencsat-router.manpages | 1 +
+ testbed/software/make-dist                      | 3 ++-
+ 4 files changed, 5 insertions(+), 2 deletions(-)
+
+commit cb772f5682aac3330b1de12b6a1c62e437efd340
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 12:22:06 2017 +0100
+
+    Improved output.
+
+ testbed/software/src/HENCSAT-QoS-Setup | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 5d74302c66820e89a4ec6116d5827558230867a6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 12:21:56 2017 +0100
+
+    Added manpage.
+
+ testbed/software/src/HENCSAT-QoS-Setup.1 | 64 ++++++++++++++++++++++++++++++++
+ 1 file changed, 64 insertions(+)
+
+commit 1b5aae159c8a6a31fa7f4ab064e905d7aa0518f0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 12:10:59 2017 +0100
+
+    Renamed file.
+
+ testbed/software/src/HENCSAT-QoS-Control | 186 -------------------------------
+ testbed/software/src/HENCSAT-QoS-Setup   | 186 +++++++++++++++++++++++++++++++
+ 2 files changed, 186 insertions(+), 186 deletions(-)
+
+commit 899d24eaccd427e9a4b66644f2173d1190d5103d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 12:10:37 2017 +0100
+
+    Some more improvements.
+
+ testbed/software/src/HENCSAT-QoS-Control | 51 +++++++++++++++++++++++---------
+ 1 file changed, 37 insertions(+), 14 deletions(-)
+
+commit 1a3c928999ea676705e2a5f3680a6107c3667f18
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 10:59:49 2017 +0100
+
+    Some improvements.
+
+ testbed/software/src/HENCSAT-QoS-Control | 25 +++++++++++++------------
+ 1 file changed, 13 insertions(+), 12 deletions(-)
+
+commit 493aac610ea8071ce312bb66dc514714e8935cdb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 15 10:34:59 2017 +0100
+
+    Added QoS script.
+
+ testbed/software/src/HENCSAT-QoS-Control         | 162 +++++++++++++++++++++++
+ testbed/software/src/hencsat-router.conf.example |  21 +++
+ 2 files changed, 183 insertions(+)
+
+commit 241e26a344f8e6af63fb1dad21a775715125112f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Mar 14 14:50:06 2017 +0100
+
+    Minor update.
+
+ testbed/software/debian/changelog |  2 +-
+ testbed/software/debian/control   | 11 -----------
+ testbed/software/hencsat.lsm      |  1 +
+ 3 files changed, 2 insertions(+), 12 deletions(-)
+
+commit 883003f507d5aaacb72c8408435b2860e96654fb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Mar 14 14:45:38 2017 +0100
+
+    Added QoS script.
+
+ testbed/software/src/setqos | 232 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 232 insertions(+)
+
+commit f924a6ad19276b6a3621c9b3a7c92e353ed8693c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Mar 14 14:42:51 2017 +0100
+
+    Some updates.
+
+ testbed/software/debian/control                    |  21 ++++++++-------------
+ testbed/software/debian/rules                      |  14 +++++++-------
+ testbed/software/make-dist                         |   9 +++++----
+ .../src/grub/Splash-HSClient1-1024x768.jpeg        | Bin 0 -> 238008 bytes
+ .../src/grub/Splash-HSDevelopment1-1024x768.jpeg   | Bin 0 -> 349155 bytes
+ .../src/grub/Splash-HSManagement1-1024x768.jpeg    | Bin 0 -> 438022 bytes
+ .../src/grub/Splash-HSRouter1-1024x768.jpeg        | Bin 0 -> 145124 bytes
+ .../src/grub/Splash-HSServer1-1024x768.jpeg        | Bin 0 -> 174841 bytes
+ 8 files changed, 20 insertions(+), 24 deletions(-)
+
+commit 3e07c713478606e8cad52e262543a470bd7d3447
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Mar 14 14:29:37 2017 +0100
+
+    Added system management scripts.
+
+ testbed/software/src/HENCSAT-System-Info          | 236 ++++++++++++++
+ testbed/software/src/HENCSAT-System-Info.1        |  46 +++
+ testbed/software/src/HENCSAT-System-Maintenance   | 366 ++++++++++++++++++++++
+ testbed/software/src/HENCSAT-System-Maintenance.1 |  71 +++++
+ 4 files changed, 719 insertions(+)
+
+commit 28f32bee89f538f22c6eba1efa5d213c7f864e39
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Mar 14 14:22:09 2017 +0100
+
+    Added background files.
+
+ .../software/src/background/Background-HSClient1.jpeg | Bin 0 -> 4007904 bytes
+ .../src/background/Background-HSDevelopment1.jpeg     | Bin 0 -> 3201461 bytes
+ .../src/background/Background-HSManagement1.jpeg      | Bin 0 -> 7302031 bytes
+ .../software/src/background/Background-HSRouter1.jpeg | Bin 0 -> 2088438 bytes
+ .../software/src/background/Background-HSServer1.jpeg | Bin 0 -> 3142439 bytes
+ .../src/background/HENCSAT-InformationText.png        | Bin 0 -> 501523 bytes
+ .../src/background/HENCSAT-InformationText.xcf        | Bin 0 -> 1007171 bytes
+ testbed/software/src/background/make-it               |   4 ++--
+ 8 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 4dfcea28c5ed798a207c9a0ee1829f3858b028c6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Mar 14 13:51:29 2017 +0100
+
+    Initial version of packaging files.
+
+ testbed/software/BUGS                              |   1 +
+ testbed/software/COPYING                           | 674 +++++++++++++++++++++
+ testbed/software/ChangeLog                         |   1 +
+ testbed/software/NEWS                              |   1 +
+ testbed/software/README                            |   1 +
+ testbed/software/build-and-install                 |  34 ++
+ testbed/software/build-deb                         | 114 ++++
+ testbed/software/clean-deb                         |  28 +
+ testbed/software/debian.conf                       |  10 +
+ testbed/software/debian/changelog                  |   5 +
+ testbed/software/debian/compat                     |   1 +
+ testbed/software/debian/control                    | 168 +++++
+ testbed/software/debian/copyright                  |  25 +
+ testbed/software/debian/hencsat-client.install     |   2 +
+ testbed/software/debian/hencsat-client.postinst    |  13 +
+ testbed/software/debian/hencsat-client.postrm      |  14 +
+ testbed/software/debian/hencsat-management.cron.d  |   0
+ testbed/software/debian/hencsat-management.install |   5 +
+ .../software/debian/hencsat-management.manpages    |   2 +
+ .../software/debian/hencsat-management.postinst    |  15 +
+ testbed/software/debian/hencsat-management.postrm  |  14 +
+ testbed/software/debian/hencsat-management.prerm   |  14 +
+ testbed/software/debian/hencsat-router.install     |   2 +
+ testbed/software/debian/hencsat-router.postinst    |  13 +
+ testbed/software/debian/hencsat-router.postrm      |  14 +
+ testbed/software/debian/hencsat-server.install     |   2 +
+ testbed/software/debian/hencsat-server.postinst    |  13 +
+ testbed/software/debian/hencsat-server.postrm      |  14 +
+ testbed/software/debian/rules                      |  24 +
+ testbed/software/debian/source/format              |   1 +
+ testbed/software/debian/upstream/signing-key.asc   | 405 +++++++++++++
+ testbed/software/debian/watch                      |   3 +
+ testbed/software/filter-empty-entries              |  61 ++
+ testbed/software/hencsat.lsm                       |   0
+ testbed/software/make-deb                          | 329 ++++++++++
+ testbed/software/make-dist                         |  62 ++
+ testbed/software/make-ppa                          |   5 +
+ testbed/software/src/background/exiftool.argfile   |   3 +
+ testbed/software/src/background/make-it            |  11 +
+ testbed/software/src/cron-apt/5-install            |   3 +
+ .../software/src/grub/01_hencsat_management_theme  |  14 +
+ .../software/src/grub/19_hencsat_development_theme |  14 +
+ testbed/software/src/grub/20_hencsat_router_theme  |  14 +
+ testbed/software/src/grub/21_hencsat_client_theme  |  14 +
+ testbed/software/src/grub/22_hencsat_server_theme  |  14 +
+ testbed/software/src/grub/grub-defaults            |  17 +
+ testbed/software/src/pbuilder/pbuilderrc           |  56 ++
+ testbed/software/update-changelog                  |   4 +
+ 48 files changed, 2254 insertions(+)

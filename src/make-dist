@@ -1,0 +1,78 @@
+#!/bin/bash -e
+
+. ./debian.conf
+
+
+CHANGELOG_HEADER="`head -n1 debian/changelog`"
+PACKAGE=`echo $CHANGELOG_HEADER | sed -e "s/(.*//" -e "s/ //g"`
+UPSTREAM_VERSION=`echo $CHANGELOG_HEADER | sed -e "s/[a-zA-Z0-9 \-]*(//" -e "s/).*//" -e "s/[0-9]*$//" -e "s/ //g" -e "s/^[0-9]*://" -e "s/-[^ ]*$//g"`
+
+echo "######################################################################"
+echo "CHANGELOG_HEADER:   $CHANGELOG_HEADER"
+echo "PACKAGE:            $PACKAGE"
+echo "UPSTREAM_VERSION:   $UPSTREAM_VERSION"
+echo "######################################################################"
+
+
+if [ -e $PACKAGE-$UPSTREAM_VERSION ] ; then
+   rm -rf $PACKAGE-$UPSTREAM_VERSION
+fi
+mkdir $PACKAGE-$UPSTREAM_VERSION || exit 1
+
+
+# ---------------------------------------------------------
+mkdir $PACKAGE-$UPSTREAM_VERSION/src
+cp NEWS README BUGS COPYING ChangeLog *.lsm $PACKAGE-$UPSTREAM_VERSION
+# cp src/*.py $PACKAGE-$UPSTREAM_VERSION
+cp src/*.[0-9] $PACKAGE-$UPSTREAM_VERSION
+
+tsFiles=`find src/ -maxdepth 1 -name '*.ts'`
+for tsFile in $tsFiles ; do
+   qtchooser -qt=5 -run-tool=lrelease -silent $tsFile
+done
+cp src/*.qm $PACKAGE-$UPSTREAM_VERSION
+cp src/*.ts $PACKAGE-$UPSTREAM_VERSION
+
+
+cp src/MELODIC-System-Info         $PACKAGE-$UPSTREAM_VERSION
+
+echo "MELODIC $UPSTREAM_VERSION, packaged `env LANG=en date`" >$PACKAGE-$UPSTREAM_VERSION/melodic-version
+
+mkdir $PACKAGE-$UPSTREAM_VERSION/cron-apt
+cp src/cron-apt/5-install $PACKAGE-$UPSTREAM_VERSION/cron-apt/
+
+mkdir $PACKAGE-$UPSTREAM_VERSION/background
+mkdir $PACKAGE-$UPSTREAM_VERSION/background/original
+cp src/background/Input/* $PACKAGE-$UPSTREAM_VERSION/background/original/
+
+mkdir $PACKAGE-$UPSTREAM_VERSION/grub
+cp src/grub/*_theme $PACKAGE-$UPSTREAM_VERSION/grub/
+cp src/grub/grub-defaults $PACKAGE-$UPSTREAM_VERSION/grub/
+
+# ~~~~~~ Image conversion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cd src/background
+./make-logo-texts
+./make-desktop
+./make-bootsplash "../../$PACKAGE-$UPSTREAM_VERSION/melodic-version"
+cd ../..
+
+desktopFiles=`find src/background/Output/Desktop-with-Logo/ -maxdepth 1 -name "*.jpeg" -or -name "*.png"`
+for desktopFile in $desktopFiles ; do
+   targetName=`basename "$desktopFile" | sed -e "s/\-plain\-/-/g"`
+   cp $desktopFile "$PACKAGE-$UPSTREAM_VERSION/background/Desktop-${targetName}"
+done
+
+splashFiles=`find src/background/Output/Splash/ -maxdepth 1 -name "*.jpeg" -or -name "*.png"`
+for splashFile in $splashFiles ; do
+   targetName=`basename "$splashFile"`
+   cp $splashFile "$PACKAGE-$UPSTREAM_VERSION/grub/Splash-${targetName}"
+done
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+mkdir $PACKAGE-$UPSTREAM_VERSION/pbuilder
+cp src/pbuilder/pbuilderrc $PACKAGE-$UPSTREAM_VERSION/pbuilder/
+# ---------------------------------------------------------
+
+
+tar czvf $PACKAGE-$UPSTREAM_VERSION.tar.gz $PACKAGE-$UPSTREAM_VERSION
+rm -rf $PACKAGE-$UPSTREAM_VERSION

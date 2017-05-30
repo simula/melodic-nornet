@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./clean-deb && \
+./make-deb trusty xenial yakkety zesty artful && \
+dput ppa *.changes
