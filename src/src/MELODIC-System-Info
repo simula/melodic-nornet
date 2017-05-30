@@ -95,9 +95,9 @@ elif  [ "$system" == "FreeBSD" ] ; then
 
 fi
 
-HENCSAT_VERSION=""
-if [ -e /etc/hencsat/hencsat-version ] ; then
-   HENCSAT_VERSION=`cat /etc/hencsat/hencsat-version`
+MELODIC_VERSION=""
+if [ -e /etc/melodic/melodic-version ] ; then
+   MELODIC_VERSION=`cat /etc/melodic/melodic-version`
 fi
 
 
@@ -107,22 +107,22 @@ fi
 echo -en "\x1b[1;34m"
 echo "================================================================="
 echo -en "\x1b[1;31m"
-echo "     #     # ####### #     #  #####   #####     #    #######"
-echo "     #     # #       ##    # #     # #     #   # #      #"
-echo "     #     # #       # #   # #       #        #   #     #"
-echo "     ####### #####   #  #  # #        #####  #     #    #"
-echo "     #     # #       #   # # #             # #######    #"
-echo "     #     # #       #    ## #     # #     # #     #    #"
-echo "     #     # ####### #     #  #####   #####  #     #    #"
+echo "     #     # ####### #       ####### ######    ###    #####"
+echo "     ##   ## #       #       #     # #     #    #    #     #"
+echo "     # # # # #       #       #     # #     #    #    #"
+echo "     #  #  # #####   #       #     # #     #    #    #"
+echo "     #     # #       #       #     # #     #    #    #"
+echo "     #     # #       #       #     # #     #    #    #     #"
+echo "     #     # ####### ####### ####### ######    ###    #####"
 echo -en "\x1b[1;34m"
-if [ "$HENCSAT_VERSION" != "" ] ; then
+if [ "$MELODIC_VERSION" != "" ] ; then
    echo ""
-   y=$(( (66-${#HENCSAT_VERSION}) / 2 ))
+   y=$(( (66-${#MELODIC_VERSION}) / 2 ))
    while [ $y -gt 0 ] ; do
       echo -n " "
       let y=$y-1
    done
-   echo $HENCSAT_VERSION
+   echo $MELODIC_VERSION
 fi
 echo "================================================================="
 echo -e "\x1b[0m"
