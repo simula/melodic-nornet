@@ -30,7 +30,7 @@ MAKEFILE="Makefile.desktop"
 INPUTS=`find Input/ -maxdepth 1 -name "*.png" -or -name "*.jpeg" -or -name "*.[jJ][pP][gG]"`
 DOMAIN=".melodic"
 DIMENSIONS="2970x2100 1920x1200 1920x1080 1600x1200 1280x1024 1024x768"
-VARIANTS="plain"
+VARIANTS="plain"   # mosaic oil
 JPEG_QUALITY=92.5
 
 

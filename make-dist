@@ -21,29 +21,20 @@ mkdir $PACKAGE-$UPSTREAM_VERSION || exit 1
 
 
 # ---------------------------------------------------------
+
 mkdir $PACKAGE-$UPSTREAM_VERSION/src
 cp NEWS README BUGS COPYING ChangeLog *.lsm $PACKAGE-$UPSTREAM_VERSION
 # cp src/*.py $PACKAGE-$UPSTREAM_VERSION
-cp src/*.[0-9] $PACKAGE-$UPSTREAM_VERSION
-
-tsFiles=`find src/ -maxdepth 1 -name '*.ts'`
-for tsFile in $tsFiles ; do
-   qtchooser -qt=5 -run-tool=lrelease -silent $tsFile
-done
-cp src/*.qm $PACKAGE-$UPSTREAM_VERSION
-cp src/*.ts $PACKAGE-$UPSTREAM_VERSION
+# cp src/*.[0-9] $PACKAGE-$UPSTREAM_VERSION
 
 
-cp src/MELODIC-System-Info         $PACKAGE-$UPSTREAM_VERSION
+cp src/MELODIC-System-Info $PACKAGE-$UPSTREAM_VERSION
 
 echo "MELODIC $UPSTREAM_VERSION, packaged `env LANG=en date`" >$PACKAGE-$UPSTREAM_VERSION/melodic-version
 
-mkdir $PACKAGE-$UPSTREAM_VERSION/cron-apt
-cp src/cron-apt/5-install $PACKAGE-$UPSTREAM_VERSION/cron-apt/
-
 mkdir $PACKAGE-$UPSTREAM_VERSION/background
-mkdir $PACKAGE-$UPSTREAM_VERSION/background/original
-cp src/background/Input/* $PACKAGE-$UPSTREAM_VERSION/background/original/
+mkdir $PACKAGE-$UPSTREAM_VERSION/background/Original
+cp src/background/Input/* $PACKAGE-$UPSTREAM_VERSION/background/Original/
 
 mkdir $PACKAGE-$UPSTREAM_VERSION/grub
 cp src/grub/*_theme $PACKAGE-$UPSTREAM_VERSION/grub/
@@ -56,11 +47,8 @@ cd src/background
 ./make-bootsplash "../../$PACKAGE-$UPSTREAM_VERSION/melodic-version"
 cd ../..
 
-desktopFiles=`find src/background/Output/Desktop-with-Logo/ -maxdepth 1 -name "*.jpeg" -or -name "*.png"`
-for desktopFile in $desktopFiles ; do
-   targetName=`basename "$desktopFile" | sed -e "s/\-plain\-/-/g"`
-   cp $desktopFile "$PACKAGE-$UPSTREAM_VERSION/background/Desktop-${targetName}"
-done
+cp -r src/background/Output/Desktop-with-Logo/    $PACKAGE-$UPSTREAM_VERSION/background/
+cp -r src/background/Output/Desktop-without-Logo/ $PACKAGE-$UPSTREAM_VERSION/background/
 
 splashFiles=`find src/background/Output/Splash/ -maxdepth 1 -name "*.jpeg" -or -name "*.png"`
 for splashFile in $splashFiles ; do
@@ -69,8 +57,6 @@ for splashFile in $splashFiles ; do
 done
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-mkdir $PACKAGE-$UPSTREAM_VERSION/pbuilder
-cp src/pbuilder/pbuilderrc $PACKAGE-$UPSTREAM_VERSION/pbuilder/
 # ---------------------------------------------------------
 
 

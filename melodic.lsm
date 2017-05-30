@@ -1,0 +1,27 @@
+Begin4
+Title:          melodic
+Version:        0.0.0
+Entered-date:   2017-05-30
+Description:    The vision of the MELODIC project is to enable federated cloud
+                computing for data-intensive applications, and provide the user
+                with an easy-to-use unified cloud environment, hiding the
+                complexity of a multi-cloud. The MELODIC platform will enable
+                big data and data-intensive applications by transparently
+                taking advantage of distinct characteristics of available
+                private and public clouds, dynamically optimise resource
+                utilisation, consider data locality, conform to the user’s
+                privacy needs and service requirements, and counter vendor
+                lock-in. From the perspective of the user, the MELODIC
+                framework will appear as an infrastructure-agnostic
+                middleware platform supporting development, deployment,
+                and execution of data-intensive applications on distributed
+                and heterogeneous multi-clouds.
+Keywords:       MELODIC Project
+Author:         dreibh@simula.no (Thomas Dreibholz)
+Maintained-by:  dreibh@simula.no (Thomas Dreibholz)
+Primary-site:   https://www.simula.no/research/projects/melodic-multi-cloud-execution-ware-large-scale-optimised-data-intensive-computing
+                368 kB download/melodic-0.0.0.tar.gz
+Original-site:  https://www.simula.no/research/projects/melodic-multi-cloud-execution-ware-large-scale-optimised-data-intensive-computing
+Platforms:      Linux
+Copying-policy: GPL
+End

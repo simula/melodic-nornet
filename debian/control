@@ -49,12 +49,10 @@ Description: MELODIC Development Tools
 
 Package: melodic-server
 Architecture: any
-Depends: ffmpeg,
-         grub2-common | grub,
+Depends: grub2-common | grub,
          melodic-management,
-         ntp,
-         openssh-server,
-         rsplib-services,
+         nornet-server,
+         openstack,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: MELODIC Server
