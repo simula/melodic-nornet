@@ -23,13 +23,7 @@ Depends: nornet-management,
          ${misc:Depends},
          ${python3:Depends},
          ${shlibs:Depends}
-Recommends: nttcp,
-            tshark
-Conflicts: landscape-common,
-           minidlna,
-           tntnet,
-           webfs
-Replaces: landscape-common
+Recommends: tshark
 Description: MELODIC Management Tools
  This metapackage contains basic software for MELODIC system management.
  The software installed provides a common working environment.
