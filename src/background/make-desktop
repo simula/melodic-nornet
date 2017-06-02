@@ -29,7 +29,7 @@ MAKE_CROPPED=$SCRIPT_BASE/image-resize-with-cropping
 MAKEFILE="Makefile.desktop"
 INPUTS=`find Input/ -maxdepth 1 -name "*.png" -or -name "*.jpeg" -or -name "*.[jJ][pP][gG]"`
 DOMAIN=".melodic"
-DIMENSIONS="2970x2100 1920x1200 1920x1080 1600x1200 1280x1024 1024x768"
+DIMENSIONS="1920x1200 1920x1080 1600x1200 1280x1024 1024x768"   # 2970x2100
 VARIANTS="plain mosaic"   # mosaic oil
 JPEG_QUALITY=92.5
 
