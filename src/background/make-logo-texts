@@ -29,7 +29,7 @@ logoTitle="MELODIC"
 logoSubtitle="Multi-cloud Execution-ware for Large-scale Optimised Data-Intensive Computing"
 logoName="MELODIC / NorNet Core"
 logoAffiliation="Simula Research Laboratory"
-logoURL="https://www.simula.no / https://www.nntb.no"
+logoURL="http://www.melodic.cloud | https://www.nntb.no"
 
 # ------ Labels -------------------------------------------------------------
 $MAKE_LOGO ${prefix}-Title.png       "$logoTitle"       1024 30 "Golden"            "$logoFont"   &
