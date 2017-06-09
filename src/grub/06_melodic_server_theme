@@ -3,8 +3,8 @@
 # Include the GRUB helper library for grub-mkconfig.
 . "/usr/share/grub/grub-mkconfig_lib"
 
-# ====== NorNet theme =======================================================
-echo >&2 "Using HENCSAT Server theme!"
+# ====== MELODIC theme =======================================================
+echo >&2 "Using MELODIC Server theme!"
 
 echo "insmod jpeg"   # Load JPEG reader!
 echo "if background_image `make_system_path_relative_to_its_root "/boot/Splash-MELODICServer1-1024x768.jpeg"`; then"
