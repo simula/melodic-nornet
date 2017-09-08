@@ -54,6 +54,47 @@ Description: MELODIC Server
  .
  See https://www.simula.no for details on MELODIC!
 
+Package: melodic-controller
+Architecture: any
+Depends: fail2ban,
+         glance,
+         grub2-common | grub,
+         keystone,
+         mariadb-server,
+         melodic-management,
+         melodic-server,
+         memcached,
+         openstack-dashboard,
+         python-memcache,
+         python-pymysql,
+         rabbitmq-server,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: MELODIC Controller
+ This package contains the scripts to configure a MELODIC controller.
+ .
+ See https://www.simula.no for details on MELODIC!
+
+Package: melodic-compute
+Architecture: any
+Depends: fail2ban,
+         grub2-common | grub,
+         melodic-management,
+         melodic-server,
+         neutron-linuxbridge-agent,
+         nova-api,
+         nova-conductor,
+         nova-consoleauth,
+         nova-novncproxy,
+         nova-placement-api,
+         nova-scheduler,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: MELODIC Compute Node
+ This package contains the scripts to configure a MELODIC compute node.
+ .
+ See https://www.simula.no for details on MELODIC!
+
 Package: melodic-desktop
 Architecture: any
 Depends: melodic-management,
