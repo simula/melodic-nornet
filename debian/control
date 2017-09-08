@@ -46,6 +46,7 @@ Depends: fail2ban,
          melodic-management,
          nornet-server,
          openstack,
+         python-openstackclient,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: MELODIC Server
