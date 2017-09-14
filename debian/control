@@ -54,7 +54,9 @@ Description: MELODIC Server
 
 Package: melodic-controller
 Architecture: any
-Depends: fail2ban,
+Depends: cinder-api,
+         cinder-scheduler,
+         fail2ban,
          glance,
          grub2-common | grub,
          keystone,
