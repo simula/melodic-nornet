@@ -17,7 +17,8 @@ Vcs-Browser: https://github.com/dreibh/melodic/tags
 
 Package: melodic-management
 Architecture: any
-Depends: nornet-management,
+Depends: fail2ban,
+         nornet-management,
          ${misc:Depends},
          ${python3:Depends},
          ${shlibs:Depends}
@@ -39,8 +40,7 @@ Description: MELODIC Development Tools
 
 Package: melodic-server
 Architecture: any
-Depends: fail2ban,
-         grub2-common | grub,
+Depends: grub2-common | grub,
          melodic-management,
          nornet-server,
          openstack,
@@ -56,7 +56,6 @@ Package: melodic-controller
 Architecture: any
 Depends: cinder-api,
          cinder-scheduler,
-         fail2ban,
          glance,
          grub2-common | grub,
          keystone,
@@ -87,12 +86,26 @@ Description: MELODIC Controller
  .
  See https://www.simula.no for details on MELODIC!
 
-Package: melodic-compute
+Package: melodic-storage
 Architecture: any
-Depends: fail2ban,
+Depends: cinder-volume,
          grub2-common | grub,
+         lvm2,
          melodic-management,
          melodic-server,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: MELODIC Storage Node
+ This package contains the scripts to configure a MELODIC storage node.
+ .
+ See https://www.simula.no for details on MELODIC!
+
+Package: melodic-compute
+Architecture: any
+Depends: grub2-common | grub,
+         melodic-management,
+         melodic-server,
+         melodic-storage,
          neutron-linuxbridge-agent,
          nova-compute,
          ${misc:Depends},
