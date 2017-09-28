@@ -31,7 +31,9 @@ Description: MELODIC Management Tools
 
 Package: melodic-development
 Architecture: any
-Depends: nornet-development, ${misc:Depends}, ${shlibs:Depends}
+Depends: nornet-development,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: MELODIC Development Tools
  This meta-package contains basic software for MELODIC development.
  The software installed provides a common working environment.
@@ -118,7 +120,9 @@ Description: MELODIC Compute Node
 
 Package: melodic-desktop
 Architecture: any
-Depends: melodic-management, ${misc:Depends}, ${shlibs:Depends}
+Depends: melodic-management,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Recommends: neon-desktop | kubuntu-desktop | lubuntu-desktop | ubuntu-desktop
 Description: MELODIC Desktop
  This meta-package contains the scripts to configure a MELODIC desktop.
