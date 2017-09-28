@@ -95,7 +95,7 @@ Depends: cinder-volume,
          lvm2,
          melodic-management,
          melodic-server,
-         thin-provisioning-tools,
+         thin-provisioning-tools,letsencrypt,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: MELODIC Storage Node
