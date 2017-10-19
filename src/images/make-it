@@ -6,7 +6,7 @@ virsh -c qemu:///system undefine ubuntu_xenial
 virt-install \
   --name ubuntu_xenial \
   --ram 1024 \
-  --disk path=/storage/tmp/ubuntu_xenial.qcow2,format=qcow2,size=16,sparse=true,cache=unsafe \
+  --disk path=/storage/tmp/ubuntu_xenial-root.qcow2,format=qcow2,size=16,sparse=true,cache=unsafe \
   --network bridge=virbr0,model=virtio \
   --graphics none \
   --vcpus 1 \
@@ -22,3 +22,13 @@ reset
 clear
 
 virt-sysprep -d ubuntu_xenial
+
+
+#   --disk path=/storage/tmp/ubuntu_xenial-swap.qcow2,format=qcow2,size=4,sparse=true,cache=unsafe  \
+#   --disk path=/storage/tmp/ubuntu_xenial-home.qcow2,format=qcow2,size=8,sparse=true,cache=unsafe  \
+
+
+#               1 1 1 free                                          \
+#                       $bios_boot{ }                               \
+#                       method{ biosgrub }                          \
+#               .                                                   \
