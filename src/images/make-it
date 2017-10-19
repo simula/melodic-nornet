@@ -1,12 +1,15 @@
 #!/bin/bash
 
+IMAGE=/vservers/ubuntu_xenial-root.qcow2
+
 virsh -c qemu:///system destroy ubuntu_xenial
 virsh -c qemu:///system undefine ubuntu_xenial
+rm -f $IMAGE
 
 virt-install \
   --name ubuntu_xenial \
   --ram 1024 \
-  --disk path=/storage/tmp/ubuntu_xenial-root.qcow2,format=qcow2,size=16,sparse=true,cache=unsafe \
+  --disk path=$IMAGE,format=qcow2,size=16,sparse=true,cache=unsafe \
   --network bridge=virbr0,model=virtio \
   --graphics none \
   --vcpus 1 \
