@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIRECTORY="/vservers"
-VARIANTS="xenial"
+VARIANTS="artful"
 
 for variant in $VARIANTS ; do
    mkdir -p "$variant"
@@ -22,20 +22,20 @@ for variant in $VARIANTS ; do
    virsh -c qemu:///system undefine "$NAME" >/dev/null 2>&1
    rm -f "$IMAGE"
 
+   qemu-img create -f qcow2 -o size=16G $IMAGE && \
    virt-install \
-   --name "$NAME" \
-   --ram 1024 \
-   --disk "path=$IMAGE,format=qcow2,size=16,sparse=true,cache=unsafe" \
-   --network bridge=virbr0,model=virtio \
-   --vcpus 1 \
-   --video=cirrus \
-   --keymap=de \
-   --os-type linux \
-   --os-variant ubuntu16.04 \
-   --location "http://archive.ubuntu.com/ubuntu/dists/$variant/main/installer-amd64/" \
-   --initrd-inject=$variant/preseed.cfg \
-   --extra-args 'apt-setup/proposed=true nomodeset fb=false priority=critical keymap=de debian-installer/keymap=de file=preseed.cfg preseed/file=preseed.cfg' \
-   --noreboot
+      --name "$NAME" \
+      --ram 1024 \
+      --disk "path=$IMAGE,format=qcow2,cache=unsafe" \
+      --network bridge=virbr0,model=virtio \
+      --vcpus 1 \
+      --video qxl --channel spicevmc \
+      --os-type linux \
+      --os-variant ubuntu16.04 \
+      --location "http://archive.ubuntu.com/ubuntu/dists/$variant/main/installer-amd64/" \
+      --initrd-inject=$variant/preseed.cfg \
+      --extra-args 'net.ifnames=0 biosdevname=0 vga=792 priority=critical file=preseed.cfg preseed/file=preseed.cfg' \
+      --noreboot
 
    # For serial console instead of graphics output:
    # --graphics none
