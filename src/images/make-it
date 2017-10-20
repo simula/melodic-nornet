@@ -1,27 +1,49 @@
 #!/bin/bash
 
-IMAGE=/vservers/ubuntu_xenial-root.qcow2
+DIRECTORY="/vservers"
+VARIANTS="xenial"
 
-virsh -c qemu:///system destroy ubuntu_xenial
-virsh -c qemu:///system undefine ubuntu_xenial
-rm -f $IMAGE
+for variant in $VARIANTS ; do
+   mkdir -p "$variant"
 
-virt-install \
-  --name ubuntu_xenial \
-  --ram 1024 \
-  --disk path=$IMAGE,format=qcow2,size=16,sparse=true,cache=unsafe \
-  --network bridge=virbr0,model=virtio \
-  --graphics none \
-  --vcpus 1 \
-  --os-type linux \
-  --os-variant ubuntu16.04 \
-  --console pty,target_type=serial \
-  --location http://archive.ubuntu.com/ubuntu/dists/xenial/main/installer-amd64/ \
-  --initrd-inject=preseed.cfg \
-  --extra-args 'console=ttyS0 apt-setup/proposed=true nomodeset fb=false priority=critical locale=en_US file=preseed.cfg preseed/file=preseed.cfg' \
-  --noreboot
+   if [ "$variant" == "xenial" ] ; then
+      sed -e "s/xenial/$variant/g" \
+          -e "s/^# d-i base-installer\/kernel\/override-image.*$/d-i base-installer\/kernel\/override-image string linux-generic-hwe-16.04/g" \
+         <preseed.cfg >$variant/preseed.cfg
+   else
+      sed -e "s/xenial/$variant/g" <preseed.cfg >$variant/preseed.cfg
+   fi
 
-reset
-clear
 
-virt-sysprep -d ubuntu_xenial
+   NAME="Ubuntu-`echo "$variant" | sed  -e's/^\(.\)/\U\1/'`"
+   IMAGE="$DIRECTORY/$NAME.qcow2"
+
+   virsh -c qemu:///system destroy  "$NAME" >/dev/null 2>&1
+   virsh -c qemu:///system undefine "$NAME" >/dev/null 2>&1
+   rm -f "$IMAGE"
+
+   virt-install \
+   --name "$NAME" \
+   --ram 1024 \
+   --disk "path=$IMAGE,format=qcow2,size=16,sparse=true,cache=unsafe" \
+   --network bridge=virbr0,model=virtio \
+   --vcpus 1 \
+   --video=cirrus \
+   --keymap=de \
+   --os-type linux \
+   --os-variant ubuntu16.04 \
+   --location "http://archive.ubuntu.com/ubuntu/dists/$variant/main/installer-amd64/" \
+   --initrd-inject=$variant/preseed.cfg \
+   --extra-args 'apt-setup/proposed=true nomodeset fb=false priority=critical keymap=de debian-installer/keymap=de file=preseed.cfg preseed/file=preseed.cfg' \
+   --noreboot
+
+   # For serial console instead of graphics output:
+   # --graphics none
+   # --console pty,target_type=serial
+   # --extra-args 'console=ttyS0 ...
+
+   # reset
+   # clear
+
+   virt-sysprep -a $IMAGE
+done
