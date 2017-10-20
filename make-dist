@@ -33,8 +33,8 @@ cp src/MELODIC-System-Info $PACKAGE-$UPSTREAM_VERSION
 echo "MELODIC $UPSTREAM_VERSION, packaged `env LANG=en date`" >$PACKAGE-$UPSTREAM_VERSION/melodic-version
 
 mkdir $PACKAGE-$UPSTREAM_VERSION/background
-mkdir $PACKAGE-$UPSTREAM_VERSION/background/Original
-cp src/background/Input/* $PACKAGE-$UPSTREAM_VERSION/background/Original/
+# mkdir $PACKAGE-$UPSTREAM_VERSION/background/Original
+# cp src/background/Input/* $PACKAGE-$UPSTREAM_VERSION/background/Original/
 
 mkdir $PACKAGE-$UPSTREAM_VERSION/grub
 cp src/grub/*_theme $PACKAGE-$UPSTREAM_VERSION/grub/
@@ -48,7 +48,7 @@ cd src/background
 cd ../..
 
 cp -r src/background/Output/Desktop-with-Logo/    $PACKAGE-$UPSTREAM_VERSION/background/
-cp -r src/background/Output/Desktop-without-Logo/ $PACKAGE-$UPSTREAM_VERSION/background/
+# cp -r src/background/Output/Desktop-without-Logo/ $PACKAGE-$UPSTREAM_VERSION/background/
 
 splashFiles=`find src/background/Output/Splash/ -maxdepth 1 -name "*.jpeg" -or -name "*.png"`
 for splashFile in $splashFiles ; do
