@@ -1,3 +1,9 @@
+melodic-nornet (0.2.1~rc1-1ubuntu1) xenial; urgency=high
+
+  * New release.
+
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Fri, 20 Oct 2017 08:08:08 +0800
+
 melodic-nornet (0.2.0-1ubuntu1) xenial; urgency=high
 
   * New release.
