@@ -19,7 +19,12 @@
 # Contact: dreibh@simula.no
 
 DIRECTORY="/vservers"
-VARIANTS="trusty xenial" #  xenial zesty artful bionic"
+VARIANTS="xenial"   # trusty xenial zesty artful bionic"
+
+XKBMODEL="pc105"
+XKBLAYOUT="de"
+XKBVARIANT="nodeadkeys"
+XKBOPTIONS=""
 
 for variant in $VARIANTS ; do
    mkdir -p "$variant"
@@ -36,6 +41,10 @@ for variant in $VARIANTS ; do
       elif [ "$variant" == "xenial" ] ; then
          # Xenial: Use HWE kernel
          sed -e "s/xenial/$variant/g" \
+             -e "s/<SET_XKBMODEL_HERE>/$XKBMODEL/g" \
+             -e "s/<SET_XKBLAYOUT_HERE>/$XKBLAYOUT/g" \
+             -e "s/<SET_XKBVARIANT_HERE>/$XKBVARIANT/g" \
+             -e "s/<SET_XKBOPTIONS_HERE>/$XKBOPTIONS/g" \
              -e "s/^d-i netcfg\/get_hostname.*\$/d-i netcfg\/get_hostname string $variant/g" \
              -e "s/^# d-i base-installer\/kernel\/override-image.*$/d-i base-installer\/kernel\/override-image string linux-generic-hwe-16.04/g" \
             <preseed.cfg >$variant/preseed.cfg
