@@ -1,7 +1,25 @@
 #!/bin/bash
+#
+# Ubuntu Template Builder
+# Copyright (C) 2017 by Thomas Dreibholz
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Contact: dreibh@simula.no
 
 DIRECTORY="/vservers"
-VARIANTS="trusty xenial zesty artful" # bionic"
+VARIANTS="trusty xenial" #  xenial zesty artful bionic"
 
 for variant in $VARIANTS ; do
    mkdir -p "$variant"
@@ -11,12 +29,14 @@ for variant in $VARIANTS ; do
       if [ "$variant" == "trusty" ] ; then
          # Trusty: No updates during installation. Kernels needs to be upgraded later manually.
          sed -e "s/xenial/$variant/g" \
+             -e "s/^d-i netcfg\/get_hostname.*\$/d-i netcfg\/get_hostname string $variant/g" \
              -e "s/^d-i pkgsel\/upgrade.*\$/d-i pkgsel\/upgrade select none/g" \
              -e "s/in-target true # <SET_POSTINSTALL_COMMANDS_HERE>.*\$/in-target apt-get install -y linux-generic-lts-xenial/g" \
             <preseed.cfg >$variant/preseed.cfg
       elif [ "$variant" == "xenial" ] ; then
          # Xenial: Use HWE kernel
          sed -e "s/xenial/$variant/g" \
+             -e "s/^d-i netcfg\/get_hostname.*\$/d-i netcfg\/get_hostname string $variant/g" \
              -e "s/^# d-i base-installer\/kernel\/override-image.*$/d-i base-installer\/kernel\/override-image string linux-generic-hwe-16.04/g" \
             <preseed.cfg >$variant/preseed.cfg
       else
