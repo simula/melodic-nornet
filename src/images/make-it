@@ -19,39 +19,43 @@
 # Contact: dreibh@simula.no
 
 DIRECTORY="/vservers"
-VARIANTS="xenial"   # trusty xenial zesty artful bionic"
+VARIANTS="xenial"   # trusty xenial zesty artful bionic
 
+# ------ Keyboard settings --------------------------------
 XKBMODEL="pc105"
 XKBLAYOUT="de"
 XKBVARIANT="nodeadkeys"
 XKBOPTIONS=""
 
+
+# ====== Make template VMs ==================================================
 for variant in $VARIANTS ; do
    mkdir -p "$variant"
 
    (
+      # ------ Customise preseed file ---------------------------------------
       LOCATION="http://no.archive.ubuntu.com/ubuntu/dists/$variant/main/installer-amd64/"
+      sed -e "s/xenial/$variant/g" \
+          -e "s/<SET_XKBMODEL_HERE>/$XKBMODEL/g" \
+          -e "s/<SET_XKBLAYOUT_HERE>/$XKBLAYOUT/g" \
+          -e "s/<SET_XKBVARIANT_HERE>/$XKBVARIANT/g" \
+          -e "s/<SET_XKBOPTIONS_HERE>/$XKBOPTIONS/g" \
+          -e "s/^d-i netcfg\/get_hostname.*\$/d-i netcfg\/get_hostname string $variant/g" \
+          <preseed.cfg >$variant/preseed.cfg
+
       if [ "$variant" == "trusty" ] ; then
          # Trusty: No updates during installation. Kernels needs to be upgraded later manually.
-         sed -e "s/xenial/$variant/g" \
-             -e "s/^d-i netcfg\/get_hostname.*\$/d-i netcfg\/get_hostname string $variant/g" \
-             -e "s/^d-i pkgsel\/upgrade.*\$/d-i pkgsel\/upgrade select none/g" \
+         sed -e "s/^d-i pkgsel\/upgrade.*\$/d-i pkgsel\/upgrade select none/g" \
              -e "s/in-target true # <SET_POSTINSTALL_COMMANDS_HERE>.*\$/in-target apt-get install -y linux-generic-lts-xenial/g" \
-            <preseed.cfg >$variant/preseed.cfg
+             -i $variant/preseed.cfg
       elif [ "$variant" == "xenial" ] ; then
          # Xenial: Use HWE kernel
-         sed -e "s/xenial/$variant/g" \
-             -e "s/<SET_XKBMODEL_HERE>/$XKBMODEL/g" \
-             -e "s/<SET_XKBLAYOUT_HERE>/$XKBLAYOUT/g" \
-             -e "s/<SET_XKBVARIANT_HERE>/$XKBVARIANT/g" \
-             -e "s/<SET_XKBOPTIONS_HERE>/$XKBOPTIONS/g" \
-             -e "s/^d-i netcfg\/get_hostname.*\$/d-i netcfg\/get_hostname string $variant/g" \
-             -e "s/^# d-i base-installer\/kernel\/override-image.*$/d-i base-installer\/kernel\/override-image string linux-generic-hwe-16.04/g" \
-            <preseed.cfg >$variant/preseed.cfg
-      else
-         sed -e "s/xenial/$variant/g" <preseed.cfg >$variant/preseed.cfg
+         sed -e "s/^# d-i base-installer\/kernel\/override-image.*$/d-i base-installer\/kernel\/override-image string linux-generic-hwe-16.04/g" \
+             -i $variant/preseed.cfg
       fi
 
+
+      # ------ Create disk image and VM -------------------------------------
       NAME="Ubuntu-`echo "$variant" | sed  -e's/^\(.\)/\U\1/'`"
       IMAGE="$DIRECTORY/$NAME.qcow2"
 
@@ -62,7 +66,7 @@ for variant in $VARIANTS ; do
       qemu-img create -f qcow2 -o size=16G $IMAGE && \
       virt-install \
          --name "$NAME" \
-         --ram 1024 \
+         --ram 4096 \
          --disk "path=$IMAGE,format=qcow2,cache=unsafe" \
          --network bridge=virbr0,model=virtio \
          --vcpus 1 \
@@ -82,6 +86,8 @@ for variant in $VARIANTS ; do
       # reset
       # clear
 
-      virt-sysprep -a $IMAGE
+
+      # ------ Clean up -----------------------------------------------------
+      # virt-sysprep -a $IMAGE
    ) &
 done
