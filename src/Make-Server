@@ -1,0 +1,109 @@
+#!/bin/bash -e
+#
+# Create Server in OpenStack
+# Copyright (C) 2017-2018 by Thomas Dreibholz
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Contact: dreibh@simula.no
+
+
+# ###### Write log action information #######################################
+log-action ()
+{
+   echo -en "\x1b[34m`date +%FT%H:%M:%S`: $@\x1b[0m"
+}
+
+
+# ###### Call OpenStack command #############################################
+call-openstack ()
+{
+   echo "$ openstack $@"
+}
+
+
+
+# ###########################################################################
+# #### Main Program                                                      ####
+# ###########################################################################
+
+if [ $# -lt 2 ] ; then
+   echo >&2 "Usage: $0 server_name flavor_name image_name [-hdd size_in_GiB|-ssd size_in_GiB] ..."
+   exit 1
+fi
+
+SERVER_NAME="$1"
+FLAVOR_NAME="$2"
+IMAGE_NAME="$3"
+shift ; shift ; shift
+
+volumeNumber=0
+while [ $# -gt 0 ] ; do
+   ACTION="$1"
+   shift
+
+   # ====== Create server ===================================================
+   log-action "Creating server $SERVER_NAME ..."
+   call-openstack server delete "$SERVER_NAME" || true  2>/dev/null >/dev/null
+   call-openstack server create "$SERVER_NAME" \
+      --wait --flavor "$FLAVOR_NAME" \
+      --image "$IMAGE_NAME" \
+      --port port-test4 \
+      --security-group default \
+      --key-name mykey \
+      --wait
+   serverID=`openstack server list --instance-name "$SERVER_NAME" -f value | awk '{ print $1 }'`
+   if [ "$serverID" == "" ] ; then
+      echo >&2 "ERROR: Unable to obtain server ID!"
+#       exit 1
+   fi
+
+   # ====== Create storage volume ===========================================
+   if [ "$ACTION" == "-sdd" -o "$ACTION" == "-hdd" ] ; then
+      type="HDD"
+      if [ "$ACTION" == "-sdd" ] ; then
+         type="SSD"
+      fi
+
+      size="$1"
+      shift
+
+      if [ $volumeNumber -eq 0 ] ; then
+         volumeName="Volume-${SERVER_NAME}-Root"
+         log-action "Creating root volume $volumeName ..."
+
+         call-openstack volume delete "$volumeName" || true >/dev/null 2>&1
+         call-openstack volume create "$volumeName" \
+            --image "$IMAGE_NAME" --bootable \
+            --size "$size" --type "NorNet-${type}" \
+            --hint local_to_instance=$serverID
+         call-openstack server add volume "$SERVER_NAME" "$volumeName"
+
+      else
+         volumeName="Volume-${SERVER_NAME}-Storage${volumeName}"
+         log-action "Creating additional volume $volumeName ..."
+
+         call-openstack volume delete "$volumeName" || true  >/dev/null 2>&1
+         call-openstack volume create "$volumeName" \
+            --image "$IMAGE_NAME" --bootable \
+            --size "$size" --type "NorNet-${type}" \
+            --hint local_to_instance=$serverID
+         call-openstack server add volume "$SERVER_NAME" "$volumeName"
+      fi
+      let volumeNumber=$volumeNumber+1
+
+   else
+      echo >&2 "ERROR: Invalid parameter $ACTION!"
+   fi
+done
