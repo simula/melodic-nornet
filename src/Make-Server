@@ -1,6 +1,6 @@
-#!/bin/bash -e
+#!/bin/bash
 #
-# Create Server in OpenStack
+# Create MELODIC/NorNet Core Server in OpenStack
 # Copyright (C) 2017-2018 by Thomas Dreibholz
 #
 # This program is free software: you can redistribute it and/or modify
@@ -19,17 +19,27 @@
 # Contact: dreibh@simula.no
 
 
-# ###### Write log action information #######################################
-log-action ()
+# ###### Write log information ##############################################
+log ()
 {
-   echo -en "\x1b[34m`date +%FT%H:%M:%S`: $@\x1b[0m"
+   echo -e "\x1b[34m`date +%FT%H:%M:%S`: $@\x1b[0m"
 }
 
 
 # ###### Call OpenStack command #############################################
 call-openstack ()
 {
-   echo "$ openstack $@"
+   echo -e "\x1b[36m$ openstack $@\x1b[0m"
+   p="$@"
+   bash -c -- "openstack $p"
+}
+
+
+# ###### Call OpenStack command #############################################
+call-openstack-quietly ()
+{
+   echo -e "\x1b[36m$ openstack $@\x1b[0m"
+   openstack $@ >/dev/null 2>&1 || true
 }
 
 
@@ -48,26 +58,43 @@ FLAVOR_NAME="$2"
 IMAGE_NAME="$3"
 shift ; shift ; shift
 
-volumeNumber=0
+set -e
+
+
+# ====== Create port ========================================================
+portName="Port-${SERVER_NAME}"
+log "Creating port $portName ..."
+call-openstack-quietly port delete "$portName"
+call-openstack port create "$portName" \
+   --network nornet-simula \
+   --security-group default
+
+# ====== Create server ======================================================
+call-openstack-quietly server delete "$SERVER_NAME"
+call-openstack server create "$SERVER_NAME" \
+   --wait --flavor "\"$FLAVOR_NAME\"" \
+   --image "$IMAGE_NAME" \
+   --port "$portName" \
+   --security-group default \
+   --key-name mykey \
+   --wait
+
+# ====== Obtain server ID ===================================================
+unset id
+eval `openstack server show "$SERVER_NAME" -f shell | grep "^id="`
+serverID="$id"
+if [ "$serverID" == "" ] ; then
+   echo >&2 "ERROR: Unable to obtain server ID!"
+   exit 1
+fi
+echo "ServerID=$serverID"
+
+
+# ====== Add additional storage volume(s) ===================================
+volumeNumber=1
 while [ $# -gt 0 ] ; do
    ACTION="$1"
    shift
-
-   # ====== Create server ===================================================
-   log-action "Creating server $SERVER_NAME ..."
-   call-openstack server delete "$SERVER_NAME" || true  2>/dev/null >/dev/null
-   call-openstack server create "$SERVER_NAME" \
-      --wait --flavor "$FLAVOR_NAME" \
-      --image "$IMAGE_NAME" \
-      --port port-test4 \
-      --security-group default \
-      --key-name mykey \
-      --wait
-   serverID=`openstack server list --instance-name "$SERVER_NAME" -f value | awk '{ print $1 }'`
-   if [ "$serverID" == "" ] ; then
-      echo >&2 "ERROR: Unable to obtain server ID!"
-#       exit 1
-   fi
 
    # ====== Create storage volume ===========================================
    if [ "$ACTION" == "-sdd" -o "$ACTION" == "-hdd" ] ; then
@@ -79,28 +106,14 @@ while [ $# -gt 0 ] ; do
       size="$1"
       shift
 
-      if [ $volumeNumber -eq 0 ] ; then
-         volumeName="Volume-${SERVER_NAME}-Root"
-         log-action "Creating root volume $volumeName ..."
+      volumeName="Volume-${SERVER_NAME}-Storage${volumeNumber}"
+      log "Creating additional volume $volumeName ..."
+      call-openstack-quietly volume delete "$volumeName"
+      call-openstack volume create "$volumeName" \
+         --size "$size" --type "NorNet-${type}" \
+         --hint local_to_instance=$serverID
+      call-openstack server add volume "$SERVER_NAME" "$volumeName"
 
-         call-openstack volume delete "$volumeName" || true >/dev/null 2>&1
-         call-openstack volume create "$volumeName" \
-            --image "$IMAGE_NAME" --bootable \
-            --size "$size" --type "NorNet-${type}" \
-            --hint local_to_instance=$serverID
-         call-openstack server add volume "$SERVER_NAME" "$volumeName"
-
-      else
-         volumeName="Volume-${SERVER_NAME}-Storage${volumeName}"
-         log-action "Creating additional volume $volumeName ..."
-
-         call-openstack volume delete "$volumeName" || true  >/dev/null 2>&1
-         call-openstack volume create "$volumeName" \
-            --image "$IMAGE_NAME" --bootable \
-            --size "$size" --type "NorNet-${type}" \
-            --hint local_to_instance=$serverID
-         call-openstack server add volume "$SERVER_NAME" "$volumeName"
-      fi
       let volumeNumber=$volumeNumber+1
 
    else
