@@ -48,7 +48,7 @@ call-openstack-quietly ()
 # #### Main Program                                                      ####
 # ###########################################################################
 
-if [ $# -lt 2 ] ; then
+if [ $# -lt 3 ] ; then
    echo >&2 "Usage: $0 server_name flavor_name image_name [-hdd size_in_GiB|-ssd size_in_GiB] ..."
    exit 1
 fi
@@ -67,6 +67,8 @@ log "Creating port $portName ..."
 call-openstack-quietly port delete "$portName"
 call-openstack port create "$portName" \
    --network nornet-simula \
+   --fixed-ip subnet=ipv4-nornet-melodic-simula,ip-address=10.255.1.10 \
+   --fixed-ip subnet=ipv6-nornet-melodic-simula,ip-address=2001:700:4100:FF01:FFFF::a \
    --security-group default
 
 # ====== Create server ======================================================
