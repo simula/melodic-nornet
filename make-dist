@@ -40,6 +40,9 @@ mkdir $PACKAGE-$UPSTREAM_VERSION/grub
 cp src/grub/*_theme $PACKAGE-$UPSTREAM_VERSION/grub/
 cp src/grub/grub-defaults $PACKAGE-$UPSTREAM_VERSION/grub/
 
+mkdir $PACKAGE-$UPSTREAM_VERSION/cloud-init
+cp src/cloud-init/cloud.cfg $PACKAGE-$UPSTREAM_VERSION/cloud-init/
+
 # ~~~~~~ Image conversion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 cd src/background
 ./make-logo-texts
