@@ -19,7 +19,7 @@
 # Contact: dreibh@simula.no
 
 DIRECTORY="/vservers"
-VARIANTS="bionic"   # trusty xenial zesty artful bionic
+VARIANTS="trusty xenial zesty artful bionic"   # trusty xenial zesty artful bionic
 
 # ------ Keyboard settings --------------------------------
 XKBMODEL="pc105"
@@ -63,7 +63,7 @@ for variant in $VARIANTS ; do
       virsh -c qemu:///system undefine "$NAME" >/dev/null 2>&1
       rm -f "$IMAGE"
 
-      qemu-img create -f qcow2 -o size=16G $IMAGE && \
+      qemu-img create -f qcow2 -o size=8G $IMAGE && \
       virt-install \
          --name "$NAME" \
          --ram 4096 \
