@@ -1,933 +1,914 @@
-commit 5009be99551c6c11e85265d92409a2d2e7697564
+commit f77ac48b1c3de0b1963c5a3b5d9f78baab5f36cb
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu May 4 15:18:01 2017 +0200
-
-    Build file updates.
-
- testbed/software/ChangeLog        | 924 +++++++++++++++++++++++++++++++++++++-
- testbed/software/debian/changelog |   2 +-
- 2 files changed, 924 insertions(+), 2 deletions(-)
-
-commit 2656688ab36ac604d09e0dc1e95c1d88f75d8b13
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu May 4 15:13:34 2017 +0200
-
-    Another update.
-
- testbed/software/src/background/make-bootsplash | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
-
-commit 64b9ffddeda0c066a5f8aa3b1fc7d14c93aba977
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu May 4 15:01:32 2017 +0200
-
-    Script improvements.
-
- testbed/software/src/background/make-desktop | 20 ++++++++++++++------
- 1 file changed, 14 insertions(+), 6 deletions(-)
-
-commit cbdb1274cd74a2827b91d7680bdf2a27f4ef4d1a
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu May 4 14:04:20 2017 +0200
-
-    Build script improvements.
-
- testbed/software/debian/changelog |  4 +--
- testbed/software/debian/control   |  2 +-
- testbed/software/make-dist        | 55 +--------------------------------------
- 3 files changed, 4 insertions(+), 57 deletions(-)
-
-commit c7858360c437b56d33d82ea4a1d14828b558d32d
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu May 4 14:04:17 2017 +0200
-
-    A fix.
-
- testbed/software/src/background/make-bootsplash | 22 +++++++++++++---------
- 1 file changed, 13 insertions(+), 9 deletions(-)
-
-commit 8ac882248dda8233b0b288bbcb6861bf2e3ef8bb
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu May 4 13:50:31 2017 +0200
-
-    Build script improvements.
-
- testbed/software/debian/control                    |   1 +
- testbed/software/make-dist                         | 123 +++++++-----
- .../src/background/HENCSAT-Affiliation.png         | Bin 0 -> 797302 bytes
- .../src/background/HENCSAT-InformationText.png     | Bin 501523 -> 0 bytes
- .../src/background/HENCSAT-InformationText.xcf     | Bin 1007171 -> 0 bytes
- testbed/software/src/background/HENCSAT-Name.png   | Bin 0 -> 466023 bytes
- .../software/src/background/HENCSAT-Subtitle.png   | Bin 0 -> 1759068 bytes
- testbed/software/src/background/HENCSAT-Title.png  | Bin 0 -> 2359290 bytes
- testbed/software/src/background/HENCSAT-URL.png    | Bin 0 -> 839924 bytes
- .../software/src/background/Input/HSClient1.jpeg   | Bin 0 -> 4007904 bytes
- .../src/background/Input/HSController1.jpeg        | Bin 0 -> 3855756 bytes
- .../src/background/Input/HSDevelopment1.jpeg       | Bin 0 -> 3201461 bytes
- .../src/background/Input/HSManagement1.jpeg        | Bin 0 -> 7302031 bytes
- .../software/src/background/Input/HSRouter1.jpeg   | Bin 0 -> 2088438 bytes
- .../software/src/background/Input/HSServer1.jpeg   | Bin 0 -> 3142439 bytes
- .../software/src/background/Input/exiftool.argfile |   3 +
- testbed/software/src/background/Make-Background    |  62 ++++++
- testbed/software/src/background/Make-Logo          |  78 ++++++++
- testbed/software/src/background/Make-Mosaic        |  88 +++++++++
- testbed/software/src/background/Make-Painting      |  57 ++++++
- testbed/software/src/background/make-bootsplash    |  93 +++++++++
- testbed/software/src/background/make-desktop       | 209 +++++++++++++++++++++
- testbed/software/src/background/make-logo-texts    |  50 +++++
- testbed/software/src/background/make-overlay       |  60 ++++++
- .../background/original/Background-HSClient1.jpeg  | Bin 4007904 -> 0 bytes
- .../original/Background-HSController1.jpeg         | Bin 3855756 -> 0 bytes
- .../original/Background-HSDevelopment1.jpeg        | Bin 3201461 -> 0 bytes
- .../original/Background-HSManagement1.jpeg         | Bin 7302031 -> 0 bytes
- .../background/original/Background-HSRouter1.jpeg  | Bin 2088438 -> 0 bytes
- .../background/original/Background-HSServer1.jpeg  | Bin 3142439 -> 0 bytes
- .../src/background/original/exiftool.argfile       |   3 -
- 31 files changed, 772 insertions(+), 55 deletions(-)
-
-commit ea4b10e6a438c13ff1e0e21e74d41dec7bb2ad6d
-Merge: 3c318d0 cff0c0a
-Author: hencsat <hencsat@ipc1.simula.nornet>
-Date:   Wed May 3 13:41:13 2017 +0200
-
-    Merge branch 'master' of https://git.ansur.no/simone/hencsat
-
-commit 3c318d01d5ec016e6a0fe7b8b6ddb68a8970322b
-Author: hencsat <hencsat@ipc1.simula.nornet>
-Date:   Wed May 3 13:40:42 2017 +0200
-
-    Updated script.
-
- testbed/software/src/client1 | 2 +-
- testbed/software/src/client2 | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
-
-commit 4977a25a3c3ba64d2559b94deb76b1f625b44171
-Merge: 0ce0ff3 82cd8d2
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed May 3 09:41:35 2017 +0200
-
-    Merge branch 'master' of git.ansur.no:simone/hencsat
-
-commit 0ce0ff3bc73f05345060849ddf52d9372c1cc075
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed May 3 09:41:22 2017 +0200
-
-    Dependency update.
-
- testbed/software/debian/changelog | 4 ++--
- testbed/software/debian/control   | 3 +--
- testbed/software/make-ppa         | 2 +-
- 3 files changed, 4 insertions(+), 5 deletions(-)
-
-commit 95bdc67f94d57a8818c0bf2965132f20d4667222
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Tue May 2 17:52:14 2017 +0200
-
-    A small fix.
-
- testbed/software/src/grub/22_hencsat_server_theme | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-commit 82cd8d2bb34a37a14fc54c8fdd0a21fe77813154
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Apr 28 11:06:07 2017 +0200
-
-    Modified script for Odroids.
-
- testbed/software/src/qos1 | 2 +-
- testbed/software/src/qos2 | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
-
-commit 88bc204af819caedf3b316745213f6dcc7c91488
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Mon Apr 10 09:46:38 2017 +0200
-
-    Dependency improvement.
-
- testbed/software/debian/control | 1 +
- 1 file changed, 1 insertion(+)
-
-commit 028137592312b9fccb13e966e47284ccfe46cf34
-Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
-Date:   Thu Apr 6 14:18:45 2017 +0200
-
-    Dependency update to work with the Odroids.
-
- testbed/software/debian/changelog | 6 ++++++
- testbed/software/debian/control   | 5 ++---
- testbed/software/make-ppa         | 2 +-
- 3 files changed, 9 insertions(+), 4 deletions(-)
-
-commit 9df6fcd47cefae7f362bc382eea5cb3e0844d6d4
-Merge: 4c7f280 edb4cae
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Mar 24 16:29:28 2017 +0100
-
-    Merge branch 'master' of https://git.ansur.no/simone/hencsat
-
-commit 4c7f280c24f802d37a02d829ad78adf0b0b27499
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Mar 24 16:29:17 2017 +0100
-
-    Label update.
-
- testbed/software/src/qos1 | 2 +-
- testbed/software/src/qos2 | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
-
-commit a4e8f4aa07612143529ae41c12635e272e1651ae
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Mar 24 12:53:29 2017 +0100
+Date:   Thu Nov 16 18:15:34 2017 +0100
 
     Version bump.
 
- testbed/software/debian/changelog | 4 ++--
+ debian/changelog | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
-commit a356ac3c18c4f487db06d077b377ef71182e132b
+commit 647b834f6d524f20456bd03d35767f0338d4fdcf
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Mar 24 12:50:34 2017 +0100
+Date:   Tue Nov 7 10:48:40 2017 +0100
 
-    Formatting fix.
+    Updated script.
 
- testbed/software/src/HENCSAT-System-Info | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ src/Create-MELODIC-Server | 15 +++++++++++----
+ 1 file changed, 11 insertions(+), 4 deletions(-)
 
-commit 4022567298494819367e0f6a151f01bddd4a96d7
+commit 63ddd33c39de3acaf2908fd57b500c7f3031cac3
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Mar 24 12:43:05 2017 +0100
+Date:   Fri Nov 3 17:50:57 2017 +0100
 
-    Output fix.
+    Reduced image size.
 
- testbed/software/src/HENCSAT-System-Info | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
-
-commit 3e5164e102260110a361d455b25a16b0ca402bb7
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 23 12:56:56 2017 +0100
-
-    Dependency fix.
-
- testbed/software/debian/changelog | 4 ++--
- testbed/software/debian/control   | 1 +
- 2 files changed, 3 insertions(+), 2 deletions(-)
-
-commit 43fba9c001ff0108e147bcadb0a5f500819952cb
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 23 12:43:19 2017 +0100
-
-    A small fix.
-
- testbed/software/make-dist | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
-
-commit 3fd36f1cde72fffb7fc64a4da7b3a294dffa0240
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Tue Mar 21 09:21:36 2017 +0100
-
-    Added description text.
-
- testbed/software/hencsat.lsm | 20 +++++++++++++++++++-
- 1 file changed, 19 insertions(+), 1 deletion(-)
-
-commit 3a9643295d3865b6c4f28f99b0b9938c23e0df3f
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Tue Mar 21 09:18:07 2017 +0100
-
-    Another dependency update.
-
- testbed/software/debian/control | 4 ++--
+ src/images/make-it | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
-commit 32a4699996843d03af74d898aa58ce23d16a5c08
+commit 251aeafb053b8cb58c5ca3904afb6ee6a7bb9989
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Tue Mar 21 09:16:44 2017 +0100
+Date:   Fri Nov 3 17:50:49 2017 +0100
 
-    Dependency update.
+    Updated preseed configuration.
 
- testbed/software/debian/control | 1 +
- 1 file changed, 1 insertion(+)
-
-commit b978f0d1397b0e0638987ba45891ec9efdad9629
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Tue Mar 21 09:09:41 2017 +0100
-
-    Merged some NorNet packaging code.
-
- testbed/software/debian/changelog |  4 ++--
- testbed/software/make-dist        | 49 +++++++++++++++++++++------------------
- 2 files changed, 28 insertions(+), 25 deletions(-)
-
-commit 2e20f96f50aeabc92ff78cc7635d3e125ac40f48
-Merge: abd53d8 ae1ef2b
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Mar 17 12:16:38 2017 +0100
-
-    Merge branch 'master' of https://git.ansur.no/simone/hencsat
-
-commit abd53d8dc1ae73bc3eaa16938d710f506f341c53
-Merge: 846bd49 d6fd09a
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Mar 17 12:16:15 2017 +0100
-
-    Merge branch 'master' of https://git.ansur.no/simone/hencsat
-
-commit ae1ef2be0ca1ef42283a645a5f0da4c98e100237
-Merge: 2adb628 d6fd09a
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Mar 17 12:16:15 2017 +0100
-
-    Merge branch 'master' of https://git.ansur.no/simone/hencsat
-
-commit 846bd498ae57b00a30958744240fe83ad32cf024
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Mar 17 12:15:53 2017 +0100
-
-    Added test script.
-
- testbed/software/src/server | 2 ++
- 1 file changed, 2 insertions(+)
-
-commit 2adb628470a898cadceb3b8af074c7905fac8145
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Mar 17 12:15:41 2017 +0100
-
-    Added test scripts.
-
- testbed/software/src/client1 | 2 ++
- testbed/software/src/client2 | 2 ++
- 2 files changed, 4 insertions(+)
-
-commit 7091c4f76b254837bf92d574898c7bc8cacef570
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Mar 17 11:35:32 2017 +0100
-
-    Some GUI improvements.
-
- testbed/software/src/hencsat-qos-controller_de.ts | 38 ++++++++++++++---------
- testbed/software/src/hencsat-qos-controller_nb.ts | 38 ++++++++++++++---------
- testbed/software/src/run-translator               |  3 ++
- testbed/software/src/update-translations          |  4 +--
- 4 files changed, 52 insertions(+), 31 deletions(-)
-
-commit e9d80777381af9676564a3bbe6734922886fa29e
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Fri Mar 17 11:24:07 2017 +0100
-
-    Added router access parameter handling.
-
- testbed/software/src/HENCSAT-QoS-Controller | 48 ++++++++++++++++++++---------
- testbed/software/src/qos1                   |  2 ++
- testbed/software/src/qos2                   |  2 ++
- 3 files changed, 38 insertions(+), 14 deletions(-)
-
-commit 56d2a2bdf11cced8b65714aa48bfb09b614823f2
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 18:52:50 2017 +0100
-
-    Dependency update.
-
- testbed/software/debian/changelog | 2 +-
- testbed/software/debian/control   | 1 -
- 2 files changed, 1 insertion(+), 2 deletions(-)
-
-commit ca58cd3c4c51d8a1c1e22b60930990294fd871e0
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 18:47:11 2017 +0100
-
-    Packaging fix.
-
- testbed/software/debian/changelog | 2 +-
- testbed/software/make-dist        | 1 -
- 2 files changed, 1 insertion(+), 2 deletions(-)
-
-commit 749e4d985a941577ac28a191e1d95306c1f8676f
-Merge: 4280e82 9f7e583
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 16:38:24 2017 +0100
-
-    Merge branch 'master' of https://git.ansur.no/simone/hencsat
-
-commit 9f7e5836bfa139a2e8a862639b80c0e3d8b6b1ef
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 16:36:39 2017 +0100
-
-    Some improvements of the user interface.
-
- testbed/software/src/HENCSAT-QoS-Controller | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
-
-commit bf1505ea199024eab666dc60d23ea0f79afe9d3e
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 16:28:48 2017 +0100
-
-    Improved sudo handling in HENCSAT Router package.
-
- testbed/software/debian/hencsat-router.examples | 1 +
- testbed/software/debian/hencsat-router.postinst | 1 -
- testbed/software/make-dist                      | 2 +-
- testbed/software/src/sudoers.append             | 7 +++++++
- 4 files changed, 9 insertions(+), 2 deletions(-)
-
-commit 4280e82ada03b74075bca089a7e6fa6d2a96ee98
-Merge: 7ca7241 1c7b514
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 16:28:25 2017 +0100
-
-    Merge branch 'master' of https://git.ansur.no/simone/hencsat
-
-commit 7ca7241dd6276d7193581bd380d64a82ac345af9
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 16:28:06 2017 +0100
-
-    Fixed sudo handling.
-
- testbed/software/src/HENCSAT-QoS-Setup | 34 ++++++++++++++++++----------------
- 1 file changed, 18 insertions(+), 16 deletions(-)
-
-commit 1c7b51435aa98dfefbfe623943f809cd12d79c97
-Merge: 1a70ee4 d8fe35c
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 16:09:52 2017 +0100
-
-    Merge branch 'master' of git.ansur.no:simone/hencsat
-
-commit 1a70ee46fde60477e7a939242c6ebb720058f808
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 16:09:42 2017 +0100
-
-    A fix.
-
- testbed/software/src/HENCSAT-QoS-Controller | 2 +-
+ src/images/preseed.cfg | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-commit bf2ba60512bba86738ebec535b6ce36f1dc3deb1
+commit 51ddb17f85ed836187646bcf9c858e77fdd5bd5c
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 16:04:19 2017 +0100
+Date:   Thu Nov 2 16:37:35 2017 +0100
 
-    Removed obsolete files.
+    Improved preseed configuration.
 
- .../software/src/grub/Splash-HSClient1-1024x768.jpeg   | Bin 238008 -> 0 bytes
- .../src/grub/Splash-HSController1-1024x768.jpeg        | Bin 438216 -> 0 bytes
- .../src/grub/Splash-HSDevelopment1-1024x768.jpeg       | Bin 349155 -> 0 bytes
- .../src/grub/Splash-HSManagement1-1024x768.jpeg        | Bin 438022 -> 0 bytes
- .../software/src/grub/Splash-HSRouter1-1024x768.jpeg   | Bin 145124 -> 0 bytes
- .../software/src/grub/Splash-HSServer1-1024x768.jpeg   | Bin 174841 -> 0 bytes
- 6 files changed, 0 insertions(+), 0 deletions(-)
+ debian/changelog       |  2 +-
+ src/images/preseed.cfg | 24 ++++++++++++++++++------
+ 2 files changed, 19 insertions(+), 7 deletions(-)
 
-commit d8fe35c2c2950ad2981927b25a6aca9f2c3b297e
+commit 2b35de21a378e30254d89d778214986ee55e4a9d
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 16:03:48 2017 +0100
+Date:   Thu Nov 2 16:03:04 2017 +0100
 
-    A small fix.
+    Updated configuration.
 
- testbed/software/src/HENCSAT-QoS-Setup | 2 +-
+ src/cloud-init/cloud.cfg | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 72b9790ec1a2b656b2ed43df53e2fd7713b864c6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 2 14:11:09 2017 +0100
+
+    Updated build scripts.
+
+ debian/changelog               | 6 ++++++
+ debian/melodic-server.examples | 1 +
+ make-dist                      | 3 +++
+ 3 files changed, 10 insertions(+)
+
+commit 0bfad90d3af3c984e20b7fdf85d86d0ff0bdbe27
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 2 14:11:01 2017 +0100
+
+    Improved scripts.
+
+ src/Create-MELODIC-Server | 124 ++++++++++++++++++++++++++++++++++++++++++++++
+ src/Delete-MELODIC-Server | 101 +++++++++++++++++++++++++++++++++++++
+ src/Make-Server           | 122 ---------------------------------------------
+ 3 files changed, 225 insertions(+), 122 deletions(-)
+
+commit 8bc8977d9ce2df89690a5a3276a57d5ab6894076
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 2 14:10:44 2017 +0100
+
+    Improved configuration.
+
+ src/cloud-init/cloud.cfg | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+commit aa7446a1b7c3e2c5a3d1588fb4bb9462ed8dd5e7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 2 12:28:48 2017 +0100
+
+    Added custom configuration.
+
+ src/cloud-init/cloud.cfg | 122 +++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 122 insertions(+)
+
+commit ea49f7635551029d54b5f6976b4503607be5252f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 2 11:40:05 2017 +0100
+
+    Added original cloud.cfg.
+
+ src/cloud-init/cloud.cfg.orig | 117 ++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 117 insertions(+)
+
+commit 9f9af9346da167db9321f697e63c8ba60963affd
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 2 11:39:41 2017 +0100
+
+    Updated script.
+
+ src/images/preseed.cfg | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit 5ea0b95bba180fc64713db918f3056e7a6f48f40
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 1 16:26:11 2017 +0100
+
+    Improved script.
+
+ src/Make-Server | 103 +++++++++++++++++++++++++++++++-------------------------
+ 1 file changed, 58 insertions(+), 45 deletions(-)
+
+commit aeeaa217f146546236fe140bce84879374046573
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 1 14:06:32 2017 +0100
+
+    Added script to create OpenStack VM.
+
+ src/Make-Server | 109 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 109 insertions(+)
+
+commit 12805698c2776d793ab5996e6077214098a2ab48
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Oct 30 15:58:27 2017 +0100
+
+    New release.
+
+ debian/changelog | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-commit f27f972c12d01adea1a2eb13f0a983aca0a40250
-Merge: f8be37f bd6d78c
+commit 2849617f9b3407183dc8f3c1cf864ee81abbc939
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 16:02:14 2017 +0100
+Date:   Mon Oct 30 15:58:13 2017 +0100
 
-    Merge branch 'master' of git.ansur.no:simone/hencsat
+    Header updates.
 
-commit f8be37fff69b08112ee2dbba612a9149759991b6
+ src/MELODIC-System-Info                   | 2 +-
+ src/background/Make-Background            | 2 +-
+ src/background/Make-Logo                  | 2 +-
+ src/background/Make-Mosaic                | 2 +-
+ src/background/Make-Painting              | 2 +-
+ src/background/image-resize-with-cropping | 2 +-
+ src/background/images-to-pdf-a4           | 2 +-
+ src/background/make-bootsplash            | 2 +-
+ src/background/make-desktop               | 2 +-
+ src/background/make-logo-texts            | 2 +-
+ src/background/make-overlay               | 2 +-
+ src/images/make-it                        | 2 +-
+ src/images/preseed.cfg                    | 2 +-
+ 13 files changed, 13 insertions(+), 13 deletions(-)
+
+commit 98bf3d45d40fc0ccd180b889395a6067b3e4ab04
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 15:59:37 2017 +0100
+Date:   Mon Oct 30 15:58:01 2017 +0100
 
-    Added parameter check.
+    Added helper scripts.
 
- testbed/software/src/HENCSAT-QoS-Setup | 18 ++++++++++++++----
- 1 file changed, 14 insertions(+), 4 deletions(-)
+ UpdateDoc1.sed |  3 +++
+ UpdateDocFiles | 25 +++++++++++++++++++++++++
+ 2 files changed, 28 insertions(+)
 
-commit bd6d78ca78815497022dc5a3dee69b8c3e2b6249
+commit 390375890e3977d63dc66cd7b154cfa4f7b808a3
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 15:57:10 2017 +0100
+Date:   Mon Oct 30 15:30:33 2017 +0100
 
-    Some configuration improvements.
+    Improved preseed files.
 
- testbed/software/src/HENCSAT-QoS-Setup | 31 +++++++++++++++++--------------
- 1 file changed, 17 insertions(+), 14 deletions(-)
+ src/images/make-it     | 2 +-
+ src/images/preseed.cfg | 8 ++++++++
+ 2 files changed, 9 insertions(+), 1 deletion(-)
 
-commit 14365383d82e0425c1db9189d085bcc4124a59d3
+commit ebdcdf72e67c550a6331d7e84452d7ca1f7358a2
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 15:32:12 2017 +0100
+Date:   Mon Oct 30 13:01:47 2017 +0100
 
-    A fix.
+    Script updates.
 
- testbed/software/src/HENCSAT-QoS-Setup | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ debian/changelog | 4 ++--
+ make-ppa         | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
 
-commit ee7aa804067a1b24849e471d10904a8f31a47190
+commit 60a38ebf8c0124c3db5a7ffdebd2d11c59a9a736
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 15:31:23 2017 +0100
+Date:   Mon Oct 30 13:01:40 2017 +0100
 
-    Improved router configuration.
+    Improved preseed script.
 
- testbed/software/src/HENCSAT-QoS-Controller | 87 ++++++++++++++++++++---------
- 1 file changed, 60 insertions(+), 27 deletions(-)
+ src/images/make-it     |  2 +-
+ src/images/preseed.cfg | 20 +++++++++++++++-----
+ 2 files changed, 16 insertions(+), 6 deletions(-)
 
-commit 5b85086956b5cf3c0d9a6af8d5159b5be9e49ee7
+commit 0b498a271cf93f5b68af8198beb9853cb9f8fba3
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 14:54:31 2017 +0100
-
-    User interface improvements.
-
- testbed/software/src/HENCSAT-QoS-Controller | 22 +++++++++++-----------
- 1 file changed, 11 insertions(+), 11 deletions(-)
-
-commit 9300b88fc6ad1822acb529aadb329834b090a86e
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 14:49:19 2017 +0100
-
-    Improved router configuration handling.
-
- testbed/software/src/HENCSAT-QoS-Controller | 80 +++++++++++++++++++++++------
- 1 file changed, 63 insertions(+), 17 deletions(-)
-
-commit 7238f9e0bd0be02d2a2560c2a4d75a893bd77810
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 13:28:48 2017 +0100
-
-    Some more shell handling code.
-
- testbed/software/src/HENCSAT-QoS-Controller | 12 +++++++++---
- 1 file changed, 9 insertions(+), 3 deletions(-)
-
-commit 19b57c59b801212a72cb0164d60894f92d1838f5
-Merge: 0d42495 cd1b3de
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 13:18:54 2017 +0100
-
-    Merge branch 'master' of https://git.ansur.no/simone/hencsat
-
-commit 0d4249584c75fcec6f8cadcf07bb8ec4c21f1499
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 13:18:19 2017 +0100
-
-    Improved QoS setup script.
-
- testbed/software/src/HENCSAT-QoS-Setup | 34 +++++++++++++++++++++++++++-------
- 1 file changed, 27 insertions(+), 7 deletions(-)
-
-commit 18d80d23f4e4517d9010808d5ddccb08737fd2da
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 12:32:51 2017 +0100
-
-    Added first part of shell communication code.
-
- testbed/software/src/HENCSAT-QoS-Controller | 26 +++++++++++++++++++++++++-
- 1 file changed, 25 insertions(+), 1 deletion(-)
-
-commit 13a2595558d355bd579ab72613ccc51d2613565f
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 12:01:41 2017 +0100
-
-    HENCSAT-QoS-Setup needs setuid setting.
-
- testbed/software/debian/changelog               | 2 +-
- testbed/software/debian/hencsat-router.postinst | 1 +
- 2 files changed, 2 insertions(+), 1 deletion(-)
-
-commit 63e3c11fc14edd90de25db33f22506ba05a39343
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 11:22:21 2017 +0100
-
-    Dependency improvements for the packages.
-
- testbed/software/debian/control                 | 25 ++++++++++++++++++-------
- testbed/software/debian/hencsat-desktop.install |  2 ++
- testbed/software/make-dist                      |  1 -
- 3 files changed, 20 insertions(+), 8 deletions(-)
-
-commit 45baf8ab1085ef9cd7ea7b3ffbc7b78c1b6e3be0
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 11:12:54 2017 +0100
-
-    Packaging improvements.
-
- testbed/software/make-dist | 64 ++++++++++++++++++++++++++++++++++++++--------
- 1 file changed, 53 insertions(+), 11 deletions(-)
-
-commit da3d4cd46ddefe79fe2a68964683b4f93804ec32
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Thu Mar 16 11:12:41 2017 +0100
-
-    Some clean-ups.
-
- .../src/background/Background-HSClient1.jpeg       | Bin 4007904 -> 0 bytes
- .../src/background/Background-HSController1.jpeg   | Bin 3855756 -> 0 bytes
- .../src/background/Background-HSDevelopment1.jpeg  | Bin 3201461 -> 0 bytes
- .../src/background/Background-HSManagement1.jpeg   | Bin 7302031 -> 0 bytes
- .../src/background/Background-HSRouter1.jpeg       | Bin 2088438 -> 0 bytes
- .../src/background/Background-HSServer1.jpeg       | Bin 3142439 -> 0 bytes
- testbed/software/src/background/exiftool.argfile   |   3 -
- .../src/background/image-resize-with-cropping      |  62 +++++++++++++++++++++
- .../background/original/Background-HSClient1.jpeg  | Bin 0 -> 4007904 bytes
- .../original/Background-HSController1.jpeg         | Bin 0 -> 3855756 bytes
- .../original/Background-HSDevelopment1.jpeg        | Bin 0 -> 3201461 bytes
- .../original/Background-HSManagement1.jpeg         | Bin 0 -> 7302031 bytes
- .../background/original/Background-HSRouter1.jpeg  | Bin 0 -> 2088438 bytes
- .../background/original/Background-HSServer1.jpeg  | Bin 0 -> 3142439 bytes
- .../src/background/original/exiftool.argfile       |   3 +
- 15 files changed, 65 insertions(+), 3 deletions(-)
-
-commit cd1b3de91ae8331aef83567775ba6850baa1b596
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 18:50:40 2017 +0100
-
-    Dependency fix.
-
- testbed/software/debian/changelog | 2 +-
- testbed/software/debian/control   | 2 --
- 2 files changed, 1 insertion(+), 3 deletions(-)
-
-commit 5426529b6be0f83adc40f41dcb0888487c32dd99
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 18:34:49 2017 +0100
-
-    A fix.
-
- testbed/software/make-ppa | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-commit f027368ea64643f5572c095d0ff42d670d90e380
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 18:29:44 2017 +0100
-
-    Removed obsolete script.
-
- testbed/software/src/setqos | 232 --------------------------------------------
- 1 file changed, 232 deletions(-)
-
-commit d3dff2b946a0bfccf0d0dc22b4a5ea9841f28faa
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 18:21:49 2017 +0100
-
-    Some dependency updates.
-
- testbed/software/debian/changelog           | 2 +-
- testbed/software/debian/control             | 3 ++-
- testbed/software/src/HENCSAT-QoS-Controller | 2 +-
- 3 files changed, 4 insertions(+), 3 deletions(-)
-
-commit be1087bc63d14f373e2cacdb52679ed7996a20db
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 18:15:24 2017 +0100
+Date:   Fri Oct 27 17:45:18 2017 +0200
 
     Some fixes.
 
- testbed/software/debian/control                   |  3 ++-
- testbed/software/make-dist                        |  6 ++++++
- testbed/software/src/HENCSAT-QoS-Controller       |  2 +-
- testbed/software/src/hencsat-qos-controller_de.ts |  5 +++++
- testbed/software/src/hencsat-qos-controller_nb.ts | 17 +++++++++++------
- 5 files changed, 25 insertions(+), 8 deletions(-)
+ src/images/make-it     | 2 +-
+ src/images/preseed.cfg | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
 
-commit 3f06ae9d1b5adf138d6048f51b26ff0a6c5ea228
+commit 18b95b932082605429992de910c9e2cd96e49144
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 18:00:36 2017 +0100
-
-    Packaging fixes.
-
- testbed/software/debian/hencsat-controller.install |  1 +
- testbed/software/make-dist                         |  2 +
- testbed/software/src/HENCSAT-QoS-Controller        |  7 ++-
- testbed/software/src/HENCSAT-QoS-Controller_de.ts  | 67 ----------------------
- testbed/software/src/HENCSAT-QoS-Controller_no.ts  | 67 ----------------------
- testbed/software/src/hencsat-qos-controller_de.ts  | 67 ++++++++++++++++++++++
- testbed/software/src/hencsat-qos-controller_nb.ts  | 67 ++++++++++++++++++++++
- testbed/software/src/update-translations           | 27 +++++++--
- 8 files changed, 166 insertions(+), 139 deletions(-)
-
-commit 60e0abd066e86283552e34b557ab97db6080a332
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 17:07:00 2017 +0100
-
-    Updated packaging files to install the controller's files.
-
- testbed/software/debian/control                    |  16 +++++
- testbed/software/debian/hencsat-controller.install |   3 +
- .../software/debian/hencsat-controller.postinst    |  13 ++++
- testbed/software/debian/hencsat-controller.postrm  |  14 +++++
- testbed/software/make-dist                         |   1 +
- testbed/software/src/HENCSAT-QoS-Controller_de.ts  |  67 +++++++++++++++++++++
- testbed/software/src/HENCSAT-QoS-Controller_no.ts  |  67 +++++++++++++++++++++
- .../src/background/Background-HSController1.jpeg   | Bin 0 -> 3855756 bytes
- testbed/software/src/background/make-it            |   2 +-
- .../software/src/grub/25_hencsat_controller_theme  |  14 +++++
- .../src/grub/Splash-HSController1-1024x768.jpeg    | Bin 0 -> 438216 bytes
- testbed/software/src/update-translations           |  16 +++++
- 12 files changed, 212 insertions(+), 1 deletion(-)
-
-commit 3c9658dccbb92e65e68d38a11975f3aa0d548b1f
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 16:16:41 2017 +0100
-
-    Refinements of the user interface.
-
- testbed/software/src/HENCSAT-QoS-Controller | 115 ++++++++++++++++++++++------
- 1 file changed, 91 insertions(+), 24 deletions(-)
-
-commit c12cf2ac816dfdb87369f1f2a12aafd963e623ad
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 15:29:02 2017 +0100
-
-    Some updates.
-
- testbed/software/src/HENCSAT-QoS-Controller | 13 ++++++++++++-
- 1 file changed, 12 insertions(+), 1 deletion(-)
-
-commit a9177e859da38a98a4dde26e1c0d077ee7dcd771
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 15:20:12 2017 +0100
-
-    Added initial version of HENCSAT-QoS-Controller.
-
- testbed/software/src/HENCSAT-QoS-Controller | 167 ++++++++++++++++++++++++++++
- 1 file changed, 167 insertions(+)
-
-commit ff33a3994b0c8df29adfff02b42a61089340a8d9
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 12:56:13 2017 +0100
-
-    Updated dependencies.
-
- testbed/software/debian/changelog | 2 +-
- testbed/software/debian/control   | 2 ++
- 2 files changed, 3 insertions(+), 1 deletion(-)
-
-commit ca0e7584cf0cb73a33002743ade9fd1c4de493d2
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 12:45:07 2017 +0100
-
-    Fixed permission.
-
- testbed/software/debian/hencsat-router.init | 0
- 1 file changed, 0 insertions(+), 0 deletions(-)
-
-commit 997fcef2474071a79b51e74383cccc8e3cc03e6f
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 12:40:04 2017 +0100
-
-    Added init script for the router.
-
- testbed/software/debian/hencsat-router.init | 84 +++++++++++++++++++++++++++++
- testbed/software/src/HENCSAT-QoS-Setup      |  2 +-
- 2 files changed, 85 insertions(+), 1 deletion(-)
-
-commit 183eea8d49cf48a76e815d1409c438128b4fb806
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 12:29:03 2017 +0100
-
-    Updated packaging files.
-
- testbed/software/debian/hencsat-router.examples | 1 +
- testbed/software/debian/rules                   | 4 ++++
- testbed/software/make-dist                      | 3 +++
- 3 files changed, 8 insertions(+)
-
-commit feeadf442e1549256ddf12b74cf3d0ab955c5828
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 12:24:59 2017 +0100
-
-    Updated configuration file.
-
- testbed/software/src/hencsat-router.conf.example | 1 +
- 1 file changed, 1 insertion(+)
-
-commit 7fe48508ccab5d84bcf1175a9824af2242508727
-Merge: b6bd189 cb772f5
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 12:24:23 2017 +0100
-
-    Merge branch 'master' of git.ansur.no:simone/hencsat
-
-commit b6bd18981c5f32d83d85bdbb12325511ddc79c5e
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 12:24:14 2017 +0100
-
-    Updated packaging files.
-
- testbed/software/debian/changelog               | 2 +-
- testbed/software/debian/hencsat-router.install  | 1 +
- testbed/software/debian/hencsat-router.manpages | 1 +
- testbed/software/make-dist                      | 3 ++-
- 4 files changed, 5 insertions(+), 2 deletions(-)
-
-commit cb772f5682aac3330b1de12b6a1c62e437efd340
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 12:22:06 2017 +0100
-
-    Improved output.
-
- testbed/software/src/HENCSAT-QoS-Setup | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-commit 5d74302c66820e89a4ec6116d5827558230867a6
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 12:21:56 2017 +0100
-
-    Added manpage.
-
- testbed/software/src/HENCSAT-QoS-Setup.1 | 64 ++++++++++++++++++++++++++++++++
- 1 file changed, 64 insertions(+)
-
-commit 1b5aae159c8a6a31fa7f4ab064e905d7aa0518f0
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 12:10:59 2017 +0100
-
-    Renamed file.
-
- testbed/software/src/HENCSAT-QoS-Control | 186 -------------------------------
- testbed/software/src/HENCSAT-QoS-Setup   | 186 +++++++++++++++++++++++++++++++
- 2 files changed, 186 insertions(+), 186 deletions(-)
-
-commit 899d24eaccd427e9a4b66644f2173d1190d5103d
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 12:10:37 2017 +0100
-
-    Some more improvements.
-
- testbed/software/src/HENCSAT-QoS-Control | 51 +++++++++++++++++++++++---------
- 1 file changed, 37 insertions(+), 14 deletions(-)
-
-commit 1a3c928999ea676705e2a5f3680a6107c3667f18
-Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 10:59:49 2017 +0100
+Date:   Fri Oct 27 17:14:57 2017 +0200
 
     Some improvements.
 
- testbed/software/src/HENCSAT-QoS-Control | 25 +++++++++++++------------
- 1 file changed, 13 insertions(+), 12 deletions(-)
+ src/images/make-it     | 40 +++++++++++++++++++++++-----------------
+ src/images/preseed.cfg | 44 ++++++++++++++++++++++++++++++++++----------
+ 2 files changed, 57 insertions(+), 27 deletions(-)
 
-commit 493aac610ea8071ce312bb66dc514714e8935cdb
+commit 4aa8cd0e43c97eb18dfe42304df4f8b75598d604
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Wed Mar 15 10:34:59 2017 +0100
+Date:   Thu Oct 26 19:03:34 2017 +0200
 
-    Added QoS script.
+    Improved script.
 
- testbed/software/src/HENCSAT-QoS-Control         | 162 +++++++++++++++++++++++
- testbed/software/src/hencsat-router.conf.example |  21 +++
- 2 files changed, 183 insertions(+)
+ src/images/make-it     | 11 ++++++++++-
+ src/images/preseed.cfg | 18 ++++++++++++------
+ 2 files changed, 22 insertions(+), 7 deletions(-)
 
-commit 241e26a344f8e6af63fb1dad21a775715125112f
+commit 73e57f4985c3ce673a67ff543f1ac96af90a8aaa
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Tue Mar 14 14:50:06 2017 +0100
+Date:   Thu Oct 26 17:04:52 2017 +0200
+
+    Some script improvements.
+
+ src/images/make-it     | 22 +++++++++++++++++++++-
+ src/images/preseed.cfg |  6 +++---
+ 2 files changed, 24 insertions(+), 4 deletions(-)
+
+commit 6c85d5353c61cbbb9d64894789fed88e32636399
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Oct 26 14:26:12 2017 +0200
+
+    Improved script.
+
+ src/images/make-it     | 91 +++++++++++++++++++++++++++-----------------------
+ src/images/preseed.cfg | 67 +++++++++++++++----------------------
+ 2 files changed, 76 insertions(+), 82 deletions(-)
+
+commit d4af5fdd9ad5c2b5a9b48e5d915ac25c43acc792
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Oct 20 16:40:13 2017 +0200
 
     Minor update.
 
- testbed/software/debian/changelog |  2 +-
- testbed/software/debian/control   | 11 -----------
- testbed/software/hencsat.lsm      |  1 +
- 3 files changed, 2 insertions(+), 12 deletions(-)
+ src/images/make-it | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-commit 883003f507d5aaacb72c8408435b2860e96654fb
+commit 4379c7a2f19978179a8cb666586a7a9731beb10e
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Tue Mar 14 14:45:38 2017 +0100
+Date:   Fri Oct 20 16:08:50 2017 +0200
 
-    Added QoS script.
+    Script updates.
 
- testbed/software/src/setqos | 232 ++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 232 insertions(+)
+ debian/melodic-desktop.install | 4 ++--
+ make-ppa                       | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
 
-commit f924a6ad19276b6a3621c9b3a7c92e353ed8693c
+commit 0784c756ce2f1322bd64b49f8cba4bf704d7b274
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Tue Mar 14 14:42:51 2017 +0100
+Date:   Fri Oct 20 16:05:41 2017 +0200
 
-    Some updates.
+    Packaging update.
 
- testbed/software/debian/control                    |  21 ++++++++-------------
- testbed/software/debian/rules                      |  14 +++++++-------
- testbed/software/make-dist                         |   9 +++++----
- .../src/grub/Splash-HSClient1-1024x768.jpeg        | Bin 0 -> 238008 bytes
- .../src/grub/Splash-HSDevelopment1-1024x768.jpeg   | Bin 0 -> 349155 bytes
- .../src/grub/Splash-HSManagement1-1024x768.jpeg    | Bin 0 -> 438022 bytes
- .../src/grub/Splash-HSRouter1-1024x768.jpeg        | Bin 0 -> 145124 bytes
- .../src/grub/Splash-HSServer1-1024x768.jpeg        | Bin 0 -> 174841 bytes
- 8 files changed, 20 insertions(+), 24 deletions(-)
+ debian/melodic-desktop.install | 8 ++++----
+ make-dist                      | 6 +++---
+ 2 files changed, 7 insertions(+), 7 deletions(-)
 
-commit 3e07c713478606e8cad52e262543a470bd7d3447
+commit 907b45c0de550f3a4c38654b11f2c50f9a471d5e
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Tue Mar 14 14:29:37 2017 +0100
+Date:   Fri Oct 20 15:30:20 2017 +0200
 
-    Added system management scripts.
+    Script improvements.
 
- testbed/software/src/HENCSAT-System-Info          | 236 ++++++++++++++
- testbed/software/src/HENCSAT-System-Info.1        |  46 +++
- testbed/software/src/HENCSAT-System-Maintenance   | 366 ++++++++++++++++++++++
- testbed/software/src/HENCSAT-System-Maintenance.1 |  71 +++++
- 4 files changed, 719 insertions(+)
+ src/images/make-it     | 28 ++++++++++++++--------------
+ src/images/preseed.cfg | 21 ++++++++++++---------
+ 2 files changed, 26 insertions(+), 23 deletions(-)
 
-commit 28f32bee89f538f22c6eba1efa5d213c7f864e39
+commit 250562be2fee42838cff967c4080566257ebbb7c
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Tue Mar 14 14:22:09 2017 +0100
+Date:   Fri Oct 20 15:30:06 2017 +0200
+
+    Dependency improvements.
+
+ debian/changelog | 6 ++++++
+ debian/control   | 9 ++++++---
+ 2 files changed, 12 insertions(+), 3 deletions(-)
+
+commit d0cd6908bceb76c73d2a555b430da06843504761
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Oct 20 11:56:27 2017 +0200
+
+    Ignore errors of grub-install. Grub may not be installed yet, due to early setup stage in preseeded installation.
+
+ debian/changelog                    | 4 ++--
+ debian/melodic-compute.postinst     | 2 +-
+ debian/melodic-compute.postrm       | 2 +-
+ debian/melodic-controller.postinst  | 2 +-
+ debian/melodic-controller.postrm    | 2 +-
+ debian/melodic-development.postinst | 2 +-
+ debian/melodic-development.postrm   | 2 +-
+ debian/melodic-management.postinst  | 2 +-
+ debian/melodic-management.postrm    | 2 +-
+ debian/melodic-server.postinst      | 2 +-
+ debian/melodic-server.postrm        | 2 +-
+ debian/melodic-storage.postinst     | 2 +-
+ debian/melodic-storage.postrm       | 2 +-
+ 13 files changed, 14 insertions(+), 14 deletions(-)
+
+commit 8118cf53ed22d700c4b555c0a46414dc3917a696
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Oct 20 11:55:19 2017 +0200
+
+    Script updates.
+
+ src/images/make-it     | 72 ++++++++++++++++++++++++++++++++------------------
+ src/images/preseed.cfg | 54 ++++++++++++++++++++++++++-----------
+ 2 files changed, 85 insertions(+), 41 deletions(-)
+
+commit d660f3bcfe99447908592886144426f1e44b8a67
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Oct 19 19:21:33 2017 +0200
+
+    An update.
+
+ src/images/make-it     |  5 ++++-
+ src/images/preseed.cfg | 24 ++++++++++++++++++------
+ 2 files changed, 22 insertions(+), 7 deletions(-)
+
+commit 643ef13dc3e0dfb2f7ea6596f216dc2a7167eb04
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Oct 19 15:57:25 2017 +0200
+
+    Another update.
+
+ src/images/make-it | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+commit 77d8020d79d1732d0e06f2785855e91d6e9d43ff
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Oct 19 15:57:08 2017 +0200
+
+    Updated script.
+
+ src/images/make-it     | 12 +++++++++++-
+ src/images/preseed.cfg | 24 +++++++++---------------
+ 2 files changed, 20 insertions(+), 16 deletions(-)
+
+commit 9cab373dc48d5f3245fd77d5e97c1fda6132dd96
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Oct 19 13:46:28 2017 +0200
+
+    Added preseed script.
+
+ src/images/make-it     |  24 +++++++++++
+ src/images/preseed.cfg | 112 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 136 insertions(+)
+
+commit 80586df9990f1655bb0ea3c21128672df590f514
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Sep 28 15:40:09 2017 +0200
+
+    Dependency updates.
+
+ debian/changelog | 6 ++++++
+ debian/control   | 2 +-
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+commit bde6c0a3bd63823a2347028f1015346344ebaf6a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Sep 28 15:40:01 2017 +0200
+
+    Added documentation.
+
+ src/docs/OpenStack-Configuration.pdf  |  Bin 0 -> 139348 bytes
+ src/docs/OpenStack-Configuration.wiki | 1363 +++++++++++++++++++++++++++++++++
+ 2 files changed, 1363 insertions(+)
+
+commit c4985b0f13908fe5565be1b3ddd87191625cdf64
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Sep 28 12:50:29 2017 +0200
+
+    Initial release.
+
+ debian/changelog | 4 ++--
+ debian/control   | 8 ++++++--
+ 2 files changed, 8 insertions(+), 4 deletions(-)
+
+commit c2d0d34fe70f4894ec8380b92876340c12f25766
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 15 16:54:38 2017 +0200
+
+    Version bump.
+
+ debian/changelog | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit e726a08e7be4b596bd4b94a450643fcc72015575
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Sep 14 21:34:15 2017 +0200
+
+    Added missing dependency.
+
+ debian/control | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit e2ec98c7f574044f1eac28d291227615c50f660d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Sep 14 17:49:41 2017 +0200
+
+    Added Grub configuration.
+
+ src/grub/11_melodic_compute_theme | 14 --------------
+ src/grub/12_melodic_storage_theme | 14 ++++++++++++++
+ src/grub/15_melodic_compute_theme | 14 ++++++++++++++
+ 3 files changed, 28 insertions(+), 14 deletions(-)
+
+commit 1ea24a26ce256e3a8e0f1c1ebaf483346c6a57b5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Sep 14 17:48:35 2017 +0200
+
+    Added packaging files.
+
+ debian/melodic-storage.install  |  2 ++
+ debian/melodic-storage.postinst | 13 +++++++++++++
+ debian/melodic-storage.postrm   | 14 ++++++++++++++
+ 3 files changed, 29 insertions(+)
+
+commit 17169c7a03c087ea876e118eb08f2dd7338741a1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Sep 14 17:47:21 2017 +0200
+
+    Added MELODIC Storage package.
+
+ debian/control | 25 +++++++++++++++++++------
+ 1 file changed, 19 insertions(+), 6 deletions(-)
+
+commit 325c17d691c9e88c4d184ca4e40aa30b489b2049
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Sep 14 17:12:45 2017 +0200
+
+    Dependency update.
+
+ debian/changelog | 4 ++--
+ debian/control   | 4 +++-
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
+commit 727b086b7410b590609289082d4a1f4f4122041e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Sep 13 21:46:31 2017 +0200
+
+    Added configuration files.
+
+ src/OpenStack/neutron.conf.orig |  1938 +++++++
+ src/OpenStack/nova.conf.orig    | 10759 ++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 12697 insertions(+)
+
+commit 8cf9f10a151f57c598378bf8ebb2b722d94edd2e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Sep 13 17:01:03 2017 +0200
+
+    Dependency updates.
+
+ debian/changelog | 4 ++--
+ debian/control   | 6 ++++++
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+
+commit 4173bc7459fa7b00148aa149618d30bd828cceb7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Sep 11 18:15:23 2017 +0200
+
+    Dependency updates.
+
+ debian/changelog |  4 ++--
+ debian/control   | 21 +++++++++------------
+ 2 files changed, 11 insertions(+), 14 deletions(-)
+
+commit 5b51427e3154438c06280df94852d1bd7c2449b4
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 8 21:33:14 2017 +0200
+
+    Reverted change.
+
+ make-dist | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 7d1cc49644f4770254ef339f0c5f43ba1eba513d
+Merge: f80dab4 77178af
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 8 20:52:25 2017 +0200
+
+    Merge branch 'master' of github.com:simula/melodic-nornet
+
+commit f80dab4fc7379a8ac86b13099a8cc0e38f7c8967
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 8 20:52:05 2017 +0200
+
+    Added grub configurations for Controller and Compute Node.
+
+ src/grub/11_melodic_compute_theme    | 14 ++++++++++++++
+ src/grub/19_melodic_controller_theme | 14 ++++++++++++++
+ 2 files changed, 28 insertions(+)
+
+commit 77178af2c88c1f7c1b82c3b9c1bd13d4016e3c1f
+Merge: fadfafd 1cdad4b
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 8 20:44:44 2017 +0200
+
+    Merge branch 'master' of github.com:simula/melodic-nornet
+
+commit fadfafd4e9abe5a0ed4f1883fb0c6b67f5121a8f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 8 20:44:17 2017 +0200
+
+    Version bump.
+
+ debian/changelog | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 1cdad4b31deb2cd8bfe0168f6d94d0cf60ad4fc4
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 8 20:43:40 2017 +0200
+
+    Added missing image.
+
+ src/background/Input/MELODICDevelopment1.jpeg | Bin 0 -> 8647950 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit dc900e9d9650b8c828e294f03acf6d795baab00e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 8 17:45:33 2017 +0200
+
+    Packaging updates.
+
+ make-dist                                     |   4 ++--
+ src/background/Input/MELODICCompute1.jpeg     | Bin 0 -> 6549803 bytes
+ src/background/Input/MELODICController1.jpeg  | Bin 3855756 -> 7731490 bytes
+ src/background/Input/MELODICDesktop1.jpeg     | Bin 0 -> 8760717 bytes
+ src/background/Input/MELODICDevelopment1.jpeg | Bin 2462534 -> 0 bytes
+ src/background/Input/MELODICManagement1.jpeg  | Bin 3173145 -> 6223337 bytes
+ src/background/Input/MELODICServer1.jpeg      | Bin 8760717 -> 6384973 bytes
+ src/background/Input/MELODICStorage1.jpeg     | Bin 0 -> 8584354 bytes
+ 8 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 513ebb0b1bf514c3614d27df7cde80cd958610c4
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 8 17:22:57 2017 +0200
+
+    Packaging file updates.
+
+ debian/control                     | 41 ++++++++++++++++++++++++++++++++++++++
+ debian/melodic-compute.install     |  2 ++
+ debian/melodic-compute.postinst    | 13 ++++++++++++
+ debian/melodic-compute.postrm      | 14 +++++++++++++
+ debian/melodic-controller.install  |  2 ++
+ debian/melodic-controller.postinst | 13 ++++++++++++
+ debian/melodic-controller.postrm   | 14 +++++++++++++
+ 7 files changed, 99 insertions(+)
+
+commit 30e1c5dff039f5536fd76b3c8e89ad9b72e4c64e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 8 17:10:22 2017 +0200
+
+    Version bump.
+
+ debian/changelog | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit dfa1eaff1e7e852908236fc82f3609d6e83cba70
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 8 17:09:37 2017 +0200
+
+    Added dependency.
+
+ debian/control | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 161a33b2d4631073338cdb8ba8000bd7dddf94d6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Sep 7 11:56:44 2017 +0200
+
+    Dependency updates.
+
+ debian/changelog | 4 ++--
+ debian/control   | 7 +++----
+ 2 files changed, 5 insertions(+), 6 deletions(-)
+
+commit 8fcdb8c4c710dc50e699927bf35474695612602b
+Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
+Date:   Fri Jun 9 16:03:50 2017 +0200
+
+    Reverted change.
+
+ src/background/make-desktop | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit a76cb5e4774142186f2f7772420a8a1029398830
+Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
+Date:   Fri Jun 9 16:03:03 2017 +0200
+
+    Minor updates.
+
+ debian/changelog               | 4 ++--
+ src/background/make-desktop    | 2 +-
+ src/background/make-logo-texts | 2 +-
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 382274806044a415f8fb9b8a569511e561fd41bb
+Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
+Date:   Fri Jun 9 13:08:44 2017 +0200
+
+    Fixed labels.
+
+ src/grub/02_melodic_management_theme  | 4 ++--
+ src/grub/06_melodic_server_theme      | 4 ++--
+ src/grub/19_melodic_development_theme | 4 ++--
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+commit d21aab9c618ec4585de330d4a9d059055f32f01a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Jun 2 14:05:03 2017 +0200
+
+    Minor update.
+
+ debian/changelog            | 2 +-
+ src/background/make-desktop | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit a8bd2c7a8b8c23abdcca7609f208373884802e53
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Jun 1 14:43:01 2017 +0200
+
+    Minor updates.
+
+ debian/changelog            |  4 ++--
+ debian/control              |  8 +-------
+ make-ppa                    | 15 +++++++++++----
+ src/background/make-desktop |  2 +-
+ 4 files changed, 15 insertions(+), 14 deletions(-)
+
+commit 4da52836b79caad0204922bec7b7f64133b52073
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 30 13:05:24 2017 +0200
+
+    File name fixes.
+
+ debian/changelog                      | 2 +-
+ src/grub/02_melodic_management_theme  | 2 +-
+ src/grub/06_melodic_server_theme      | 2 +-
+ src/grub/19_melodic_development_theme | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+commit dec5fc7f03b621e22cd042d35932dd2ef5555a1d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 30 12:21:37 2017 +0200
+
+    Minor update.
+
+ debian/changelog | 2 +-
+ debian/control   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 991489c9cb179c4cd1f3de3f5da05285f2c280b3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 30 12:10:09 2017 +0200
+
+    Some fixes.
+
+ debian/changelog                             |   2 +-
+ debian/control                               |   8 +++-----
+ debian/melodic-desktop.install               |   8 ++++++--
+ make-dist                                    |  28 +++++++--------------------
+ melodic.lsm                                  |  27 ++++++++++++++++++++++++++
+ src/background/Input/MELODICController1.jpeg | Bin 0 -> 3855756 bytes
+ src/background/Input/MELODICServer1.jpeg     | Bin 3855756 -> 8760717 bytes
+ src/background/make-desktop                  |   2 +-
+ 8 files changed, 45 insertions(+), 30 deletions(-)
+
+commit e88b87789b2f151e6829147d52142bf39ef3524f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 30 11:40:38 2017 +0200
+
+    Some clean-ups.
+
+ BUGS                                              |   1 +
+ COPYING                                           | 674 ++++++++++++++++
+ ChangeLog                                         | 933 ++++++++++++++++++++++
+ NEWS                                              |   1 +
+ README                                            |   1 +
+ build-and-install                                 |  34 +
+ build-deb                                         | 114 +++
+ clean-deb                                         |  28 +
+ debian.conf                                       |  10 +
+ debian/changelog                                  |   5 +
+ debian/compat                                     |   1 +
+ debian/control                                    |  74 ++
+ debian/copyright                                  |  25 +
+ debian/melodic-desktop.install                    |   2 +
+ debian/melodic-development.install                |   2 +
+ debian/melodic-development.postinst               |  17 +
+ debian/melodic-development.postrm                 |  14 +
+ debian/melodic-management.install                 |   4 +
+ debian/melodic-management.postinst                |  15 +
+ debian/melodic-management.postrm                  |  14 +
+ debian/melodic-management.prerm                   |  14 +
+ debian/melodic-server.install                     |   2 +
+ debian/melodic-server.postinst                    |  13 +
+ debian/melodic-server.postrm                      |  14 +
+ debian/rules                                      |  24 +
+ debian/source/format                              |   1 +
+ debian/upstream/signing-key.asc                   | 405 ++++++++++
+ debian/watch                                      |   3 +
+ filter-empty-entries                              |  61 ++
+ make-deb                                          | 329 ++++++++
+ make-dist                                         |  78 ++
+ make-ppa                                          |   5 +
+ src/BUGS                                          |   1 -
+ src/COPYING                                       | 674 ----------------
+ src/ChangeLog                                     | 933 ----------------------
+ src/MELODIC-System-Info                           | 236 ++++++
+ src/NEWS                                          |   1 -
+ src/README                                        |   1 -
+ src/background/Input/Background1.fsf              |  18 +
+ src/background/Input/Background1.png              | Bin 0 -> 3841553 bytes
+ src/background/Input/MELODICDevelopment1.jpeg     | Bin 0 -> 2462534 bytes
+ src/background/Input/MELODICManagement1.jpeg      | Bin 0 -> 3173145 bytes
+ src/background/Input/MELODICServer1.jpeg          | Bin 0 -> 3855756 bytes
+ src/background/Input/exiftool.argfile             |   3 +
+ src/background/Make-Background                    |  62 ++
+ src/background/Make-Logo                          | 122 +++
+ src/background/Make-Mosaic                        |  88 ++
+ src/background/Make-Painting                      |  57 ++
+ src/background/image-resize-with-cropping         |  68 ++
+ src/background/images-to-pdf-a4                   |  61 ++
+ src/background/make-a4                            |   5 +
+ src/background/make-all                           |   6 +
+ src/background/make-bootsplash                    |  97 +++
+ src/background/make-desktop                       | 217 +++++
+ src/background/make-logo-texts                    |  49 ++
+ src/background/make-overlay                       |  60 ++
+ src/build-and-install                             |  34 -
+ src/build-deb                                     | 114 ---
+ src/clean-deb                                     |  28 -
+ src/debian.conf                                   |  10 -
+ src/debian/changelog                              |   5 -
+ src/debian/compat                                 |   1 -
+ src/debian/control                                |  74 --
+ src/debian/copyright                              |  25 -
+ src/debian/melodic-desktop.install                |   2 -
+ src/debian/melodic-development.install            |   2 -
+ src/debian/melodic-development.postinst           |  17 -
+ src/debian/melodic-development.postrm             |  14 -
+ src/debian/melodic-management.install             |   4 -
+ src/debian/melodic-management.postinst            |  15 -
+ src/debian/melodic-management.postrm              |  14 -
+ src/debian/melodic-management.prerm               |  14 -
+ src/debian/melodic-server.install                 |   2 -
+ src/debian/melodic-server.postinst                |  13 -
+ src/debian/melodic-server.postrm                  |  14 -
+ src/debian/rules                                  |  24 -
+ src/debian/source/format                          |   1 -
+ src/debian/upstream/signing-key.asc               | 405 ----------
+ src/debian/watch                                  |   3 -
+ src/filter-empty-entries                          |  61 --
+ src/grub/02_melodic_management_theme              |  14 +
+ src/grub/06_melodic_server_theme                  |  14 +
+ src/grub/19_melodic_development_theme             |  14 +
+ src/grub/grub-defaults                            |  17 +
+ src/make-deb                                      | 329 --------
+ src/make-dist                                     |  78 --
+ src/make-ppa                                      |   5 -
+ src/src/MELODIC-System-Info                       | 236 ------
+ src/src/background/Input/Background1.fsf          |  18 -
+ src/src/background/Input/Background1.png          | Bin 3841553 -> 0 bytes
+ src/src/background/Input/MELODICDevelopment1.jpeg | Bin 2462534 -> 0 bytes
+ src/src/background/Input/MELODICManagement1.jpeg  | Bin 3173145 -> 0 bytes
+ src/src/background/Input/MELODICServer1.jpeg      | Bin 3855756 -> 0 bytes
+ src/src/background/Input/exiftool.argfile         |   3 -
+ src/src/background/Make-Background                |  62 --
+ src/src/background/Make-Logo                      | 122 ---
+ src/src/background/Make-Mosaic                    |  88 --
+ src/src/background/Make-Painting                  |  57 --
+ src/src/background/image-resize-with-cropping     |  68 --
+ src/src/background/images-to-pdf-a4               |  61 --
+ src/src/background/make-a4                        |   5 -
+ src/src/background/make-all                       |   6 -
+ src/src/background/make-bootsplash                |  97 ---
+ src/src/background/make-desktop                   | 217 -----
+ src/src/background/make-logo-texts                |  49 --
+ src/src/background/make-overlay                   |  60 --
+ src/src/grub/02_melodic_management_theme          |  14 -
+ src/src/grub/06_melodic_server_theme              |  14 -
+ src/src/grub/19_melodic_development_theme         |  14 -
+ src/src/grub/grub-defaults                        |  17 -
+ src/update-changelog                              |   4 -
+ update-changelog                                  |   4 +
+ 112 files changed, 4130 insertions(+), 4130 deletions(-)
+
+commit 16a202c18e29741bcfda46b49fb3281c141b5f37
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 30 11:39:58 2017 +0200
+
+    Added another background file.
+
+ src/src/background/Input/Background1.fsf |  18 ++++++++++++++++++
+ src/src/background/Input/Background1.png | Bin 0 -> 3841553 bytes
+ 2 files changed, 18 insertions(+)
+
+commit 1714aec8100c6c15aa49700bb1da0b1816fc643e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 30 11:34:53 2017 +0200
+
+    Updated information tool.
+
+ src/src/MELODIC-System-Info | 26 +++++++++++++-------------
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+
+commit 21aab688eb91c0e23b1f7c081c4c3942b7a3ccd8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 30 11:28:50 2017 +0200
 
     Added background files.
 
- .../software/src/background/Background-HSClient1.jpeg | Bin 0 -> 4007904 bytes
- .../src/background/Background-HSDevelopment1.jpeg     | Bin 0 -> 3201461 bytes
- .../src/background/Background-HSManagement1.jpeg      | Bin 0 -> 7302031 bytes
- .../software/src/background/Background-HSRouter1.jpeg | Bin 0 -> 2088438 bytes
- .../software/src/background/Background-HSServer1.jpeg | Bin 0 -> 3142439 bytes
- .../src/background/HENCSAT-InformationText.png        | Bin 0 -> 501523 bytes
- .../src/background/HENCSAT-InformationText.xcf        | Bin 0 -> 1007171 bytes
- testbed/software/src/background/make-it               |   4 ++--
- 8 files changed, 2 insertions(+), 2 deletions(-)
+ src/src/background/Input/MELODICDevelopment1.jpeg | Bin 0 -> 2462534 bytes
+ src/src/background/Input/MELODICManagement1.jpeg  | Bin 0 -> 3173145 bytes
+ src/src/background/Input/MELODICServer1.jpeg      | Bin 0 -> 3855756 bytes
+ src/src/background/Input/exiftool.argfile         |   3 +
+ src/src/background/Make-Background                |  62 +++++++
+ src/src/background/Make-Logo                      | 122 ++++++++++++
+ src/src/background/Make-Mosaic                    |  88 +++++++++
+ src/src/background/Make-Painting                  |  57 ++++++
+ src/src/background/image-resize-with-cropping     |  68 +++++++
+ src/src/background/images-to-pdf-a4               |  61 ++++++
+ src/src/background/make-a4                        |   5 +
+ src/src/background/make-all                       |   6 +
+ src/src/background/make-bootsplash                |  97 ++++++++++
+ src/src/background/make-desktop                   | 217 ++++++++++++++++++++++
+ src/src/background/make-logo-texts                |  49 +++++
+ src/src/background/make-overlay                   |  60 ++++++
+ 16 files changed, 895 insertions(+)
 
-commit 4dfcea28c5ed798a207c9a0ee1829f3858b028c6
+commit 2a0fd0341bd64af7306a70e75c5d9946be7ea3c4
 Author: Thomas Dreibholz <dreibh@simula.no>
-Date:   Tue Mar 14 13:51:29 2017 +0100
+Date:   Tue May 30 11:10:09 2017 +0200
 
-    Initial version of packaging files.
+    Added management files.
 
- testbed/software/BUGS                              |   1 +
- testbed/software/COPYING                           | 674 +++++++++++++++++++++
- testbed/software/ChangeLog                         |   1 +
- testbed/software/NEWS                              |   1 +
- testbed/software/README                            |   1 +
- testbed/software/build-and-install                 |  34 ++
- testbed/software/build-deb                         | 114 ++++
- testbed/software/clean-deb                         |  28 +
- testbed/software/debian.conf                       |  10 +
- testbed/software/debian/changelog                  |   5 +
- testbed/software/debian/compat                     |   1 +
- testbed/software/debian/control                    | 168 +++++
- testbed/software/debian/copyright                  |  25 +
- testbed/software/debian/hencsat-client.install     |   2 +
- testbed/software/debian/hencsat-client.postinst    |  13 +
- testbed/software/debian/hencsat-client.postrm      |  14 +
- testbed/software/debian/hencsat-management.cron.d  |   0
- testbed/software/debian/hencsat-management.install |   5 +
- .../software/debian/hencsat-management.manpages    |   2 +
- .../software/debian/hencsat-management.postinst    |  15 +
- testbed/software/debian/hencsat-management.postrm  |  14 +
- testbed/software/debian/hencsat-management.prerm   |  14 +
- testbed/software/debian/hencsat-router.install     |   2 +
- testbed/software/debian/hencsat-router.postinst    |  13 +
- testbed/software/debian/hencsat-router.postrm      |  14 +
- testbed/software/debian/hencsat-server.install     |   2 +
- testbed/software/debian/hencsat-server.postinst    |  13 +
- testbed/software/debian/hencsat-server.postrm      |  14 +
- testbed/software/debian/rules                      |  24 +
- testbed/software/debian/source/format              |   1 +
- testbed/software/debian/upstream/signing-key.asc   | 405 +++++++++++++
- testbed/software/debian/watch                      |   3 +
- testbed/software/filter-empty-entries              |  61 ++
- testbed/software/hencsat.lsm                       |   0
- testbed/software/make-deb                          | 329 ++++++++++
- testbed/software/make-dist                         |  62 ++
- testbed/software/make-ppa                          |   5 +
- testbed/software/src/background/exiftool.argfile   |   3 +
- testbed/software/src/background/make-it            |  11 +
- testbed/software/src/cron-apt/5-install            |   3 +
- .../software/src/grub/01_hencsat_management_theme  |  14 +
- .../software/src/grub/19_hencsat_development_theme |  14 +
- testbed/software/src/grub/20_hencsat_router_theme  |  14 +
- testbed/software/src/grub/21_hencsat_client_theme  |  14 +
- testbed/software/src/grub/22_hencsat_server_theme  |  14 +
- testbed/software/src/grub/grub-defaults            |  17 +
- testbed/software/src/pbuilder/pbuilderrc           |  56 ++
- testbed/software/update-changelog                  |   4 +
- 48 files changed, 2254 insertions(+)
+ src/src/MELODIC-System-Info               | 236 ++++++++++++++++++++++++++++++
+ src/src/grub/02_melodic_management_theme  |  14 ++
+ src/src/grub/06_melodic_server_theme      |  14 ++
+ src/src/grub/19_melodic_development_theme |  14 ++
+ src/src/grub/grub-defaults                |  17 +++
+ 5 files changed, 295 insertions(+)
+
+commit 7e13c87c0adf2715646683e1981aef837041de7f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 30 11:06:00 2017 +0200
+
+    Added packaging files.
+
+ src/BUGS                 |   1 +
+ src/COPYING              | 674 ++++++++++++++++++++++++++++++++++
+ src/ChangeLog            | 933 +++++++++++++++++++++++++++++++++++++++++++++++
+ src/NEWS                 |   1 +
+ src/README               |   1 +
+ src/build-and-install    |  34 ++
+ src/build-deb            | 114 ++++++
+ src/clean-deb            |  28 ++
+ src/debian.conf          |  10 +
+ src/filter-empty-entries |  61 ++++
+ src/make-deb             | 329 +++++++++++++++++
+ src/make-dist            |  78 ++++
+ src/make-ppa             |   5 +
+ src/update-changelog     |   4 +
+ 14 files changed, 2273 insertions(+)
+
+commit 67b082f53bd459e1ad961d0093378c82de51b6cc
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 30 11:04:36 2017 +0200
+
+    Added packaging files.
+
+ src/debian/changelog                    |   5 +
+ src/debian/compat                       |   1 +
+ src/debian/control                      |  74 ++++++
+ src/debian/copyright                    |  25 ++
+ src/debian/melodic-desktop.install      |   2 +
+ src/debian/melodic-development.install  |   2 +
+ src/debian/melodic-development.postinst |  17 ++
+ src/debian/melodic-development.postrm   |  14 ++
+ src/debian/melodic-management.install   |   4 +
+ src/debian/melodic-management.postinst  |  15 ++
+ src/debian/melodic-management.postrm    |  14 ++
+ src/debian/melodic-management.prerm     |  14 ++
+ src/debian/melodic-server.install       |   2 +
+ src/debian/melodic-server.postinst      |  13 +
+ src/debian/melodic-server.postrm        |  14 ++
+ src/debian/rules                        |  24 ++
+ src/debian/source/format                |   1 +
+ src/debian/upstream/signing-key.asc     | 405 ++++++++++++++++++++++++++++++++
+ src/debian/watch                        |   3 +
+ 19 files changed, 649 insertions(+)
