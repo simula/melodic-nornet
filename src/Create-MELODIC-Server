@@ -67,8 +67,9 @@ log "Creating port $portName ..."
 call-openstack-quietly port delete "$portName"
 call-openstack port create "$portName" \
    --network nornet-simula \
-   --enable-port-security --security-group SecurityGroup-NorNet-Internal
+   --disable-port-security --no-security-group
 
+#    --enable-port-security --security-group SecurityGroup-NorNet-Internal
 #    --disable-port-security --no-security-group
 #    --fixed-ip subnet=ipv4-nornet-melodic-simula,ip-address=10.255.1.10 \
 #    --fixed-ip subnet=ipv6-nornet-melodic-simula,ip-address=2001:700:4100:FF01:FFFF::a \
