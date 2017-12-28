@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 9),
                gimp,
                imagemagick,
                libfile-fcntllock-perl,
-               python3-all,
+               python3,
                python3-wand
 Standards-Version: 3.9.7
 X-Python3-Version: >= 3.2
