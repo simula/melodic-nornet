@@ -48,6 +48,7 @@ Depends: grub2-common | grub,
          python3,
          ${misc:Depends},
          ${shlibs:Depends}
+Recommends: intel-microcode
 Description: MELODIC Server
  This package contains the scripts to configure a MELODIC server.
  .
