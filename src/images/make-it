@@ -19,7 +19,7 @@
 # Contact: dreibh@simula.no
 
 DIRECTORY="/vservers"
-VARIANTS="trusty xenial zesty artful bionic"   # trusty xenial zesty artful bionic
+VARIANTS="trusty xenial artful bionic"   # trusty xenial artful bionic
 
 # ------ Keyboard settings --------------------------------
 XKBMODEL="pc105"
@@ -91,3 +91,4 @@ for variant in $VARIANTS ; do
       # virt-sysprep -a $IMAGE
    ) &
 done
+wait
