@@ -70,6 +70,7 @@ for variant in $VARIANTS ; do
          --disk "path=$IMAGE,format=qcow2,cache=unsafe" \
          --network bridge=virbr0,model=virtio \
          --vcpus 1 \
+         --cpu host \
          --video qxl --channel spicevmc \
          --os-type linux \
          --os-variant ubuntu16.04 \
@@ -85,7 +86,6 @@ for variant in $VARIANTS ; do
 
       # reset
       # clear
-
 
       # ------ Clean up -----------------------------------------------------
       # virt-sysprep -a $IMAGE
