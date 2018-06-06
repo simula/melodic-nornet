@@ -4,7 +4,8 @@ Priority: optional
 Maintainer: Thomas Dreibholz <dreibh@simula.no>
 Homepage: https://www.simula.no/
 Build-Depends: debhelper (>= 9),
-               exiftool,dh-python,
+               dh-python,
+               exiftool,
                gimp,
                imagemagick,
                libfile-fcntllock-perl,
