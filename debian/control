@@ -4,13 +4,13 @@ Priority: optional
 Maintainer: Thomas Dreibholz <dreibh@simula.no>
 Homepage: https://www.simula.no/
 Build-Depends: debhelper (>= 9),
-               exiftool,
+               exiftool,dh-python,
                gimp,
                imagemagick,
                libfile-fcntllock-perl,
                python3,
                python3-wand
-Standards-Version: 3.9.7
+Standards-Version: 4.1.4
 X-Python3-Version: >= 3.2
 Vcs-Git: https://github.com/dreibh/melodic.git
 Vcs-Browser: https://github.com/dreibh/melodic/tags
