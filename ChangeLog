@@ -1,3 +1,131 @@
+commit 882d0ae97d447e463c2b402ee81b46d9875753d8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Jun 6 15:59:47 2018 +0200
+
+    Dependency fix.
+
+ debian/control | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 8b3c3ced3b9ec7adbe80b9a8f89462813de604b3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Jun 6 12:05:47 2018 +0200
+
+    Build script updates.
+
+ build-deb        |  8 ++++----
+ clean-deb        |  7 +++++--
+ debian/changelog |  6 ++++++
+ debian/control   |  4 ++--
+ make-deb         | 60 ++++++++++++++++++++++++++++----------------------------
+ make-ppa         |  2 +-
+ 6 files changed, 48 insertions(+), 39 deletions(-)
+
+commit c8105854f9ab5dc891769cadd4d1e059b718c6f2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Jun 6 12:04:32 2018 +0200
+
+    Updated background configuration.
+
+ src/background/make-desktop | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit db115d438fca61ff07138956076bb7ea064d47cc
+Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
+Date:   Wed May 30 09:28:01 2018 +0200
+
+    Script update.
+
+ debian/changelog | 6 ++++++
+ make-ppa         | 2 +-
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+commit 5dda7ca5c14157e7d96c1c37db008324917f6ea5
+Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
+Date:   Wed May 30 09:26:20 2018 +0200
+
+    Updated script to create template for the upcoming Ubuntu 18.10 (Cosmic Cuttlefish).
+
+ src/images/make-it | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit dd45c66468f43a8bc3c0c505ef031ac8cbc1c389
+Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
+Date:   Mon Apr 23 11:36:39 2018 +0200
+
+    Minor updates.
+
+ src/images/make-it     | 2 +-
+ src/images/preseed.cfg | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 6a030c2dccd2acd113cf3dd1ce32a57ed72d49c1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 22 15:18:27 2018 +0100
+
+    Updated preseed files to work again for Ubuntu Bionic.
+
+ src/images/make-it     | 3 ++-
+ src/images/preseed.cfg | 8 ++++++--
+ 2 files changed, 8 insertions(+), 3 deletions(-)
+
+commit 414287863081cbf5a897bda29f9227955efa69d3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Jan 9 09:36:15 2018 +0100
+
+    Added intel-microcode as "recommends", in order to handle Spectre/Meltdown bug fixes.
+
+ debian/changelog | 6 ++++++
+ debian/control   | 1 +
+ 2 files changed, 7 insertions(+)
+
+commit be2a063e8a937c18b3885ba89771f1ef364e5a35
+Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
+Date:   Thu Dec 28 11:05:28 2017 +0800
+
+    Dependency fix.
+
+ debian/control | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 33b9ec7b91f9e3d1ed806d4cc8a3688567fcc525
+Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
+Date:   Thu Dec 28 10:31:35 2017 +0800
+
+    New release.
+
+ debian/changelog                      |   6 ++++++
+ src/background/Input/Christmas1.jpeg  | Bin 0 -> 7534485 bytes
+ src/background/Input/SantaClaus1.jpeg | Bin 0 -> 4549293 bytes
+ 3 files changed, 6 insertions(+)
+
+commit 08d60c6ec3011ec2f241bc621c7b159277844797
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Dec 2 17:39:51 2017 +0100
+
+    Updated preseed.
+
+ src/images/preseed.cfg | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit a3a52afe00447ac4ecd7b7b99a3525c759b458d5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 17 15:23:41 2017 +0100
+
+    An update.
+
+ src/Create-MELODIC-Server | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit fec56dac8d943be164f203de2eea093713cf5b7c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 16 18:15:47 2017 +0100
+
+    New release.
+
+ ChangeLog | 1299 ++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 640 insertions(+), 659 deletions(-)
+
 commit f77ac48b1c3de0b1963c5a3b5d9f78baab5f36cb
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Nov 16 18:15:34 2017 +0100
