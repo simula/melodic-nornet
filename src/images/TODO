@@ -1,0 +1,5 @@
+Swap is /vda5 in disk => do not create swap here!
+
+Make cloud-init set:
+- Hostname
+- Increase partitions
