@@ -1,5 +1,9 @@
-Swap is /vda5 in disk => do not create swap here!
+Partitioning:
+- Swap is /vda5 in disk => do not create swap here!
+Swap is separate parition
+- BTRFS instead of ext4?
 
 Make cloud-init set:
-- Hostname
+- Set hostname
 - Increase partitions
+- Possible network configuration?
