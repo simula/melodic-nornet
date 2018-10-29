@@ -3,7 +3,8 @@ Section: net
 Priority: optional
 Maintainer: Thomas Dreibholz <dreibh@simula.no>
 Homepage: https://www.simula.no/
-Build-Depends: debhelper (>= 9),
+Build-Depends: cmake,
+               debhelper (>= 9),
                dh-python,
                exiftool,
                gimp,
@@ -32,10 +33,10 @@ Description: MELODIC Management Tools
 
 Package: melodic-development
 Architecture: any
-Depends: exiftool,
+Depends: cmake,
+         exiftool,
          gimp,
          gsfonts,
-         cmake,
          imagemagick,
          nornet-development,
          ${misc:Depends},
@@ -63,7 +64,6 @@ Description: MELODIC Server
 Package: melodic-controller
 Architecture: any
 Depends: cinder-api,
- cmake,
          cinder-scheduler,
          glance,
          grub2-common | grub,
