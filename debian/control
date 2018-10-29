@@ -19,7 +19,6 @@ Architecture: any
 Depends: fail2ban,
          nornet-management,
          ${misc:Depends},
-         ${python3:Depends},
          ${shlibs:Depends}
 Recommends: tshark
 Description: MELODIC Management Tools
