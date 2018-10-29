@@ -40,19 +40,19 @@ EXECUTE_PROCESS(COMMAND head -n1 ${CMAKE_CURRENT_SOURCE_DIR}/../debian/changelog
 # ------ Layouts ------------------------------------------
 SET(TDD_RESOLUTIONS
 #   320x200
-#   640x480     # VGA
+   640x480     # VGA
    1024x768    # Standard
-#   1366x768
-#   1600x1200
-#   1920x1080   # Full HD 16:9
-#   1920x1200   # Full HD 16:10
+   1366x768
+   1600x1200
+   1920x1080   # Full HD 16:9
+   1920x1200   # Full HD 16:10
 #   2970x2100   # DIN A4
-#   3840x2160   # 4K 16:9
+   3840x2160   # 4K 16:9
 )
 
 SET(TDD_VARIANTS
    plain
-#   mosaic
+   mosaic
 #   oil
 #   cloth
 #   oldphoto
