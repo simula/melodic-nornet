@@ -45,6 +45,10 @@ rm -f "$OUTPUTFILENAME"
     (drawable (car (gimp-image-get-active-layer image)))
    )
    ; ------------------------------------------------------------------------
+   ; First, make sure that the image is RGB, not indexed color mode!
+   (if (not (= RGB (car (gimp-image-base-type image))))
+             (gimp-image-convert-rgb image))
+
    ; Change colours
    (gimp-hue-saturation drawable ALL-HUES 120 0 0)
    ; Bump Map
