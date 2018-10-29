@@ -5,15 +5,12 @@ Maintainer: Thomas Dreibholz <dreibh@simula.no>
 Homepage: https://www.simula.no/
 Build-Depends: cmake,
                debhelper (>= 9),
-               dh-python,
                exiftool,
                gimp,
                gsfonts,
                imagemagick,
-               libfile-fcntllock-perl,
-               python3
+               libfile-fcntllock-perl
 Standards-Version: 4.1.4
-X-Python3-Version: >= 3.2
 Vcs-Git: https://github.com/dreibh/melodic.git
 Vcs-Browser: https://github.com/dreibh/melodic/tags
 
