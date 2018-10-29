@@ -1,5 +1,0 @@
-#!/bin/sh
-
-./images-to-pdf-a4 MELODIC-A4.pdf \
-   Output/Desktop-with-Logo/MELODICServer1-plain-2970x2100.jpeg \
-   Output/Text/Overlay-2970x2100.png

@@ -7,10 +7,10 @@ Build-Depends: debhelper (>= 9),
                dh-python,
                exiftool,
                gimp,
+               gsfonts,
                imagemagick,
                libfile-fcntllock-perl,
-               python3,
-               python3-wand
+               python3
 Standards-Version: 4.1.4
 X-Python3-Version: >= 3.2
 Vcs-Git: https://github.com/dreibh/melodic.git
@@ -32,7 +32,12 @@ Description: MELODIC Management Tools
 
 Package: melodic-development
 Architecture: any
-Depends: nornet-development,
+Depends: exiftool,
+         gimp,
+         gsfonts,
+         cmake,
+         imagemagick,
+         nornet-development,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: MELODIC Development Tools
@@ -58,6 +63,7 @@ Description: MELODIC Server
 Package: melodic-controller
 Architecture: any
 Depends: cinder-api,
+ cmake,
          cinder-scheduler,
          glance,
          grub2-common | grub,

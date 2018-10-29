@@ -18,15 +18,14 @@
 #
 # Contact: dreibh@iem.uni-due.de
 
-if [ $# -lt 3 ] ; then
-   echo >&2 "Usage: $0 output_file width height"
+if [ $# -lt 4 ] ; then
+   echo >&2 "Usage: $0 output_file width height input_directory"
    exit 1
 fi
 OUTPUT="$1"
 WIDTH="$2"
 HEIGHT="$3"
-
-prefix="MELODIC"
+DIRECTORY="$4"
 
 # ------ Proportions --------------------------------------------------------
 titleWidth=0.75      # of Width
@@ -38,23 +37,20 @@ indent=0.055         # of Height
 
 
 # ------ Create logo --------------------------------------------------------
-titleWidthValue=`echo "${WIDTH}*${titleWidth}" | bc -l`
-subtitleWidthValue=`echo "${WIDTH}*${subtitleWidth}" | bc -l`
-nameHeightValue=`echo "${HEIGHT}*${nameHeight}" | bc -l`
-titleBorderValue=`echo "${nameHeightValue}*${titleBorder}" | bc -l`
-nameBorderValue=`echo "${nameHeightValue}*${nameBorder}" | bc -l`
-indentValue=`echo "${HEIGHT}*${indent}" | bc -l`
+titleWidthValue=`awk "BEGIN { print ${WIDTH}*${titleWidth} }"`
+subtitleWidthValue=`awk "BEGIN { print ${WIDTH}*${subtitleWidth} }"`
+nameHeightValue=`awk "BEGIN { print ${HEIGHT}*${nameHeight} }"`
+titleBorderValue=`awk "BEGIN { print ${nameHeightValue}*${titleBorder} }"`
+nameBorderValue=`awk "BEGIN { print ${nameHeightValue}*${nameBorder} }"`
+indentValue=`awk "BEGIN { print ${HEIGHT}*${indent} }"`
 
 convert -size ${WIDTH}x${HEIGHT} xc:none \
    \( -background none \
-      \( $prefix-Title.png       -trim +repage -resize ${titleWidthValue}x \) -gravity center -append \
-      \( $prefix-Subtitle.png    -trim +repage -resize ${subtitleWidthValue}x -bordercolor none -border 0x${titleBorderValue} \) -gravity south  -append \) -gravity center -composite \
+      \( $DIRECTORY/Title.png       -trim +repage -resize ${titleWidthValue}x \) -gravity center -append \
+      \( $DIRECTORY/Subtitle.png    -trim +repage -resize ${subtitleWidthValue}x -bordercolor none -border 0x${titleBorderValue} \) -gravity south  -append \) -gravity center -composite \
    \( -background none \
-      \( $prefix-Name.png        -trim +repage -resize x${nameHeightValue} \) -gravity center -append \
-      \( $prefix-Affiliation.png -trim +repage -resize x${nameHeightValue} -bordercolor none -border 0x${nameBorderValue} \) -gravity south  -append \
-      \( $prefix-URL.png         -trim +repage -resize x${nameHeightValue} \) -gravity south  -append \) \
+      \( $DIRECTORY/Name.png        -trim +repage -resize x${nameHeightValue} \) -gravity center -append \
+      \( $DIRECTORY/Affiliation.png -trim +repage -resize x${nameHeightValue} -bordercolor none -border 0x${nameBorderValue} \) -gravity south  -append \
+      \( $DIRECTORY/URL.png         -trim +repage -resize x${nameHeightValue} \) -gravity south  -append \) \
          -gravity southeast -geometry +${indentValue}+${indentValue} -composite \
 "$OUTPUT"
-
-#    \( $prefix-hostname.png       -trim +repage -resize x${hostHeight} \) \
-#       -gravity north -geometry +0+${indent} -composite \

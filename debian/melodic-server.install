@@ -1,2 +1,2 @@
-grub/??_melodic_server_theme             /etc/grub.d
-grub/Splash-MELODICServer1-1024x768.jpeg /boot
+/usr/share/melodic-desktop/Splash/Splash-MELODICServer1-1024x768.jpeg /boot
+/etc/grub.d/??_melodic_server_theme

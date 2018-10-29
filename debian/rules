@@ -1,23 +1,13 @@
 #!/usr/bin/make -f
 
+# export DH_VERBOSE = 1
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
 %:
-	dh $@ --with python3
+	dh $@ --buildsystem=cmake --parallel
 
-override_dh_auto_build:
-# 	set -ex; for python in $(shell py3versions -r); do \
-# 		$$python setup.py build ; \
-# 	done
-
-# Use setup.py to install the API module into the right directory.
-override_dh_auto_install:
-# 	# NOTE: This is for the package "nornet-api", hence the following --root parameter!
-# 	set -ex; for python in $(shell py3versions -r); do \
-# 		$$python setup.py install --install-layout=deb --root $(CURDIR)/debian/nornet-api ; \
-# 	done
-
-override_dh_auto_clean:
-	dh_clean
-	rm -rf build
+override_dh_auto_configure:
+	dh_auto_configure -- -DFLAT_DIRECTORY_STRUCTURE=1 -DBUILD_BOOTSPLASH=1 -DPRINT_A4=1
 
 # Use upstream ChangeLog for installation
 override_dh_installchangelogs:

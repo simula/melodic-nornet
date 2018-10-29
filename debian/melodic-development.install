@@ -1,2 +1,2 @@
-grub/??_melodic_development_theme             /etc/grub.d
-grub/Splash-MELODICDevelopment1-1024x768.jpeg /boot
+/usr/share/melodic-desktop/Splash/Splash-MELODICDevelopment1-1024x768.jpeg /boot
+/etc/grub.d/??_melodic_development_theme
