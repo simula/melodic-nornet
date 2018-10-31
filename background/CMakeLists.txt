@@ -101,48 +101,48 @@ IF(NOT TEST_GIMP)
 ENDIF()
 
 FIND_PROGRAM(MAKE_CROPPED ${TDD_MAKE_CROPPED})
-IF(NOT IDENTIFY)
+IF(NOT MAKE_CROPPED)
    MESSAGE(FATAL_ERROR "Resize-with-Cropping (${TDD_MAKE_CROPPED}) not found!")
 ENDIF()
 
 FIND_PROGRAM(MAKE_LOGO ${TDD_MAKE_LOGO})
-IF(NOT IDENTIFY)
+IF(NOT MAKE_LOGO)
    MESSAGE(FATAL_ERROR "Make-Logo (${TDD_MAKE_LOGO}) not found!")
 ENDIF()
 
 FIND_PROGRAM(MAKE_BACKGROUND ${TDD_MAKE_BACKGROUND})
-IF(NOT IDENTIFY)
+IF(NOT MAKE_BACKGROUND)
    MESSAGE(FATAL_ERROR "Make-Background (${TDD_MAKE_BACKGROUND}) not found!")
 ENDIF()
 
 FIND_PROGRAM(MAKE_PAINTING ${TDD_MAKE_PAINTING})
-IF(NOT IDENTIFY)
+IF(NOT MAKE_PAINTING)
    MESSAGE(FATAL_ERROR "Make-Painting (${TDD_MAKE_PAINTING}) not found!")
 ENDIF()
 
 FIND_PROGRAM(MAKE_MOSAIC ${TDD_MAKE_MOSAIC})
-IF(NOT IDENTIFY)
+IF(NOT MAKE_MOSAIC)
    MESSAGE(FATAL_ERROR "Make-Mosaic (${TDD_MAKE_MOSAIC}) not found!")
 ENDIF()
 
 FIND_PROGRAM(MAKE_CLOTH ${TDD_MAKE_CLOTH})
-IF(NOT IDENTIFY)
+IF(NOT MAKE_CLOTH)
    MESSAGE(FATAL_ERROR "Make-Cloth (${TDD_MAKE_CLOTH}) not found!")
 ENDIF()
 
 FIND_PROGRAM(MAKE_OLDPHOTO ${TDD_MAKE_OLDPHOTO})
-IF(NOT IDENTIFY)
+IF(NOT MAKE_OLDPHOTO)
    MESSAGE(FATAL_ERROR "Make-OldPhoto (${TDD_MAKE_OLDPHOTO}) not found!")
 ENDIF()
 
 # ------ Customised background scripts --------------------------------------
 FIND_PROGRAM(MAKE_CAPTION ${TDD_MAKE_CAPTION})
-IF(NOT IDENTIFY)
+IF(NOT MAKE_CAPTION)
    MESSAGE(FATAL_ERROR "Caption script (${TDD_MAKE_CAPTION}) not found!")
 ENDIF()
 
 FIND_PROGRAM(MAKE_OVERLAY ${TDD_MAKE_OVERLAY})
-IF(NOT IDENTIFY)
+IF(NOT MAKE_OVERLAY)
    MESSAGE(FATAL_ERROR "Caption script (${TDD_MAKE_OVERLAY}) not found!")
 ENDIF()
 
@@ -310,7 +310,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
                ADD_CUSTOM_COMMAND(OUTPUT  ${imageWithoutLogo}
                                   COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_CROPPED}    ${image} ${imageTemp2} ${aspectRatio} ${width}
                                   COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_BACKGROUND} ${imageTemp2} ${imageTemp1}
-                                  COMMAND ${CONVERT} ${imageTemp1} -interlace line ${imageWithoutLogo}
+                                  COMMAND ${GM} convert ${imageTemp1} -interlace line ${imageWithoutLogo}
                                   COMMAND ${EXIFTOOL} -q -overwrite_original -Copyright="${TDD_COPYRIGHT}" ${imageWithoutLogo}
                                   COMMAND ${RM} -f ${imageTemp1} ${imageTemp2}
                                   DEPENDS ${image}
@@ -319,7 +319,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
             ELSE()
                ADD_CUSTOM_COMMAND(OUTPUT  ${imageWithoutLogo}
                                   COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_CROPPED} ${image} ${imageTemp1} ${aspectRatio} ${width}
-                                  COMMAND ${CONVERT} ${imageTemp1} -interlace line ${imageWithoutLogo}
+                                  COMMAND ${GM} convert ${imageTemp1} -interlace line ${imageWithoutLogo}
                                   COMMAND ${EXIFTOOL} -q -overwrite_original -Copyright="${TDD_COPYRIGHT}" ${imageWithoutLogo}
                                   COMMAND ${RM} -f ${imageTemp1} ${imageTemp2}
                                   DEPENDS ${image}
@@ -334,7 +334,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
             ADD_CUSTOM_COMMAND(OUTPUT  ${imageWithoutLogo}
                                COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_CROPPED}  ${image} ${imageTemp2} ${aspectRatio} ${width}
                                COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_PAINTING} ${imageTemp2} ${imageTemp1} ${makeSize}
-                               COMMAND ${CONVERT} ${imageTemp1} -interlace line ${imageWithoutLogo}
+                               COMMAND ${GM} convert ${imageTemp1} -interlace line ${imageWithoutLogo}
                                COMMAND ${EXIFTOOL} -q -overwrite_original -Copyright="${TDD_COPYRIGHT}" ${imageWithoutLogo}
                                COMMAND ${RM} -f ${imageTemp1} ${imageTemp2}
                                DEPENDS ${image}
@@ -355,7 +355,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
             ADD_CUSTOM_COMMAND(OUTPUT  ${imageWithoutLogo}
                                COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_CROPPED} ${image} ${imageTemp2} ${aspectRatio} ${width}
                                COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_MOSAIC}  ${imageTemp2} ${imageTemp1} ${tileSize} ${tileHeight} ${tileHeight} hexagons rough
-                               COMMAND ${CONVERT} ${imageTemp1} -interlace line ${imageWithoutLogo}
+                               COMMAND ${GM} convert ${imageTemp1} -interlace line ${imageWithoutLogo}
                                COMMAND ${EXIFTOOL} -q -overwrite_original -Copyright="${TDD_COPYRIGHT}" ${imageWithoutLogo}
                                COMMAND ${RM} -f ${imageTemp1} ${imageTemp2}
                                DEPENDS ${image}
@@ -367,7 +367,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
             ADD_CUSTOM_COMMAND(OUTPUT  ${imageWithoutLogo}
                                COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_CROPPED} ${image} ${imageTemp2} ${aspectRatio} ${width}
                                COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_CLOTH}   ${imageTemp2} ${imageTemp1} 5
-                               COMMAND ${CONVERT} ${imageTemp1} -interlace line ${imageWithoutLogo}
+                               COMMAND ${GM} convert ${imageTemp1} -interlace line ${imageWithoutLogo}
                                COMMAND ${EXIFTOOL} -q -overwrite_original -Copyright="${TDD_COPYRIGHT}" ${imageWithoutLogo}
                                COMMAND ${RM} -f ${imageTemp1} ${imageTemp2}
                                DEPENDS ${image}
@@ -379,7 +379,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
             ADD_CUSTOM_COMMAND(OUTPUT  ${imageWithoutLogo}
                                COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_CROPPED}  ${image} ${imageTemp2} ${aspectRatio} ${width}
                                COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_OLDPHOTO} ${imageTemp2} ${imageTemp1} 20
-                               COMMAND ${CONVERT} ${imageTemp1} -interlace line ${imageWithoutLogo}
+                               COMMAND ${GM} convert ${imageTemp1} -interlace line ${imageWithoutLogo}
                                COMMAND ${EXIFTOOL} -q -overwrite_original -Copyright="${TDD_COPYRIGHT}" ${imageWithoutLogo}
                                COMMAND ${RM} -f ${imageTemp1} ${imageTemp2}
                                DEPENDS ${image}
@@ -429,7 +429,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
          # ------ Without hostname ------------------------------------------
          ELSE()
             ADD_CUSTOM_COMMAND(OUTPUT ${imageWithLogo}
-                               COMMAND ${CONVERT} '\(' ${imageWithoutLogo} '\)' -append '\(' ${overlayImage} '\)' -gravity center -composite -interlace line -quality ${TDD_JPEG_QUALITY} ${imageWithLogo}
+                               COMMAND ${GM} composite ${overlayImage} ${imageWithoutLogo} -interlace line -quality ${TDD_JPEG_QUALITY} ${imageWithLogo}
                                COMMAND ${EXIFTOOL} -q -overwrite_original -Copyright="${TDD_COPYRIGHT}" ${imageWithLogo}
                                DEPENDS ${generate_overlayImage}
                                        ${overlayImage}
@@ -447,7 +447,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
             SET(generate_imageBootsplash "generate_${imageName}-Splash-${resolution}.jpeg")
 
             ADD_CUSTOM_COMMAND(OUTPUT  ${imageBootsplash}
-                               COMMAND ${CONVERT} -size ${TDD_BOOTSPLASH_RESOLUTION} xc:skyblue '\(' ${imageWithLogo} '\)' -gravity center -composite '\(' ${bootsplash_overlayImage} '\)' -gravity South -composite -quality ${TDD_JPEG_QUALITY} ${imageBootsplash}
+                               COMMAND ${GM} composite  -gravity South ${bootsplash_overlayImage} ${imageWithLogo} -quality ${TDD_JPEG_QUALITY} ${imageBootsplash}
                                COMMAND ${EXIFTOOL} -q -overwrite_original -Copyright="${TDD_COPYRIGHT}" ${imageBootsplash}
                                DEPENDS ${generate_bootsplash_overlayImage}
                                        ${bootsplash_overlayImage}
