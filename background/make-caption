@@ -30,9 +30,18 @@ fi
 CAPTION="`cat "$2"`"
 WIDTH="$3"
 
-convert -size ${WIDTH}x42 xc:transparent \
-   \( -background Gold -fill "#02266b" \
-      -font Helvetica-Bold -pointsize 24 \
-      -gravity center \
-      label:"$CAPTION"  \) -composite \
+
+# convert -size ${WIDTH}x42 xc:transparent \
+#    \( -background Gold -fill "#02266b" \
+#       -font Helvetica-Bold -pointsize 24 \
+#       -gravity center \
+#       label:"$CAPTION"  \) -composite \
+#    "${OUTPUT}"
+
+gm convert \
+   -size ${WIDTH}x42 xc:#FFD70044 \
+   -fill "#02266b" \
+   -font Helvetica-Bold -pointsize 24 \
+   -gravity Center \
+   -draw "text 0,1 \"${CAPTION}\"" \
    "${OUTPUT}"
