@@ -44,13 +44,19 @@ titleBorderValue=`awk "BEGIN { print ${nameHeightValue}*${titleBorder} }"`
 nameBorderValue=`awk "BEGIN { print ${nameHeightValue}*${nameBorder} }"`
 indentValue=`awk "BEGIN { print ${HEIGHT}*${indent} }"`
 
-convert -size ${WIDTH}x${HEIGHT} xc:none \
-   \( -background none \
-      \( $DIRECTORY/Title.png       -trim +repage -resize ${titleWidthValue}x \) -gravity center -append \
-      \( $DIRECTORY/Subtitle.png    -trim +repage -resize ${subtitleWidthValue}x -bordercolor none -border 0x${titleBorderValue} \) -gravity south  -append \) -gravity center -composite \
-   \( -background none \
-      \( $DIRECTORY/Name.png        -trim +repage -resize x${nameHeightValue} \) -gravity center -append \
-      \( $DIRECTORY/Affiliation.png -trim +repage -resize x${nameHeightValue} -bordercolor none -border 0x${nameBorderValue} \) -gravity south  -append \
-      \( $DIRECTORY/URL.png         -trim +repage -resize x${nameHeightValue} \) -gravity south  -append \) \
-         -gravity southeast -geometry +${indentValue}+${indentValue} -composite \
+# convert -size ${WIDTH}x${HEIGHT} xc:none \
+#     -background none \
+#        $DIRECTORY/Title.png       -trim +repage -resize ${titleWidthValue}x  -gravity center -append \
+#        $DIRECTORY/Subtitle.png    -trim +repage -resize ${subtitleWidthValue}x -bordercolor none -border 0x${titleBorderValue}  -gravity south  -append  -gravity center  \
+#     -background none \
+#        $DIRECTORY/Name.png        -trim +repage -resize x${nameHeightValue}  -gravity center -append \
+#        $DIRECTORY/Affiliation.png -trim +repage -resize x${nameHeightValue} -bordercolor none -border 0x${nameBorderValue}  -gravity south  -append \
+#        $DIRECTORY/URL.png         -trim +repage -resize x${nameHeightValue}  -gravity south  -append  \
+#          -gravity southeast -geometry +${indentValue}+${indentValue}  \
+# "$OUTPUT"
+
+
+gm composite -size ${WIDTH}x${HEIGHT} xc:none \
+   -gravity Center -geometry ${titleWidthValue}x $DIRECTORY/Title.png  \
+   -gravity SouthEast -geometry x${nameHeightValue} $DIRECTORY/URL.png  \
 "$OUTPUT"
