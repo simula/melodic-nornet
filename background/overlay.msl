@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+   <image id="title">
+      <read filename="Output/Text/Title.png"/>
+      <resize geometry="512x"/>
+   </image>
+   <image id="URL">
+      <read filename="Output/Text/URL.png"/>
+      <resize geometry="256x"/>
+   </image>
+   <image id="background" size="1024x768">
+      <read filename="xc:none" />
+      <composite image="URL" gravity="SouthEast"/>
+<!--       <composite image="title" gravity="Center"/> -->
+   </image>
+   <write filename="result.png"/>
+</group>

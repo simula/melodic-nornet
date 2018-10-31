@@ -89,6 +89,11 @@ IF(NOT IDENTIFY)
    MESSAGE(FATAL_ERROR "identify (Ubuntu/Debian: imagemagick; Fedora: ImageMagick) not found!")
 ENDIF()
 
+FIND_PROGRAM(GM gm PATHS /bin /usr/bin /usr/local/bin)
+IF(NOT GM)
+   MESSAGE(FATAL_ERROR "gm (Ubuntu/Debian: graphicsmagick; Fedora: GraphicsMagick) not found!")
+ENDIF()
+
 # ------ Required scripts ---------------------------------------------------
 FIND_PROGRAM(TEST_GIMP ${TDD_TEST_GIMP})
 IF(NOT TEST_GIMP)
@@ -462,7 +467,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
             SET(generate_pdfA4 "generate_${TDD_PRINT_PREFIX}-A4.pdf")
 
             ADD_CUSTOM_COMMAND(OUTPUT ${pdfA4}
-                              COMMAND ${CONVERT} ${imageWithLogo} ${overlayImage} -units PixelsPerCentimeter -density 100x100 -page 2970x2100 -resize 2970x2100 -gravity center -compress lossless ${pdfA4}
+                              COMMAND ${GM} convert ${imageWithLogo} ${overlayImage} -units PixelsPerCentimeter -density 100x100 -page 2970x2100 -resize 2970x2100 -gravity center -compress lossless ${pdfA4}
                               DEPENDS ${generate_overlayImage}
                                       ${overlayImage}
                                       ${generate_imageWithLogo}
@@ -480,7 +485,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
             SET(generate_pdfA3 "generate_${TDD_PRINT_PREFIX}-A3.pdf")
 
             ADD_CUSTOM_COMMAND(OUTPUT ${pdfA3}
-                              COMMAND ${CONVERT} ${imageWithLogo} ${overlayImage} -units PixelsPerCentimeter -density 100x100 -page 5940x4200 -resize 5940x4200 -gravity center -compress lossless ${pdfA3}
+                              COMMAND ${GM} convert ${imageWithLogo} ${overlayImage} -units PixelsPerCentimeter -density 100x100 -page 5940x4200 -resize 5940x4200 -gravity center -compress lossless ${pdfA3}
                               DEPENDS ${generate_overlayImage}
                                       ${overlayImage}
                                       ${generate_imageWithLogo}
