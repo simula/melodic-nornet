@@ -27,6 +27,8 @@ WIDTH="$2"
 HEIGHT="$3"
 DIRECTORY="$4"
 
+GM="/usr/bin/gm"
+
 # ------ Proportions --------------------------------------------------------
 titleWidth=0.75      # of Width
 subtitleWidth=0.80   # of Width
@@ -56,7 +58,7 @@ indentValue=`awk "BEGIN { print ${HEIGHT}*${indent} }"`
 # "$OUTPUT"
 
 
-# gm composite -size ${WIDTH}x${HEIGHT} xc:none \
+# ${GM} composite -size ${WIDTH}x${HEIGHT} xc:none \
 #    -gravity Center -geometry ${titleWidthValue}x $DIRECTORY/Title.png  \
 #    -gravity SouthEast -geometry x${nameHeightValue} $DIRECTORY/URL.png  \
 # "$OUTPUT"
@@ -64,40 +66,40 @@ indentValue=`awk "BEGIN { print ${HEIGHT}*${indent} }"`
 
 tempDirectory=`mktemp -d`
 
-gm convert $DIRECTORY/Title.png -trim \
+${GM} convert $DIRECTORY/Title.png -trim \
    -resize ${titleWidthValue}x \
    ${tempDirectory}/title.miff
-gm convert $DIRECTORY/Subtitle.png -trim \
+${GM} convert $DIRECTORY/Subtitle.png -trim \
    -resize ${subtitleWidthValue}x \
    -bordercolor none -border 0x${titleBorderValue} \
    ${tempDirectory}/subtitle.miff
-gm convert -gravity Center -background none -append \
+${GM} convert -gravity Center -background none -append \
    ${tempDirectory}/title.miff ${tempDirectory}/subtitle.miff ${tempDirectory}/logo.miff
 
 
-gm convert $DIRECTORY/Name.png -trim \
+${GM} convert $DIRECTORY/Name.png -trim \
    -resize x${nameHeightValue} \
    ${tempDirectory}/name.miff
-gm convert $DIRECTORY/Affiliation.png -trim \
+${GM} convert $DIRECTORY/Affiliation.png -trim \
    -resize x${nameHeightValue} \
    -bordercolor none -border 0x${nameBorderValue} \
    ${tempDirectory}/affiliation.miff
-gm convert $DIRECTORY/URL.png -trim \
+${GM} convert $DIRECTORY/URL.png -trim \
    -resize x${nameHeightValue} \
    ${tempDirectory}/url.miff
-gm convert -gravity Center -background none -append \
+${GM} convert -gravity Center -background none -append \
    ${tempDirectory}/name.miff ${tempDirectory}/affiliation.miff ${tempDirectory}/url.miff \
    ${tempDirectory}/contact.miff
 
 
-gm composite -size ${WIDTH}x${HEIGHT} \
+${GM} composite -size ${WIDTH}x${HEIGHT} \
    -gravity Center ${tempDirectory}/logo.miff \
    xc:none ${tempDirectory}/layer-contact.miff
-gm composite -size ${WIDTH}x${HEIGHT} \
+${GM} composite -size ${WIDTH}x${HEIGHT} \
    -gravity SouthEast -geometry +${indentValue}+${indentValue} ${tempDirectory}/contact.miff \
    xc:none ${tempDirectory}/layer-logo.miff
 
 
-gm composite ${tempDirectory}/layer-contact.miff ${tempDirectory}/layer-logo.miff "$OUTPUT"
+${GM} composite ${tempDirectory}/layer-contact.miff ${tempDirectory}/layer-logo.miff "$OUTPUT"
 
 rm -rf ${tempDirectory}

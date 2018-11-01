@@ -30,6 +30,8 @@ fi
 CAPTION="`cat "$2"`"
 WIDTH="$3"
 
+GM="/usr/bin/gm"
+
 
 # convert -size ${WIDTH}x42 xc:transparent \
 #    \( -background Gold -fill "#02266b" \
@@ -38,7 +40,7 @@ WIDTH="$3"
 #       label:"$CAPTION"  \) -composite \
 #    "${OUTPUT}"
 
-gm convert \
+${GM} convert \
    -size ${WIDTH}x42 xc:#FFD70044 \
    -fill "#02266b" \
    -font Helvetica-Bold -pointsize 24 \
