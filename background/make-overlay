@@ -94,7 +94,7 @@ gm composite -size ${WIDTH}x${HEIGHT} \
    -gravity Center ${tempDirectory}/logo.miff \
    xc:none ${tempDirectory}/layer-contact.miff
 gm composite -size ${WIDTH}x${HEIGHT} \
-   -gravity SouthEast -geometry +${indentValue}+${indentValue} contact.miff \
+   -gravity SouthEast -geometry +${indentValue}+${indentValue} ${tempDirectory}/contact.miff \
    xc:none ${tempDirectory}/layer-logo.miff
 
 
