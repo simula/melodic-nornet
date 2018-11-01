@@ -56,7 +56,46 @@ indentValue=`awk "BEGIN { print ${HEIGHT}*${indent} }"`
 # "$OUTPUT"
 
 
-gm composite -size ${WIDTH}x${HEIGHT} xc:none \
-   -gravity Center -geometry ${titleWidthValue}x $DIRECTORY/Title.png  \
-   -gravity SouthEast -geometry x${nameHeightValue} $DIRECTORY/URL.png  \
-"$OUTPUT"
+# gm composite -size ${WIDTH}x${HEIGHT} xc:none \
+#    -gravity Center -geometry ${titleWidthValue}x $DIRECTORY/Title.png  \
+#    -gravity SouthEast -geometry x${nameHeightValue} $DIRECTORY/URL.png  \
+# "$OUTPUT"
+
+
+tempDirectory=`mktemp -d`
+
+gm convert $DIRECTORY/Title.png -trim \
+   -resize ${titleWidthValue}x \
+   ${tempDirectory}/title.miff
+gm convert $DIRECTORY/Subtitle.png -trim \
+   -resize ${subtitleWidthValue}x \
+   -bordercolor none -border 0x${titleBorderValue} \
+   ${tempDirectory}/subtitle.miff
+gm convert -gravity Center -background none -append \
+   ${tempDirectory}/title.miff ${tempDirectory}/subtitle.miff ${tempDirectory}/logo.miff
+
+
+gm convert $DIRECTORY/Name.png -trim \
+   -resize x${nameHeightValue} \
+   ${tempDirectory}/name.miff
+gm convert $DIRECTORY/Affiliation.png -trim \
+   -resize x${nameHeightValue} \
+   -bordercolor none -border 0x${nameBorderValue} \
+   ${tempDirectory}/affiliation.miff
+gm convert $DIRECTORY/URL.png -trim \
+   -resize x${nameHeightValue} \
+   ${tempDirectory}/url.miff
+gm convert -gravity Center -background none -append \
+   ${tempDirectory}/name.miff ${tempDirectory}/affiliation.miff ${tempDirectory}/url.miff \
+   ${tempDirectory}/contact.miff
+
+
+gm composite -size ${WIDTH}x${HEIGHT} \
+   -gravity Center ${tempDirectory}/logo.miff \
+   xc:none ${tempDirectory}/layer-contact.miff
+gm composite -size ${WIDTH}x${HEIGHT} \
+   -gravity SouthEast -geometry +${indentValue}+${indentValue} contact.miff \
+   xc:none ${tempDirectory}/layer-logo.miff
+
+
+gm composite ${tempDirectory}/layer-contact.miff ${tempDirectory}/layer-logo.miff "$OUTPUT"
