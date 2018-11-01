@@ -99,3 +99,5 @@ gm composite -size ${WIDTH}x${HEIGHT} \
 
 
 gm composite ${tempDirectory}/layer-contact.miff ${tempDirectory}/layer-logo.miff "$OUTPUT"
+
+rm -rf ${tempDirectory}
