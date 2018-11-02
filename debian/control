@@ -9,7 +9,6 @@ Build-Depends: cmake,
                gimp,
                graphicsmagick,
                gsfonts,
-               imagemagick,
                libfile-fcntllock-perl
 Standards-Version: 4.1.4
 Vcs-Git: https://github.com/dreibh/melodic.git
@@ -35,7 +34,6 @@ Depends: cmake,
          gimp,
          graphicsmagick,
          gsfonts,
-         imagemagick,
          nornet-development,
          ${misc:Depends},
          ${shlibs:Depends}

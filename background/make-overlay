@@ -100,7 +100,7 @@ ${GM} convert -gravity Center -background none -append \
    ${tempDirectory}/contact.miff
 
 
-# ------ Combine everything ------------------------------------------------=
+# ------ Combine everything -------------------------------------------------
 ${GM} composite -size ${WIDTH}x${HEIGHT} \
    -gravity Center ${tempDirectory}/logo.miff \
    xc:none ${tempDirectory}/layer-contact.miff

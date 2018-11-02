@@ -74,24 +74,14 @@ IF(NOT AWK)
    MESSAGE(FATAL_ERROR "awk (Ubuntu/Debian: awk; Fedora: awk) not found!")
 ENDIF()
 
-FIND_PROGRAM(EXIFTOOL exiftool PATHS /bin /usr/bin /usr/local/bin)
-IF(NOT EXIFTOOL)
-   MESSAGE(FATAL_ERROR "exiftool (Ubuntu/Debian: exiftool; Fedora: perl-Image-ExifTool) not found!")
-ENDIF()
-
-FIND_PROGRAM(CONVERT convert PATHS /bin /usr/bin /usr/local/bin)
-IF(NOT CONVERT)
-   MESSAGE(FATAL_ERROR "convert (Ubuntu/Debian: imagemagick; Fedora: ImageMagick) not found!")
-ENDIF()
-
-FIND_PROGRAM(IDENTIFY identify PATHS /bin /usr/bin /usr/local/bin)
-IF(NOT IDENTIFY)
-   MESSAGE(FATAL_ERROR "identify (Ubuntu/Debian: imagemagick; Fedora: ImageMagick) not found!")
-ENDIF()
-
 FIND_PROGRAM(GM gm PATHS /bin /usr/bin /usr/local/bin)
 IF(NOT GM)
    MESSAGE(FATAL_ERROR "gm (Ubuntu/Debian: graphicsmagick; Fedora: GraphicsMagick) not found!")
+ENDIF()
+
+FIND_PROGRAM(EXIFTOOL exiftool PATHS /bin /usr/bin /usr/local/bin)
+IF(NOT EXIFTOOL)
+   MESSAGE(FATAL_ERROR "exiftool (Ubuntu/Debian: libimage-exiftool-perl; Fedora: perl-Image-ExifTool) not found!")
 ENDIF()
 
 # ------ Required scripts ---------------------------------------------------
