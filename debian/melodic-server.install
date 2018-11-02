@@ -1,4 +1,4 @@
 /etc/grub.d/??_melodic_server_theme
-/usr/share/melodic-desktop/Splash/MELODICServer1-1024x768.jpeg /boot/Splash-MELODICServer1-1024x768.jpeg
+/usr/share/melodic-desktop/Splash/MELODICServer1-1024x768.jpeg /boot
 /usr/share/melodic-nornet/cloud.cfg
 /usr/share/melodic-nornet/grub-defaults
