@@ -37,8 +37,6 @@ titleBorder=0.50     # of Name Height
 nameBorder=0.35      # of Name Height
 indent=0.055         # of Height
 
-
-# ------ Create logo --------------------------------------------------------
 titleWidthValue=`awk "BEGIN { print ${WIDTH}*${titleWidth} }"`
 subtitleWidthValue=`awk "BEGIN { print ${WIDTH}*${subtitleWidth} }"`
 nameHeightValue=`awk "BEGIN { print ${HEIGHT}*${nameHeight} }"`
@@ -46,27 +44,10 @@ titleBorderValue=`awk "BEGIN { print ${nameHeightValue}*${titleBorder} }"`
 nameBorderValue=`awk "BEGIN { print ${nameHeightValue}*${nameBorder} }"`
 indentValue=`awk "BEGIN { print ${HEIGHT}*${indent} }"`
 
-# convert -size ${WIDTH}x${HEIGHT} xc:none \
-#     -background none \
-#        $DIRECTORY/Title.png       -trim +repage -resize ${titleWidthValue}x  -gravity center -append \
-#        $DIRECTORY/Subtitle.png    -trim +repage -resize ${subtitleWidthValue}x -bordercolor none -border 0x${titleBorderValue}  -gravity south  -append  -gravity center  \
-#     -background none \
-#        $DIRECTORY/Name.png        -trim +repage -resize x${nameHeightValue}  -gravity center -append \
-#        $DIRECTORY/Affiliation.png -trim +repage -resize x${nameHeightValue} -bordercolor none -border 0x${nameBorderValue}  -gravity south  -append \
-#        $DIRECTORY/URL.png         -trim +repage -resize x${nameHeightValue}  -gravity south  -append  \
-#          -gravity southeast -geometry +${indentValue}+${indentValue}  \
-# "$OUTPUT"
-
-
-# ${GM} composite -size ${WIDTH}x${HEIGHT} xc:none \
-#    -gravity Center -geometry ${titleWidthValue}x $DIRECTORY/Title.png  \
-#    -gravity SouthEast -geometry x${nameHeightValue} $DIRECTORY/URL.png  \
-# "$OUTPUT"
-
 
 tempDirectory=`mktemp -d`
 
-# ====== Resize input images ================================================
+# ------ Resize input images ------------------------------------------------
 ${GM} convert $DIRECTORY/Title.png -trim \
    -resize ${titleWidthValue}x \
    ${tempDirectory}/title.miff
@@ -86,7 +67,7 @@ ${GM} convert $DIRECTORY/URL.png -trim \
    -resize x${nameHeightValue} \
    ${tempDirectory}/url.miff
 
-# ====== Center title over subtitle =========================================
+# ------ Center title over subtitle -----------------------------------------
 th=`gm identify -format "%h" "${tempDirectory}/title.miff"`
 # Size is ${subtitleWidthValue}x${th}:
 ${GM} composite -size ${subtitleWidthValue}x${th} \
@@ -99,7 +80,7 @@ ${GM} convert -background none -append \
    ${tempDirectory}/logo.miff
 
 
-# ====== Center contact labels ==============================================
+# ------ Center contact labels ----------------------------------------------
 nw=`gm identify -format "%w" "${tempDirectory}/name.miff"`
 nh=`gm identify -format "%h" "${tempDirectory}/name.miff"`
 
@@ -119,7 +100,7 @@ ${GM} convert -gravity Center -background none -append \
    ${tempDirectory}/contact.miff
 
 
-# ====== Combine everything =================================================
+# ------ Combine everything ------------------------------------------------=
 ${GM} composite -size ${WIDTH}x${HEIGHT} \
    -gravity Center ${tempDirectory}/logo.miff \
    xc:none ${tempDirectory}/layer-contact.miff
