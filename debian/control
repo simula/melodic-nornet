@@ -5,11 +5,11 @@ Maintainer: Thomas Dreibholz <dreibh@simula.no>
 Homepage: https://www.simula.no/
 Build-Depends: cmake,
                debhelper (>= 9),
-               exiftool,
                gimp,
                graphicsmagick,
                gsfonts,
-               libfile-fcntllock-perl
+               libfile-fcntllock-perl,
+               libimage-exiftool-perl
 Standards-Version: 4.1.4
 Vcs-Git: https://github.com/dreibh/melodic.git
 Vcs-Browser: https://github.com/dreibh/melodic/tags
@@ -30,10 +30,10 @@ Description: MELODIC Management Tools
 Package: melodic-development
 Architecture: any
 Depends: cmake,
-         exiftool,
          gimp,
          graphicsmagick,
          gsfonts,
+         libimage-exiftool-perl,
          nornet-development,
          ${misc:Depends},
          ${shlibs:Depends}
