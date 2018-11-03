@@ -88,6 +88,7 @@ rm -f "$outputFileName"
 gm convert "$inputFileName" \
    -crop ${croppedInputWidth}x${croppedInputHeight}+${cx}+${cy} \
    -resize ${newWidth}x${newHeight} \
+   +repage \
    "$outputFileName"
 
 # echo "Done!"
