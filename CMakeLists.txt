@@ -21,7 +21,7 @@ PROJECT(melodic-nornet NONE)
 
 SET(BUILD_MAJOR "0")
 SET(BUILD_MINOR "5")
-SET(BUILD_PATCH "0~rc1.9")
+SET(BUILD_PATCH "0~rc1.10")
 SET(BUILD_VERSION ${BUILD_MAJOR}.${BUILD_MINOR}.${BUILD_PATCH})
 
 
@@ -109,4 +109,5 @@ ENDIF()
 #############################################################################
 
 ADD_SUBDIRECTORY(src)
+ADD_SUBDIRECTORY(grub)
 ADD_SUBDIRECTORY(background)

@@ -9,5 +9,4 @@ INSTALL(FILES MELODIC-System-Info DESTINATION ${CMAKE_INSTALL_BINDIR})
 # SOURCE DIRECTORIES
 #############################################################################
 
-ADD_SUBDIRECTORY(grub)
 ADD_SUBDIRECTORY(cloud-init)
