@@ -30,13 +30,11 @@ fi
 CAPTION="`cat "$2"`"
 WIDTH="$3"
 
-GM="/usr/bin/gm"
+if [ "${MAKE_CAPTION}" = "" ] ; then
+   MAKE_CAPTION=gimp-scripts/Make-Caption
+fi
 
-
-${GM} convert \
-   -size ${WIDTH}x42 xc:#FFD70044 \
-   -fill "#02266b" \
-   -font Helvetica-Bold -pointsize 24 \
-   -gravity Center \
-   -draw "text 0,1 \"${CAPTION}\"" \
-   "${OUTPUT}"
+${MAKE_CAPTION} \
+   "${OUTPUT}" "${CAPTION}" 1024 42 \
+   "Noto Sans Bold" 60 \
+   "#02266b" "#ffd700" 26

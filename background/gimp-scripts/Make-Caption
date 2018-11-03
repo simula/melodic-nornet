@@ -20,8 +20,8 @@
 
 
 # Example:
-# Make-Caption Caption.png Caption.input 1024 42 "Noto Sans Bold" 75
-# Make-Caption Caption.png Caption.input 1024 42 "Noto Sans Bold" 75 "#02266b" "#ffd700" 26
+# Make-Caption Caption.png Caption.input 1024 42 "Noto Sans Bold" 60
+# Make-Caption Caption.png Caption.input 1024 42 "Noto Sans Bold" 60 "#02266b" "#ffd700" 26
 
 
 # ====== Handle arguments ===================================================
@@ -57,7 +57,7 @@ rm -f "$OUTPUTFILENAME"
    ((outputFileName   "$OUTPUTFILENAME")
     (captionText      "$CAPTION_TEXT")
     (captionWidth     $CAPTION_WIDTH)
-    (captionHeight    42)
+    (captionHeight    $CAPTION_HEIGHT)
     (captionFont      "$FONT")
     (captionFontSize  (/ (* $FONT_SIZE captionHeight) 100))
     (captionOpacity   (- 100 $TRANSPARENCY))
