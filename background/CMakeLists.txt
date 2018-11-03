@@ -173,6 +173,31 @@ LIST(SORT TDD_VARIANTS)
 FILE(MAKE_DIRECTORY ${TDD_OUTPUT_DIRECTORY})
 
 
+# ###### Create unique target name from file name ###########################
+FUNCTION(makeUniqueTarget target fileName)
+   SET(result ${fileName})
+   STRING(REPLACE "ä" "ae" result ${result})
+   STRING(REPLACE "ö" "oe" result ${result})
+   STRING(REPLACE "ü" "ue" result ${result})
+   STRING(REPLACE "ß" "ss" result ${result})
+   STRING(REPLACE "Ä" "AE" result ${result})
+   STRING(REPLACE "Ö" "OE" result ${result})
+   STRING(REPLACE "Ü" "UE" result ${result})
+   STRING(REPLACE "æ" "ae" result ${result})
+   STRING(REPLACE "ø" "oe" result ${result})
+   STRING(REPLACE "å" "aa" result ${result})
+   STRING(REPLACE "Æ" "AE" result ${result})
+   STRING(REPLACE "Ø" "OE" result ${result})
+   STRING(REPLACE "Å" "AA" result ${result})
+   STRING(REGEX REPLACE "[áàǎã]" "a" result ${result})
+   STRING(REGEX REPLACE "[ÁÀǍÃ]" "A" result ${result})
+   STRING(REGEX REPLACE "[éèê]"  "e" result ${result})
+   STRING(REGEX REPLACE "[ÉÈÊ]"  "E" result ${result})
+   STRING(REGEX REPLACE "[^a-zA-Z0-9.+-@_]" "_X_" result ${result})
+   SET(${target} ${result} PARENT_SCOPE)
+ENDFUNCTION()
+
+
 # ###### Initialise GIMP directory ##########################################
 # Due to parallel runs of Gimp, make sure that gimp runs once allone first!
 SET(GIMP_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/.gimp)
@@ -216,7 +241,7 @@ FOREACH(image IN LISTS TDD_IMAGE_FILES)
    IF(imageName MATCHES ^[a-z])
       SET(hostname               "${imageName}.${TDD_DOMAIN}")
       SET(hostnameImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Text/${hostname}.png")
-      SET(generate_hostnameImage "generate_${hostname}.png")
+      makeUniqueTarget(generate_hostnameImage "generate_${hostname}.png")
 
       ADD_CUSTOM_COMMAND(OUTPUT  ${hostnameImage}
                          COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_LOGO} ${hostnameImage} "${hostname}" 256 10 "Brushed Aluminium" "Comic Sans MS"
@@ -232,7 +257,7 @@ FILE(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Overlay)
 FILE(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_SPLASH})
 
 SET(captionFile          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_SPLASH}/${TDD_OUTPUT_CAPTIONFILE}")
-SET(generate_captionFile "generate_Caption.input")
+makeUniqueTarget(generate_captionFile "generate_Caption.input")
 FILE(GENERATE OUTPUT ${captionFile} CONTENT "${TDD_BOOTSPLASH_TEXT}")
 ADD_CUSTOM_TARGET(${generate_captionFile} DEPENDS ${captionFile})
 IF(BUILD_BOOTSPLASH)
@@ -240,7 +265,7 @@ IF(BUILD_BOOTSPLASH)
 ENDIF()
 
 SET(bootsplash_overlayImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Caption-${TDD_BOOTSPLASH_RESOLUTION}.png")
-SET(generate_bootsplash_overlayImage "generate_Caption-${TDD_BOOTSPLASH_RESOLUTION}.png")
+makeUniqueTarget(generate_bootsplash_overlayImage "generate_Caption-${TDD_BOOTSPLASH_RESOLUTION}.png")
 STRING(REGEX REPLACE "x.*$" "" bootsplash_width "${TDD_BOOTSPLASH_RESOLUTION}")
 ADD_CUSTOM_COMMAND(OUTPUT  ${bootsplash_overlayImage}
                    COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} MAKE_CAPTION=${MAKE_CAPTION} ${BUILD_CAPTION} ${bootsplash_overlayImage} ${captionFile} ${bootsplash_width}
@@ -267,7 +292,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
 
    # ====== Generate overlay graphics =======================================
    SET(overlayImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Overlay-${resolution}.png")
-   SET(generate_overlayImage "generate_overlayImage-${resolution}.png")
+   makeUniqueTarget(generate_overlayImage "generate_overlayImage-${resolution}.png")
 
    # NOTE: Dependency on generate targets and files!
    ADD_CUSTOM_COMMAND(OUTPUT ${overlayImage}
@@ -285,10 +310,10 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
       IF(imageName MATCHES ^[a-z])
          SET(hostname               "${imageName}.${TDD_DOMAIN}")
          SET(hostnameImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Text/${hostname}.png")
-         SET(generate_hostnameImage "generate_${hostname}.png")
+         makeUniqueTarget(generate_hostnameImage "generate_${hostname}.png")
 
          SET(overlayImageWithHostname          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Overlay-${hostname}-${resolution}.png")
-         SET(generate_overlayImageWithHostname "generate_overlayImageWithHostname-${hostname}-${resolution}.png")
+         makeUniqueTarget(generate_overlayImageWithHostname "generate_overlayImageWithHostname-${hostname}-${resolution}.png")
 
          # NOTE: Dependency on generate targets and files!
          ADD_CUSTOM_COMMAND(OUTPUT ${overlayImageWithHostname}
@@ -322,9 +347,9 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
             SET(imageWithoutLogo   "${dirWithoutLogo}/${imageName}${imageExtension}")
             SET(instDirWithoutLogo "${CMAKE_INSTALL_DATADIR}/${TDD_INSTALL_SUBDIRECTORY}/${TDD_OUTPUT_WITHOUT_LOGO}/${resolution}/${variant}")
          ENDIF()
-         SET(generate_imageWithoutLogo "generate_${imageName}-without-Logo-${variant}-${resolution}${imageExtension}")
-         FILE(MAKE_DIRECTORY ${dirWithoutLogo})
+         makeUniqueTarget(generate_imageWithoutLogo "generate_${imageName}-without-Logo-${variant}-${resolution}${imageExtension}")
 
+         FILE(MAKE_DIRECTORY ${dirWithoutLogo})
          SET(imageTemp2 ${imageWithoutLogo}-tmp2.png)   # Processed image
          SET(imageTemp1 ${imageWithoutLogo}-tmp1.png)   # Processed and cropped image
 
@@ -429,7 +454,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
             SET(imageWithLogo   "${dirWithLogo}/${imageName}${imageExtension}")
             SET(instDirWithLogo "${CMAKE_INSTALL_DATADIR}/${TDD_INSTALL_SUBDIRECTORY}/${TDD_OUTPUT_WITH_LOGO}/${resolution}/${variant}")
          ENDIF()
-         SET(generate_imageWithLogo "generate_${imageName}-with-Logo-${variant}-${resolution}${imageExtension}")
+         makeUniqueTarget(generate_imageWithLogo "generate_${imageName}-with-Logo-${variant}-${resolution}${imageExtension}")
          FILE(MAKE_DIRECTORY ${dirWithLogo})
 
          # ------ With hostname ---------------------------------------------
@@ -460,7 +485,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
          # ====== Bootsplash ================================================
          IF((BUILD_BOOTSPLASH) AND (resolution STREQUAL "${TDD_BOOTSPLASH_RESOLUTION}") AND (variant STREQUAL "${TDD_BOOTSPLASH_VARIANT}"))
             SET(imageBootsplash          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_SPLASH}/${imageName}-${resolution}.jpeg")
-            SET(generate_imageBootsplash "generate_${imageName}-Splash-${resolution}.jpeg")
+            makeUniqueTarget(generate_imageBootsplash "generate_${imageName}-Splash-${resolution}.jpeg")
 
             ADD_CUSTOM_COMMAND(OUTPUT  ${imageBootsplash}
                                COMMAND ${GM} composite  -gravity South ${bootsplash_overlayImage} ${imageWithLogo} -quality ${TDD_JPEG_QUALITY} ${imageBootsplash}
@@ -480,7 +505,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
            (variant STREQUAL "${TDD_PRINT_VARIANT}") AND
            ("${imageName}${imageExtension}" STREQUAL "${TDD_PRINT_IMAGE}"))
             SET(pdfA4          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_PRINT_PREFIX}-A4.pdf")
-            SET(generate_pdfA4 "generate_${TDD_PRINT_PREFIX}-A4.pdf")
+            makeUniqueTarget(generate_pdfA4 "generate_${TDD_PRINT_PREFIX}-A4.pdf")
 
             ADD_CUSTOM_COMMAND(OUTPUT ${pdfA4}
                               COMMAND ${GM} convert ${imageWithLogo} ${overlayImage} -units PixelsPerCentimeter -density 100x100 -page 2970x2100 -resize 2970x2100 -gravity center -compress lossless ${pdfA4}
@@ -499,7 +524,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
            (variant STREQUAL "${TDD_PRINT_VARIANT}") AND
            ("${imageName}${imageExtension}" STREQUAL "${TDD_PRINT_IMAGE}"))
             SET(pdfA3          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_PRINT_PREFIX}-A3.pdf")
-            SET(generate_pdfA3 "generate_${TDD_PRINT_PREFIX}-A3.pdf")
+            makeUniqueTarget(generate_pdfA3 "generate_${TDD_PRINT_PREFIX}-A3.pdf")
 
             ADD_CUSTOM_COMMAND(OUTPUT ${pdfA3}
                               COMMAND ${GM} convert ${imageWithLogo} ${overlayImage} -units PixelsPerCentimeter -density 100x100 -page 5940x4200 -resize 5940x4200 -gravity center -compress lossless ${pdfA3}
