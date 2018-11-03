@@ -58,7 +58,7 @@ SET(TDD_VARIANTS
 #   oldphoto
 )
 
-SET(TDD_JPEG_QUALITY          92.5)
+SET(TDD_JPEG_QUALITY          87.5)
 
 SET(TDD_BUILD_BOOTSPLASH      1)
 SET(TDD_BOOTSPLASH_RESOLUTION "1024x768")
@@ -79,8 +79,8 @@ SET(TDD_COPYRIGHT             "Copyright ${this_year} by Thomas Dreibholz")
 FILE(GLOB TDD_TEXT_FILES  "*.text")
 FILE(GLOB TDD_IMAGE_FILES "Input/*.[Jj][Pp][Ee][Gg]" "Input/*.[Jj][Pp][Gg]" "Input/*.[Pp][Nn][Gg]")
 
-SET(TDD_MAKE_OVERLAY "${CMAKE_CURRENT_SOURCE_DIR}/make-overlay")
-SET(TDD_MAKE_CAPTION "${CMAKE_CURRENT_SOURCE_DIR}/make-caption")
+SET(TDD_BUILD_OVERLAY "${CMAKE_CURRENT_SOURCE_DIR}/build-overlay")
+SET(TDD_BUILD_CAPTION "${CMAKE_CURRENT_SOURCE_DIR}/build-caption")
 
 # ------ Outputs ------------------------------------------
 SET(TDD_ADD_DIST_TARGET          0)
@@ -98,6 +98,7 @@ SET(TDD_OUTPUT_CAPTIONFILE       "melodic-version")
 # ------ Programs -----------------------------------------
 SET(TDD_TEST_GIMP       "${CMAKE_CURRENT_SOURCE_DIR}/gimp-scripts/Test-Gimp")
 SET(TDD_MAKE_CROPPED    "${CMAKE_CURRENT_SOURCE_DIR}/gimp-scripts/Resize-with-Cropping")
+SET(TDD_MAKE_CAPTION    "${CMAKE_CURRENT_SOURCE_DIR}/gimp-scripts/Make-Caption")
 SET(TDD_MAKE_LOGO       "${CMAKE_CURRENT_SOURCE_DIR}/gimp-scripts/Make-Logo")
 SET(TDD_MAKE_BACKGROUND "${CMAKE_CURRENT_SOURCE_DIR}/gimp-scripts/Make-Background")
 SET(TDD_MAKE_PAINTING   "${CMAKE_CURRENT_SOURCE_DIR}/gimp-scripts/Make-Painting")

@@ -7,7 +7,6 @@ Build-Depends: cmake,
                debhelper (>= 9),
                gimp,
                graphicsmagick,
-               gsfonts,
                libfile-fcntllock-perl,
                libimage-exiftool-perl
 Standards-Version: 4.1.4

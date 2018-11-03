@@ -95,6 +95,11 @@ IF(NOT MAKE_CROPPED)
    MESSAGE(FATAL_ERROR "Resize-with-Cropping (${TDD_MAKE_CROPPED}) not found!")
 ENDIF()
 
+FIND_PROGRAM(MAKE_CAPTION ${TDD_MAKE_CAPTION})
+IF(NOT MAKE_CAPTION)
+   MESSAGE(FATAL_ERROR "Make-Caption (${TDD_MAKE_CAPTION}) not found!")
+ENDIF()
+
 FIND_PROGRAM(MAKE_LOGO ${TDD_MAKE_LOGO})
 IF(NOT MAKE_LOGO)
    MESSAGE(FATAL_ERROR "Make-Logo (${TDD_MAKE_LOGO}) not found!")
@@ -126,14 +131,14 @@ IF(NOT MAKE_OLDPHOTO)
 ENDIF()
 
 # ------ Customised background scripts --------------------------------------
-FIND_PROGRAM(MAKE_CAPTION ${TDD_MAKE_CAPTION})
-IF(NOT MAKE_CAPTION)
-   MESSAGE(FATAL_ERROR "Caption script (${TDD_MAKE_CAPTION}) not found!")
+FIND_PROGRAM(BUILD_CAPTION ${TDD_BUILD_CAPTION})
+IF(NOT BUILD_CAPTION)
+   MESSAGE(FATAL_ERROR "Caption script (${TDD_BUILD_CAPTION}) not found!")
 ENDIF()
 
-FIND_PROGRAM(MAKE_OVERLAY ${TDD_MAKE_OVERLAY})
-IF(NOT MAKE_OVERLAY)
-   MESSAGE(FATAL_ERROR "Caption script (${TDD_MAKE_OVERLAY}) not found!")
+FIND_PROGRAM(BUILD_OVERLAY ${TDD_BUILD_OVERLAY})
+IF(NOT BUILD_OVERLAY)
+   MESSAGE(FATAL_ERROR "Caption script (${TDD_BUILD_OVERLAY}) not found!")
 ENDIF()
 
 
@@ -238,9 +243,11 @@ SET(bootsplash_overlayImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_D
 SET(generate_bootsplash_overlayImage "generate_Caption-${TDD_BOOTSPLASH_RESOLUTION}.png")
 STRING(REGEX REPLACE "x.*$" "" bootsplash_width "${TDD_BOOTSPLASH_RESOLUTION}")
 ADD_CUSTOM_COMMAND(OUTPUT  ${bootsplash_overlayImage}
-                   COMMAND ${MAKE_CAPTION} ${bootsplash_overlayImage} ${captionFile} ${bootsplash_width}
+                   COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} MAKE_CAPTION=${MAKE_CAPTION} ${BUILD_CAPTION} ${bootsplash_overlayImage} ${captionFile} ${bootsplash_width}
                    DEPENDS ${generate_captionFile}
-                           ${captionFile})
+                           ${captionFile}
+                           generate_gimpDirStamp
+                           ${gimpDirStamp})
 ADD_CUSTOM_TARGET(${generate_bootsplash_overlayImage} DEPENDS ${bootsplash_overlayImage})
 
 
@@ -264,7 +271,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
 
    # NOTE: Dependency on generate targets and files!
    ADD_CUSTOM_COMMAND(OUTPUT ${overlayImage}
-                      COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${MAKE_OVERLAY} ${overlayImage} ${width} ${height} ${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Text
+                      COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} ${BUILD_OVERLAY} ${overlayImage} ${width} ${height} ${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Text
                       DEPENDS generate_all_texts
                               ${all_texts})
    ADD_CUSTOM_TARGET(${generate_overlayImage} DEPENDS ${overlayImage})
