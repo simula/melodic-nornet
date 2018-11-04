@@ -10,8 +10,8 @@ Build-Depends: cmake,
                libfile-fcntllock-perl,
                libimage-exiftool-perl
 Standards-Version: 4.1.4
-Vcs-Git: https://github.com/dreibh/melodic.git
-Vcs-Browser: https://github.com/dreibh/melodic/tags
+Vcs-Git: https://github.com/simula/melodic-nornet.git
+Vcs-Browser: https://github.com/simula/melodic-nornet/tags
 
 Package: melodic-management
 Architecture: any
