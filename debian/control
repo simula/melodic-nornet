@@ -5,6 +5,9 @@ Maintainer: Thomas Dreibholz <dreibh@simula.no>
 Homepage: https://www.simula.no/
 Build-Depends: cmake,
                debhelper (>= 9),
+               fonts-dejavu,
+               fonts-noto,
+               fonts-noto-cjk,
                gimp,
                graphicsmagick,
                libfile-fcntllock-perl,
@@ -29,6 +32,9 @@ Description: MELODIC Management Tools
 Package: melodic-development
 Architecture: any
 Depends: cmake,
+         fonts-dejavu,
+         fonts-noto,
+         fonts-noto-cjk,
          gimp,
          graphicsmagick,
          gsfonts,
