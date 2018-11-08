@@ -254,8 +254,8 @@ FOREACH(image IN LISTS TDD_IMAGE_FILES)
    # ====== Generate hostname graphics ======================================
    GET_FILENAME_COMPONENT(imageName ${image} NAME_WE)
    IF(imageName MATCHES ^[a-z])
-      SET(hostname               "${imageName}.${TDD_DOMAIN}")
-      SET(hostnameImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Text/${hostname}.png")
+      SET(hostname      "${imageName}.${TDD_DOMAIN}")
+      SET(hostnameImage "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Text/${hostname}.png")
       makeUniqueTarget(generate_hostnameImage "generate_${hostname}.png")
 
       ADD_CUSTOM_COMMAND(OUTPUT  ${hostnameImage}
@@ -271,7 +271,7 @@ ENDFOREACH()
 FILE(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Overlay)
 FILE(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_SPLASH})
 
-SET(captionFile          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_SPLASH}/${TDD_OUTPUT_CAPTIONFILE}")
+SET(captionFile "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_SPLASH}/${TDD_OUTPUT_CAPTIONFILE}")
 makeUniqueTarget(generate_captionFile "generate_Caption.input")
 FILE(GENERATE OUTPUT ${captionFile} CONTENT "${TDD_BOOTSPLASH_TEXT}")
 ADD_CUSTOM_TARGET(${generate_captionFile} DEPENDS ${captionFile})
@@ -279,7 +279,7 @@ IF(BUILD_BOOTSPLASH)
    INSTALL(FILES ${captionFile} DESTINATION "${CMAKE_INSTALL_DATADIR}/${TDD_INSTALL_SUBDIRECTORY}/${TDD_OUTPUT_SPLASH}")
 ENDIF()
 
-SET(bootsplash_overlayImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Caption-${TDD_BOOTSPLASH_RESOLUTION}.png")
+SET(bootsplash_overlayImage "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Caption-${TDD_BOOTSPLASH_RESOLUTION}.png")
 makeUniqueTarget(generate_bootsplash_overlayImage "generate_Caption-${TDD_BOOTSPLASH_RESOLUTION}.png")
 STRING(REGEX REPLACE "x.*$" "" bootsplash_width "${TDD_BOOTSPLASH_RESOLUTION}")
 ADD_CUSTOM_COMMAND(OUTPUT  ${bootsplash_overlayImage}
@@ -306,7 +306,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
 
 
    # ====== Generate overlay graphics =======================================
-   SET(overlayImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Overlay-${resolution}.png")
+   SET(overlayImage "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Overlay-${resolution}.png")
    makeUniqueTarget(generate_overlayImage "generate_overlayImage-${resolution}.png")
 
    # NOTE: Dependency on generate targets and files!
@@ -323,11 +323,11 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
       # ====== Generate overlay graphics with hostname ======================
       GET_FILENAME_COMPONENT(imageName ${image} NAME_WE)
       IF(imageName MATCHES ^[a-z])
-         SET(hostname               "${imageName}.${TDD_DOMAIN}")
-         SET(hostnameImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Text/${hostname}.png")
+         SET(hostname      "${imageName}.${TDD_DOMAIN}")
+         SET(hostnameImage "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Text/${hostname}.png")
          makeUniqueTarget(generate_hostnameImage "generate_${hostname}.png")
 
-         SET(overlayImageWithHostname          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Overlay-${hostname}-${resolution}.png")
+         SET(overlayImageWithHostname "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Overlay-${hostname}-${resolution}.png")
          makeUniqueTarget(generate_overlayImageWithHostname "generate_overlayImageWithHostname-${hostname}-${resolution}.png")
 
          # NOTE: Dependency on generate targets and files!
