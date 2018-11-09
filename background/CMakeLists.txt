@@ -29,22 +29,27 @@
 # Contact: dreibh@iem.uni-due.de
 
 
-# ###### Initialise #########################################################
+#############################################################################
+# INITIALISE
+#############################################################################
+
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 PROJECT(undefined NONE)   # to be set in Setting.cmake
 INCLUDE(Settings.input)
 
-SET(CMAKE_INSTALL_BINDIR        "bin"       CACHE PATH "user executables [PREFIX/bin]")
-SET(CMAKE_INSTALL_SBINDIR       "sbin"      CACHE PATH "system admin executables [EPREFIX/sbin]")
-SET(CMAKE_INSTALL_DATADIR       "share"     CACHE PATH "read-only architecture-independent data [PREFIX/share]")
-SET(CMAKE_INSTALL_SYSCONFDIR    "etc"       CACHE PATH "read-only single-machine data [PREFIX/etc]")
-SET(CMAKE_INSTALL_LOCALSTATEDIR "var"       CACHE PATH "modifiable single-machine data [PREFIX/var]")
-SET(CMAKE_INSTALL_LIBDIR        "lib"       CACHE PATH "object code libraries [PREFIX/lib]")
-SET(CMAKE_INSTALL_INCLUDEDIR    "include"   CACHE PATH "read-only includes [PREFIX/include]")
-SET(CMAKE_INSTALL_MANDIR        "share/man" CACHE PATH "man documentation [PREFIX/share/man]")
+
+#############################################################################
+# INSTALLATION_DIRECTORIES
+#############################################################################
+
+# See: https://cmake.org/cmake/help/v3.0/module/GNUInstallDirs.html
+INCLUDE(GNUInstallDirs)
 
 
-# ###### Options ############################################################
+#############################################################################
+# OPTIONS
+#############################################################################
+
 OPTION(FLAT_DIRECTORY_STRUCTURE "Use flat directory structure" ${TDD_FLAT_DIRECTORY_STRUCTURE})
 
 OPTION(INSTALL_ORIGINALS "Install original images as well" ${TDD_INSTALL_ORIGINALS})
@@ -65,7 +70,10 @@ IF(PRINT_A4 OR PRINT_A3)
 ENDIF()
 
 
-# ###### Requirements #######################################################
+#############################################################################
+# REQUIREMENTS
+#############################################################################
+
 INCLUDE(FindUnixCommands)
 
 # ------ Required prgorams --------------------------------------------------
@@ -142,7 +150,10 @@ IF(NOT BUILD_OVERLAY)
 ENDIF()
 
 
-# ###### Packaging ##########################################################
+#############################################################################
+# REQUIREMENTS
+#############################################################################
+
 IF(TDD_ADD_DIST_TARGET)
    SET(CPACK_SOURCE_GENERATOR "TGZ")
    SET(CPACK_SOURCE_PACKAGE_FILE_NAME
@@ -155,7 +166,9 @@ IF(TDD_ADD_DIST_TARGET)
 ENDIF()
 
 
-# ###### Targets ############################################################
+#############################################################################
+# BUILD TARGETS
+#############################################################################
 
 # NOTE: The following build rules use custom commands. They need additional
 #       targets as well, to correctly run parallel builds! For details, see:
@@ -175,7 +188,9 @@ FILE(MAKE_DIRECTORY ${TDD_OUTPUT_DIRECTORY})
 
 # ###### Create unique target name from file name ###########################
 FUNCTION(makeUniqueTarget target fileName)
+   # STRING(MAKE_C_IDENTIFIER ${fileName} result)
    SET(result ${fileName})
+   STRING(REGEX REPLACE "[/\\ ]" "-"  result ${result})
    STRING(REPLACE "ä" "ae" result ${result})
    STRING(REPLACE "ö" "oe" result ${result})
    STRING(REPLACE "ü" "ue" result ${result})
@@ -193,7 +208,7 @@ FUNCTION(makeUniqueTarget target fileName)
    STRING(REGEX REPLACE "[ÁÀǍÃ]" "A" result ${result})
    STRING(REGEX REPLACE "[éèê]"  "e" result ${result})
    STRING(REGEX REPLACE "[ÉÈÊ]"  "E" result ${result})
-   STRING(REGEX REPLACE "[^a-zA-Z0-9.+-@_]" "_X_" result ${result})
+   STRING(REGEX REPLACE "[^a-zA-Z0-9\\.@_+-]" "_X_" result ${result})
    SET(${target} ${result} PARENT_SCOPE)
 ENDFUNCTION()
 
@@ -239,8 +254,8 @@ FOREACH(image IN LISTS TDD_IMAGE_FILES)
    # ====== Generate hostname graphics ======================================
    GET_FILENAME_COMPONENT(imageName ${image} NAME_WE)
    IF(imageName MATCHES ^[a-z])
-      SET(hostname               "${imageName}.${TDD_DOMAIN}")
-      SET(hostnameImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Text/${hostname}.png")
+      SET(hostname      "${imageName}.${TDD_DOMAIN}")
+      SET(hostnameImage "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Text/${hostname}.png")
       makeUniqueTarget(generate_hostnameImage "generate_${hostname}.png")
 
       ADD_CUSTOM_COMMAND(OUTPUT  ${hostnameImage}
@@ -256,7 +271,7 @@ ENDFOREACH()
 FILE(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Overlay)
 FILE(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_SPLASH})
 
-SET(captionFile          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_SPLASH}/${TDD_OUTPUT_CAPTIONFILE}")
+SET(captionFile "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_SPLASH}/${TDD_OUTPUT_CAPTIONFILE}")
 makeUniqueTarget(generate_captionFile "generate_Caption.input")
 FILE(GENERATE OUTPUT ${captionFile} CONTENT "${TDD_BOOTSPLASH_TEXT}")
 ADD_CUSTOM_TARGET(${generate_captionFile} DEPENDS ${captionFile})
@@ -264,7 +279,7 @@ IF(BUILD_BOOTSPLASH)
    INSTALL(FILES ${captionFile} DESTINATION "${CMAKE_INSTALL_DATADIR}/${TDD_INSTALL_SUBDIRECTORY}/${TDD_OUTPUT_SPLASH}")
 ENDIF()
 
-SET(bootsplash_overlayImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Caption-${TDD_BOOTSPLASH_RESOLUTION}.png")
+SET(bootsplash_overlayImage "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Caption-${TDD_BOOTSPLASH_RESOLUTION}.png")
 makeUniqueTarget(generate_bootsplash_overlayImage "generate_Caption-${TDD_BOOTSPLASH_RESOLUTION}.png")
 STRING(REGEX REPLACE "x.*$" "" bootsplash_width "${TDD_BOOTSPLASH_RESOLUTION}")
 ADD_CUSTOM_COMMAND(OUTPUT  ${bootsplash_overlayImage}
@@ -291,7 +306,7 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
 
 
    # ====== Generate overlay graphics =======================================
-   SET(overlayImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Overlay-${resolution}.png")
+   SET(overlayImage "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Overlay-${resolution}.png")
    makeUniqueTarget(generate_overlayImage "generate_overlayImage-${resolution}.png")
 
    # NOTE: Dependency on generate targets and files!
@@ -308,11 +323,11 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
       # ====== Generate overlay graphics with hostname ======================
       GET_FILENAME_COMPONENT(imageName ${image} NAME_WE)
       IF(imageName MATCHES ^[a-z])
-         SET(hostname               "${imageName}.${TDD_DOMAIN}")
-         SET(hostnameImage          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Text/${hostname}.png")
+         SET(hostname      "${imageName}.${TDD_DOMAIN}")
+         SET(hostnameImage "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/Text/${hostname}.png")
          makeUniqueTarget(generate_hostnameImage "generate_${hostname}.png")
 
-         SET(overlayImageWithHostname          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Overlay-${hostname}-${resolution}.png")
+         SET(overlayImageWithHostname "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Overlay-${hostname}-${resolution}.png")
          makeUniqueTarget(generate_overlayImageWithHostname "generate_overlayImageWithHostname-${hostname}-${resolution}.png")
 
          # NOTE: Dependency on generate targets and files!
@@ -539,3 +554,12 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
       ENDFOREACH()
    ENDFOREACH()
 ENDFOREACH()
+
+
+#############################################################################
+# SOURCE DIRECTORIES
+#############################################################################
+
+IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/grub)
+   ADD_SUBDIRECTORY(${CMAKE_CURRENT_SOURCE_DIR}/grub)
+ENDIF()

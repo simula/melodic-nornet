@@ -1,1 +1,2 @@
-${MAKE_LOGO} ${OUTPUT}   "MELODIC / NorNet Core"   256 10 "Golden"   "Eras"
+# Note: DejaVu Sans does not support CJK characters -> fallback is (probably) Noto Sans!
+${MAKE_LOGO} ${OUTPUT}   "MELODIC / NorNet Core"   256 10 "Golden"  "DejaVu Sans"
