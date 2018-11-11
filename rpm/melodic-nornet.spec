@@ -9,9 +9,18 @@ Source: https://packages.melodic-nornet.example/sources/%{name}-%{version}.tar.g
 
 AutoReqProv: on
 BuildRequires: cmake
-BuildRequires: perl-Image-ExifTool
+BuildRequires: dejavu-sans-fonts
+BuildRequires: dejavu-sans-mono-fonts
+BuildRequires: dejavu-serif-fonts
+BuildRequires: ghostscript
 BuildRequires: gimp
-BuildRequires: ImageMagick
+BuildRequires: google-noto-cjk-fonts
+BuildRequires: google-noto-mono-fonts
+BuildRequires: google-noto-sans-fonts
+BuildRequires: google-noto-serif-fonts
+BuildRequires: GraphicsMagick
+BuildRequires: perl-Image-ExifTool
+BuildRequires: urw-base35-fonts
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 
