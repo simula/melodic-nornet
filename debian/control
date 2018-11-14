@@ -3,7 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Thomas Dreibholz <dreibh@simula.no>
 Homepage: https://www.simula.no/
-Build-Depends: cmake,
+Build-Depends: cmake (>= 3.0) | cmake3,
                debhelper (>= 9),
                fonts-dejavu,
                fonts-noto,
@@ -33,7 +33,7 @@ Description: MELODIC Management Tools
 
 Package: melodic-development
 Architecture: any
-Depends: cmake,
+Depends: cmake (>= 3.0) | cmake3,
          fonts-dejavu,
          fonts-noto,
          fonts-noto-cjk,
