@@ -9,7 +9,7 @@ export TRAVIS_OS_NAME="linux"
 
 export DOCKER="ubuntu:bionic"
 export VARIANT="ubuntu"
-export TOOL="compile"
+export TOOL="pbuilder"
 
 # export DOCKER="fedora:29"
 # export VARIANT="fedora"
