@@ -107,8 +107,8 @@ see http://www.melodic.cloud for details on melodic!
 %files management
 /boot/MELODIC/Management1-1024x768.jpeg
 /etc/grub.d/??_melodic_management_theme
-/etc/melodic/melodic-stuff-version
-/usr/share/melodic-stuff/grub-defaults
+/etc/melodic/melodic-version
+/usr/share/melodic-nornet/grub-defaults
 
 %post management
 cp /usr/share/melodic/grub-defaults /etc/default/grub
