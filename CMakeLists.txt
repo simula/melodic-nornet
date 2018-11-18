@@ -17,7 +17,7 @@
 # Contact: dreibh@simula.no
 
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
-PROJECT(melodic-nornet NONE)
+PROJECT(melodic-nornet LANGUAGES C)
 
 SET(BUILD_MAJOR "0")
 SET(BUILD_MINOR "5")
