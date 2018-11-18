@@ -168,9 +168,6 @@ Requires: rpm
 Requires: texlive-epstopdf-bin
 Requires: urw-base35-fonts
 Requires: valgrind
-Recommends: libmelodic-devel
-Recommends: libmelodic-docs
-Recommends: libmelodic-socketapi-devel
 Recommends: rsplib-devel
 
 
@@ -207,8 +204,8 @@ See http://www.melodic.cloud for details on MELODIC!
 /boot/MELODIC/Desktop1-1024x768.jpeg
 /etc/grub.d/??_melodic_desktop_theme
 /usr/share/melodic-desktop/MELODIC-A4.pdf
-/usr/share/melodic-nornet/Desktop-with-Logo/*x*/*/*
-/usr/share/melodic-nornet/Desktop-without-Logo/*x*/*/*
+/usr/share/melodic-desktop/Desktop-with-Logo/*x*/*/*
+/usr/share/melodic-desktop/Desktop-without-Logo/*x*/*/*
 %ghost /usr/share/melodic-nornet/Splash
 
 %post desktop
