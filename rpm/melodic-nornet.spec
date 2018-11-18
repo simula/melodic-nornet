@@ -46,9 +46,9 @@ make %{?_smp_mflags}
 make DESTDIR=%{buildroot} install
 # ====== Relocate files =====================================================
 mkdir -p %{buildroot}/boot/MELODIC
-mv %{buildroot}/usr/share/melodic-desktop/splash/MELODICManagement1-1024x768.jpeg  %{buildroot}/boot/MELODIC
-mv %{buildroot}/usr/share/melodic-desktop/splash/MELODICDevelopment1-1024x768.jpeg %{buildroot}/boot/MELODIC
-mv %{buildroot}/usr/share/melodic-desktop/splash/MELODICDesktop1-1024x768.jpeg     %{buildroot}/boot/MELODIC
+mv %{buildroot}/usr/share/melodic-desktop/splash/Management1-1024x768.jpeg  %{buildroot}/boot/MELODIC
+mv %{buildroot}/usr/share/melodic-desktop/splash/Development1-1024x768.jpeg %{buildroot}/boot/MELODIC
+mv %{buildroot}/usr/share/melodic-desktop/splash/Desktop1-1024x768.jpeg     %{buildroot}/boot/MELODIC
 mkdir -p %{buildroot}/etc/melodic
 mv %{buildroot}/usr/share/melodic-desktop/splash/melodic-stuff-version %{buildroot}/etc/melodic
 # ===========================================================================
