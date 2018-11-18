@@ -12,6 +12,7 @@ BuildRequires: cmake
 BuildRequires: dejavu-sans-fonts
 BuildRequires: dejavu-sans-mono-fonts
 BuildRequires: dejavu-serif-fonts
+BuildRequires: gcc
 BuildRequires: ghostscript
 BuildRequires: gimp
 BuildRequires: google-noto-cjk-fonts
@@ -50,7 +51,7 @@ mv %{buildroot}/usr/share/melodic-desktop/Splash/Management1-1024x768.jpeg  %{bu
 mv %{buildroot}/usr/share/melodic-desktop/Splash/Development1-1024x768.jpeg %{buildroot}/boot/MELODIC
 mv %{buildroot}/usr/share/melodic-desktop/Splash/Desktop1-1024x768.jpeg     %{buildroot}/boot/MELODIC
 mkdir -p %{buildroot}/etc/melodic
-mv %{buildroot}/usr/share/melodic-desktop/Splash/melodic-stuff-version %{buildroot}/etc/melodic
+mv %{buildroot}/usr/share/melodic-desktop/Splash/melodic-version %{buildroot}/etc/melodic
 # ===========================================================================
 
 
