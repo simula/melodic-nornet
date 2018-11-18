@@ -29,7 +29,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 %global debug_package %{nil}
 
 # TEST ONLY:
-# %define _unpackaged_files_terminate_build 0
+%define _unpackaged_files_terminate_build 0
 
 
 %description
@@ -105,7 +105,7 @@ the software installed provides a common working environment.
 see http://www.melodic.cloud for details on melodic!
 
 %files management
-/boot/MELODIC/MELODICManagement1-1024x768.jpeg
+/boot/MELODIC/Management1-1024x768.jpeg
 /etc/grub.d/??_melodic_management_theme
 /etc/melodic/melodic-stuff-version
 /usr/share/melodic-stuff/grub-defaults
@@ -180,7 +180,7 @@ The software installed provides a common working environment.
 See http://www.melodic.cloud for details on MELODIC!
 
 %files development
-/boot/MELODIC/MELODICDevelopment1-1024x768.jpeg
+/boot/MELODIC/Development1-1024x768.jpeg
 /etc/grub.d/??_melodic_development_theme
 
 %post development
@@ -204,7 +204,7 @@ This meta-package contains the scripts to configure a MELODIC desktop.
 See http://www.melodic.cloud for details on MELODIC!
 
 %files desktop
-/boot/MELODIC/MELODICDesktop1-1024x768.jpeg
+/boot/MELODIC/Desktop1-1024x768.jpeg
 /etc/grub.d/??_melodic_desktop_theme
 /usr/share/melodic-desktop/MELODIC-A4.pdf
 /usr/share/melodic-nornet/Desktop-with-Logo/*x*/*/*
