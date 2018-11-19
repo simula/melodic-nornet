@@ -46,7 +46,7 @@ nameBorderValue=`awk "BEGIN { print ${nameHeightValue}*${nameBorder} }"`
 indentValue=`awk "BEGIN { print ${HEIGHT}*${indent} }"`
 
 
-tempDirectory=`mktemp -d`
+tempDirectory=`mktemp -d melodic-overlay-${WIDTH}x${HEIGHT}.XXXXXXXXXXXXXXXX`
 
 # ------ Resize input images ------------------------------------------------
 ${GM} convert $DIRECTORY/Title.png -trim \
