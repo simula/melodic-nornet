@@ -167,8 +167,6 @@ Requires: pbuilder
 Requires: perl-Image-ExifTool
 Requires: pkg-config
 Requires: python3
-Requires: python3-psycopg2
-Requires: python3-pymongo
 Requires: qt5-qtbase-devel
 Requires: quilt
 Requires: R-base
