@@ -24,7 +24,8 @@ Depends: fail2ban,
          nornet-management,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: tshark
+Recommends: grub2-common,
+            tshark
 Description: MELODIC Management Tools
  This metapackage contains basic software for MELODIC system management.
  The software installed provides a common working environment.
@@ -42,6 +43,7 @@ Depends: cmake (>= 3.0) | cmake3,
          graphicsmagick,
          gsfonts,
          libimage-exiftool-perl,
+         melodic-management,
          nornet-development,
          ${misc:Depends},
          ${shlibs:Depends}
@@ -53,8 +55,7 @@ Description: MELODIC Development Tools
 
 Package: melodic-server
 Architecture: any
-Depends: grub2-common | grub,
-         melodic-management,
+Depends: melodic-management,
          nornet-server,
          python3,
          ${misc:Depends},
@@ -70,7 +71,6 @@ Architecture: any
 Depends: cinder-api,
          cinder-scheduler,
          glance,
-         grub2-common | grub,
          keystone,
          letsencrypt,
          mariadb-server,
@@ -106,7 +106,6 @@ Description: MELODIC Controller
 Package: melodic-storage
 Architecture: any
 Depends: cinder-volume,
-         grub2-common | grub,
          lvm2,
          melodic-management,
          melodic-server,
@@ -120,8 +119,7 @@ Description: MELODIC Storage Node
 
 Package: melodic-compute
 Architecture: any
-Depends: grub2-common | grub,
-         melodic-management,
+Depends: melodic-management,
          melodic-server,
          melodic-storage,
          neutron-linuxbridge-agent,
