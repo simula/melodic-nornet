@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 0.5.0~rc1.12
+Version: 0.5.0~rc1.13
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -99,9 +99,10 @@ Recommends: rsplib-tools
 Recommends: wireshark-cli
 
 %description management
-this metapackage contains basic software for melodic system management.
-the software installed provides a common working environment.
-see http://www.melodic.cloud for details on melodic!
+This metapackage contains basic software for MELODIC system management.
+The software installed provides a common working environment.
+.
+See http://www.melodic.cloud for details on MELODIC!
 
 %files management
 /boot/MELODIC/Management1-1024x768.jpeg

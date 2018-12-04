@@ -43,7 +43,7 @@ Depends: cmake (>= 3.0) | cmake3,
          graphicsmagick,
          gsfonts,
          libimage-exiftool-perl,
-         melodic-management,
+         melodic-management (>= ${source:Version}),
          nornet-development,
          ${misc:Depends},
          ${shlibs:Depends}
@@ -55,7 +55,7 @@ Description: MELODIC Development Tools
 
 Package: melodic-server
 Architecture: any
-Depends: melodic-management,
+Depends: melodic-management (>= ${source:Version}),
          nornet-server,
          python3,
          ${misc:Depends},
@@ -74,8 +74,8 @@ Depends: cinder-api,
          keystone,
          letsencrypt,
          mariadb-server,
-         melodic-management,
-         melodic-server,
+         melodic-management (>= ${source:Version}),
+         melodic-server (>= ${source:Version}),
          memcached,
          neutron-dhcp-agent,
          neutron-l3-agent,
@@ -87,7 +87,6 @@ Depends: cinder-api,
          nova-conductor,
          nova-consoleauth,
          nova-novncproxy,
-         nova-placement-api,
          nova-scheduler,
          openstack-dashboard,
          python-glanceclient,
@@ -98,6 +97,7 @@ Depends: cinder-api,
          rabbitmq-server,
          ${misc:Depends},
          ${shlibs:Depends}
+Recommends: nova-placement-api
 Description: MELODIC Controller
  This package contains the scripts to configure a MELODIC controller.
  .
@@ -107,8 +107,8 @@ Package: melodic-storage
 Architecture: any
 Depends: cinder-volume,
          lvm2,
-         melodic-management,
-         melodic-server,
+         melodic-management (>= ${source:Version}),
+         melodic-server (>= ${source:Version}),
          thin-provisioning-tools,
          ${misc:Depends},
          ${shlibs:Depends}
@@ -119,9 +119,9 @@ Description: MELODIC Storage Node
 
 Package: melodic-compute
 Architecture: any
-Depends: melodic-management,
-         melodic-server,
-         melodic-storage,
+Depends: melodic-management (>= ${source:Version}),
+         melodic-server (>= ${source:Version}),
+         melodic-storage (>= ${source:Version}),
          neutron-linuxbridge-agent,
          nova-compute,
          ${misc:Depends},
@@ -133,10 +133,9 @@ Description: MELODIC Compute Node
 
 Package: melodic-desktop
 Architecture: any
-Depends: melodic-management,
+Depends: melodic-management (>= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: neon-desktop | kubuntu-desktop | lubuntu-desktop | ubuntu-desktop
 Description: MELODIC Desktop
  This meta-package contains the scripts to configure a MELODIC desktop.
  .
