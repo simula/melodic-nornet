@@ -133,7 +133,7 @@ Description: MELODIC Compute Node
 
 Package: melodic-desktop
 Architecture: any
-Depends: firefox,
+Depends: firefox | firefox-esr,
          kubuntu-desktop | neon-desktop | kde-standard | deepin-desktop-environment | lubuntu-desktop | ubuntu-desktop,
          melodic-management (>= ${source:Version}),
          sddm | kdm | lightdm | gdm3,
