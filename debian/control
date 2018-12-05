@@ -43,7 +43,7 @@ Depends: cmake (>= 3.0) | cmake3,
          graphicsmagick,
          gsfonts,
          libimage-exiftool-perl,
-         melodic-management (>= ${source:Version}),
+         melodic-management (= ${binary:Version}),
          nornet-development,
          ${misc:Depends},
          ${shlibs:Depends}
@@ -55,7 +55,7 @@ Description: MELODIC Development Tools
 
 Package: melodic-server
 Architecture: any
-Depends: melodic-management (>= ${source:Version}),
+Depends: melodic-management (= ${binary:Version}),
          nornet-server,
          python3,
          ${misc:Depends},
@@ -74,8 +74,8 @@ Depends: cinder-api,
          keystone,
          letsencrypt,
          mariadb-server,
-         melodic-management (>= ${source:Version}),
-         melodic-server (>= ${source:Version}),
+         melodic-management (= ${binary:Version}),
+         melodic-server (= ${binary:Version}),
          memcached,
          neutron-dhcp-agent,
          neutron-l3-agent,
@@ -107,8 +107,8 @@ Package: melodic-storage
 Architecture: any
 Depends: cinder-volume,
          lvm2,
-         melodic-management (>= ${source:Version}),
-         melodic-server (>= ${source:Version}),
+         melodic-management (= ${binary:Version}),
+         melodic-server (= ${binary:Version}),
          thin-provisioning-tools,
          ${misc:Depends},
          ${shlibs:Depends}
@@ -119,9 +119,9 @@ Description: MELODIC Storage Node
 
 Package: melodic-compute
 Architecture: any
-Depends: melodic-management (>= ${source:Version}),
-         melodic-server (>= ${source:Version}),
-         melodic-storage (>= ${source:Version}),
+Depends: melodic-management (= ${binary:Version}),
+         melodic-server (= ${binary:Version}),
+         melodic-storage (= ${binary:Version}),
          neutron-linuxbridge-agent,
          nova-compute,
          ${misc:Depends},
@@ -135,7 +135,7 @@ Package: melodic-desktop
 Architecture: any
 Depends: firefox | firefox-esr,
          kubuntu-desktop | neon-desktop | kde-standard | deepin-desktop-environment | lubuntu-desktop | ubuntu-desktop,
-         melodic-management (>= ${source:Version}),
+         melodic-management (= ${binary:Version}),
          sddm | kdm | lightdm | gdm3,
          ${misc:Depends},
          ${shlibs:Depends}
