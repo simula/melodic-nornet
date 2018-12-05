@@ -6,7 +6,7 @@ Homepage: http://www.melodic.cloud/
 Build-Depends: cmake (>= 3.0) | cmake3,
                debhelper (>= 9),
                fonts-dejavu,
-               fonts-noto,
+               fonts-noto-hinted,
                fonts-noto-cjk,
                ghostscript,
                gimp,
@@ -36,7 +36,7 @@ Package: melodic-development
 Architecture: any
 Depends: cmake (>= 3.0) | cmake3,
          fonts-dejavu,
-         fonts-noto,
+         fonts-noto-hinted,
          fonts-noto-cjk,
          ghostscript,
          gimp,
