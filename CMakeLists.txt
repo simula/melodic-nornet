@@ -103,5 +103,3 @@ ENDIF()
 #############################################################################
 
 ADD_SUBDIRECTORY(src)
-ADD_SUBDIRECTORY(grub)
-ADD_SUBDIRECTORY(background)
