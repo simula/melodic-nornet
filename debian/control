@@ -6,8 +6,8 @@ Homepage: http://www.melodic.cloud/
 Build-Depends: cmake (>= 3.0) | cmake3,
                debhelper (>= 9),
                fonts-dejavu,
-               fonts-noto,
                fonts-noto-cjk,
+               fonts-noto-hinted,
                ghostscript,
                gimp,
                graphicsmagick,
@@ -24,7 +24,8 @@ Depends: fail2ban,
          nornet-management,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: tshark
+Recommends: grub2-common,
+            tshark
 Description: MELODIC Management Tools
  This metapackage contains basic software for MELODIC system management.
  The software installed provides a common working environment.
@@ -35,13 +36,14 @@ Package: melodic-development
 Architecture: any
 Depends: cmake (>= 3.0) | cmake3,
          fonts-dejavu,
-         fonts-noto,
          fonts-noto-cjk,
+         fonts-noto-hinted,
          ghostscript,
          gimp,
          graphicsmagick,
          gsfonts,
          libimage-exiftool-perl,
+         melodic-management (= ${binary:Version}),
          nornet-development,
          ${misc:Depends},
          ${shlibs:Depends}
@@ -53,8 +55,7 @@ Description: MELODIC Development Tools
 
 Package: melodic-server
 Architecture: any
-Depends: grub2-common | grub,
-         melodic-management,
+Depends: melodic-management (= ${binary:Version}),
          nornet-server,
          python3,
          ${misc:Depends},
@@ -70,12 +71,11 @@ Architecture: any
 Depends: cinder-api,
          cinder-scheduler,
          glance,
-         grub2-common | grub,
          keystone,
          letsencrypt,
          mariadb-server,
-         melodic-management,
-         melodic-server,
+         melodic-management (= ${binary:Version}),
+         melodic-server (= ${binary:Version}),
          memcached,
          neutron-dhcp-agent,
          neutron-l3-agent,
@@ -87,7 +87,6 @@ Depends: cinder-api,
          nova-conductor,
          nova-consoleauth,
          nova-novncproxy,
-         nova-placement-api,
          nova-scheduler,
          openstack-dashboard,
          python-glanceclient,
@@ -98,6 +97,7 @@ Depends: cinder-api,
          rabbitmq-server,
          ${misc:Depends},
          ${shlibs:Depends}
+Recommends: nova-placement-api
 Description: MELODIC Controller
  This package contains the scripts to configure a MELODIC controller.
  .
@@ -106,10 +106,9 @@ Description: MELODIC Controller
 Package: melodic-storage
 Architecture: any
 Depends: cinder-volume,
-         grub2-common | grub,
          lvm2,
-         melodic-management,
-         melodic-server,
+         melodic-management (= ${binary:Version}),
+         melodic-server (= ${binary:Version}),
          thin-provisioning-tools,
          ${misc:Depends},
          ${shlibs:Depends}
@@ -120,10 +119,9 @@ Description: MELODIC Storage Node
 
 Package: melodic-compute
 Architecture: any
-Depends: grub2-common | grub,
-         melodic-management,
-         melodic-server,
-         melodic-storage,
+Depends: melodic-management (= ${binary:Version}),
+         melodic-server (= ${binary:Version}),
+         melodic-storage (= ${binary:Version}),
          neutron-linuxbridge-agent,
          nova-compute,
          ${misc:Depends},
@@ -135,10 +133,12 @@ Description: MELODIC Compute Node
 
 Package: melodic-desktop
 Architecture: any
-Depends: melodic-management,
+Depends: firefox | firefox-esr,
+         kubuntu-desktop | neon-desktop | kde-standard | deepin-desktop-environment | lubuntu-desktop | ubuntu-desktop,
+         melodic-management (= ${binary:Version}),
+         sddm | kdm | lightdm | gdm3,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: neon-desktop | kubuntu-desktop | lubuntu-desktop | ubuntu-desktop
 Description: MELODIC Desktop
  This meta-package contains the scripts to configure a MELODIC desktop.
  .

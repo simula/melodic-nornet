@@ -6,7 +6,9 @@ case "$1" in
    configure)
       ln -sf /usr/bin/MELODIC-System-Info /etc/update-motd.d/56-melodic-management
       /usr/sbin/update-motd 2>/dev/null || true
-      update-grub || true
+      if [ -x /usr/sbin/update-grub ] ; then
+         /usr/sbin/update-grub || true
+      fi
       ;;
 esac
 

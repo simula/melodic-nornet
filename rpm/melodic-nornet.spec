@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 0.5.0~rc1.12
+Version: 0.5.0~rc1.14
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -75,7 +75,6 @@ Requires: jq
 Requires: libidn
 Requires: lksctp-tools
 Requires: mlocate
-Requires: netperfmeter
 Requires: net-snmp-utils
 Requires: net-tools
 Requires: nmap
@@ -84,7 +83,6 @@ Requires: pxz
 Requires: reiserfs-utils
 Requires: reprepro
 Requires: smartmontools
-Requires: sslscan
 Requires: subnetcalc
 Requires: tcpdump
 Requires: tftp
@@ -93,15 +91,18 @@ Requires: tree
 Requires: vconfig
 Requires: virt-what
 Requires: whois
+Recommends: grub2-tools
+Recommends: netperfmeter
 Recommends: rsplib-docs
 Recommends: rsplib-services
 Recommends: rsplib-tools
 Recommends: wireshark-cli
 
 %description management
-this metapackage contains basic software for melodic system management.
-the software installed provides a common working environment.
-see http://www.melodic.cloud for details on melodic!
+This metapackage contains basic software for MELODIC system management.
+The software installed provides a common working environment.
+.
+See http://www.melodic.cloud for details on MELODIC!
 
 %files management
 /boot/MELODIC/Management1-1024x768.jpeg
@@ -111,17 +112,24 @@ see http://www.melodic.cloud for details on melodic!
 /usr/share/melodic-nornet/grub-defaults
 
 %post management
-cp /usr/share/melodic/grub-defaults /etc/default/grub
-grub2-mkconfig -o /boot/grub2/grub.cfg
+echo "Updating /etc/default/grub with NorNet settings:"
+echo "-----"
+cat /usr/share/melodic-nornet/grub-defaults | \
+   ( if grep "biosdevname=0" >/dev/null 2>&1 /proc/cmdline ; then sed "s/^GRUB_CMDLINE_LINUX=\"/GRUB_CMDLINE_LINUX=\"biosdevname=0 /g" ; else cat ; fi ) | \
+   ( if grep "net.ifnames=0" >/dev/null 2>&1 /proc/cmdline ; then sed "s/^GRUB_CMDLINE_LINUX=\"/GRUB_CMDLINE_LINUX=\"net.ifnames=0 /g" ; else cat ; fi ) | tee /etc/default/grub.new && \
+mv /etc/default/grub.new /etc/default/grub
+echo "-----"
+if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
 
 %postun management
 rm -f /etc/grub.d/??_melodic_desktop_theme
-grub2-mkconfig -o /boot/grub2/grub.cfg
+if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
 
 
 %package development
 Summary: MELODIC Development
 Group: Applications/Internet
+Requires: %{name}-management = %{version}-%{release}
 Requires: autoconf
 Requires: automake
 Requires: banner
@@ -159,8 +167,6 @@ Requires: pbuilder
 Requires: perl-Image-ExifTool
 Requires: pkg-config
 Requires: python3
-Requires: python3-psycopg2
-Requires: python3-pymongo
 Requires: qt5-qtbase-devel
 Requires: quilt
 Requires: R-base
@@ -181,19 +187,17 @@ See http://www.melodic.cloud for details on MELODIC!
 /etc/grub.d/??_melodic_development_theme
 
 %post development
-cp /usr/share/melodic/grub-defaults /etc/default/grub
-grub2-mkconfig -o /boot/grub2/grub.cfg
+if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
 
 %postun development
 rm -f /etc/grub.d/??_melodic_desktop_theme
-grub2-mkconfig -o /boot/grub2/grub.cfg
+if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
 
 
 %package desktop
 Summary: MELODIC Desktop
 Group: Applications/Internet
 Requires: %{name}-management = %{version}-%{release}
-Requires: %{name}-api = %{version}-%{release}
 Recommends: xorg-x11-drv-vmware
 
 %description desktop
@@ -209,12 +213,11 @@ See http://www.melodic.cloud for details on MELODIC!
 %ghost /usr/share/melodic-nornet/Splash
 
 %post desktop
-cp /usr/share/melodic/grub-defaults /etc/default/grub
-grub2-mkconfig -o /boot/grub2/grub.cfg
+if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
 
 %postun desktop
 rm -f /etc/grub.d/??_melodic_desktop_theme
-grub2-mkconfig -o /boot/grub2/grub.cfg
+if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
 
 
 %changelog

@@ -35,16 +35,6 @@ matrix:
       group: travis_latest
       env: DOCKER="ubuntu:xenial" VARIANT="ubuntu" TOOL="pbuilder"
 
-    # ====== Ubuntu 14.04 (Trusty Tahr) ====================================
-    - os: linux
-      dist: xenial
-      group: travis_latest
-      env: DOCKER="ubuntu:trusty" VARIANT="ubuntu" TOOL="compile" COMPILER_C="gcc" COMPILER_CXX="g++"
-    - os: linux
-      dist: xenial
-      group: travis_latest
-      env: DOCKER="ubuntu:trusty" VARIANT="ubuntu" TOOL="pbuilder"
-
 
      # ###### Debian Linux ##################################################
 
@@ -158,4 +148,6 @@ install:
 script:
   - |
     travis_wait 60 ci/build
-    #travis_wait 60 ci/test
+    if [ "${VARIANT}" != "debian" ] ; then   # There is no Debian PPA for the required nornet-* packages!
+       travis_wait 60 ci/test
+    fi
