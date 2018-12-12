@@ -7,7 +7,7 @@ export TRAVIS_OS_NAME="linux"
 # export VARIANT="debian"
 # export TOOL="pbuilder"
 
-export DOCKER="ubuntu:xenial"
+export DOCKER="ubuntu:cosmic"
 export VARIANT="ubuntu"
 export TOOL="pbuilder"
 
