@@ -5,7 +5,7 @@ Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
 License: GPLv3
 URL: https://github.com/simula/melodic-nornet
-Source: https://packages.melodic-nornet.example/sources/%{name}-%{version}.tar.gz
+Source: https://packages.nntb.no/sources/%{name}-%{version}.tar.gz
 
 AutoReqProv: on
 BuildRequires: cmake
@@ -32,8 +32,9 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 
 %description
- This package contains the scripts to configure a SuNILab desktop.
- See https://github.com/simula/melodic-nornet for details on SuNILab!
+This package contains software for MELODIC system management.
+The software installed provides a common working environment.
+See http://www.melodic.cloud for details on MELODIC!
 
 %prep
 %setup -q
@@ -101,7 +102,6 @@ Recommends: wireshark-cli
 %description management
 This metapackage contains basic software for MELODIC system management.
 The software installed provides a common working environment.
-.
 See http://www.melodic.cloud for details on MELODIC!
 
 %files management
