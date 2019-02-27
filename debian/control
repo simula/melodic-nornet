@@ -14,12 +14,12 @@ Build-Depends: cmake (>= 3.0) | cmake3,
                gsfonts,
                libfile-fcntllock-perl,
                libimage-exiftool-perl
-Standards-Version: 4.2.1
+Standards-Version: 4.3.0
 Vcs-Git: https://github.com/simula/melodic-nornet.git
 Vcs-Browser: https://github.com/simula/melodic-nornet/tags
 
 Package: melodic-management
-Architecture: any
+Architecture: all
 Depends: fail2ban,
          nornet-management,
          ${misc:Depends},
@@ -33,7 +33,7 @@ Description: MELODIC Management Tools
  See http://www.melodic.cloud for details on MELODIC!
 
 Package: melodic-development
-Architecture: any
+Architecture: all
 Depends: cmake (>= 3.0) | cmake3,
          fonts-dejavu,
          fonts-noto-cjk,
@@ -54,7 +54,7 @@ Description: MELODIC Development Tools
  See http://www.melodic.cloud for details on MELODIC!
 
 Package: melodic-server
-Architecture: any
+Architecture: all
 Depends: melodic-management (= ${binary:Version}),
          nornet-server,
          python3,
@@ -67,7 +67,7 @@ Description: MELODIC Server
  See http://www.melodic.cloud for details on MELODIC!
 
 Package: melodic-controller
-Architecture: any
+Architecture: all
 Depends: cinder-api,
          cinder-scheduler,
          glance,
@@ -104,7 +104,7 @@ Description: MELODIC Controller
  See http://www.melodic.cloud for details on MELODIC!
 
 Package: melodic-storage
-Architecture: any
+Architecture: all
 Depends: cinder-volume,
          lvm2,
          melodic-management (= ${binary:Version}),
@@ -118,7 +118,7 @@ Description: MELODIC Storage Node
  See http://www.melodic.cloud for details on MELODIC!
 
 Package: melodic-compute
-Architecture: any
+Architecture: all
 Depends: melodic-management (= ${binary:Version}),
          melodic-server (= ${binary:Version}),
          melodic-storage (= ${binary:Version}),
@@ -132,7 +132,7 @@ Description: MELODIC Compute Node
  See http://www.melodic.cloud for details on MELODIC!
 
 Package: melodic-desktop
-Architecture: any
+Architecture: all
 Depends: firefox | firefox-esr,
          kubuntu-desktop | neon-desktop | kde-standard | deepin-desktop-environment | lubuntu-desktop | ubuntu-desktop,
          melodic-management (= ${binary:Version}),
