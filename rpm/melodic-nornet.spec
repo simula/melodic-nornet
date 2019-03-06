@@ -5,7 +5,7 @@ Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
 License: GPLv3
 URL: https://github.com/simula/melodic-nornet
-Source: https://packages.nntb.no/sources/%{name}-%{version}.tar.gz
+Source: https://packages.nntb.no/software/%{name}/%{name}-%{version}.tar.xz
 
 AutoReqProv: on
 BuildRequires: cmake
@@ -59,9 +59,9 @@ mv %{buildroot}/usr/share/melodic-desktop/Splash/melodic-version %{buildroot}/et
 Summary: MELODIC Management
 Group: Applications/Internet
 Requires: bash-completion
+Requires: bc
 Requires: bridge-utils
 Requires: btrfs-progs
-Requires: bc
 Requires: bwm-ng
 Requires: colordiff
 Requires: cronie
@@ -76,6 +76,7 @@ Requires: jq
 Requires: libidn
 Requires: lksctp-tools
 Requires: mlocate
+Requires: netperfmeter
 Requires: net-snmp-utils
 Requires: net-tools
 Requires: nmap
@@ -83,6 +84,9 @@ Requires: ntpdate
 Requires: pxz
 Requires: reiserfs-utils
 Requires: reprepro
+Requires: rsplib-docs
+Requires: rsplib-services
+Requires: rsplib-tools
 Requires: smartmontools
 Requires: subnetcalc
 Requires: tcpdump
@@ -92,12 +96,8 @@ Requires: tree
 Requires: vconfig
 Requires: virt-what
 Requires: whois
+Requires: wireshark-cli
 Recommends: grub2-tools
-Recommends: netperfmeter
-Recommends: rsplib-docs
-Recommends: rsplib-services
-Recommends: rsplib-tools
-Recommends: wireshark-cli
 
 %description management
 This metapackage contains basic software for MELODIC system management.
@@ -106,10 +106,10 @@ See http://www.melodic.cloud for details on MELODIC!
 
 %files management
 /boot/MELODIC/Management1-1024x768.jpeg
-/etc/grub.d/??_melodic_management_theme
-/etc/melodic/melodic-version
-/usr/bin/MELODIC-System-Info
-/usr/share/melodic-nornet/grub-defaults
+%{_sysconfdir}//grub.d/??_melodic_management_theme
+%{_sysconfdir}//melodic/melodic-version
+%{_bindir}/MELODIC-System-Info
+%{_datadir}/melodic-nornet/grub-defaults
 
 %post management
 echo "Updating /etc/default/grub with NorNet settings:"
@@ -184,7 +184,7 @@ See http://www.melodic.cloud for details on MELODIC!
 
 %files development
 /boot/MELODIC/Development1-1024x768.jpeg
-/etc/grub.d/??_melodic_development_theme
+%{_sysconfdir}//grub.d/??_melodic_development_theme
 
 %post development
 if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
@@ -206,11 +206,11 @@ See http://www.melodic.cloud for details on MELODIC!
 
 %files desktop
 /boot/MELODIC/Desktop1-1024x768.jpeg
-/etc/grub.d/??_melodic_desktop_theme
-/usr/share/melodic-desktop/MELODIC-A4.pdf
-/usr/share/melodic-desktop/Desktop-with-Logo/*x*/*/*
-/usr/share/melodic-desktop/Desktop-without-Logo/*x*/*/*
-%ghost /usr/share/melodic-nornet/Splash
+%{_sysconfdir}//grub.d/??_melodic_desktop_theme
+%{_datadir}/melodic-desktop/MELODIC-A4.pdf
+%{_datadir}/melodic-desktop/Desktop-with-Logo/*x*/*/*
+%{_datadir}/melodic-desktop/Desktop-without-Logo/*x*/*/*
+%ghost %{_datadir}/melodic-nornet/Splash
 
 %post desktop
 if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi

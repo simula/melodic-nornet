@@ -1,3 +1,3 @@
-version=3
-opts=pgpsigurlmangle=s/$/.asc/ filenamemangle=s/.+\/melodic-(\d\S*)\.tar\.gz/melodic-$1\.tar\.gz/ \
-  https://bitbucket.org/simula/melodic/tags .*/melodic-(\d\S*)\.tar\.gz
+version=4
+opts=pgpsigurlmangle=s/$/.asc/ \
+https://packages.nntb.no/software/melodic-nornet  melodic-nornet-(.*)\.tar\.xz
