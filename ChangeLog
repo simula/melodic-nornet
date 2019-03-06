@@ -1,11 +1,960 @@
+commit 6987e254506918a514220334a59aefc957f7780f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 6 16:19:36 2019 +0100
+
+    Updated packaging files.
+
+commit 30590dfb74498c4055f0076f2b8a5e6168f53c89
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 6 16:19:10 2019 +0100
+
+    Using tar.xz.
+
+commit cbc8628823e28e7b4441165f0829ce7fc705b26e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Mar 5 16:51:43 2019 +0100
+
+    Updated CI script.
+
+commit ef612e866d6936907ba760b545790043ca69aaca
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 27 15:41:48 2019 +0100
+
+    Updated packaging files.
+
+commit 8704aaeed73d1cbb5c6882cb92ae71b006f039ef
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Feb 22 15:57:15 2019 +0100
+
+    Improved CI script.
+
+commit 703ed6983371585ed0bd04af29806c1f3e6dc0cb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 20 17:20:08 2019 +0100
+
+    Updated CI scripts.
+
+commit 60d12b426b5f1604ef85a073adeee8ad7846a498
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 20 16:46:25 2019 +0100
+
+    Build script updates.
+
+commit 55e89a8ed7c73fd85b5138b9f47669ca25125d48
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Feb 19 14:15:26 2019 +0100
+
+    RPM fixes.
+
+commit e7b7290476351bf4a8f74a396508f8015c900434
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Jan 27 16:24:24 2019 +0100
+
+    Updated build scripts.
+
+commit 4c94d986439f7a238f76f7545083f40415886882
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Jan 16 15:30:05 2019 +0100
+
+    Updated build scripts.
+
+commit feb5821ac2520dd9dc301fd14d1cdccf9710b73a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Dec 17 10:01:07 2018 +0100
+
+    Improved Travis CI configuration.
+
+commit 4c39f09b72f58b9d9b2036d54242199be1f79589
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Dec 16 19:27:28 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit 6cc2449f4e1cf156be271e3849cb5a360b700cf0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Dec 16 12:53:31 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit 0cd4dbee7a4b41612982e3fc5ca6a0241dcc6fec
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Dec 15 12:46:48 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit 4278a948012abcc2db68b65ef7b1a411ae1ecee8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Dec 15 12:41:23 2018 +0100
+
+    Build script fix.
+
+commit 2afa9d7bc48ed18d347e0460dbc14b0007eb08df
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Dec 14 17:05:13 2018 +0100
+
+    Improved Travis CI configuration.
+
+commit da2691dcafb3415d6d51cc2bf9777500093b2193
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Dec 14 16:32:46 2018 +0100
+
+    A fix.
+
+commit 22366f52a67189d6d4268b73aeb6b6a5844258cb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Dec 14 13:16:16 2018 +0100
+
+    Updated build scripts.
+
+commit c22ea128fc4a9b3fd3389b7475151a65143bc20c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Dec 14 13:15:34 2018 +0100
+
+    Minor clean-up.
+
+commit febb62ea46fcf99c5ec22306dbac80759cabe2fe
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Dec 14 13:14:13 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit 3327474568884fcf64b1c70998610747e025beb1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Dec 7 11:15:08 2018 +0100
+
+    Some clean-ups.
+
+commit d1110d75f5beb3f3053921e521121ff7eae1aeb5
+Merge: 6ac1f17 d82aefb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Dec 7 11:14:12 2018 +0100
+
+    Merge branch 'master' into dreibh/cmake
+
+commit d82aefb9ada1079bac130a7b3ba632a51a109677
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 5 23:40:50 2018 +0100
+
+    Build script updates.
+
+commit 054df994aae7ea32b8392ec9dd158ce0e357163a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 5 16:33:51 2018 +0100
+
+    Version bump.
+
+commit 8bc7645f8e113a37ffb40a4ed833b5070b188cfd
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 5 13:43:53 2018 +0100
+
+    Packaging improvement.
+
+commit 8190a48fe486b65302eb157cbd0a89af66229953
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 5 13:43:03 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit c4e2cfcb7a59baaf605a9a8965a199e48217406a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 5 13:42:22 2018 +0100
+
+    Requires Ubuntu 16.04 or higher.
+
+commit 10b03e05df48c4ec7a0b7ae4d61773ab21e3ec5f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 5 13:21:26 2018 +0100
+
+    Dependency fix.
+
+commit 01eb49552152355ff296db4fb99fd1ced9de5722
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 5 10:51:33 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit 9dcd36eb81c6fad38fa5413b6391d6c1b1419823
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Dec 4 23:15:42 2018 +0100
+
+    Dependency improvements.
+
+commit 792d09d9ade469976f2f99adfdce7b661d12260c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Dec 4 22:54:15 2018 +0100
+
+    A fix.
+
+commit d5ef9b56e82f40b586e87b62f3210ddfb0ac27ea
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Dec 4 19:46:39 2018 +0100
+
+    Dependency update.
+
+commit 0be769e6782039e23100ad16680e136fcba74a06
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Dec 4 17:45:13 2018 +0100
+
+    A fix.
+
+commit e62fcdfdecb73eef816c3acfe889d9378b3f5670
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Dec 4 15:52:52 2018 +0100
+
+    Packaging improvements.
+
+commit e1de1a3cc7f951bcd7e383c65cf9269b10f16ac1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Dec 4 10:22:07 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit 23297c0d7662e0660ab3124139fde20171e09537
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Dec 3 21:12:34 2018 +0100
+
+    Updated build scripts.
+
+commit 792cbd9aaf62232e528809c8414ca3faa6455f5d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 28 23:33:11 2018 +0100
+
+    Updated configuration file.
+
+commit f4ca85980784a1bdc6dbe213b7b9a5b27b8d907e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 28 23:29:31 2018 +0100
+
+    Minor clean-ups.
+
+commit f41dc2989efdfaa08795c5355a7aacba3ec8ebfb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 28 23:07:19 2018 +0100
+
+    Some clean-ups.
+
+commit 3431acfd11ef6813c39690b42cf87787e3a1be21
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 28 22:59:37 2018 +0100
+
+    Improved script.
+
+commit 2114d34ab543e6d2027bb59bb6fd868d71fd0f63
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 28 22:56:33 2018 +0100
+
+    Improved Debian files.
+
+commit 78221632898cbd208226d4623b5ac025e02c6083
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 28 22:55:23 2018 +0100
+
+    Improved RPM spec.
+
+commit 4326463127b44b081eddffbe4c5b52fedeb79923
+Merge: 24335da ef0072b
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 28 15:08:13 2018 +0100
+
+    Merge branch 'master' of github.com:simula/melodic-nornet
+
+commit 24335da1aa42871262c7fe5c420a6bf6cd4197ca
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 28 15:07:54 2018 +0100
+
+    MIFF -> uncompressed TIFF, to avoid Bug #300 of GraphicsMagick (https://sourceforge.net/p/graphicsmagick/bugs/300/).
+
+commit aa0cd10b3815fb2657aaae4c7cf6a5f1f893a293
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 28 15:00:46 2018 +0100
+
+    Do not print useless warnings.
+
+commit ef0072b4a64a086b4e9b2d13dc8ab4682fbfdc52
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 27 21:24:55 2018 +0100
+
+    Improved build script.
+
+commit 6ac1f172e979cc1d113379db7c1288b8aab1443d
+Merge: efff55b c5046a4
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 27 17:19:58 2018 +0100
+
+    Merge branch 'master' into dreibh/cmake
+
+commit c5046a42edb995aacc9e0ba48fd74cd77f210672
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 27 17:15:49 2018 +0100
+
+    Updated build scripts.
+
+commit d199fb0be0c701b76d6e40a86435bcc88bd3eabb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 24 10:30:57 2018 +0100
+
+    Updated build script.
+
+commit cd811f6e45f7e610b507fd05cf551390a5b87bab
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 21 21:20:08 2018 +0100
+
+    A fix.
+
+commit 1faa3e345d78d8ce250b4cafdb307df9c9736888
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 21 21:19:20 2018 +0100
+
+    Build script updates.
+
+commit 203966b0e3ac3f686f7e13fad6dc42e0b0b39622
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 21 19:26:22 2018 +0100
+
+    Updated build scripts.
+
+commit 378c25d742653747432c0233078fce073ee1acbe
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 20 17:30:17 2018 +0100
+
+    Added script.
+
+commit 884806c6aa4623dd474683e8879f396196ea631b
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 20 14:45:44 2018 +0100
+
+    Updated build scripts.
+
+commit ee014f5a283c74c6bc4d8499587a81985f211f82
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 20 10:39:22 2018 +0100
+
+    Another build script update.
+
+commit c3b1b9eabb6dd0efda303209f5a06f098a675252
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 20 10:37:28 2018 +0100
+
+    Updated build scripts.
+
+commit e78dc0fdb3558cc14997e8185d4a32166d97441d
+Merge: 3bb51c6 53c8806
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 19 20:04:26 2018 +0100
+
+    Merge branch 'dreibh/travis-ci'
+
+commit 53c88069204569ab8616ea456ba1753c09fb3e60
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 19 19:18:44 2018 +0100
+
+    A fix.
+
+commit 3bb51c6ea74815d643d06f9950498cdcc7fbb02b
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 19 18:01:41 2018 +0100
+
+    Added missing file.
+
+commit b17e006ce3247f32cefa112647bccc1644de31ca
+Merge: 8ed3b4c d90141d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 19 17:03:51 2018 +0100
+
+    Merge branch 'dreibh/travis-ci' of github.com:simula/melodic-nornet into dreibh/travis-ci
+
+commit 8ed3b4cbec14e852400414e1679ef270078a4c27
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 19 16:37:45 2018 +0100
+
+    Build script updates.
+
+commit d90141dea6b0e50bfe9e6d0126522b55fb35b99b
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 18:42:39 2018 +0100
+
+    An update.
+
+commit 58833239860fa7ea734ef6c8ab032223905a1498
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 18:24:46 2018 +0100
+
+    Added missing files.
+
+commit 7e389103f1f5d8a7b122ca0ad5852877f4f074c5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 18:23:09 2018 +0100
+
+    An update.
+
+commit ca958b0ddfb2cf7c34f854cb680d1a71edb2b0e1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 18:05:45 2018 +0100
+
+    Minor fix.
+
+commit 9b5e4e72ddfe4514e05f20418c101e282054405a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 17:12:11 2018 +0100
+
+    A small fix.
+
+commit bd0702f9bb64b45933bf8dccc8955c4c5e5eb401
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 16:41:00 2018 +0100
+
+    An update.
+
+commit ec136222cca127ca0adb9d0a09ab39ee93cb9d1f
+Merge: 5a3dec1 3c7fa4c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 15:56:09 2018 +0100
+
+    Merge branch 'dreibh/travis-ci' of github.com:simula/melodic-nornet into dreibh/travis-ci
+
+commit 5a3dec1385a1967820b947f921bb5983c93e187a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 15:56:03 2018 +0100
+
+    An update.
+
+commit 3c7fa4c86ae255e829610f0f95f8169a6be03d18
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 15:53:34 2018 +0100
+
+    Setting language in CMakeLists.txt.
+
+commit 91e0c1415c2b2b1bffb33f6db76f776530b860ad
+Merge: f4a458f 5e437c8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 15:30:24 2018 +0100
+
+    Merge branch 'dreibh/travis-ci' of github.com:simula/melodic-nornet into dreibh/travis-ci
+
+commit 5e437c89f84a52630c1baeb87210b67548c988f0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 15:14:48 2018 +0100
+
+    A fix.
+
+commit 0f8a0385337ac0488a58a4b2333d5c05314db28e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 14:54:41 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit 286ac9028722f063fc66e6337b86c1e0d90e1609
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 18 14:52:07 2018 +0100
+
+    Added RPM packaging files.
+
+commit f4a458f3477e8937b1e7a6c5943108380bfafee8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 17 12:00:45 2018 +0100
+
+    Minor update.
+
+commit b131d85b4198cc41f8eae55f62ee0a354fd035ff
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 16 21:54:50 2018 +0100
+
+    Updated build scripts.
+
+commit c3f1c9381abeeec46fabdced9543025949413619
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 15 22:26:59 2018 +0100
+
+    Script updates.
+
+commit efff55b8aa814d96f551ef3ad48b2695472bafc7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 15 13:32:18 2018 +0100
+
+    Updated scripts.
+
+commit dfd50ead879d63576dfda5155622865abb88b80e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 14 17:33:06 2018 +0100
+
+    Improved build scripts.
+
+commit 88f55f493a56d67c33c0623d57b77115bb4d8a08
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 14 13:31:46 2018 +0100
+
+    Requires CMake >= 3.0, to ensure that CMAKE_INSTALL_FULL_SYSCONFDIR is correct.
+
+commit 171ca702d0a1c6fc11d43eb237c896cc00d8994c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 14 13:25:19 2018 +0100
+
+    Updated test scripts.
+
+commit d872afe6aad6c1bf5b0c4ab0d0e2938bb28609c7
+Merge: 792dc82 702a68e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 13 22:23:55 2018 +0100
+
+    Merge branch 'dreibh/cmake' into dreibh/travis-ci
+
+commit 702a68e143177ed60604ceb665757380a458b125
+Merge: c731248 f26dd8c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 13 22:23:40 2018 +0100
+
+    Merge branch 'dreibh/cmake' of github.com:simula/melodic-nornet into dreibh/cmake
+
+commit c7312480740708bda0da446df7fdb8be1dc563a2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 13 22:23:30 2018 +0100
+
+    A fix.
+
+commit 792dc82ac41979e9e0a9ce66ce717489be93be67
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 13 18:10:37 2018 +0100
+
+    Updated script.
+
+commit cb3c9d85b473774afa0e35edf36a5b8f2d3b4c94
+Merge: 218b044 81e30d9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 13 18:01:03 2018 +0100
+
+    Merge branch 'dreibh/travis-ci' of github.com:simula/melodic-nornet into dreibh/travis-ci
+
+commit 218b0440c9b4eaca569b38c92bd82f482baa73a6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 13 17:58:32 2018 +0100
+
+    Updated scripts.
+
+commit 81e30d9eb097a23247a1bea063c302dc2a87020d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 11 23:40:20 2018 +0100
+
+    A fix.
+
+commit 2717b65319a4216e06f17911486a606e69cced90
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 11 21:48:13 2018 +0100
+
+    A fix.
+
+commit 9fc921cf991d487958d2a96b5b5c91d9509cb020
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 11 21:10:30 2018 +0100
+
+    A fix.
+
+commit 4655cca7b0b44c5750fd948b5c66ae30edbaa83a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 11 20:47:04 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit f26dd8ce9c494dca5d2664ca8fe144f55b42c9dc
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 9 16:19:15 2018 +0100
+
+    Minor updates.
+
+commit bc33860a10c1d729b5dd3087273ef773b5940f97
+Merge: cb90407 77ccd50
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 9 12:19:55 2018 +0100
+
+    Merge branch 'dreibh/cmake' of github.com:simula/melodic-nornet into dreibh/cmake
+
+commit cb90407f61df6022cbbddc33b73f0369fe047a18
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 9 12:18:57 2018 +0100
+
+    Filter out some more useless gimp warnings.
+
+commit 77ccd502ad1141983aa9aeeb68f817c640cc2c8e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 8 23:24:22 2018 +0100
+
+    A fix.
+
+commit 6fd8cd854ef78d5f31061def0c653848b4cafa54
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 8 23:10:28 2018 +0100
+
+    Small clean-ups.
+
+commit 692568ae05de6bc3e4c973b5c368aac681bc15a9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 8 23:04:56 2018 +0100
+
+    Fix in CMakeLists.txt for grub configuration installation.
+
+commit 10f941e28cd380ab94916eae254a55cfeb05175e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 8 22:54:32 2018 +0100
+
+    Fixed dependencies.
+
+commit 452d9089ef57e8c174c80462f73683dd00c1880d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 8 22:28:59 2018 +0100
+
+    Added comment.
+
+commit cd22c13e70d4dce55255859135892946b116fa6f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 8 21:37:22 2018 +0100
+
+    A fix.
+
+commit 6105f6693b43065f43b9a172e2f80df9a85685fc
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 8 21:36:36 2018 +0100
+
+    Added comment.
+
+commit 9e631b3d03ed0ba84fbc36922a126f31e5cbf7e1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 8 21:31:01 2018 +0100
+
+    Improved scripts.
+
+commit e544200cae4da51a87f9ee18d1b5f14e164a7ae5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 8 20:30:40 2018 +0100
+
+    Script updates.
+
+commit 231d53e8dad1554baf98eab10597d610a7664564
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 8 20:13:10 2018 +0100
+
+    Script update.
+
+commit 67bc1437f730ecddcf92811c92835125e6f42470
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 7 23:08:18 2018 +0100
+
+    Build improvement.
+
+commit 3d38a90dcca5933018ad8816fecce1f60d59bfc7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 7 22:59:11 2018 +0100
+
+    Some improvements.
+
+commit 12eb46a64b8dd468f36f0129ac71dd68379ef89e
+Merge: 74bd8d0 c20370f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 4 20:08:08 2018 +0100
+
+    Merge branch 'dreibh/cmake' of github.com:simula/melodic-nornet into dreibh/cmake
+
+commit 74bd8d079a462e2e8d05f6fda4622f33bf156ff0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 4 20:07:54 2018 +0100
+
+    Another try.
+
+commit c20370fd1c5aeb8ee01edb5c4ba5ee5a0006a750
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 4 17:09:40 2018 +0100
+
+    Minor update.
+
+commit cc6e75ffac6c45d0900b73aac5e83d777f2d8c13
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 3 21:38:26 2018 +0100
+
+    Some clean-ups.
+
+commit 348ee8f8d79e6b62b9aad53de5a54f66eb5c02e0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 3 21:02:48 2018 +0100
+
+    A fix.
+
+commit da02c1ca046e1533719186e2377c7377635a8075
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 3 21:02:05 2018 +0100
+
+    Properly handle file names with non-ASCII characters.
+
+commit 375cd1adf84b665deef9715300dbb774eaab9026
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 3 14:55:18 2018 +0100
+
+    An update.
+
+commit 2ec6e88e8e688974d5a40e905a7a0677009e5b6f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 3 14:49:59 2018 +0100
+
+    Script updates.
+
+commit a1ed79f0f5d33f1d0b02dc86ae254d09d9b2d056
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 3 14:01:11 2018 +0100
+
+    Version bump.
+
+commit b75b03443398192dd0343a20310f0b671b94889d
+Merge: 9dc9cf0 94adeda
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 3 14:00:44 2018 +0100
+
+    Merge branch 'dreibh/gm' into dreibh/cmake
+
+commit 94adedad0ef729998f60b842687f93fadc915504
+Merge: 4e920e6 678bcb7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 3 14:00:16 2018 +0100
+
+    Merge branch 'dreibh/gm' of github.com:simula/melodic-nornet into dreibh/gm
+
+commit 4e920e65dfc03e35b73ee5e50203a44b64b6f87e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 3 13:57:41 2018 +0100
+
+    Updated scripts.
+
+commit 9dc9cf064a9f4d698b648a52d5012d66d1a94c97
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 2 17:48:17 2018 +0100
+
+    Another improvement.
+
+commit 8b1f0109310b2801e089a1f38c04e8ecdf6068ad
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 2 17:40:03 2018 +0100
+
+    File name fixes.
+
+commit 678bcb749a12b2a788a0bb9164bc2eaeddff22d8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 2 17:24:33 2018 +0100
+
+    Minor clean-up.
+
+commit 482583560497def1ebfca4150e53ef944ed25b99
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 2 16:40:43 2018 +0100
+
+    Dependency updates.
+
+commit c87a47e63b2f3a011e4f3d77954c25b14c75a1c9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 2 16:36:54 2018 +0100
+
+    Script and packaging updates.
+
+commit dc1cf34d73ffdb0bacf304d613b4d7681a40f738
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 2 16:32:24 2018 +0100
+
+    Improved script.
+
+commit f883e06082db830d99be736a070180545473692d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 2 16:30:24 2018 +0100
+
+    Converted script from ImageMagick to GraphicsMagick.
+
+commit 34817959b13200cb5a6c41f4b5ed4a1f881eb26d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 1 18:36:57 2018 +0100
+
+    A fix.
+
+commit 35675880f903c11871fcfebe99b11765ed13c8f1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 1 14:44:35 2018 +0100
+
+    Further script improvements.
+
+commit ed8e6859b2add26778ace318573e986cffa03230
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 1 14:39:04 2018 +0100
+
+    Remove temporary files.
+
+commit 178226e9d541cf0ef0bca7fcfb48e13e1912e3d2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 1 14:31:59 2018 +0100
+
+    A fix.
+
+commit cb80e91e824ae90fd65d3b523ff49def351bb0b6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 1 14:30:59 2018 +0100
+
+    Improved script.
+
+commit 7e6d0e0f89b8e87944b2645ffe018dda30ee4555
+Merge: 5dcaf2a 6f76ada
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 1 13:06:52 2018 +0100
+
+    Merge branch 'dreibh/cmake' into dreibh/gm
+
+commit 6f76adacc1ca7fb2c3a56ef21851af25c56085dc
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 1 11:46:15 2018 +0100
+
+    Another fix.
+
+commit c292b1569bcba4cbdaed888742a0825efca3a9bc
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Nov 1 10:33:50 2018 +0100
+
+    A fix.
+
+commit 04eb8734e19bf64bd724a0367e58d7e4fdb4854a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 31 23:38:42 2018 +0100
+
+    Improved script.
+
+commit 5dcaf2a702a8e26e12eb33f210c174593c211e3f
+Merge: b97a084 610bd74
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 31 23:13:03 2018 +0100
+
+    Merge branch 'dreibh/cmake' into dreibh/gm
+
+commit 610bd74a22b46d30517db7f1e8936cb5ac3e0eff
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 31 22:59:29 2018 +0100
+
+    Version bump.
+
+commit e15baeefafdffc24c34f152aa9e1494121a8eeab
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 31 22:49:58 2018 +0100
+
+    Improved hostname handling. Now, all conversions are handled by GraphicsMagick instead of ImageMagick.
+
+commit 9cfcb8a169da4e15839b797f86378945176bb2e2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 31 21:55:43 2018 +0100
+
+    Use GraphicsMagick for most tasks.
+
+commit 95afd25f7a2d2abd74acf7dbc9f1f770e81cd8c6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 31 21:55:30 2018 +0100
+
+    Use GraphicsMagick.
+
+commit a2ea238e44b213fc5012246f2e1f3e25e76871ce
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 31 21:17:05 2018 +0100
+
+    Improved script.
+
+commit b97a084a4301a948d961ef1b55d5afecc8001c6a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 31 17:34:23 2018 +0100
+
+    Not working yet.
+
+commit 83086f2fb4d83dcb7dbea13e7cd12761890f08da
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 31 15:43:09 2018 +0100
+
+    Converted script from ImageMagick to GraphicsMagick.
+
+commit 222151575b24078a9567813568edb4b68943d645
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Oct 29 17:12:37 2018 +0100
+
+    Updated configuration.
+
+commit d71ddd3f3c04e0d78a86cc3e0b99ba3440173fd4
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Oct 29 17:12:32 2018 +0100
+
+    A fix.
+
+commit 36e3a27b7c25b51281c5c30048ee4488fe122a61
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Oct 29 16:43:59 2018 +0100
+
+    Packaging file updates.
+
+commit 42ef23a8372a0491edff915436d38e87024081ca
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Oct 29 16:35:26 2018 +0100
+
+    Script update.
+
+commit b2fad57d865031a8d7d52d2f972bbb0eead49cf6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Oct 29 16:35:06 2018 +0100
+
+    Updated packaging files, added metadata.
+
+commit a7013037a4f1f081b8f47b85dd1f79a634529e7f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Oct 29 16:29:01 2018 +0100
+
+    Updated dependencies.
+
+commit f299dac11e3f88e59c618c2cdf5bcf0d9b7155a7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Oct 29 16:28:25 2018 +0100
+
+    Some improvements and fixes.
+
+commit 352880db932b265a4521112f737a8e40577c7d0f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Oct 29 16:04:18 2018 +0100
+
+    Updated dependencies.
+
+commit eaecc5e60fca57392a36a201b2862580895365b0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Oct 29 14:49:23 2018 +0100
+
+    Switch to CMake.
+
+commit 8ad0a17d89ed79f64435a5a2919a6529dbe92d5f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 17 15:45:21 2018 +0200
+
+    Added Travis CI configuration.
+
+commit 09f337333f6fbe6cee827586e3ce3e8122481b63
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Jul 19 10:36:29 2018 +0200
+
+    Updated TODO.
+
+commit c9b565d6c73fe75f7063d38bd0a98b5ba0bb3961
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Jul 19 10:20:32 2018 +0200
+
+    Added TODO.
+
+commit 0b89263a0a8d3f6f03e005b2695cb463330726a1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Jul 18 12:28:29 2018 +0200
+
+    Added logos.
+
+commit 7f9a83aa71bd55f0cbccb733b631a47cdfd73aac
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Jun 7 09:09:50 2018 +0200
+
+    Version bump.
+
 commit 882d0ae97d447e463c2b402ee81b46d9875753d8
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Wed Jun 6 15:59:47 2018 +0200
 
     Dependency fix.
-
- debian/control | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
 
 commit 8b3c3ced3b9ec7adbe80b9a8f89462813de604b3
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -13,22 +962,11 @@ Date:   Wed Jun 6 12:05:47 2018 +0200
 
     Build script updates.
 
- build-deb        |  8 ++++----
- clean-deb        |  7 +++++--
- debian/changelog |  6 ++++++
- debian/control   |  4 ++--
- make-deb         | 60 ++++++++++++++++++++++++++++----------------------------
- make-ppa         |  2 +-
- 6 files changed, 48 insertions(+), 39 deletions(-)
-
 commit c8105854f9ab5dc891769cadd4d1e059b718c6f2
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Wed Jun 6 12:04:32 2018 +0200
 
     Updated background configuration.
-
- src/background/make-desktop | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit db115d438fca61ff07138956076bb7ea064d47cc
 Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
@@ -36,18 +974,11 @@ Date:   Wed May 30 09:28:01 2018 +0200
 
     Script update.
 
- debian/changelog | 6 ++++++
- make-ppa         | 2 +-
- 2 files changed, 7 insertions(+), 1 deletion(-)
-
 commit 5dda7ca5c14157e7d96c1c37db008324917f6ea5
 Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
 Date:   Wed May 30 09:26:20 2018 +0200
 
     Updated script to create template for the upcoming Ubuntu 18.10 (Cosmic Cuttlefish).
-
- src/images/make-it | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit dd45c66468f43a8bc3c0c505ef031ac8cbc1c389
 Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
@@ -55,19 +986,11 @@ Date:   Mon Apr 23 11:36:39 2018 +0200
 
     Minor updates.
 
- src/images/make-it     | 2 +-
- src/images/preseed.cfg | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
-
 commit 6a030c2dccd2acd113cf3dd1ce32a57ed72d49c1
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Mar 22 15:18:27 2018 +0100
 
     Updated preseed files to work again for Ubuntu Bionic.
-
- src/images/make-it     | 3 ++-
- src/images/preseed.cfg | 8 ++++++--
- 2 files changed, 8 insertions(+), 3 deletions(-)
 
 commit 414287863081cbf5a897bda29f9227955efa69d3
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -75,18 +998,11 @@ Date:   Tue Jan 9 09:36:15 2018 +0100
 
     Added intel-microcode as "recommends", in order to handle Spectre/Meltdown bug fixes.
 
- debian/changelog | 6 ++++++
- debian/control   | 1 +
- 2 files changed, 7 insertions(+)
-
 commit be2a063e8a937c18b3885ba89771f1ef364e5a35
 Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
 Date:   Thu Dec 28 11:05:28 2017 +0800
 
     Dependency fix.
-
- debian/control | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 33b9ec7b91f9e3d1ed806d4cc8a3688567fcc525
 Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
@@ -94,19 +1010,11 @@ Date:   Thu Dec 28 10:31:35 2017 +0800
 
     New release.
 
- debian/changelog                      |   6 ++++++
- src/background/Input/Christmas1.jpeg  | Bin 0 -> 7534485 bytes
- src/background/Input/SantaClaus1.jpeg | Bin 0 -> 4549293 bytes
- 3 files changed, 6 insertions(+)
-
 commit 08d60c6ec3011ec2f241bc621c7b159277844797
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Sat Dec 2 17:39:51 2017 +0100
 
     Updated preseed.
-
- src/images/preseed.cfg | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit a3a52afe00447ac4ecd7b7b99a3525c759b458d5
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -114,17 +1022,11 @@ Date:   Fri Nov 17 15:23:41 2017 +0100
 
     An update.
 
- src/Create-MELODIC-Server | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
-
 commit fec56dac8d943be164f203de2eea093713cf5b7c
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Nov 16 18:15:47 2017 +0100
 
     New release.
-
- ChangeLog | 1299 ++++++++++++++++++++++++++++++-------------------------------
- 1 file changed, 640 insertions(+), 659 deletions(-)
 
 commit f77ac48b1c3de0b1963c5a3b5d9f78baab5f36cb
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -132,17 +1034,11 @@ Date:   Thu Nov 16 18:15:34 2017 +0100
 
     Version bump.
 
- debian/changelog | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
-
 commit 647b834f6d524f20456bd03d35767f0338d4fdcf
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Tue Nov 7 10:48:40 2017 +0100
 
     Updated script.
-
- src/Create-MELODIC-Server | 15 +++++++++++----
- 1 file changed, 11 insertions(+), 4 deletions(-)
 
 commit 63ddd33c39de3acaf2908fd57b500c7f3031cac3
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -150,17 +1046,11 @@ Date:   Fri Nov 3 17:50:57 2017 +0100
 
     Reduced image size.
 
- src/images/make-it | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
-
 commit 251aeafb053b8cb58c5ca3904afb6ee6a7bb9989
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Nov 3 17:50:49 2017 +0100
 
     Updated preseed configuration.
-
- src/images/preseed.cfg | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 51ddb17f85ed836187646bcf9c858e77fdd5bd5c
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -168,18 +1058,11 @@ Date:   Thu Nov 2 16:37:35 2017 +0100
 
     Improved preseed configuration.
 
- debian/changelog       |  2 +-
- src/images/preseed.cfg | 24 ++++++++++++++++++------
- 2 files changed, 19 insertions(+), 7 deletions(-)
-
 commit 2b35de21a378e30254d89d778214986ee55e4a9d
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Nov 2 16:03:04 2017 +0100
 
     Updated configuration.
-
- src/cloud-init/cloud.cfg | 4 ++++
- 1 file changed, 4 insertions(+)
 
 commit 72b9790ec1a2b656b2ed43df53e2fd7713b864c6
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -187,21 +1070,11 @@ Date:   Thu Nov 2 14:11:09 2017 +0100
 
     Updated build scripts.
 
- debian/changelog               | 6 ++++++
- debian/melodic-server.examples | 1 +
- make-dist                      | 3 +++
- 3 files changed, 10 insertions(+)
-
 commit 0bfad90d3af3c984e20b7fdf85d86d0ff0bdbe27
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Nov 2 14:11:01 2017 +0100
 
     Improved scripts.
-
- src/Create-MELODIC-Server | 124 ++++++++++++++++++++++++++++++++++++++++++++++
- src/Delete-MELODIC-Server | 101 +++++++++++++++++++++++++++++++++++++
- src/Make-Server           | 122 ---------------------------------------------
- 3 files changed, 225 insertions(+), 122 deletions(-)
 
 commit 8bc8977d9ce2df89690a5a3276a57d5ab6894076
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -209,17 +1082,11 @@ Date:   Thu Nov 2 14:10:44 2017 +0100
 
     Improved configuration.
 
- src/cloud-init/cloud.cfg | 8 ++++++--
- 1 file changed, 6 insertions(+), 2 deletions(-)
-
 commit aa7446a1b7c3e2c5a3d1588fb4bb9462ed8dd5e7
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Nov 2 12:28:48 2017 +0100
 
     Added custom configuration.
-
- src/cloud-init/cloud.cfg | 122 +++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 122 insertions(+)
 
 commit ea49f7635551029d54b5f6976b4503607be5252f
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -227,17 +1094,11 @@ Date:   Thu Nov 2 11:40:05 2017 +0100
 
     Added original cloud.cfg.
 
- src/cloud-init/cloud.cfg.orig | 117 ++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 117 insertions(+)
-
 commit 9f9af9346da167db9321f697e63c8ba60963affd
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Nov 2 11:39:41 2017 +0100
 
     Updated script.
-
- src/images/preseed.cfg | 6 ++++++
- 1 file changed, 6 insertions(+)
 
 commit 5ea0b95bba180fc64713db918f3056e7a6f48f40
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -245,17 +1106,11 @@ Date:   Wed Nov 1 16:26:11 2017 +0100
 
     Improved script.
 
- src/Make-Server | 103 +++++++++++++++++++++++++++++++-------------------------
- 1 file changed, 58 insertions(+), 45 deletions(-)
-
 commit aeeaa217f146546236fe140bce84879374046573
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Wed Nov 1 14:06:32 2017 +0100
 
     Added script to create OpenStack VM.
-
- src/Make-Server | 109 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 109 insertions(+)
 
 commit 12805698c2776d793ab5996e6077214098a2ab48
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -263,29 +1118,11 @@ Date:   Mon Oct 30 15:58:27 2017 +0100
 
     New release.
 
- debian/changelog | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 2849617f9b3407183dc8f3c1cf864ee81abbc939
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Mon Oct 30 15:58:13 2017 +0100
 
     Header updates.
-
- src/MELODIC-System-Info                   | 2 +-
- src/background/Make-Background            | 2 +-
- src/background/Make-Logo                  | 2 +-
- src/background/Make-Mosaic                | 2 +-
- src/background/Make-Painting              | 2 +-
- src/background/image-resize-with-cropping | 2 +-
- src/background/images-to-pdf-a4           | 2 +-
- src/background/make-bootsplash            | 2 +-
- src/background/make-desktop               | 2 +-
- src/background/make-logo-texts            | 2 +-
- src/background/make-overlay               | 2 +-
- src/images/make-it                        | 2 +-
- src/images/preseed.cfg                    | 2 +-
- 13 files changed, 13 insertions(+), 13 deletions(-)
 
 commit 98bf3d45d40fc0ccd180b889395a6067b3e4ab04
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -293,19 +1130,11 @@ Date:   Mon Oct 30 15:58:01 2017 +0100
 
     Added helper scripts.
 
- UpdateDoc1.sed |  3 +++
- UpdateDocFiles | 25 +++++++++++++++++++++++++
- 2 files changed, 28 insertions(+)
-
 commit 390375890e3977d63dc66cd7b154cfa4f7b808a3
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Mon Oct 30 15:30:33 2017 +0100
 
     Improved preseed files.
-
- src/images/make-it     | 2 +-
- src/images/preseed.cfg | 8 ++++++++
- 2 files changed, 9 insertions(+), 1 deletion(-)
 
 commit ebdcdf72e67c550a6331d7e84452d7ca1f7358a2
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -313,19 +1142,11 @@ Date:   Mon Oct 30 13:01:47 2017 +0100
 
     Script updates.
 
- debian/changelog | 4 ++--
- make-ppa         | 2 +-
- 2 files changed, 3 insertions(+), 3 deletions(-)
-
 commit 60a38ebf8c0124c3db5a7ffdebd2d11c59a9a736
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Mon Oct 30 13:01:40 2017 +0100
 
     Improved preseed script.
-
- src/images/make-it     |  2 +-
- src/images/preseed.cfg | 20 +++++++++++++++-----
- 2 files changed, 16 insertions(+), 6 deletions(-)
 
 commit 0b498a271cf93f5b68af8198beb9853cb9f8fba3
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -333,19 +1154,11 @@ Date:   Fri Oct 27 17:45:18 2017 +0200
 
     Some fixes.
 
- src/images/make-it     | 2 +-
- src/images/preseed.cfg | 4 ++--
- 2 files changed, 3 insertions(+), 3 deletions(-)
-
 commit 18b95b932082605429992de910c9e2cd96e49144
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Oct 27 17:14:57 2017 +0200
 
     Some improvements.
-
- src/images/make-it     | 40 +++++++++++++++++++++++-----------------
- src/images/preseed.cfg | 44 ++++++++++++++++++++++++++++++++++----------
- 2 files changed, 57 insertions(+), 27 deletions(-)
 
 commit 4aa8cd0e43c97eb18dfe42304df4f8b75598d604
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -353,19 +1166,11 @@ Date:   Thu Oct 26 19:03:34 2017 +0200
 
     Improved script.
 
- src/images/make-it     | 11 ++++++++++-
- src/images/preseed.cfg | 18 ++++++++++++------
- 2 files changed, 22 insertions(+), 7 deletions(-)
-
 commit 73e57f4985c3ce673a67ff543f1ac96af90a8aaa
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Oct 26 17:04:52 2017 +0200
 
     Some script improvements.
-
- src/images/make-it     | 22 +++++++++++++++++++++-
- src/images/preseed.cfg |  6 +++---
- 2 files changed, 24 insertions(+), 4 deletions(-)
 
 commit 6c85d5353c61cbbb9d64894789fed88e32636399
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -373,18 +1178,11 @@ Date:   Thu Oct 26 14:26:12 2017 +0200
 
     Improved script.
 
- src/images/make-it     | 91 +++++++++++++++++++++++++++-----------------------
- src/images/preseed.cfg | 67 +++++++++++++++----------------------
- 2 files changed, 76 insertions(+), 82 deletions(-)
-
 commit d4af5fdd9ad5c2b5a9b48e5d915ac25c43acc792
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Oct 20 16:40:13 2017 +0200
 
     Minor update.
-
- src/images/make-it | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 4379c7a2f19978179a8cb666586a7a9731beb10e
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -392,19 +1190,11 @@ Date:   Fri Oct 20 16:08:50 2017 +0200
 
     Script updates.
 
- debian/melodic-desktop.install | 4 ++--
- make-ppa                       | 2 +-
- 2 files changed, 3 insertions(+), 3 deletions(-)
-
 commit 0784c756ce2f1322bd64b49f8cba4bf704d7b274
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Oct 20 16:05:41 2017 +0200
 
     Packaging update.
-
- debian/melodic-desktop.install | 8 ++++----
- make-dist                      | 6 +++---
- 2 files changed, 7 insertions(+), 7 deletions(-)
 
 commit 907b45c0de550f3a4c38654b11f2c50f9a471d5e
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -412,19 +1202,11 @@ Date:   Fri Oct 20 15:30:20 2017 +0200
 
     Script improvements.
 
- src/images/make-it     | 28 ++++++++++++++--------------
- src/images/preseed.cfg | 21 ++++++++++++---------
- 2 files changed, 26 insertions(+), 23 deletions(-)
-
 commit 250562be2fee42838cff967c4080566257ebbb7c
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Oct 20 15:30:06 2017 +0200
 
     Dependency improvements.
-
- debian/changelog | 6 ++++++
- debian/control   | 9 ++++++---
- 2 files changed, 12 insertions(+), 3 deletions(-)
 
 commit d0cd6908bceb76c73d2a555b430da06843504761
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -432,30 +1214,11 @@ Date:   Fri Oct 20 11:56:27 2017 +0200
 
     Ignore errors of grub-install. Grub may not be installed yet, due to early setup stage in preseeded installation.
 
- debian/changelog                    | 4 ++--
- debian/melodic-compute.postinst     | 2 +-
- debian/melodic-compute.postrm       | 2 +-
- debian/melodic-controller.postinst  | 2 +-
- debian/melodic-controller.postrm    | 2 +-
- debian/melodic-development.postinst | 2 +-
- debian/melodic-development.postrm   | 2 +-
- debian/melodic-management.postinst  | 2 +-
- debian/melodic-management.postrm    | 2 +-
- debian/melodic-server.postinst      | 2 +-
- debian/melodic-server.postrm        | 2 +-
- debian/melodic-storage.postinst     | 2 +-
- debian/melodic-storage.postrm       | 2 +-
- 13 files changed, 14 insertions(+), 14 deletions(-)
-
 commit 8118cf53ed22d700c4b555c0a46414dc3917a696
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Oct 20 11:55:19 2017 +0200
 
     Script updates.
-
- src/images/make-it     | 72 ++++++++++++++++++++++++++++++++------------------
- src/images/preseed.cfg | 54 ++++++++++++++++++++++++++-----------
- 2 files changed, 85 insertions(+), 41 deletions(-)
 
 commit d660f3bcfe99447908592886144426f1e44b8a67
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -463,18 +1226,11 @@ Date:   Thu Oct 19 19:21:33 2017 +0200
 
     An update.
 
- src/images/make-it     |  5 ++++-
- src/images/preseed.cfg | 24 ++++++++++++++++++------
- 2 files changed, 22 insertions(+), 7 deletions(-)
-
 commit 643ef13dc3e0dfb2f7ea6596f216dc2a7167eb04
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Oct 19 15:57:25 2017 +0200
 
     Another update.
-
- src/images/make-it | 10 ----------
- 1 file changed, 10 deletions(-)
 
 commit 77d8020d79d1732d0e06f2785855e91d6e9d43ff
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -482,19 +1238,11 @@ Date:   Thu Oct 19 15:57:08 2017 +0200
 
     Updated script.
 
- src/images/make-it     | 12 +++++++++++-
- src/images/preseed.cfg | 24 +++++++++---------------
- 2 files changed, 20 insertions(+), 16 deletions(-)
-
 commit 9cab373dc48d5f3245fd77d5e97c1fda6132dd96
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Oct 19 13:46:28 2017 +0200
 
     Added preseed script.
-
- src/images/make-it     |  24 +++++++++++
- src/images/preseed.cfg | 112 +++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 136 insertions(+)
 
 commit 80586df9990f1655bb0ea3c21128672df590f514
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -502,19 +1250,11 @@ Date:   Thu Sep 28 15:40:09 2017 +0200
 
     Dependency updates.
 
- debian/changelog | 6 ++++++
- debian/control   | 2 +-
- 2 files changed, 7 insertions(+), 1 deletion(-)
-
 commit bde6c0a3bd63823a2347028f1015346344ebaf6a
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Sep 28 15:40:01 2017 +0200
 
     Added documentation.
-
- src/docs/OpenStack-Configuration.pdf  |  Bin 0 -> 139348 bytes
- src/docs/OpenStack-Configuration.wiki | 1363 +++++++++++++++++++++++++++++++++
- 2 files changed, 1363 insertions(+)
 
 commit c4985b0f13908fe5565be1b3ddd87191625cdf64
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -522,18 +1262,11 @@ Date:   Thu Sep 28 12:50:29 2017 +0200
 
     Initial release.
 
- debian/changelog | 4 ++--
- debian/control   | 8 ++++++--
- 2 files changed, 8 insertions(+), 4 deletions(-)
-
 commit c2d0d34fe70f4894ec8380b92876340c12f25766
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Sep 15 16:54:38 2017 +0200
 
     Version bump.
-
- debian/changelog | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit e726a08e7be4b596bd4b94a450643fcc72015575
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -541,19 +1274,11 @@ Date:   Thu Sep 14 21:34:15 2017 +0200
 
     Added missing dependency.
 
- debian/control | 1 +
- 1 file changed, 1 insertion(+)
-
 commit e2ec98c7f574044f1eac28d291227615c50f660d
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Sep 14 17:49:41 2017 +0200
 
     Added Grub configuration.
-
- src/grub/11_melodic_compute_theme | 14 --------------
- src/grub/12_melodic_storage_theme | 14 ++++++++++++++
- src/grub/15_melodic_compute_theme | 14 ++++++++++++++
- 3 files changed, 28 insertions(+), 14 deletions(-)
 
 commit 1ea24a26ce256e3a8e0f1c1ebaf483346c6a57b5
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -561,19 +1286,11 @@ Date:   Thu Sep 14 17:48:35 2017 +0200
 
     Added packaging files.
 
- debian/melodic-storage.install  |  2 ++
- debian/melodic-storage.postinst | 13 +++++++++++++
- debian/melodic-storage.postrm   | 14 ++++++++++++++
- 3 files changed, 29 insertions(+)
-
 commit 17169c7a03c087ea876e118eb08f2dd7338741a1
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Sep 14 17:47:21 2017 +0200
 
     Added MELODIC Storage package.
-
- debian/control | 25 +++++++++++++++++++------
- 1 file changed, 19 insertions(+), 6 deletions(-)
 
 commit 325c17d691c9e88c4d184ca4e40aa30b489b2049
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -581,19 +1298,11 @@ Date:   Thu Sep 14 17:12:45 2017 +0200
 
     Dependency update.
 
- debian/changelog | 4 ++--
- debian/control   | 4 +++-
- 2 files changed, 5 insertions(+), 3 deletions(-)
-
 commit 727b086b7410b590609289082d4a1f4f4122041e
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Wed Sep 13 21:46:31 2017 +0200
 
     Added configuration files.
-
- src/OpenStack/neutron.conf.orig |  1938 +++++++
- src/OpenStack/nova.conf.orig    | 10759 ++++++++++++++++++++++++++++++++++++++
- 2 files changed, 12697 insertions(+)
 
 commit 8cf9f10a151f57c598378bf8ebb2b722d94edd2e
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -601,28 +1310,17 @@ Date:   Wed Sep 13 17:01:03 2017 +0200
 
     Dependency updates.
 
- debian/changelog | 4 ++--
- debian/control   | 6 ++++++
- 2 files changed, 8 insertions(+), 2 deletions(-)
-
 commit 4173bc7459fa7b00148aa149618d30bd828cceb7
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Mon Sep 11 18:15:23 2017 +0200
 
     Dependency updates.
 
- debian/changelog |  4 ++--
- debian/control   | 21 +++++++++------------
- 2 files changed, 11 insertions(+), 14 deletions(-)
-
 commit 5b51427e3154438c06280df94852d1bd7c2449b4
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Sep 8 21:33:14 2017 +0200
 
     Reverted change.
-
- make-dist | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit 7d1cc49644f4770254ef339f0c5f43ba1eba513d
 Merge: f80dab4 77178af
@@ -637,10 +1335,6 @@ Date:   Fri Sep 8 20:52:05 2017 +0200
 
     Added grub configurations for Controller and Compute Node.
 
- src/grub/11_melodic_compute_theme    | 14 ++++++++++++++
- src/grub/19_melodic_controller_theme | 14 ++++++++++++++
- 2 files changed, 28 insertions(+)
-
 commit 77178af2c88c1f7c1b82c3b9c1bd13d4016e3c1f
 Merge: fadfafd 1cdad4b
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -654,17 +1348,11 @@ Date:   Fri Sep 8 20:44:17 2017 +0200
 
     Version bump.
 
- debian/changelog | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 1cdad4b31deb2cd8bfe0168f6d94d0cf60ad4fc4
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Sep 8 20:43:40 2017 +0200
 
     Added missing image.
-
- src/background/Input/MELODICDevelopment1.jpeg | Bin 0 -> 8647950 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
 
 commit dc900e9d9650b8c828e294f03acf6d795baab00e
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -672,30 +1360,11 @@ Date:   Fri Sep 8 17:45:33 2017 +0200
 
     Packaging updates.
 
- make-dist                                     |   4 ++--
- src/background/Input/MELODICCompute1.jpeg     | Bin 0 -> 6549803 bytes
- src/background/Input/MELODICController1.jpeg  | Bin 3855756 -> 7731490 bytes
- src/background/Input/MELODICDesktop1.jpeg     | Bin 0 -> 8760717 bytes
- src/background/Input/MELODICDevelopment1.jpeg | Bin 2462534 -> 0 bytes
- src/background/Input/MELODICManagement1.jpeg  | Bin 3173145 -> 6223337 bytes
- src/background/Input/MELODICServer1.jpeg      | Bin 8760717 -> 6384973 bytes
- src/background/Input/MELODICStorage1.jpeg     | Bin 0 -> 8584354 bytes
- 8 files changed, 2 insertions(+), 2 deletions(-)
-
 commit 513ebb0b1bf514c3614d27df7cde80cd958610c4
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Sep 8 17:22:57 2017 +0200
 
     Packaging file updates.
-
- debian/control                     | 41 ++++++++++++++++++++++++++++++++++++++
- debian/melodic-compute.install     |  2 ++
- debian/melodic-compute.postinst    | 13 ++++++++++++
- debian/melodic-compute.postrm      | 14 +++++++++++++
- debian/melodic-controller.install  |  2 ++
- debian/melodic-controller.postinst | 13 ++++++++++++
- debian/melodic-controller.postrm   | 14 +++++++++++++
- 7 files changed, 99 insertions(+)
 
 commit 30e1c5dff039f5536fd76b3c8e89ad9b72e4c64e
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -703,17 +1372,11 @@ Date:   Fri Sep 8 17:10:22 2017 +0200
 
     Version bump.
 
- debian/changelog | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
-
 commit dfa1eaff1e7e852908236fc82f3609d6e83cba70
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Sep 8 17:09:37 2017 +0200
 
     Added dependency.
-
- debian/control | 1 +
- 1 file changed, 1 insertion(+)
 
 commit 161a33b2d4631073338cdb8ba8000bd7dddf94d6
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -721,18 +1384,11 @@ Date:   Thu Sep 7 11:56:44 2017 +0200
 
     Dependency updates.
 
- debian/changelog | 4 ++--
- debian/control   | 7 +++----
- 2 files changed, 5 insertions(+), 6 deletions(-)
-
 commit 8fcdb8c4c710dc50e699927bf35474695612602b
 Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
 Date:   Fri Jun 9 16:03:50 2017 +0200
 
     Reverted change.
-
- src/background/make-desktop | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit a76cb5e4774142186f2f7772420a8a1029398830
 Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
@@ -740,21 +1396,11 @@ Date:   Fri Jun 9 16:03:03 2017 +0200
 
     Minor updates.
 
- debian/changelog               | 4 ++--
- src/background/make-desktop    | 2 +-
- src/background/make-logo-texts | 2 +-
- 3 files changed, 4 insertions(+), 4 deletions(-)
-
 commit 382274806044a415f8fb9b8a569511e561fd41bb
 Author: Thomas Dreibholz <dreibh@iem.uni-due.de>
 Date:   Fri Jun 9 13:08:44 2017 +0200
 
     Fixed labels.
-
- src/grub/02_melodic_management_theme  | 4 ++--
- src/grub/06_melodic_server_theme      | 4 ++--
- src/grub/19_melodic_development_theme | 4 ++--
- 3 files changed, 6 insertions(+), 6 deletions(-)
 
 commit d21aab9c618ec4585de330d4a9d059055f32f01a
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -762,21 +1408,11 @@ Date:   Fri Jun 2 14:05:03 2017 +0200
 
     Minor update.
 
- debian/changelog            | 2 +-
- src/background/make-desktop | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
-
 commit a8bd2c7a8b8c23abdcca7609f208373884802e53
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Jun 1 14:43:01 2017 +0200
 
     Minor updates.
-
- debian/changelog            |  4 ++--
- debian/control              |  8 +-------
- make-ppa                    | 15 +++++++++++----
- src/background/make-desktop |  2 +-
- 4 files changed, 15 insertions(+), 14 deletions(-)
 
 commit 4da52836b79caad0204922bec7b7f64133b52073
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -784,21 +1420,11 @@ Date:   Tue May 30 13:05:24 2017 +0200
 
     File name fixes.
 
- debian/changelog                      | 2 +-
- src/grub/02_melodic_management_theme  | 2 +-
- src/grub/06_melodic_server_theme      | 2 +-
- src/grub/19_melodic_development_theme | 2 +-
- 4 files changed, 4 insertions(+), 4 deletions(-)
-
 commit dec5fc7f03b621e22cd042d35932dd2ef5555a1d
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Tue May 30 12:21:37 2017 +0200
 
     Minor update.
-
- debian/changelog | 2 +-
- debian/control   | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
 
 commit 991489c9cb179c4cd1f3de3f5da05285f2c280b3
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -806,135 +1432,11 @@ Date:   Tue May 30 12:10:09 2017 +0200
 
     Some fixes.
 
- debian/changelog                             |   2 +-
- debian/control                               |   8 +++-----
- debian/melodic-desktop.install               |   8 ++++++--
- make-dist                                    |  28 +++++++--------------------
- melodic.lsm                                  |  27 ++++++++++++++++++++++++++
- src/background/Input/MELODICController1.jpeg | Bin 0 -> 3855756 bytes
- src/background/Input/MELODICServer1.jpeg     | Bin 3855756 -> 8760717 bytes
- src/background/make-desktop                  |   2 +-
- 8 files changed, 45 insertions(+), 30 deletions(-)
-
 commit e88b87789b2f151e6829147d52142bf39ef3524f
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Tue May 30 11:40:38 2017 +0200
 
     Some clean-ups.
-
- BUGS                                              |   1 +
- COPYING                                           | 674 ++++++++++++++++
- ChangeLog                                         | 933 ++++++++++++++++++++++
- NEWS                                              |   1 +
- README                                            |   1 +
- build-and-install                                 |  34 +
- build-deb                                         | 114 +++
- clean-deb                                         |  28 +
- debian.conf                                       |  10 +
- debian/changelog                                  |   5 +
- debian/compat                                     |   1 +
- debian/control                                    |  74 ++
- debian/copyright                                  |  25 +
- debian/melodic-desktop.install                    |   2 +
- debian/melodic-development.install                |   2 +
- debian/melodic-development.postinst               |  17 +
- debian/melodic-development.postrm                 |  14 +
- debian/melodic-management.install                 |   4 +
- debian/melodic-management.postinst                |  15 +
- debian/melodic-management.postrm                  |  14 +
- debian/melodic-management.prerm                   |  14 +
- debian/melodic-server.install                     |   2 +
- debian/melodic-server.postinst                    |  13 +
- debian/melodic-server.postrm                      |  14 +
- debian/rules                                      |  24 +
- debian/source/format                              |   1 +
- debian/upstream/signing-key.asc                   | 405 ++++++++++
- debian/watch                                      |   3 +
- filter-empty-entries                              |  61 ++
- make-deb                                          | 329 ++++++++
- make-dist                                         |  78 ++
- make-ppa                                          |   5 +
- src/BUGS                                          |   1 -
- src/COPYING                                       | 674 ----------------
- src/ChangeLog                                     | 933 ----------------------
- src/MELODIC-System-Info                           | 236 ++++++
- src/NEWS                                          |   1 -
- src/README                                        |   1 -
- src/background/Input/Background1.fsf              |  18 +
- src/background/Input/Background1.png              | Bin 0 -> 3841553 bytes
- src/background/Input/MELODICDevelopment1.jpeg     | Bin 0 -> 2462534 bytes
- src/background/Input/MELODICManagement1.jpeg      | Bin 0 -> 3173145 bytes
- src/background/Input/MELODICServer1.jpeg          | Bin 0 -> 3855756 bytes
- src/background/Input/exiftool.argfile             |   3 +
- src/background/Make-Background                    |  62 ++
- src/background/Make-Logo                          | 122 +++
- src/background/Make-Mosaic                        |  88 ++
- src/background/Make-Painting                      |  57 ++
- src/background/image-resize-with-cropping         |  68 ++
- src/background/images-to-pdf-a4                   |  61 ++
- src/background/make-a4                            |   5 +
- src/background/make-all                           |   6 +
- src/background/make-bootsplash                    |  97 +++
- src/background/make-desktop                       | 217 +++++
- src/background/make-logo-texts                    |  49 ++
- src/background/make-overlay                       |  60 ++
- src/build-and-install                             |  34 -
- src/build-deb                                     | 114 ---
- src/clean-deb                                     |  28 -
- src/debian.conf                                   |  10 -
- src/debian/changelog                              |   5 -
- src/debian/compat                                 |   1 -
- src/debian/control                                |  74 --
- src/debian/copyright                              |  25 -
- src/debian/melodic-desktop.install                |   2 -
- src/debian/melodic-development.install            |   2 -
- src/debian/melodic-development.postinst           |  17 -
- src/debian/melodic-development.postrm             |  14 -
- src/debian/melodic-management.install             |   4 -
- src/debian/melodic-management.postinst            |  15 -
- src/debian/melodic-management.postrm              |  14 -
- src/debian/melodic-management.prerm               |  14 -
- src/debian/melodic-server.install                 |   2 -
- src/debian/melodic-server.postinst                |  13 -
- src/debian/melodic-server.postrm                  |  14 -
- src/debian/rules                                  |  24 -
- src/debian/source/format                          |   1 -
- src/debian/upstream/signing-key.asc               | 405 ----------
- src/debian/watch                                  |   3 -
- src/filter-empty-entries                          |  61 --
- src/grub/02_melodic_management_theme              |  14 +
- src/grub/06_melodic_server_theme                  |  14 +
- src/grub/19_melodic_development_theme             |  14 +
- src/grub/grub-defaults                            |  17 +
- src/make-deb                                      | 329 --------
- src/make-dist                                     |  78 --
- src/make-ppa                                      |   5 -
- src/src/MELODIC-System-Info                       | 236 ------
- src/src/background/Input/Background1.fsf          |  18 -
- src/src/background/Input/Background1.png          | Bin 3841553 -> 0 bytes
- src/src/background/Input/MELODICDevelopment1.jpeg | Bin 2462534 -> 0 bytes
- src/src/background/Input/MELODICManagement1.jpeg  | Bin 3173145 -> 0 bytes
- src/src/background/Input/MELODICServer1.jpeg      | Bin 3855756 -> 0 bytes
- src/src/background/Input/exiftool.argfile         |   3 -
- src/src/background/Make-Background                |  62 --
- src/src/background/Make-Logo                      | 122 ---
- src/src/background/Make-Mosaic                    |  88 --
- src/src/background/Make-Painting                  |  57 --
- src/src/background/image-resize-with-cropping     |  68 --
- src/src/background/images-to-pdf-a4               |  61 --
- src/src/background/make-a4                        |   5 -
- src/src/background/make-all                       |   6 -
- src/src/background/make-bootsplash                |  97 ---
- src/src/background/make-desktop                   | 217 -----
- src/src/background/make-logo-texts                |  49 --
- src/src/background/make-overlay                   |  60 --
- src/src/grub/02_melodic_management_theme          |  14 -
- src/src/grub/06_melodic_server_theme              |  14 -
- src/src/grub/19_melodic_development_theme         |  14 -
- src/src/grub/grub-defaults                        |  17 -
- src/update-changelog                              |   4 -
- update-changelog                                  |   4 +
- 112 files changed, 4130 insertions(+), 4130 deletions(-)
 
 commit 16a202c18e29741bcfda46b49fb3281c141b5f37
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -942,18 +1444,11 @@ Date:   Tue May 30 11:39:58 2017 +0200
 
     Added another background file.
 
- src/src/background/Input/Background1.fsf |  18 ++++++++++++++++++
- src/src/background/Input/Background1.png | Bin 0 -> 3841553 bytes
- 2 files changed, 18 insertions(+)
-
 commit 1714aec8100c6c15aa49700bb1da0b1816fc643e
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Tue May 30 11:34:53 2017 +0200
 
     Updated information tool.
-
- src/src/MELODIC-System-Info | 26 +++++++++++++-------------
- 1 file changed, 13 insertions(+), 13 deletions(-)
 
 commit 21aab688eb91c0e23b1f7c081c4c3942b7a3ccd8
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -961,36 +1456,11 @@ Date:   Tue May 30 11:28:50 2017 +0200
 
     Added background files.
 
- src/src/background/Input/MELODICDevelopment1.jpeg | Bin 0 -> 2462534 bytes
- src/src/background/Input/MELODICManagement1.jpeg  | Bin 0 -> 3173145 bytes
- src/src/background/Input/MELODICServer1.jpeg      | Bin 0 -> 3855756 bytes
- src/src/background/Input/exiftool.argfile         |   3 +
- src/src/background/Make-Background                |  62 +++++++
- src/src/background/Make-Logo                      | 122 ++++++++++++
- src/src/background/Make-Mosaic                    |  88 +++++++++
- src/src/background/Make-Painting                  |  57 ++++++
- src/src/background/image-resize-with-cropping     |  68 +++++++
- src/src/background/images-to-pdf-a4               |  61 ++++++
- src/src/background/make-a4                        |   5 +
- src/src/background/make-all                       |   6 +
- src/src/background/make-bootsplash                |  97 ++++++++++
- src/src/background/make-desktop                   | 217 ++++++++++++++++++++++
- src/src/background/make-logo-texts                |  49 +++++
- src/src/background/make-overlay                   |  60 ++++++
- 16 files changed, 895 insertions(+)
-
 commit 2a0fd0341bd64af7306a70e75c5d9946be7ea3c4
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Tue May 30 11:10:09 2017 +0200
 
     Added management files.
-
- src/src/MELODIC-System-Info               | 236 ++++++++++++++++++++++++++++++
- src/src/grub/02_melodic_management_theme  |  14 ++
- src/src/grub/06_melodic_server_theme      |  14 ++
- src/src/grub/19_melodic_development_theme |  14 ++
- src/src/grub/grub-defaults                |  17 +++
- 5 files changed, 295 insertions(+)
 
 commit 7e13c87c0adf2715646683e1981aef837041de7f
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -998,45 +1468,8 @@ Date:   Tue May 30 11:06:00 2017 +0200
 
     Added packaging files.
 
- src/BUGS                 |   1 +
- src/COPYING              | 674 ++++++++++++++++++++++++++++++++++
- src/ChangeLog            | 933 +++++++++++++++++++++++++++++++++++++++++++++++
- src/NEWS                 |   1 +
- src/README               |   1 +
- src/build-and-install    |  34 ++
- src/build-deb            | 114 ++++++
- src/clean-deb            |  28 ++
- src/debian.conf          |  10 +
- src/filter-empty-entries |  61 ++++
- src/make-deb             | 329 +++++++++++++++++
- src/make-dist            |  78 ++++
- src/make-ppa             |   5 +
- src/update-changelog     |   4 +
- 14 files changed, 2273 insertions(+)
-
 commit 67b082f53bd459e1ad961d0093378c82de51b6cc
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Tue May 30 11:04:36 2017 +0200
 
     Added packaging files.
-
- src/debian/changelog                    |   5 +
- src/debian/compat                       |   1 +
- src/debian/control                      |  74 ++++++
- src/debian/copyright                    |  25 ++
- src/debian/melodic-desktop.install      |   2 +
- src/debian/melodic-development.install  |   2 +
- src/debian/melodic-development.postinst |  17 ++
- src/debian/melodic-development.postrm   |  14 ++
- src/debian/melodic-management.install   |   4 +
- src/debian/melodic-management.postinst  |  15 ++
- src/debian/melodic-management.postrm    |  14 ++
- src/debian/melodic-management.prerm     |  14 ++
- src/debian/melodic-server.install       |   2 +
- src/debian/melodic-server.postinst      |  13 +
- src/debian/melodic-server.postrm        |  14 ++
- src/debian/rules                        |  24 ++
- src/debian/source/format                |   1 +
- src/debian/upstream/signing-key.asc     | 405 ++++++++++++++++++++++++++++++++
- src/debian/watch                        |   3 +
- 19 files changed, 649 insertions(+)
