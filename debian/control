@@ -34,7 +34,7 @@ Description: MELODIC Management Tools
 
 Package: melodic-development
 Architecture: all
-Depends: cmake (>= 3.0) | cmake3,
+Depends: cmake (>= 3.0.2) | cmake3,
          fonts-dejavu,
          fonts-noto-cjk,
          fonts-noto-hinted,
