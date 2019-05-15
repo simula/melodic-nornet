@@ -21,7 +21,7 @@ Vcs-Browser: https://github.com/simula/melodic-nornet/tags
 Package: melodic-management
 Architecture: all
 Depends: fail2ban,
-         nornet-management,
+         nornet-management,gdisk,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: grub2-common,
