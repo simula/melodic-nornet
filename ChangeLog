@@ -1,3 +1,57 @@
+commit 33cec62d1340f44feecd4b5b95010c8d26321891
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed May 15 15:50:14 2019 +0200
+
+    Dependency update.
+
+commit 8ff91154350200786986cc1148838b615242f656
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon May 6 13:31:53 2019 +0200
+
+    Updated script.
+
+commit 7e71ecc65416a25a0bf5c19364c0e50bd5f3e707
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon May 6 13:25:47 2019 +0200
+
+    Updated build script.
+
+commit fc0398ccfc745f0f66cc4c16c8cb8670791655e1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Apr 9 13:59:07 2019 +0200
+
+    A fix.
+
+commit 8db14126b49714e2538eeb58e67e365f0e9e76e1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Apr 9 12:53:12 2019 +0200
+
+    Improved CI scripts.
+
+commit 66c867bfbd5fa24fec68de165952cee9248b6f04
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 8 10:50:08 2019 +0100
+
+    Minor update.
+
+commit 9e589fd6cf0edc90c4f5618d92433d0e2df85bad
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 8 10:31:26 2019 +0100
+
+    Minor update.
+
+commit c9bbe92a3c5639539d306d25e7984b997e9679c1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 6 16:22:02 2019 +0100
+
+    A fix.
+
+commit e7d0032c181b014817b5f42d3499e6fc50bb4b84
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 6 16:20:45 2019 +0100
+
+    Version bump.
+
 commit 6987e254506918a514220334a59aefc957f7780f
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Wed Mar 6 16:19:36 2019 +0100
