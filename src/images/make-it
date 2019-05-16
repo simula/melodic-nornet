@@ -19,7 +19,7 @@
 # Contact: dreibh@simula.no
 
 DIRECTORY="/vservers"
-VARIANTS="trusty xenial artful bionic cosmic"   # trusty xenial artful bionic cosmic
+VARIANTS="trusty xenial bionic cosmic disco eoan"   # trusty xenial bionic cosmic disco eoan
 
 # ------ Keyboard settings --------------------------------
 XKBMODEL="pc105"
