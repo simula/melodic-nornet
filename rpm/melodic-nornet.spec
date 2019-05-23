@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 0.6.0
+Version: 0.6.1~rc1.0
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet

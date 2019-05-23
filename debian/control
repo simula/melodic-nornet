@@ -122,7 +122,6 @@ Package: melodic-compute
 Architecture: all
 Depends: melodic-management (= ${binary:Version}),
          melodic-server (= ${binary:Version}),
-         melodic-storage (= ${binary:Version}),
          neutron-linuxbridge-agent,
          nova-compute,
          ${misc:Depends},
