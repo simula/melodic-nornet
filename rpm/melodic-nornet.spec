@@ -40,7 +40,8 @@ See http://www.melodic.cloud for details on MELODIC!
 %setup -q
 
 %build
-%cmake -DCMAKE_INSTALL_PREFIX=/usr -DFLAT_DIRECTORY_STRUCTURE=0 .
+# NOTE: CMAKE_VERBOSE_MAKEFILE=OFF for reduced log output!
+%cmake -DCMAKE_INSTALL_PREFIX=/usr -DFLAT_DIRECTORY_STRUCTURE=0 -DCMAKE_VERBOSE_MAKEFILE=OFF .
 make %{?_smp_mflags}
 
 %install
