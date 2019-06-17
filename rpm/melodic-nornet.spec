@@ -138,7 +138,7 @@ Requires: bison
 Requires: bzip2-devel
 Requires: clang
 Requires: cmake
-Requires: createrepo
+Requires: (createrepo_c or createrepo)
 Requires: debhelper
 Requires: dejavu-sans-fonts
 Requires: dejavu-sans-mono-fonts
