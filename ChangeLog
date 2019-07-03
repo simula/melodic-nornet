@@ -1,3 +1,27 @@
+commit c838e66ecd70ddbcc6369b446cab890fc53a20c6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Jun 27 21:35:44 2019 +0200
+
+    CI script update.
+
+commit 07b1eec581a06c256f9c6204170824e8a4297f78
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Jun 27 21:34:54 2019 +0200
+
+    Build script update.
+
+commit 63615c01321b161d74645fab050d026609d1a815
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Jun 24 17:24:16 2019 +0200
+
+    Updated build scripts.
+
+commit 3e412c6e02f91a0da2fab8fad6f555c0e50351f6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Jun 17 17:18:12 2019 +0200
+
+    New release 0.6.2.
+
 commit 2e04efccd432a0f69e2abddd97d31477dfe7b42f
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Mon Jun 17 17:16:55 2019 +0200

@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 0.6.2
+Version: 0.6.3
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -222,6 +222,8 @@ if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub
 
 
 %changelog
+* Wed Jul 03 2019 Thomas Dreibholz <dreibh@simula.no> - 0.6.3
+- New upstream release.
 * Mon Jun 17 2019 Thomas Dreibholz <dreibh@simula.no> - 0.6.2
 - New upstream release.
 * Tue May 28 2019 Thomas Dreibholz <dreibh@simula.no> - 0.6.1
