@@ -65,7 +65,7 @@ for variant in $VARIANTS ; do
       virsh undefine --nvram "$NAME" >/dev/null 2>&1
       rm -f "$IMAGE"
 
-      bootOptions="--boot uefi"
+      bootOptions=""   # "--boot uefi"
       osOptions="--os-type linux --os-variant ubuntu19.04"
       if [ "$variant" == "trusty" ] ; then
          bootOptions=""
