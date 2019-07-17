@@ -34,7 +34,9 @@ for variant in $VARIANTS ; do
 
    (
       # ------ Customise preseed file ---------------------------------------
-      LOCATION="http://no.archive.ubuntu.com/ubuntu/dists/$variant/main/installer-amd64/"
+      # BASE_LOCATION="http://no.archive.ubuntu.com/ubuntu/dists/"
+      BASE_LOCATION="https://ftp.lysator.liu.se/ubuntu/"   # Use HTTPS!
+      LOCATION="${BASE_LOCATION}/ubuntu/dists/$variant/main/installer-amd64/"
       sed -e "s/xenial/$variant/g" \
           -e "s/<SET_XKBMODEL_HERE>/$XKBMODEL/g" \
           -e "s/<SET_XKBLAYOUT_HERE>/$XKBLAYOUT/g" \
@@ -59,21 +61,29 @@ for variant in $VARIANTS ; do
       NAME="Ubuntu-`echo "$variant" | sed  -e's/^\(.\)/\U\1/'`"
       IMAGE="$DIRECTORY/$NAME.qcow2"
 
-      virsh -c qemu:///system destroy  "$NAME" >/dev/null 2>&1
-      virsh -c qemu:///system undefine "$NAME" >/dev/null 2>&1
+      virsh destroy "$NAME"          >/dev/null 2>&1
+      virsh undefine --nvram "$NAME" >/dev/null 2>&1
       rm -f "$IMAGE"
+
+      bootOptions="--boot uefi"
+      osOptions="--os-type linux --os-variant ubuntu19.04"
+      if [ "$variant" == "trusty" ] ; then
+         bootOptions=""
+         osOptions="--os-type linux --os-variant ubuntu16.04"
+      fi
 
       qemu-img create -f qcow2 -o size=8G $IMAGE && \
       virt-install \
          --name "$NAME" \
          --ram 4096 \
-         --disk "path=$IMAGE,format=qcow2,cache=unsafe" \
+         --controller scsi,model=virtio-scsi \
+         --disk "bus=scsi,path=$IMAGE,format=qcow2,cache=unsafe,discard=unmap" \
          --network bridge=virbr0,model=virtio \
-         --vcpus 1 \
+         --vcpus 4 \
          --cpu host \
-         --video qxl --channel spicevmc \
-         --os-type linux \
-         --os-variant ubuntu16.04 \
+         --video virtio --channel spicevmc \
+         ${bootOptions} \
+         ${osOptions} \
          --location "$LOCATION" \
          --initrd-inject=$variant/preseed.cfg \
          --extra-args 'net.ifnames=0 biosdevname=0 vga=792 priority=critical file=preseed.cfg preseed/file=preseed.cfg' \
