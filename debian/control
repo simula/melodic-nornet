@@ -2,7 +2,7 @@ Source: melodic-nornet
 Section: net
 Priority: optional
 Maintainer: Thomas Dreibholz <dreibh@simula.no>
-Homepage: http://www.melodic.cloud/
+Homepage: https://www.melodic.cloud/
 Build-Depends: cmake (>= 3.0.2) | cmake3,
                debhelper (>= 9),
                fonts-dejavu,
@@ -31,7 +31,7 @@ Description: MELODIC Management Tools
  This metapackage contains basic software for MELODIC system management.
  The software installed provides a common working environment.
  .
- See http://www.melodic.cloud for details on MELODIC!
+ See https://www.melodic.cloud for details on MELODIC!
 
 Package: melodic-development
 Architecture: all
@@ -52,7 +52,7 @@ Description: MELODIC Development Tools
  This meta-package contains basic software for MELODIC development.
  The software installed provides a common working environment.
  .
- See http://www.melodic.cloud for details on MELODIC!
+ See https://www.melodic.cloud for details on MELODIC!
 
 Package: melodic-server
 Architecture: all
@@ -65,7 +65,7 @@ Recommends: intel-microcode
 Description: MELODIC Server
  This package contains the scripts to configure a MELODIC server.
  .
- See http://www.melodic.cloud for details on MELODIC!
+ See https://www.melodic.cloud for details on MELODIC!
 
 Package: melodic-controller
 Architecture: all
@@ -102,7 +102,7 @@ Recommends: nova-placement-api
 Description: MELODIC Controller
  This package contains the scripts to configure a MELODIC controller.
  .
- See http://www.melodic.cloud for details on MELODIC!
+ See https://www.melodic.cloud for details on MELODIC!
 
 Package: melodic-storage
 Architecture: all
@@ -116,7 +116,7 @@ Depends: cinder-volume,
 Description: MELODIC Storage Node
  This package contains the scripts to configure a MELODIC storage node.
  .
- See http://www.melodic.cloud for details on MELODIC!
+ See https://www.melodic.cloud for details on MELODIC!
 
 Package: melodic-compute
 Architecture: all
@@ -129,7 +129,7 @@ Depends: melodic-management (= ${binary:Version}),
 Description: MELODIC Compute Node
  This package contains the scripts to configure a MELODIC compute node.
  .
- See http://www.melodic.cloud for details on MELODIC!
+ See https://www.melodic.cloud for details on MELODIC!
 
 Package: melodic-desktop
 Architecture: all
@@ -142,4 +142,4 @@ Depends: firefox | firefox-esr,
 Description: MELODIC Desktop
  This meta-package contains the scripts to configure a MELODIC desktop.
  .
- See http://www.melodic.cloud for details on MELODIC!
+ See https://www.melodic.cloud for details on MELODIC!
