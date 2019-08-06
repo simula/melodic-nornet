@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 0.6.3
+Version: 0.7.0
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -34,7 +34,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 %description
 This package contains software for MELODIC system management.
 The software installed provides a common working environment.
-See http://www.melodic.cloud for details on MELODIC!
+See https://www.melodic.cloud for details on MELODIC!
 
 %prep
 %setup -q
@@ -103,7 +103,7 @@ Recommends: grub2-tools
 %description management
 This metapackage contains basic software for MELODIC system management.
 The software installed provides a common working environment.
-See http://www.melodic.cloud for details on MELODIC!
+See https://www.melodic.cloud for details on MELODIC!
 
 %files management
 /boot/MELODIC/Management1-1024x768.jpeg
@@ -181,7 +181,7 @@ Recommends: rsplib-devel
 %description development
 This meta-package contains basic software for MELODIC development.
 The software installed provides a common working environment.
-See http://www.melodic.cloud for details on MELODIC!
+See https://www.melodic.cloud for details on MELODIC!
 
 %files development
 /boot/MELODIC/Development1-1024x768.jpeg
@@ -203,7 +203,7 @@ Recommends: xorg-x11-drv-vmware
 
 %description desktop
 This meta-package contains the scripts to configure a MELODIC desktop.
-See http://www.melodic.cloud for details on MELODIC!
+See https://www.melodic.cloud for details on MELODIC!
 
 %files desktop
 /boot/MELODIC/Desktop1-1024x768.jpeg
@@ -222,6 +222,8 @@ if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub
 
 
 %changelog
+* Mon Aug 05 2019 Thomas Dreibholz <dreibh@simula.no> - 0.7.0
+- New upstream release.
 * Wed Jul 03 2019 Thomas Dreibholz <dreibh@simula.no> - 0.6.3
 - New upstream release.
 * Mon Jun 17 2019 Thomas Dreibholz <dreibh@simula.no> - 0.6.2
