@@ -1,3 +1,101 @@
+commit e0b543ce4900c9f970068d2ae94ff9787265dbb2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 7 15:30:44 2019 +0200
+
+    Need to check for update-grub before calling it. It may not exist in e.g. Docker environments.
+
+commit 49f4d48233a9bd222962221a76ec87a058020dd7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 7 15:29:21 2019 +0200
+
+    Need to check for update-grub before calling it. It may not exist in e.g. Docker environments.
+
+commit 35bdec34d3549ffd187df6499d07d736b6f70062
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 7 14:05:57 2019 +0200
+
+    Added missing manpage.
+
+commit 8c7373700383cc3154b25dca1dd96439bad30bda
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 7 13:00:51 2019 +0200
+
+    Improved packaging.
+
+commit bb5cf67238c85e6a33f3a3328dba5c542f064e86
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 7 12:34:40 2019 +0200
+
+    Use "update-motd" instead of "/usr/sbin/update-motd" in postinst/postrm scripts.
+
+commit 432c2d2eea2a35d4b6ab5e067a421598199c9c69
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 7 11:33:45 2019 +0200
+
+    Use "update-grub" instead of "/usr/sbin/update-grub" in postinst/postrm scripts.
+
+commit 59120ca551d942d006bcf11572d5ee9c50055e52
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 7 10:33:04 2019 +0200
+
+    Fixed some inconsistencies in different packaging files.
+
+commit 585b559e5637e02e9cb36c6bbbbcf2b8203ef448
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 7 10:04:34 2019 +0200
+
+    Updated build scripts.
+
+commit bd3a7a914cc18b0f6b52e1ae79a607eb4e0a6657
+Merge: 832501d 7eec1ab
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 16:53:55 2019 +0200
+
+    Merge branch 'master' of github.com:simula/melodic-nornet
+
+commit 832501d4c4b9d147de13f9a1f568c73e8c74851d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 16:50:36 2019 +0200
+
+    Removed leading / from Ubuntu/Debian install files.
+
+commit 7eec1ab301b59d60c0699dececb605db6bbab13f
+Merge: 07289ec 0392341
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 13:27:16 2019 +0200
+
+    Merge branch 'master' of github.com:simula/melodic-nornet
+
+commit 07289ec5fba967c465cd8f198d0f1f8dd647bca3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 13:27:02 2019 +0200
+
+    Updated scripts.
+
+commit 039234108d9d61b67f7c7a8a7d88c45848f68613
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 5 22:58:52 2019 +0200
+
+    Script updates.
+
+commit ba4a49f1515c5f06a8b9cfc3fef1d6adb9ec63cd
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 5 22:06:50 2019 +0200
+
+    Updated CI scripts.
+
+commit fe46d59bdc7a57be83f237d04c382f6c990e1075
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 5 17:00:41 2019 +0200
+
+    Updated Debian Standards version.
+
+commit 98f0c0396371b49c467dac627af562966f4e68be
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 5 16:38:11 2019 +0200
+
+    New release melodic-nornet-0.7.0.
+
 commit 181ece13723a46b858c2a283f909f91fb7859b67
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Mon Aug 5 16:37:57 2019 +0200
