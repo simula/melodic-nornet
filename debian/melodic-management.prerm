@@ -5,7 +5,7 @@ set -e
 case "$1" in
    remove|upgrade|deconfigure)
       rm -f /etc/update-motd.d/55-melodic-management || true
-      /usr/sbin/update-motd 2>/dev/null || true
+      update-motd 2>/dev/null || true
       ;;
 esac
 

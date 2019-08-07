@@ -4,7 +4,7 @@ set -e
 
 case "$1" in
    configure)
-      /usr/sbin/update-motd 2>/dev/null || true
+      update-motd 2>/dev/null || true
       if [ -x update-grub ] ; then
          update-grub || true
       fi
