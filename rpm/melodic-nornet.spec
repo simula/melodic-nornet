@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 0.7.0
+Version: 0.7.1~rc0
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -57,7 +57,7 @@ mv %{buildroot}/usr/share/melodic-desktop/Splash/melodic-version %{buildroot}/et
 
 
 %package management
-Summary: MELODIC Management
+Summary: Management tools for the MELODIC system environment
 Group: Applications/Internet
 Requires: bash-completion
 Requires: bc
@@ -128,7 +128,7 @@ if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub
 
 
 %package development
-Summary: MELODIC Development
+Summary: Development tools for the MELODIC system environment
 Group: Applications/Internet
 Requires: %{name}-management = %{version}-%{release}
 Requires: autoconf
@@ -179,7 +179,7 @@ Recommends: rsplib-devel
 
 
 %description development
-This meta-package contains basic software for MELODIC development.
+This metapackage contains basic software for MELODIC development.
 The software installed provides a common working environment.
 See https://www.melodic.cloud for details on MELODIC!
 
@@ -196,13 +196,13 @@ if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub
 
 
 %package desktop
-Summary: MELODIC Desktop
+Summary: Desktop setup for the MELODIC system environment
 Group: Applications/Internet
 Requires: %{name}-management = %{version}-%{release}
 Recommends: xorg-x11-drv-vmware
 
 %description desktop
-This meta-package contains the scripts to configure a MELODIC desktop.
+This metapackage contains the scripts to configure a MELODIC desktop.
 See https://www.melodic.cloud for details on MELODIC!
 
 %files desktop

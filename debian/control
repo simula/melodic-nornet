@@ -27,7 +27,7 @@ Depends: fail2ban,
          ${shlibs:Depends}
 Recommends: grub2-common,
             tshark
-Description: MELODIC Management Tools
+Description: Management Tools tools for the MELODIC system environment
  This metapackage contains basic software for MELODIC system management.
  The software installed provides a common working environment.
  .
@@ -48,8 +48,8 @@ Depends: cmake (>= 3.0.2) | cmake3,
          nornet-development,
          ${misc:Depends},
          ${shlibs:Depends}
-Description: MELODIC Development Tools
- This meta-package contains basic software for MELODIC development.
+Description: Development Tools tools for the MELODIC system environment
+ This metapackage contains basic software for MELODIC development.
  The software installed provides a common working environment.
  .
  See https://www.melodic.cloud for details on MELODIC!
@@ -62,8 +62,9 @@ Depends: melodic-management (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: intel-microcode
-Description: MELODIC Server
- This package contains the scripts to configure a MELODIC server.
+Description: Server tools for the MELODIC system environment
+ This package contains the scripts to configure a MELODIC
+ server.
  .
  See https://www.melodic.cloud for details on MELODIC!
 
@@ -99,8 +100,9 @@ Depends: cinder-api,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: nova-placement-api
-Description: MELODIC Controller
- This package contains the scripts to configure a MELODIC controller.
+Description: Controller tools for the MELODIC system environment
+ This package contains the scripts to configure a MELODIC
+ controller.
  .
  See https://www.melodic.cloud for details on MELODIC!
 
@@ -113,8 +115,9 @@ Depends: cinder-volume,
          thin-provisioning-tools,
          ${misc:Depends},
          ${shlibs:Depends}
-Description: MELODIC Storage Node
- This package contains the scripts to configure a MELODIC storage node.
+Description: Storage Node tools for the MELODIC system environment
+ This package contains the scripts to configure a MELODIC
+ storage node.
  .
  See https://www.melodic.cloud for details on MELODIC!
 
@@ -126,8 +129,9 @@ Depends: melodic-management (= ${binary:Version}),
          nova-compute,
          ${misc:Depends},
          ${shlibs:Depends}
-Description: MELODIC Compute Node
- This package contains the scripts to configure a MELODIC compute node.
+Description: Compute Node tools for the MELODIC system environment
+ This package contains the scripts to configure a MELODIC
+ compute node.
  .
  See https://www.melodic.cloud for details on MELODIC!
 
@@ -139,7 +143,8 @@ Depends: firefox | firefox-esr,
          sddm | kdm | lightdm | gdm3,
          ${misc:Depends},
          ${shlibs:Depends}
-Description: MELODIC Desktop
- This meta-package contains the scripts to configure a MELODIC desktop.
+Description: Desktop setup for the MELODIC system environment
+ This metapackage contains the scripts to configure a
+ MELODIC desktop.
  .
  See https://www.melodic.cloud for details on MELODIC!
