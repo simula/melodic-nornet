@@ -2,7 +2,8 @@
 # PROGRAMS
 #############################################################################
 
-INSTALL(FILES MELODIC-System-Info DESTINATION ${CMAKE_INSTALL_BINDIR})
+INSTALL(FILES MELODIC-System-Info   DESTINATION ${CMAKE_INSTALL_BINDIR})
+INSTALL(FILES MELODIC-System-Info.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
 
 
 #############################################################################

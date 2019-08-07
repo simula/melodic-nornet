@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 0.7.1~rc0
+Version: 0.7.1~rc1
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -111,6 +111,7 @@ See https://www.melodic.cloud for details on MELODIC!
 %{_sysconfdir}//melodic/melodic-version
 %{_bindir}/MELODIC-System-Info
 %{_datadir}/melodic-nornet/grub-defaults
+%{_mandir}/man1/MELODIC-System-Info.1.gz
 
 %post management
 echo "Updating /etc/default/grub with NorNet settings:"
