@@ -71,7 +71,6 @@ Requires: git
 Requires: gpm
 Requires: hping3
 Requires: htop
-Requires: ipsec-tools
 Requires: joe
 Requires: jq
 Requires: libidn
