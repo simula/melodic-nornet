@@ -1,1 +1,1 @@
-${MAKE_LOGO} ${OUTPUT}   "https://www.melodic.cloud | https://www.nntb.no"   256 10 "Brushed Aluminium"   "DejaVu Sans"
+${MAKE_TEXT} ${OUTPUT}   "https://www.melodic.cloud | https://www.nntb.no"   256 10 "Brushed Aluminium"   "DejaVu Sans"

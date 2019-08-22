@@ -1,1 +1,1 @@
-${MAKE_LOGO} ${OUTPUT}   "MELODIC"   1024 30 "Golden"   "DejaVu Sans Bold"
+${MAKE_TEXT} ${OUTPUT}   "MELODIC"   1024 30 "Golden"   "DejaVu Sans Bold"
