@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Create MELODIC/NorNet Core Server in OpenStack
 # Copyright (C) 2017-2018 by Thomas Dreibholz

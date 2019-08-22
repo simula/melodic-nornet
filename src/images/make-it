@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Ubuntu Template Builder
 # Copyright (C) 2017-2018 by Thomas Dreibholz
