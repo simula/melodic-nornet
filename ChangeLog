@@ -1,3 +1,141 @@
+commit d086bc30cbd828125aadabd95d6b3c71027bb49a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Aug 22 10:51:21 2019 +0200
+
+    Removed obsolete script.
+
+commit 2b115677f2609517886e99232004a7b53407ff70
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Aug 22 10:51:14 2019 +0200
+
+    Updated Python and Bash shebangs for improved platform-independence.
+
+commit fa34dbb5910562d5835199b13f020bc3a2f8db70
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Aug 22 10:50:41 2019 +0200
+
+    Updated scripts.
+
+commit 322408ad8a51fa6fb99b6accf0e3848adab2ce12
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Aug 22 10:45:28 2019 +0200
+
+    Minor updates.
+
+commit 7d80d38d641fb1dc9d3a9d11fdbd0e4f7abf86cf
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Aug 22 10:44:18 2019 +0200
+
+    Updated scripts.
+
+commit 8159d897186891ab7e79d0f9b0862e9e2665931e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Aug 22 10:06:55 2019 +0200
+
+    Updated build helper script.
+
+commit 5bdca3aa45c9c62c5dc487c467004a93fc037bc1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Aug 22 10:05:35 2019 +0200
+
+    Updated Travis CI configuration
+
+commit a8dc33b4b1a3ff9555ec0d87dde096f189b959bd
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Aug 22 10:05:35 2019 +0200
+
+    Updated build scripts
+
+commit 8ddff3a4b9bf0fd4d876a4cdc44eac9ed5d1ac40
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Aug 22 10:05:35 2019 +0200
+
+    Updated build scripts
+
+commit b60b7abc97c89ac81854b9c186cbba97ca2ae38c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 20 13:24:44 2019 +0200
+
+    Dependency update.
+
+commit c939d57ed2ffb2552c8157e4834344bc0d624970
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 20 08:34:02 2019 +0200
+
+    Using LC_NUMERIC=C for awk to ensure expected format of floats regardless of locale settings.
+
+commit de09e9f27bbff9f3f676e3f30a45cf0c18f21122
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 19 11:34:01 2019 +0200
+
+    Updated Travis CI configuration.
+
+commit a43a39ee11bc5282da711dea2efea47b314908cb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 19 11:27:05 2019 +0200
+
+    Updated build helper script.
+
+commit eaad2c1cea1b07f7d9ab45384dfbd70436ea17b9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 19 11:01:12 2019 +0200
+
+    Updated build scripts.
+
+commit 9524566707f88997b98a5c330b67c2ef170a85b0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 19 11:01:04 2019 +0200
+
+    Updated build helper script.
+
+commit edfde4f45fed679896a9f447781b64226abd0ea8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Aug 17 22:55:11 2019 +0200
+
+    Updated build scripts.
+
+commit 9008dda3071f44113fe6065e5a88ffb6598ae2bb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Aug 17 22:54:54 2019 +0200
+
+    Updated CI scripts.
+
+commit e2fcdb42827c203f4b4e3c41065d11b4271c771d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 14 09:51:34 2019 +0200
+
+    Updated CI scripts.
+
+commit d89145b38bfb563b927338787ba3e6965a13bd90
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 12 15:30:31 2019 +0200
+
+    Updated build script.
+
+commit cfaa54f263979b5bb01a82d67ad09923938c5fa0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 12 15:29:48 2019 +0200
+
+    Removed Ubuntu Cosmic from Travis CI builds, since it is deprecated.
+
+commit 0275bd24e70cd73b0eb6880461f00e2812284803
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Aug 10 18:48:42 2019 +0200
+
+    A test.
+
+commit e725dbd2afe4d5ff625c2bc781cde6a479c96fb5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 7 18:49:56 2019 +0200
+
+    Updated LSM entry.
+
+commit 39fe87838d2eba918eeaf28a416798b4d249ff90
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 7 18:45:45 2019 +0200
+
+    New release melodic-nornet-0.7.1.
+
 commit e0b543ce4900c9f970068d2ae94ff9787265dbb2
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Wed Aug 7 15:30:44 2019 +0200
