@@ -1,3 +1,22 @@
+commit 168a5a3a2b1e211a3a0a0f3be58f2be67f42d721
+Merge: 9f1f3dd 985b964
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 20 22:25:22 2019 +0200
+
+    Merge branch 'master' of github.com:simula/melodic-nornet
+
+commit 9f1f3dd5795f20ce7a904ee3f5ae7945b30e9c56
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 20 19:59:03 2019 +0200
+
+    New release melodic-nornet-0.8.1.
+
+commit 985b9645741b9afc7498279080cd1397a8d8738a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 20 12:02:56 2019 +0200
+
+    Updated dependencies.
+
 commit 125957313138bd6bed54fe74a1fca5b173fb6344
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Wed Sep 18 08:57:59 2019 +0200
