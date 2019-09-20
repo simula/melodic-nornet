@@ -1,3 +1,45 @@
+commit 125957313138bd6bed54fe74a1fca5b173fb6344
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Sep 18 08:57:59 2019 +0200
+
+    Updated build scripts
+
+commit 8dfbbff6df74f6bd1e510a6f400a3eef42dcea34
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Sep 10 15:44:52 2019 +0300
+
+    Updated build scripts
+
+commit cf14caadb0262e558d75d8e2a6acfb8de69ca2f6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Sep 10 15:44:18 2019 +0300
+
+    Updated Travis CI configuration.
+
+commit e851ff62d8f45c88add4d52b7e3fdca92ae61f33
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Sep 4 22:51:20 2019 +0200
+
+    Updated build scripts
+
+commit 91f0715a25ce11c71e94228c6e39e9a3e6677566
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 26 13:07:08 2019 +0200
+
+    Updated build scripts
+
+commit 93295ed9741b9cf455cd2ca08b1512aef76c0767
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Aug 22 18:33:20 2019 +0200
+
+    Updated LSM entry.
+
+commit 636972e4e5e923bf8ef385095929ee5c60905193
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Aug 22 17:54:42 2019 +0200
+
+    New release melodic-nornet-0.8.0.
+
 commit d086bc30cbd828125aadabd95d6b3c71027bb49a
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Aug 22 10:51:21 2019 +0200
