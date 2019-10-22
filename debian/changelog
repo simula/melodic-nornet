@@ -1,3 +1,9 @@
+melodic-nornet (0.8.3~rc0-1ubuntu1) xenial; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Tue, 22 Oct 2019 11:42:02 +0200
+
 melodic-nornet (0.8.2-1ubuntu1) xenial; urgency=medium
 
   * New upstream release.
