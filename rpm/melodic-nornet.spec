@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 0.8.3~rc0
+Version: 0.8.3
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -222,6 +222,8 @@ if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub
 
 
 %changelog
+* Wed Oct 23 2019 Thomas Dreibholz <dreibh@iem.uni-due.de> - 0.8.3
+- New upstream release.
 * Fri Sep 20 2019 Thomas Dreibholz <dreibh@iem.uni-due.de> - 0.8.2
 - New upstream release.
 * Fri Sep 20 2019 Thomas Dreibholz <dreibh@iem.uni-due.de> - 0.8.1
