@@ -1,3 +1,15 @@
+commit 1edec7278b2e4f841970450f3892831510cdfebb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 23 14:14:30 2019 +0200
+
+    Updated LSM entry.
+
+commit 34e6c7702e42816e07efb570503fe2e15dcfd2a9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 23 14:11:16 2019 +0200
+
+    New release melodic-nornet-0.8.3.
+
 commit ef1525878aa3c80266dd95086477a93c1ce8226b
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Tue Oct 22 17:13:54 2019 +0200
