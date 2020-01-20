@@ -14,7 +14,7 @@ Build-Depends: cmake (>= 3.0.2) | cmake3,
                gsfonts,
                libfile-fcntllock-perl,
                libimage-exiftool-perl
-Standards-Version: 4.4.1.1
+Standards-Version: 4.4.1.2
 Vcs-Git: https://github.com/simula/melodic-nornet.git
 Vcs-Browser: https://github.com/simula/melodic-nornet/tags
 

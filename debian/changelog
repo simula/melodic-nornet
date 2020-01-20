@@ -1,3 +1,10 @@
+melodic-nornet (1.0.0-1ubuntu1) xenial; urgency=medium
+
+  * New upstream release.
+  * debian/control: Updated standards version to 4.4.1.2.
+
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Mon, 20 Jan 2020 15:12:52 +0100
+
 melodic-nornet (0.8.4-1ubuntu1) xenial; urgency=medium
 
   * New upstream release.
