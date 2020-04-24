@@ -1,3 +1,45 @@
+commit ea7c7aa7e8671aa9289c403daa786c50a32daae6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Apr 20 14:37:48 2020 +0200
+
+    Dependency fix.
+
+commit f6dcfad25009800ee0709549cdcbc49a9ecba5fd
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Apr 17 11:30:57 2020 +0200
+
+    Updated Travis CI configuration for Ubuntu builds.
+
+commit 33ee50b3615fc12195a0f2eed57baf8d5b9de7bd
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Apr 16 11:42:56 2020 +0200
+
+    Updated Travis CI configuration: Ubuntu 19.04 (Disco Dingo) is now obsolete.
+
+commit 74cc40b454e29c5b6722497a13c028aaa97783d0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Apr 14 19:04:41 2020 +0200
+
+    Updated build scripts
+
+commit 40bf26068620ed1ad059d74e794d8448bd85c4f5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Mar 26 09:57:02 2020 +0100
+
+    Updated build scripts
+
+commit b17075597a43370f4605e3ffc4494bea1d823e07
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Feb 7 13:38:30 2020 +0100
+
+    Updated build scripts
+
+commit 78f436c8b111c95df0ab98a50133eabb254b0f5d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Jan 20 15:12:54 2020 +0100
+
+    New release melodic-nornet-1.0.0.
+
 commit d562c357d095ad85fc18e75fcd50a23e78831c2d
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Dec 5 13:19:18 2019 +0100
