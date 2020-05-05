@@ -2,3 +2,4 @@ etc/grub.d/??_melodic_management_theme
 usr/bin/MELODIC-System-Info
 usr/share/melodic-desktop/Splash/Management1-1024x768.jpeg /boot/MELODIC
 usr/share/melodic-desktop/Splash/melodic-version /etc/melodic
+usr/share/melodic-nornet/grub-defaults
