@@ -123,7 +123,7 @@ echo "-----"
 if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
 
 %postun management
-rm -f /etc/grub.d/??_melodic_desktop_theme
+rm -f /etc/grub.d/??_melodic_management_theme
 if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
 
 
@@ -191,7 +191,7 @@ See https://www.melodic.cloud for details on MELODIC!
 if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
 
 %postun development
-rm -f /etc/grub.d/??_melodic_desktop_theme
+rm -f /etc/grub.d/??_melodic_development_theme
 if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
 
 
