@@ -1,3 +1,39 @@
+commit ce3c5b732d5d0f64461d67d8b30629f337f847f8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 5 13:15:39 2020 +0200
+
+    Version bump.
+
+commit 6c3d137ca5e7ee8b0aabadeda0d394fb68340cc3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 5 08:43:30 2020 +0200
+
+    Updated build scripts
+
+commit 87cb29f6a625a34893e3fbe0efefef985ca0de9d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 5 08:43:30 2020 +0200
+
+    Updated build scripts
+
+commit 2d5196add050741c10fe9029847f4d91a9658e6e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 5 08:43:09 2020 +0200
+
+    Updated Ubuntu/Debian packaging files.
+
+commit 3616d15feae2d7adc1033e1eb963e48d968422cf
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 5 08:41:30 2020 +0200
+
+    Updated RPM spec.
+
+commit dbf8aa04fe516e5aacef85ba648a80b5af084b02
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Apr 24 12:41:51 2020 +0200
+
+    New release melodic-nornet-1.0.1.
+
 commit ea7c7aa7e8671aa9289c403daa786c50a32daae6
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Mon Apr 20 14:37:48 2020 +0200
