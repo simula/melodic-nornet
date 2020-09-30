@@ -42,10 +42,10 @@ See https://www.melodic.cloud for details on MELODIC!
 %build
 # NOTE: CMAKE_VERBOSE_MAKEFILE=OFF for reduced log output!
 %cmake -DCMAKE_INSTALL_PREFIX=/usr -DFLAT_DIRECTORY_STRUCTURE=0 -DCMAKE_VERBOSE_MAKEFILE=OFF .
-make %{?_smp_mflags}
+%cmake_build
 
 %install
-make DESTDIR=%{buildroot} install
+%cmake_install
 # ====== Relocate files =====================================================
 mkdir -p %{buildroot}/boot/MELODIC
 mv %{buildroot}/usr/share/melodic-desktop/Splash/Management1-1024x768.jpeg  %{buildroot}/boot/MELODIC
