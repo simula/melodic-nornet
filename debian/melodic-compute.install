@@ -1,2 +1,2 @@
 etc/grub.d/??_melodic_compute_theme
-usr/share/melodic-desktop/Splash/Compute1-1024x768.jpeg /boot/MELODIC
+usr/share/melodic-desktop/Splash/Compute1-*.jpeg /boot/MELODIC
