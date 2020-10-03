@@ -26,7 +26,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 BuildArch: noarch
 
 # TEST ONLY:
-# define _unpackaged_files_terminate_build 0
+%define _unpackaged_files_terminate_build 0
 
 
 %description
