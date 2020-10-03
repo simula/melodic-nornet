@@ -55,8 +55,8 @@ separator ()
 # ====== Print banner =======================================================
 
 MELODIC_VERSION=""
-if [ -e /etc/nornet/melodic-version ] ; then
-   MELODIC_VERSION=`cat /etc/nornet/melodic-version`
+if [ -e /etc/melodic/melodic-version ] ; then
+   MELODIC_VERSION=`cat /etc/melodic/melodic-version`
 fi
 
 echo -en "\x1b[1;34m"
@@ -69,6 +69,8 @@ center "#  #  # #####   #       #     # #     #    #    #      "
 center "#     # #       #       #     # #     #    #    #      "
 center "#     # #       #       #     # #     #    #    #     #"
 center "#     # ####### ####### ####### ######    ###    ##### "
+echo ""
+center "-- Multi-cloud Execution-ware for Large-scale Optimised Data-Intensive Computing --"
 echo -en "\x1b[1;34m"
 if [ "${MELODIC_VERSION}" != "" ] ; then
    echo ""
