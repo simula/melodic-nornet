@@ -26,7 +26,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 BuildArch: noarch
 
 # TEST ONLY:
-%define _unpackaged_files_terminate_build 0
+# define _unpackaged_files_terminate_build 0
 
 
 %description
@@ -46,9 +46,9 @@ See https://www.melodic.cloud for details on MELODIC!
 %cmake_install
 # ====== Relocate files =====================================================
 mkdir -p %{buildroot}/boot/MELODIC
-mv %{buildroot}/usr/share/melodic-desktop/Splash/Management1-1024x768.jpeg  %{buildroot}/boot/MELODIC
-mv %{buildroot}/usr/share/melodic-desktop/Splash/Development1-1024x768.jpeg %{buildroot}/boot/MELODIC
-mv %{buildroot}/usr/share/melodic-desktop/Splash/Desktop1-1024x768.jpeg     %{buildroot}/boot/MELODIC
+mv %{buildroot}/usr/share/melodic-desktop/Splash/Management1-*.jpeg  %{buildroot}/boot/MELODIC
+mv %{buildroot}/usr/share/melodic-desktop/Splash/Development1-*.jpeg %{buildroot}/boot/MELODIC
+mv %{buildroot}/usr/share/melodic-desktop/Splash/Desktop1-*.jpeg     %{buildroot}/boot/MELODIC
 mkdir -p %{buildroot}/etc/melodic
 mv %{buildroot}/usr/share/melodic-desktop/Splash/melodic-version %{buildroot}/etc/melodic
 # ===========================================================================
@@ -103,12 +103,12 @@ The software installed provides a common working environment.
 See https://www.melodic.cloud for details on MELODIC!
 
 %files management
-/boot/MELODIC/Management1-1024x768.jpeg
+/boot/MELODIC/Management1-*.jpeg
 %{_sysconfdir}//grub.d/??_melodic_management_theme
 %{_sysconfdir}//melodic/melodic-version
-%{_bindir}/MELODIC-System-Info
 %{_datadir}/melodic-nornet/grub-defaults
-%{_mandir}/man1/MELODIC-System-Info.1.gz
+%{_sysconfdir}/system-info.d/15-melodic
+%{_sysconfdir}/system-maintenance.d/15-melodic
 
 %post management
 echo "Updating /etc/default/grub with NorNet settings:"
@@ -182,7 +182,7 @@ The software installed provides a common working environment.
 See https://www.melodic.cloud for details on MELODIC!
 
 %files development
-/boot/MELODIC/Development1-1024x768.jpeg
+/boot/MELODIC/Development1-*.jpeg
 %{_sysconfdir}//grub.d/??_melodic_development_theme
 
 %post development
@@ -204,7 +204,7 @@ This metapackage contains the scripts to configure a MELODIC desktop.
 See https://www.melodic.cloud for details on MELODIC!
 
 %files desktop
-/boot/MELODIC/Desktop1-1024x768.jpeg
+/boot/MELODIC/Desktop1-*.jpeg
 %{_sysconfdir}//grub.d/??_melodic_desktop_theme
 %{_datadir}/melodic-desktop/MELODIC-A4.pdf
 %{_datadir}/melodic-desktop/Desktop-with-Logo/*x*/*/*
