@@ -54,9 +54,9 @@ separator ()
 
 # ====== Print banner =======================================================
 
-NORNET_VERSION=""
-if [ -e /etc/nornet/nornet-version ] ; then
-   NORNET_VERSION=`cat /etc/nornet/nornet-version`
+MELODIC_VERSION=""
+if [ -e /etc/nornet/melodic-version ] ; then
+   MELODIC_VERSION=`cat /etc/nornet/melodic-version`
 fi
 
 echo -en "\x1b[1;34m"
@@ -70,9 +70,9 @@ center "#     # #       #       #     # #     #    #    #      "
 center "#     # #       #       #     # #     #    #    #     #"
 center "#     # ####### ####### ####### ######    ###    ##### "
 echo -en "\x1b[1;34m"
-if [ "${NORNET_VERSION}" != "" ] ; then
+if [ "${MELODIC_VERSION}" != "" ] ; then
    echo ""
-   center "${NORNET_VERSION}"
+   center "${MELODIC_VERSION}"
 fi
 separator
 echo -e "\x1b[0m"
