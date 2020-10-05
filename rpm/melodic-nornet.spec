@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 1.0.2
+Version: 1.1.0~alpha1.1
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -111,13 +111,6 @@ See https://www.melodic.cloud for details on MELODIC!
 %{_sysconfdir}/system-maintenance.d/15-melodic
 
 %post management
-echo "Updating /etc/default/grub with NorNet settings:"
-echo "-----"
-cat /usr/share/melodic-nornet/grub-defaults | \
-   ( if grep "biosdevname=0" >/dev/null 2>&1 /proc/cmdline ; then sed "s/^GRUB_CMDLINE_LINUX=\"/GRUB_CMDLINE_LINUX=\"biosdevname=0 /g" ; else cat ; fi ) | \
-   ( if grep "net.ifnames=0" >/dev/null 2>&1 /proc/cmdline ; then sed "s/^GRUB_CMDLINE_LINUX=\"/GRUB_CMDLINE_LINUX=\"net.ifnames=0 /g" ; else cat ; fi ) | tee /etc/default/grub.new && \
-mv /etc/default/grub.new /etc/default/grub
-echo "-----"
 if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
 
 %postun management
