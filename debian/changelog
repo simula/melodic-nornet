@@ -1,9 +1,9 @@
-melodic-nornet (1.1.0~alpha1.1-1ubuntu1) focal; urgency=medium
+melodic-nornet (1.1.0-1ubuntu1) focal; urgency=medium
 
   * New upstream release.
   * debian/control: Updated standards version to 4.5.0.3.
 
- -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Mon, 05 Oct 2020 10:06:02 +0200
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Tue, 06 Oct 2020 20:50:16 +0200
 
 melodic-nornet (1.0.2-1ubuntu1) focal; urgency=medium
 
