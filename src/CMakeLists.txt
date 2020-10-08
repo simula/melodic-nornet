@@ -2,8 +2,16 @@
 # PROGRAMS
 #############################################################################
 
-INSTALL(FILES MELODIC-System-Info   DESTINATION ${CMAKE_INSTALL_BINDIR})
-INSTALL(FILES MELODIC-System-Info.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+
+
+#############################################################################
+# CONFIGURATION FILES
+#############################################################################
+
+INSTALL(PROGRAMS system-info.d/15-melodic DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/system-info.d)
+
+INSTALL(PROGRAMS system-maintenance.d/15-melodic DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/system-maintenance.d)
+
 
 
 #############################################################################

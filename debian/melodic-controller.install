@@ -1,2 +1,2 @@
 etc/grub.d/??_melodic_controller_theme
-usr/share/melodic-desktop/Splash/Controller1-1024x768.jpeg /boot/MELODIC
+usr/share/melodic-desktop/Splash/Controller1-*.jpeg /boot/MELODIC

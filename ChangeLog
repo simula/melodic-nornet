@@ -1,3 +1,124 @@
+commit 391b44d0191abafdd1ee8694d8d51338f4c895f6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Oct 5 22:01:46 2020 +0200
+
+    Improved packaging configuration.
+
+commit 673fc5c99c201751572cc94f38a5110d33074c2c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Oct 3 19:43:49 2020 +0200
+
+    Some clean-ups.
+
+commit 023fb5d493348459aed5e0cb7ef975c7933a1bf8
+Merge: 48a7e8e fdc1ee1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Oct 3 18:35:33 2020 +0200
+
+    Merge branch 'master' of https://github.com/simula/melodic-nornet
+
+commit fdc1ee1a5c772c1f060e6b2a85a4cbed3487393a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Oct 3 18:29:27 2020 +0200
+
+    Minor update.
+
+commit 48a7e8e84b34b0106cf4db75e646f79331f238d2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Oct 3 18:26:44 2020 +0200
+
+    Minor RPM update.
+
+commit e23bae5b71cdab64e5281ced5015297a22698a53
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Oct 3 17:52:40 2020 +0200
+
+    Update to System-Info/System-Maintenance scripts.
+
+commit 6905bace04f3a598588f3ecf792ae9ead649f347
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Oct 1 12:18:11 2020 +0200
+
+    RPM spec fix: need to set BuildArch.
+
+commit 86ed05e257900d857a5fd66b173f1a0308b75856
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Oct 1 11:54:36 2020 +0200
+
+    Packaging file updates.
+
+commit 99f9c9cd5f81c5984411078c0f4caf8ee382d3fa
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Oct 1 11:05:24 2020 +0200
+
+    Updated scripts.
+
+commit 9988504c181bd98fff2b961b0ca4126826fd5a50
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Sep 30 17:04:55 2020 +0200
+
+    Updated RPM spec file.
+
+commit d2059abb1d5b515a1395e14e00f1da7ae92343bb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Sep 30 16:55:42 2020 +0200
+
+    Updated build scripts
+
+commit 83723b526d54707663505ad6a7b325edc65fd408
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Sep 10 12:41:21 2020 +0200
+
+    Updated build scripts
+
+commit 6fbd0686c4e469c8cda4f1ac632e88b637170918
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Sep 10 12:41:11 2020 +0200
+
+    Updated packaging configuration.
+
+commit 51ac4690ab634a25f2759fce39259fc915cc67c3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Sep 10 12:36:38 2020 +0200
+
+    Updated signing key.
+
+commit 7295ad39914787364e8649bb506397a4ccf8ad7d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 4 14:15:28 2020 +0200
+
+    Updated build scripts
+
+commit 411836de7cb59426854d4000413e2699db037b0e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 4 14:11:58 2020 +0200
+
+    Updated Travis CI configuration.
+
+commit 8eac56ff88de8e47798fbb3e94180c61c62d56e9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Sep 4 14:09:51 2020 +0200
+
+    Updated build scripts
+
+commit cbae7d0f2cb6b94cb57cf718afa35645a48a5a8b
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Jul 16 11:58:02 2020 +0200
+
+    Updated build scripts
+
+commit e4ca2b926a78c29a705ee87a50de7b2f88f041a2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Jul 16 11:48:46 2020 +0200
+
+    Fixed packaging configuration.
+
+commit c5e02677bd5a51d1e940ab3c8b9efd0b0bcef9f3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue May 5 13:17:05 2020 +0200
+
+    New release melodic-nornet-1.0.2.
+
 commit ce3c5b732d5d0f64461d67d8b30629f337f847f8
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Tue May 5 13:15:39 2020 +0200

@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 1.0.2
+Version: 1.1.0
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -23,9 +23,7 @@ BuildRequires: perl-Image-ExifTool
 BuildRequires: urw-base35-fonts
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
-
-# This package does not generate debug information (no executables):
-%global debug_package %{nil}
+BuildArch: noarch
 
 # TEST ONLY:
 %define _unpackaged_files_terminate_build 0
@@ -48,9 +46,9 @@ See https://www.melodic.cloud for details on MELODIC!
 %cmake_install
 # ====== Relocate files =====================================================
 mkdir -p %{buildroot}/boot/MELODIC
-mv %{buildroot}/usr/share/melodic-desktop/Splash/Management1-1024x768.jpeg  %{buildroot}/boot/MELODIC
-mv %{buildroot}/usr/share/melodic-desktop/Splash/Development1-1024x768.jpeg %{buildroot}/boot/MELODIC
-mv %{buildroot}/usr/share/melodic-desktop/Splash/Desktop1-1024x768.jpeg     %{buildroot}/boot/MELODIC
+mv %{buildroot}/usr/share/melodic-desktop/Splash/Management1-*.jpeg  %{buildroot}/boot/MELODIC
+mv %{buildroot}/usr/share/melodic-desktop/Splash/Development1-*.jpeg %{buildroot}/boot/MELODIC
+mv %{buildroot}/usr/share/melodic-desktop/Splash/Desktop1-*.jpeg     %{buildroot}/boot/MELODIC
 mkdir -p %{buildroot}/etc/melodic
 mv %{buildroot}/usr/share/melodic-desktop/Splash/melodic-version %{buildroot}/etc/melodic
 # ===========================================================================
@@ -105,21 +103,14 @@ The software installed provides a common working environment.
 See https://www.melodic.cloud for details on MELODIC!
 
 %files management
-/boot/MELODIC/Management1-1024x768.jpeg
+/boot/MELODIC/Management1-*.jpeg
 %{_sysconfdir}//grub.d/??_melodic_management_theme
 %{_sysconfdir}//melodic/melodic-version
-%{_bindir}/MELODIC-System-Info
 %{_datadir}/melodic-nornet/grub-defaults
-%{_mandir}/man1/MELODIC-System-Info.1.gz
+%{_sysconfdir}/system-info.d/15-melodic
+%{_sysconfdir}/system-maintenance.d/15-melodic
 
 %post management
-echo "Updating /etc/default/grub with NorNet settings:"
-echo "-----"
-cat /usr/share/melodic-nornet/grub-defaults | \
-   ( if grep "biosdevname=0" >/dev/null 2>&1 /proc/cmdline ; then sed "s/^GRUB_CMDLINE_LINUX=\"/GRUB_CMDLINE_LINUX=\"biosdevname=0 /g" ; else cat ; fi ) | \
-   ( if grep "net.ifnames=0" >/dev/null 2>&1 /proc/cmdline ; then sed "s/^GRUB_CMDLINE_LINUX=\"/GRUB_CMDLINE_LINUX=\"net.ifnames=0 /g" ; else cat ; fi ) | tee /etc/default/grub.new && \
-mv /etc/default/grub.new /etc/default/grub
-echo "-----"
 if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg || true ; fi
 
 %postun management
@@ -184,7 +175,7 @@ The software installed provides a common working environment.
 See https://www.melodic.cloud for details on MELODIC!
 
 %files development
-/boot/MELODIC/Development1-1024x768.jpeg
+/boot/MELODIC/Development1-*.jpeg
 %{_sysconfdir}//grub.d/??_melodic_development_theme
 
 %post development
@@ -206,7 +197,7 @@ This metapackage contains the scripts to configure a MELODIC desktop.
 See https://www.melodic.cloud for details on MELODIC!
 
 %files desktop
-/boot/MELODIC/Desktop1-1024x768.jpeg
+/boot/MELODIC/Desktop1-*.jpeg
 %{_sysconfdir}//grub.d/??_melodic_desktop_theme
 %{_datadir}/melodic-desktop/MELODIC-A4.pdf
 %{_datadir}/melodic-desktop/Desktop-with-Logo/*x*/*/*
@@ -222,6 +213,8 @@ if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub
 
 
 %changelog
+* Tue Oct 06 2020 Thomas Dreibholz <dreibh@iem.uni-due.de> - 1.1.0
+- New upstream release.
 * Tue May 05 2020 Thomas Dreibholz <dreibh@iem.uni-due.de> - 1.0.2
 - New upstream release.
 * Fri Apr 24 2020 Thomas Dreibholz <dreibh@iem.uni-due.de> - 1.0.1

@@ -4,7 +4,6 @@ set -e
 
 case "$1" in
    configure)
-      update-motd 2>/dev/null || true
       if [ -x "$(command -v update-grub)" ] ; then
          update-grub || true
       fi

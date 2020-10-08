@@ -33,7 +33,7 @@
 # INITIALISE
 #############################################################################
 
-CMAKE_MINIMUM_REQUIRED(VERSION 3.0.2)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.3)
 PROJECT(undefined NONE)   # to be set in Settings.input
 INCLUDE(Settings.input)
 
@@ -57,8 +57,12 @@ OPTION(INSTALL_ORIGINALS "Install original images as well" ${TDD_INSTALL_ORIGINA
 OPTION(INSERT_HOSTNAME "Insert hostnames into images" ${TDD_INSERT_HOSTNAME})
 
 OPTION(BUILD_BOOTSPLASH "Build bootsplash JPEG" ${TDD_BUILD_BOOTSPLASH})
+IF(NOT TDD_BOOTSPLASH_RESOLUTIONS)
+   # Legacy option: use TDD_BOOTSPLASH_RESOLUTION (one resolution only)
+   SET(TDD_BOOTSPLASH_RESOLUTIONS ${TDD_BOOTSPLASH_RESOLUTION})
+ENDIF()
 IF(BUILD_BOOTSPLASH)
-   LIST(APPEND TDD_RESOLUTIONS "${TDD_BOOTSPLASH_RESOLUTION}")
+   LIST(APPEND TDD_RESOLUTIONS "${TDD_BOOTSPLASH_RESOLUTIONS}")
    LIST(APPEND TDD_VARIANTS    "${TDD_BOOTSPLASH_VARIANT}")
 ENDIF()
 
@@ -270,7 +274,7 @@ FOREACH(image IN LISTS TDD_IMAGE_FILES)
 ENDFOREACH()
 
 
-# ###### Generate bootsplash overlay ########################################
+# ###### Generate caption image #############################################
 FILE(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY})
 FILE(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_SPLASH})
 
@@ -282,17 +286,20 @@ IF(BUILD_BOOTSPLASH)
    INSTALL(FILES ${captionFile} DESTINATION "${CMAKE_INSTALL_DATADIR}/${TDD_INSTALL_SUBDIRECTORY}/${TDD_OUTPUT_SPLASH}")
 ENDIF()
 
-SET(bootsplash_overlayImage "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Caption-${TDD_BOOTSPLASH_RESOLUTION}.png")
-makeUniqueTarget(generate_bootsplash_overlayImage "generate_Caption-${TDD_BOOTSPLASH_RESOLUTION}.png")
-STRING(REGEX REPLACE "x.*$" "" bootsplash_width "${TDD_BOOTSPLASH_RESOLUTION}")
-ADD_CUSTOM_COMMAND(OUTPUT  ${bootsplash_overlayImage}
-                   COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} MAKE_CAPTION=${MAKE_CAPTION} ${BUILD_CAPTION} ${bootsplash_overlayImage} ${captionFile} ${bootsplash_width}
-                   DEPENDS ${generate_captionFile}
-                           ${captionFile}
-                           generate_gimpDirStamp
-                           ${gimpDirStamp}
-                           ${BUILD_CAPTION})
-ADD_CUSTOM_TARGET(${generate_bootsplash_overlayImage} DEPENDS ${bootsplash_overlayImage})
+FOREACH(resolution IN LISTS TDD_BOOTSPLASH_RESOLUTIONS)
+   SET(imageCaption "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Caption-${resolution}.png")
+   makeUniqueTarget(generate_imageCaption "generate_Caption-${resolution}.png")
+   STRING(REGEX REPLACE "x.*$" "" bootsplash_width  "${resolution}")
+   STRING(REGEX REPLACE "^.*x" "" bootsplash_height "${resolution}")
+   ADD_CUSTOM_COMMAND(OUTPUT  ${imageCaption}
+                      COMMAND env GIMP2_DIRECTORY=${GIMP_DIRECTORY} MAKE_CAPTION=${MAKE_CAPTION} ${BUILD_CAPTION} ${imageCaption} ${captionFile} ${bootsplash_width} ${bootsplash_height}
+                      DEPENDS ${generate_captionFile}
+                              ${captionFile}
+                              generate_gimpDirStamp
+                              ${gimpDirStamp}
+                              ${BUILD_CAPTION})
+   ADD_CUSTOM_TARGET(${generate_imageCaption} DEPENDS ${imageCaption})
+ENDFOREACH()
 
 
 # ###### Generate desktop graphics ##########################################
@@ -503,15 +510,17 @@ FOREACH(resolution IN LISTS TDD_RESOLUTIONS)
 
 
          # ====== Bootsplash ================================================
-         IF((BUILD_BOOTSPLASH) AND (resolution STREQUAL "${TDD_BOOTSPLASH_RESOLUTION}") AND (variant STREQUAL "${TDD_BOOTSPLASH_VARIANT}"))
-            SET(imageBootsplash          "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_SPLASH}/${imageName}-${resolution}.jpeg")
+         IF((BUILD_BOOTSPLASH) AND (resolution IN_LIST TDD_BOOTSPLASH_RESOLUTIONS) AND (variant STREQUAL "${TDD_BOOTSPLASH_VARIANT}"))
+            SET(imageCaption "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_OVERLAY}/Caption-${resolution}.png")
+            makeUniqueTarget(generate_imageCaption "generate_Caption-${resolution}.png")
+            SET(imageBootsplash "${CMAKE_CURRENT_BINARY_DIR}/${TDD_OUTPUT_DIRECTORY}/${TDD_OUTPUT_SPLASH}/${imageName}-${resolution}.jpeg")
             makeUniqueTarget(generate_imageBootsplash "generate_${imageName}-Splash-${resolution}.jpeg")
 
             ADD_CUSTOM_COMMAND(OUTPUT  ${imageBootsplash}
-                               COMMAND ${GM} composite  -gravity South ${bootsplash_overlayImage} ${imageWithLogo} -quality ${TDD_JPEG_QUALITY} ${imageBootsplash}
+                               COMMAND ${GM} composite  -gravity South ${imageCaption} ${imageWithLogo} -quality ${TDD_JPEG_QUALITY} ${imageBootsplash}
                                COMMAND ${EXIFTOOL} -m -q -overwrite_original -Copyright="${TDD_COPYRIGHT}" ${imageBootsplash} || true
-                               DEPENDS ${generate_bootsplash_overlayImage}
-                                       ${bootsplash_overlayImage}
+                               DEPENDS ${generate_imageCaption}
+                                       ${imageCaption}
                                        ${generate_imageWithLogo}
                                        ${imageWithLogo})
             ADD_CUSTOM_TARGET(${generate_imageBootsplash} ALL DEPENDS ${imageBootsplash})
