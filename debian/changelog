@@ -1,3 +1,9 @@
+melodic-nornet (1.1.1-1ubuntu1) focal; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Fri, 09 Oct 2020 16:28:11 +0200
+
 melodic-nornet (1.1.0-1ubuntu1) focal; urgency=medium
 
   * New upstream release.
