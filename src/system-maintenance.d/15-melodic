@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Print installed NorNet packages
+# Print installed MELODIC packages
 # Copyright (C) 2013-2020 by Thomas Dreibholz
 #
 # This program is free software: you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 
 fullPackageList="$1"
 
-echo "====== Installed NorNet Software ============================================="
+echo "====== Installed MELODIC Software ============================================"
 grep "^melodic-" ${fullPackageList}
 
 exit 0
