@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 1.1.1
+Version: 1.1.2
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -213,6 +213,8 @@ if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub
 
 
 %changelog
+* Tue Oct 27 2020 Thomas Dreibholz <dreibh@iem.uni-due.de> - 1.1.2
+- New upstream release.
 * Fri Oct 09 2020 Thomas Dreibholz <dreibh@iem.uni-due.de> - 1.1.1
 - New upstream release.
 * Tue Oct 06 2020 Thomas Dreibholz <dreibh@iem.uni-due.de> - 1.1.0

@@ -1,3 +1,28 @@
+commit d02401046c3dafe1440120e3b0f0d9044a8835b1
+Merge: 46f67d5 39bee9c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Oct 9 17:36:14 2020 +0200
+
+    Merge branch 'master' of github.com:simula/melodic-nornet
+
+commit 46f67d5a5aef64ed5c41e6565a05d4b14e5aca02
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Oct 9 17:36:01 2020 +0200
+
+    A small fix.
+
+commit 39bee9c4ff31fda2a3c0f6808d8a7fe5e41ae7f9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Oct 9 16:38:12 2020 +0200
+
+    Updated LSM entry.
+
+commit 3f0212369332a7def05da691bef9fbd9d4034d29
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Oct 9 16:28:15 2020 +0200
+
+    New release melodic-nornet-1.1.1.
+
 commit d7fff97ef9ab911e4819fe04209c3fb31043d202
 Merge: 6abfdc8 9f0271e
 Author: Thomas Dreibholz <dreibh@simula.no>
