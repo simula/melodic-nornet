@@ -1,3 +1,15 @@
+commit 3ca088beaf0db8ecf5e29d655a30d61969250789
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 15 13:43:38 2020 +0100
+
+    Updated build scripts
+
+commit d48b60daa704eca98f852519876f813801789f3d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Oct 27 10:52:08 2020 +0100
+
+    New release melodic-nornet-1.1.2.
+
 commit d02401046c3dafe1440120e3b0f0d9044a8835b1
 Merge: 46f67d5 39bee9c
 Author: Thomas Dreibholz <dreibh@simula.no>

@@ -1,5 +1,6 @@
 # /usr/share/melodic-desktop/Desktop-without-Logo/*
 # /usr/share/melodic-desktop/Original/*
 # /usr/share/melodic-desktop/Splash/
+etc/grub.d/??_melodic_desktop_theme
 usr/share/melodic-desktop/*.pdf
 usr/share/melodic-desktop/Desktop-with-Logo/*
