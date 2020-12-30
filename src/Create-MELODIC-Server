@@ -78,7 +78,7 @@ call-openstack port create "$portName" \
 # ====== Create server ======================================================
 call-openstack-quietly server delete "$SERVER_NAME"
 call-openstack server create "$SERVER_NAME" \
-   --wait --flavor "\"$FLAVOR_NAME\"" \
+   --flavor "\"$FLAVOR_NAME\"" \
    --image "$IMAGE_NAME" \
    --port "$portName" \
    --key-name mykey \
