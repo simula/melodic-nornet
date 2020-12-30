@@ -1,0 +1,11 @@
+#!/bin/sh
+
+../Create-MELODIC-Server warszawa.simula.nornet "Amiga 12000" "5gVINNI-OpenStack-Ubuntu-20.04-LTS" -hdd 256
+
+openstack port delete Port-warszawa.simula.nornet-UNINETT
+openstack port create Port-warszawa.simula.nornet-UNINETT \
+   --network uninett-simula \
+   --no-security-group --disable-port-security \
+   --fixed-ip subnet=ipv4-uninett-simula,ip-address=128.39.37.158 \
+   --fixed-ip subnet=ipv6-uninett-simula,ip-address=2001:700:4100:2::158
+openstack server add port warszawa.simula.nornet Port-warszawa.simula.nornet-UNINETT
