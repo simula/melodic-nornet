@@ -1,6 +1,6 @@
 #!/bin/sh
 
-../Create-MELODIC-Server warszawa.simula.nornet "Amiga 12000" "5gVINNI-OpenStack-Ubuntu-20.04-LTS" -hdd 256
+../Create-MELODIC-Server warszawa.simula.nornet "Amiga 12000" "5gVINNI-OpenStack-Ubuntu-18.04-LTS" -hdd 256
 
 openstack port delete Port-warszawa.simula.nornet-UNINETT
 openstack port create Port-warszawa.simula.nornet-UNINETT \
