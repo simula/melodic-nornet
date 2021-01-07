@@ -81,8 +81,9 @@ call-openstack server create "$SERVER_NAME" \
    --flavor "\"$FLAVOR_NAME\"" \
    --image "$IMAGE_NAME" \
    --port "$portName" \
-   --key-name mykey \
-   --wait
+   --key-name mykey
+# \
+#   --wait
 
 # ====== Obtain server ID ===================================================
 unset id
