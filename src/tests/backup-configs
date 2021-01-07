@@ -1,0 +1,147 @@
+#!/bin/bash -e
+#
+# HENCSAT Configuration Backup Script
+# Copyright (C) 2017-2019 by Thomas Dreibholz
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Contact: dreibh@simula.no
+
+
+# ###### Backup file ########################################################
+backup-file ()
+{
+   inputFile="$1"
+   outputDirectory="$2"
+   outputFile="$3"
+   option="$4"
+   if [ -e "${inputFile}" ] ; then
+      if [ "${outputFile}" == "" ] ; then
+         outputFile="${outputDirectory}/`basename ${inputFile}`"
+      fi
+      if [ ! -e ${outputFile} ] ; then
+         echo "Copying ${inputFile} to ${outputFile} ..."
+         cp ${inputFile} ${outputFile}
+      elif ! diff -q ${inputFile} ${outputFile} >/dev/null ; then
+         echo "Updating ${inputFile} to ${outputFile} ..."
+         colordiff ${inputFile} ${outputFile} || true
+         cp ${inputFile} ${outputFile}
+      fi
+
+      if [ -e ${outputFile} ] ; then
+         chown ${SUDO_USER}:${SUDO_USER} ${outputFile}
+      fi
+
+      # Ensure that the file is tracked by Git:
+      sudo -u ${SUDO_USER} git add ${outputFile}
+   else
+      if [ "${option}" == "MANDATORY" ] ; then
+         echo >&2 "ERROR: File ${inputFile} does not exist!"
+         exit 1
+      elif [ "${option}" == "WARNING" ] ; then
+         echo >&2 "WARNING: File ${inputFile} does not exist!"
+      fi
+   fi
+}
+
+
+# ###### Main program #######################################################
+name=`hostname -f`
+directory=`find . -mindepth 1 -maxdepth 1 -type d -name "*-${name}" | sed -e "s#^\./##g"`
+if [ ! -d "${directory}" ] ; then
+   echo >&2 "ERROR: Unable to find directory *-${name}!"
+   exit 1
+fi
+
+# ====== System configuration ===============================================
+echo "Backup to ${directory} ..."
+MANDATORY_SYSTEM_FILES="
+   /etc/apt/sources.list
+   /etc/hostname
+   /etc/hosts
+   /etc/sudoers
+   /etc/sysctl.conf
+"
+for file in ${MANDATORY_SYSTEM_FILES} ; do
+   backup-file ${file} ${directory} "" MANDATORY
+done
+SYSTEM_FILES="
+   /etc/rc.local
+   /etc/network/interfaces
+   /etc/network/interfaces.old
+   /etc/netplan/*.yaml
+"
+for file in ${SYSTEM_FILES} ; do
+   backup-file ${file} ${directory} ""
+done
+
+
+# ====== OpenStack configuration ============================================
+OPENSTACK_FILES="
+   /etc/cinder/cinder.conf
+   /etc/glance/glance-api.conf
+   /etc/keystone/keystone.conf
+   /etc/mysql/mariadb.conf.d/99-openstack.cnf
+   /etc/memcached.conf
+   /etc/neutron/dhcp_agent.ini
+   /etc/neutron/l3_agent.ini
+   /etc/neutron/metadata_agent.ini
+   /etc/neutron/neutron.conf
+   /etc/neutron/plugins/ml2/ml2_conf.ini
+   /etc/neutron/plugins/ml2/linuxbridge_agent.ini
+   /etc/nova/nova.conf
+   /etc/rabbitmq/rabbitmq.conf
+   /usr/lib/python3/dist-packages/openstack_dashboard/local/local_settings.py
+"
+for file in ${OPENSTACK_FILES} ; do
+   backup-file ${file} ${directory} "" WARNING
+done
+
+
+# ====== OpenAirInterface configuration =====================================
+OAI_FILES="
+   /usr/local/etc/oai/cassandra.conf
+   /usr/local/etc/oai/hss_rel14.conf
+   /usr/local/etc/oai/hss_rel14.json
+   /usr/local/etc/oai/mme.conf
+   /usr/local/etc/oai/spgw_c.conf
+   /usr/local/etc/oai/spgw_u.conf
+"
+for file in ${OAI_FILES} ; do
+   backup-file ${file} ${directory} "" WARNING
+done
+
+
+# ====== OpenVPN configuration ==============================================
+if [ -d /etc/openvpn ] ; then
+   OPENVPN_FILES="
+      /etc/openvpn/*.conf
+      /etc/openvpn/tap-up
+      /etc/openvpn/tap-down
+   "
+   for file in ${OPENVPN_FILES} ; do
+      backup-file ${file} ${directory} "" WARNING
+   done
+fi
+
+
+# ====== Apache configuration ===============================================
+if [ -d /etc/apache2/ ] ; then
+   backup-file /etc/apache2/sites-available/000-default.conf ${directory} apache-site-000-default.conf WARNING
+   backup-file /etc/apache2/sites-available/keystone.conf    ${directory} apache-site-keystone.conf    WARNING
+fi
+
+
+echo "Done!"
+ls -l ${directory}/
