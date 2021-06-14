@@ -1,7 +1,7 @@
 Begin4
 Title:          melodic-nornet
-Version:        1.1.1
-Entered-date:   2020-10-09
+Version:        1.1.4
+Entered-date:   2021-06-14
 Description:    The vision of the MELODIC project is to enable federated cloud
                 computing for data-intensive applications, and provide the user
                 with an easy-to-use unified cloud environment, hiding the
@@ -20,7 +20,7 @@ Keywords:       MELODIC Project
 Author:         dreibh@simula.no (Thomas Dreibholz)
 Maintained-by:  dreibh@simula.no (Thomas Dreibholz)
 Primary-site:   https://packages.nntb.no/software/melodic-nornet
-                67971 kB melodic-nornet-1.1.1.tar.xz
+                68009 kB melodic-nornet-1.1.4.tar.xz
 Original-site:  https://www.melodic.cloud
 Platforms:      Linux
 Copying-policy: GPL-3+
