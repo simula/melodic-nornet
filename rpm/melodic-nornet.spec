@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 1.1.4
+Version: 1.1.5
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -80,7 +80,6 @@ Requires: net-tools
 Requires: nmap
 Requires: (ntpsec or ntpdate)
 Requires: pxz
-Requires: reiserfs-utils
 Requires: reprepro
 Requires: rsplib-docs
 Requires: rsplib-services
@@ -96,6 +95,7 @@ Requires: virt-what
 Requires: whois
 Requires: wireshark-cli
 Recommends: grub2-tools
+Recommends: reiserfs-utils
 
 %description management
 This metapackage contains basic software for MELODIC system management.
@@ -213,6 +213,8 @@ if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub
 
 
 %changelog
+* Mon Feb 14 2022 Thomas Dreibholz <dreibh@iem.uni-due.de> - 1.1.5
+- New upstream release.
 * Mon Jun 14 2021 Thomas Dreibholz <dreibh@iem.uni-due.de> - 1.1.4
 - New upstream release.
 * Sun Nov 15 2020 Thomas Dreibholz <dreibh@iem.uni-due.de> - 1.1.3

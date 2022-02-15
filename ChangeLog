@@ -1,3 +1,75 @@
+commit 9dc86f3c6908cde42954446c3840cb48eb1d9515
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Feb 14 17:15:05 2022 +0100
+
+    Updated build scripts
+
+commit 412363c2f78e26f9349ed52f1286bfed5ffab3ee
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 30 15:31:04 2021 +0100
+
+    Updated CI scripts
+
+commit 4708b9fb0ac14ba3fe942deb9e6ca4d85a2faf98
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 30 15:30:58 2021 +0100
+
+    Travis CI is dead. Removed obsolete Travis CI scripts and configuration.
+
+commit 442f85567b6d3f427f03a3d4ff75665a91822394
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 30 15:30:37 2021 +0100
+
+    Updated build scripts
+
+commit a067cac4420849de6fe7bff2e8cd682f63108f82
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 30 15:29:05 2021 +0100
+
+    Removed invalid field "Homepage" from debian/upstream/metadata
+
+commit 5a11ed119655a41027abadd7ff2a4490a51ebb78
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 8 10:40:06 2021 +0100
+
+    Updated build scripts
+
+commit 1a92a38bce0695636c82e0458c674257c91717fe
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 7 14:29:12 2021 +0100
+
+    Updated build script.
+
+commit a7b7478574d90e6394032e89eea3207efeb4c9e1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 3 18:22:22 2021 +0100
+
+    Updated build scripts
+
+commit 47f3a8424ba5889912b5d87d9e50425c77d40ed9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 3 18:22:21 2021 +0100
+
+    Updated build scripts
+
+commit 4b5f467326d32784651af2816811808f51cabad6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Oct 19 16:11:57 2021 +0200
+
+    Updated build scripts
+
+commit 6af1fdcddc76454df6bc88bdb3db97d8d3c4ded3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Jun 14 12:54:28 2021 +0200
+
+    Updated LSM entry.
+
+commit 83ebad839e21f3c7bb4a6529ae5ecdb64fe965a6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Jun 14 12:44:21 2021 +0200
+
+    New release melodic-nornet-1.1.4.
+
 commit 15e34ca098240877db69922f8a5578df2b9189d0
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Mon Jun 14 12:42:21 2021 +0200
