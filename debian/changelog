@@ -1,3 +1,9 @@
+melodic-nornet (1.1.6-1ubuntu1) hirsute; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Wed, 16 Feb 2022 11:45:07 +0100
+
 melodic-nornet (1.1.5-1ubuntu1) hirsute; urgency=medium
 
   * New upstream release.

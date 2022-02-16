@@ -1,3 +1,15 @@
+commit 772b684606b567bc6b3da12cf2bf4416babef1a1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 16 11:42:20 2022 +0100
+
+    Updated background script.
+
+commit 99f55a7a52aa15103c400fa27156c297070007b2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Feb 15 16:47:07 2022 +0100
+
+    RPM dependency fix.
+
 commit 9dc86f3c6908cde42954446c3840cb48eb1d9515
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Mon Feb 14 17:15:05 2022 +0100
