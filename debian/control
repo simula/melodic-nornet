@@ -16,8 +16,6 @@ Build-Depends: cmake (>= 3.3) | cmake3,
                libimage-exiftool-perl
 Standards-Version: 4.6.0.1
 Rules-Requires-Root: no
-Vcs-Git: https://github.com/simula/melodic-nornet.git
-Vcs-Browser: https://github.com/simula/melodic-nornet/tags
 
 Package: melodic-management
 Architecture: all
