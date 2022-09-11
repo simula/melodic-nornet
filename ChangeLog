@@ -1,3 +1,33 @@
+commit 5f1ecc87f9aa3f24ef0a4aca8d5d41d3cb18faa5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 31 11:47:09 2022 +0200
+
+    Removed Vcs-* fields from debian/control.
+
+commit 0b157fa066190c730edd2903416a39808e516682
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 31 11:18:48 2022 +0200
+
+    Updated CI scripts
+
+commit 3e8fe401f490460dd5fe84ef257ef81e3626a651
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 31 11:18:46 2022 +0200
+
+    Updated build scripts
+
+commit 2464ffc3feeb36b2d6d21d1118ce72506b56c7d1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 16 12:12:59 2022 +0100
+
+    Updated LSM entry.
+
+commit 593c57ebb0f071b28d50258b0313277c1a3c35b7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 16 11:46:58 2022 +0100
+
+    New release melodic-nornet-1.1.6.
+
 commit 772b684606b567bc6b3da12cf2bf4416babef1a1
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Wed Feb 16 11:42:20 2022 +0100
