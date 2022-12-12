@@ -1,11 +1,11 @@
 #############################################################################
-# PROGRAMS
+#### PROGRAMS                                                            ####
 #############################################################################
 
 
 
 #############################################################################
-# CONFIGURATION FILES
+#### CONFIGURATION FILES                                                 ####
 #############################################################################
 
 INSTALL(PROGRAMS system-info.d/15-melodic DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/system-info.d)
@@ -15,7 +15,7 @@ INSTALL(PROGRAMS system-maintenance.d/15-melodic DESTINATION ${CMAKE_INSTALL_FUL
 
 
 #############################################################################
-# SOURCE DIRECTORIES
+#### SOURCE DIRECTORIES                                                  ####
 #############################################################################
 
 ADD_SUBDIRECTORY(background)
