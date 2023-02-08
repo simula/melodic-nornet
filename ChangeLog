@@ -1,3 +1,39 @@
+commit 2ad604eb6240ade6a9ae3bc29ecd51f13c7bcc72
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Feb 2 13:23:07 2023 +0100
+
+    URL change from UDE to NNTB.
+
+commit 1a78270638333d0ffce5ebdea7dc573d043788ba
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Feb 2 12:13:30 2023 +0100
+
+    Updated autogen.sh.
+
+commit 5374d5d4e9653ac333da62d1ed103584721d503d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Feb 2 11:52:56 2023 +0100
+
+    Updated CI scripts
+
+commit 0beefc61c0b43a01da31c4823bc7fbe46cbf4c27
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Feb 2 11:52:25 2023 +0100
+
+    Updated build scripts
+
+commit a7bc7f6fc1ca6377eed61aae2f4cbca626b9eeba
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Dec 12 13:29:58 2022 +0100
+
+    Minor CMakeLists.txt updates.
+
+commit 3c33a65bb7b00e484dc779292099a96084f3fd75
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Sep 11 13:57:08 2022 +0200
+
+    New release melodic-nornet-1.1.7.
+
 commit 5f1ecc87f9aa3f24ef0a4aca8d5d41d3cb18faa5
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Wed Aug 31 11:47:09 2022 +0200
