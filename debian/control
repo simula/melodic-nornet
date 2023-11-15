@@ -22,8 +22,7 @@ Architecture: all
 Depends: fail2ban,
          gdisk,
          nornet-management,
-         ${misc:Depends},
-         ${shlibs:Depends}
+         ${misc:Depends}
 Recommends: grub2-common,
             tshark
 Description: Management Tools tools for the MELODIC system environment
@@ -34,7 +33,7 @@ Description: Management Tools tools for the MELODIC system environment
 
 Package: melodic-development
 Architecture: all
-Depends: cmake (>= 3.3) | cmake3,
+Depends: cmake,
          fonts-dejavu,
          fonts-noto-cjk,
          fonts-noto-hinted,
@@ -45,8 +44,7 @@ Depends: cmake (>= 3.3) | cmake3,
          libimage-exiftool-perl,
          melodic-management (= ${binary:Version}),
          nornet-development,
-         ${misc:Depends},
-         ${shlibs:Depends}
+         ${misc:Depends}
 Description: Development Tools tools for the MELODIC system environment
  This metapackage contains basic software for MELODIC development.
  The software installed provides a common working environment.
@@ -58,8 +56,7 @@ Architecture: all
 Depends: melodic-management (= ${binary:Version}),
          nornet-server,
          python3,
-         ${misc:Depends},
-         ${shlibs:Depends}
+         ${misc:Depends}
 Recommends: intel-microcode
 Description: Server tools for the MELODIC system environment
  This package contains the scripts to configure a MELODIC
@@ -95,8 +92,7 @@ Depends: cinder-api,
          python3-openstackclient | python-openstackclient,
          python3-pymysql | python-pymysql,
          rabbitmq-server,
-         ${misc:Depends},
-         ${shlibs:Depends}
+         ${misc:Depends}
 Recommends: nova-placement-api
 Description: Controller tools for the MELODIC system environment
  This package contains the scripts to configure a MELODIC
@@ -111,8 +107,7 @@ Depends: cinder-volume,
          melodic-management (= ${binary:Version}),
          melodic-server (= ${binary:Version}),
          thin-provisioning-tools,
-         ${misc:Depends},
-         ${shlibs:Depends}
+         ${misc:Depends}
 Description: Storage Node tools for the MELODIC system environment
  This package contains the scripts to configure a MELODIC
  storage node.
@@ -125,8 +120,7 @@ Depends: melodic-management (= ${binary:Version}),
          melodic-server (= ${binary:Version}),
          neutron-linuxbridge-agent,
          nova-compute,
-         ${misc:Depends},
-         ${shlibs:Depends}
+         ${misc:Depends}
 Description: Compute Node tools for the MELODIC system environment
  This package contains the scripts to configure a MELODIC
  compute node.
@@ -139,8 +133,7 @@ Depends: firefox | firefox-esr,
          kubuntu-desktop | neon-desktop | kde-standard | deepin-desktop-environment | lubuntu-desktop | ubuntu-desktop,
          melodic-management (= ${binary:Version}),
          sddm | kdm | lightdm | gdm3,
-         ${misc:Depends},
-         ${shlibs:Depends}
+         ${misc:Depends}
 Description: Desktop setup for the MELODIC system environment
  This metapackage contains the scripts to configure a
  MELODIC desktop.
