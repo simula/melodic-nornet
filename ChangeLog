@@ -1,3 +1,57 @@
+commit b84ee5a056d8253e5a09b51f555c8fbd12568682
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 6 15:05:15 2023 +0100
+
+    Dependency fix.
+
+commit cadec6c0445097f5207f3629573dd5dee7142f8d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 15 11:42:31 2023 +0100
+
+    Dependency improvements.
+
+commit 4d034d0c291b125f6401a24c98d17e6fcf05e6c6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 15 10:53:51 2023 +0100
+
+    Packaging clean-ups.
+
+commit 75479eeedb7266645469132b8e2c514aee09d970
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 15 09:53:31 2023 +0100
+
+    Header updates.
+
+commit 95704344d2bb3476da2dc7cfa1f89e2a89084a29
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 15 09:51:09 2023 +0100
+
+    Updated build scripts
+
+commit 8c750b0c70a0a5e32a61921d765e396c5e3539e5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 15 09:33:15 2023 +0100
+
+    Updated CI scripts
+
+commit 898388897a551c89e612ecf15a44e03bb56eaa18
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 15 09:33:14 2023 +0100
+
+    Updated build scripts
+
+commit 390d3af4e9ea2378f040b11ddcfd4cf073a5a86c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 8 11:55:58 2023 +0100
+
+    Updated LSM entry.
+
+commit 44552a250cfd0d07688c73b287c24de4e892cde7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 8 11:45:51 2023 +0100
+
+    New release melodic-nornet-1.1.8.
+
 commit 2ad604eb6240ade6a9ae3bc29ecd51f13c7bcc72
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Feb 2 13:23:07 2023 +0100
