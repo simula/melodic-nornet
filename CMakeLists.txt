@@ -39,53 +39,33 @@ INCLUDE(GNUInstallDirs)
 
 SET(CPACK_SOURCE_GENERATOR "TXZ")
 SET(CPACK_SOURCE_PACKAGE_FILE_NAME
-   "${CMAKE_PROJECT_NAME}-${BUILD_MAJOR}.${BUILD_MINOR}.${BUILD_PATCH}")
-SET(CPACK_SOURCE_IGNORE_FILES
-   "${PROJECT_SOURCE_DIR}/${CMAKE_PROJECT_NAME}-*;${PROJECT_SOURCE_DIR}/${CMAKE_PROJECT_NAME}_*;/build/;/.git/;;/.gimp/;/config.log;/CMakeFiles/;CMakeCache.txt$;.cmake$;.tar.gz$;/_CPack_Packages;/Makefile$;~$;/build-deb;/clean-deb;/filter-empty-entries;/make-symbols;/make-ppa;/make-deb;/debian.conf;/make-rpm;/rpm.conf;${CPACK_SOURCE_IGNORE_FILES};/background/Output/")
+    "${CMAKE_PROJECT_NAME}-${BUILD_MAJOR}.${BUILD_MINOR}.${BUILD_PATCH}")
+SET(CPACK_SOURCE_IGNORE_FILES "\\\\.git;\\\\.swp$;~$;\\\\.\\\\#;/\\\\#")
+LIST(APPEND CPACK_SOURCE_IGNORE_FILES "^${PROJECT_SOURCE_DIR}/${CMAKE_PROJECT_NAME}[_-]")
+LIST(APPEND CPACK_SOURCE_IGNORE_FILES "\\\\.cmake$|\\\\.make$|\\\\.log$")
+LIST(APPEND CPACK_SOURCE_IGNORE_FILES "/CMakeCache\\\\.txt$")
+LIST(APPEND CPACK_SOURCE_IGNORE_FILES "/(CMakeFiles|CMakeScripts|_CPack_Packages)/")
+LIST(APPEND CPACK_SOURCE_IGNORE_FILES "/package-version\\\\.h$")
+LIST(APPEND CPACK_SOURCE_IGNORE_FILES "/packaging\\\\.conf$")
+LIST(APPEND CPACK_SOURCE_IGNORE_FILES "^${PROJECT_SOURCE_DIR}/(po.*/|src.*/|)Makefile$")
 INCLUDE(CPack)
 
 ADD_CUSTOM_TARGET(dist COMMAND ${CMAKE_MAKE_PROGRAM} clean package_source)
 
 
-INCLUDE(CheckIncludeFile)
-INCLUDE(CheckStructHasMember)
-
-
 #############################################################################
-#### OS-DEPENDENT                                                        ####
+#### UNINSTALL                                                           ####
 #############################################################################
 
-IF (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
-    MESSAGE(STATUS ${CMAKE_SYSTEM_NAME} " supported")
+IF(NOT TARGET uninstall)
+   CONFIGURE_FILE(
+      "${CMAKE_CURRENT_SOURCE_DIR}/cmake_uninstall.cmake.in"
+      "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
+      IMMEDIATE @ONLY)
 
-ELSEIF (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
-    MESSAGE(STATUS ${CMAKE_SYSTEM_NAME} " supported")
-    SET(CMAKE_REQUIRED_INCLUDES "/usr/local/include" "/usr/include")
-    SET(CMAKE_LIBRARY_PATH "/usr/local/lib")
-    INCLUDE_DIRECTORIES("/usr/local/include")
-
-ELSEIF (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-    MESSAGE(STATUS ${CMAKE_SYSTEM_NAME} " supported")
-    SET(CMAKE_REQUIRED_INCLUDES "/usr/local/include" "/usr/include" "/usr/local/opt/openssl/include")
-    SET(CMAKE_LIBRARY_PATH "/usr/local/lib")
-    INCLUDE_DIRECTORIES("/usr/local/include" "/usr/local/opt/openssl/include")
-
-ELSEIF (${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
-    MESSAGE(STATUS ${CMAKE_SYSTEM_NAME} " supported")
-    SET(CMAKE_REQUIRED_INCLUDES "/usr/pkg/include" "/usr/include" "/usr/local/include")
-    SET(CMAKE_LIBRARY_PATH "/usr/local/lib")
-    INCLUDE_DIRECTORIES("/usr/pkg/include" "/usr/local/include")
-
-ELSE()
-    MESSAGE(FATAL_ERROR ${CMAKE_SYSTEM_NAME} " not supported (yet?)")
-
+   ADD_CUSTOM_TARGET(uninstall
+      COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
 ENDIF()
-
-
-#############################################################################
-#### REQUIREMENTS                                                        ####
-#############################################################################
-
 
 
 #############################################################################
