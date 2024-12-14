@@ -1,3 +1,45 @@
+commit 5e5ca7715d9ddf12405168da9d04b215f31d3dc2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Dec 5 17:48:36 2024 +0100
+
+    Updated CMakeLists.txt.
+
+commit b875fc8d6a33dbd638268b202034107c713ead4e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Dec 5 17:18:15 2024 +0100
+
+    Packaging updates.
+
+commit 4a78d14369c6481f4535cbcac1cff6e9deaba126
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Dec 5 16:09:04 2024 +0100
+
+    Updated CI scripts
+
+commit bcef71a757a4dfba6b202a7b7d376e03779b1e0c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Dec 5 16:09:01 2024 +0100
+
+    Updated build scripts
+
+commit 2e6e3c5aeea006273a87cd2e63e6dd0ab87dc5a8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Dec 7 10:20:49 2023 +0100
+
+    Updated packaging configuration.
+
+commit 1d6e37f7010f7566530bf7b0c0bfc2fb65574a00
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 6 17:44:05 2023 +0100
+
+    Updated LSM entry.
+
+commit 20b4c36a998a978c0259ff1f47cf6894233986a0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 6 17:28:26 2023 +0100
+
+    New release melodic-nornet-1.1.9.
+
 commit b84ee5a056d8253e5a09b51f555c8fbd12568682
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Wed Dec 6 15:05:15 2023 +0100
