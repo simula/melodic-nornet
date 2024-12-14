@@ -3,7 +3,7 @@ Version: 1.2.0
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
-License: GPL-3+
+License: GPL-3.0-or-later
 URL: https://github.com/simula/melodic-nornet
 Source: https://packages.nntb.no/software/%{name}/%{name}-%{version}.tar.xz
 
