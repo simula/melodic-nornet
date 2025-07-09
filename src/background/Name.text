@@ -1,2 +1,1 @@
-# Note: DejaVu Sans does not support CJK characters -> fallback is (probably) Noto Sans!
 ${MAKE_GLOSSYTEXT} ${OUTPUT}   "MELODIC / NorNet Core"   256   --bordersize 10  --colorscheme  "Golden"  --font "DejaVu Sans Bold"
