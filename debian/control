@@ -16,7 +16,7 @@ Build-Depends: cmake,
                gsfonts,
                libfile-fcntllock-perl,
                libimage-exiftool-perl
-Standards-Version: 4.7.0
+Standards-Version: 4.7.2
 Rules-Requires-Root: no
 
 Package: melodic-management

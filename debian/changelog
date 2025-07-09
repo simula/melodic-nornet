@@ -1,3 +1,10 @@
+melodic-nornet (1.2.1~rc0-1ubuntu1) questing; urgency=medium
+
+  * New upstream release.
+  * debian/control: Updated standards version to 4.7.2.
+
+ -- Thomas Dreibholz <thomas.dreibholz@gmail.com>  Wed, 09 Jul 2025 16:43:58 +0200
+
 melodic-nornet (1.2.0-1ubuntu1) oracular; urgency=medium
 
   * New upstream release.

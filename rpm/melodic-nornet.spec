@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 1.2.0
+Version: 1.2.1~rc0
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -20,7 +20,6 @@ BuildRequires: google-noto-sans-fonts
 BuildRequires: google-noto-serif-fonts
 BuildRequires: GraphicsMagick
 BuildRequires: perl-Image-ExifTool
-BuildRequires: pygtk2
 BuildRequires: urw-base35-fonts
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
