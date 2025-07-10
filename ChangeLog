@@ -1,3 +1,57 @@
+commit c69854a1b645519c6fcbbb00d457a694ff25f521
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Jul 10 10:16:50 2025 +0200
+
+    Minor compatibility fix.
+
+commit bf040283ef4b3bd8cfd7c8e7c3c6c9305c62263d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Jul 9 16:51:44 2025 +0200
+
+    Version bump.
+
+commit d296069e16d383f0a876882c816566d91cd3d01f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Jul 9 16:42:45 2025 +0200
+
+    Minor update.
+
+commit 03a24901f1cbc72cb821c2109281cd2b8a706d77
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Jul 9 16:24:49 2025 +0200
+
+    Updated texts.
+
+commit d0425db68f9067b32049e1b62d78ef8e43a135a0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Jul 9 16:18:05 2025 +0200
+
+    Updated background generation.
+
+commit a39669bb4d086bbfb9ca544e8f42b45be7c2d08e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Jul 9 16:17:26 2025 +0200
+
+    Updated scripts.
+
+commit 983ade2b12c431431b1c65c34deeaf2b571dcc13
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Jul 9 16:16:43 2025 +0200
+
+    Updated GIMP scripts
+
+commit a4b6a8c1097ea87b2d4245b8cf4ba728ca3d4803
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Dec 14 16:31:01 2024 +0100
+
+    Another RPM spec file update.
+
+commit 9a14c9b744711f964ccb3d8798166e706f1a2c2a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Dec 14 15:39:34 2024 +0100
+
+    New release melodic-nornet-1.2.0.
+
 commit 5e5ca7715d9ddf12405168da9d04b215f31d3dc2
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Thu Dec 5 17:48:36 2024 +0100
