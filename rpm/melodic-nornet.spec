@@ -7,6 +7,10 @@ License: GPL-3.0-or-later
 URL: https://github.com/simula/melodic-nornet
 Source: https://packages.nntb.no/software/%{name}/%{name}-%{version}.tar.xz
 
+# FIXME: S390x does not provide the dependency Gimp 3.x, yet.
+#        Once this is fixed, the architecture exclusion can be removed:
+ExcludeArch: s390x
+
 AutoReqProv: on
 BuildRequires: cmake
 BuildRequires: dejavu-sans-fonts
