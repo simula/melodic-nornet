@@ -1,1 +1,10 @@
-${MAKE_GLOSSYTEXT} "${OUTPUT}"   "MELODIC / NorNet Core"   256   --bordersize 10  --colorscheme  "Golden"  --font "DejaVu Sans Bold"
+#!/usr/bin/env bash
+
+# Bash options:
+set -eu
+
+${MAKE_GLOSSYTEXT} "${OUTPUT}"     \
+   "MELODIC / NorNet Core"   256   \
+   --bordersize 10                 \
+   --colorscheme  "Golden"         \
+   --font "DejaVu Sans Bold"
