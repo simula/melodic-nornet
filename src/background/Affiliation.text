@@ -1,1 +1,1 @@
-${MAKE_GLOSSYTEXT} ${OUTPUT}   "Simula Research Laboratory"   256   --bordersize 10  --colorscheme  "Golden"   --font "DejaVu Sans Book"
+${MAKE_GLOSSYTEXT} "${OUTPUT}"   "Simula Research Laboratory"   256   --bordersize 10  --colorscheme  "Golden"   --font "DejaVu Sans Book"

@@ -1,1 +1,1 @@
-${MAKE_GLOSSYTEXT} ${OUTPUT}   "https://www.melodic.cloud | https://www.nntb.no"   256   --bordersize 10  --colorscheme  "Brushed Aluminium"  --font "DejaVu Sans Book"
+${MAKE_GLOSSYTEXT} "${OUTPUT}"   "https://www.melodic.cloud | https://www.nntb.no"   256   --bordersize 10  --colorscheme  "Brushed Aluminium"  --font "DejaVu Sans Book"
