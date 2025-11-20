@@ -82,7 +82,6 @@ Requires: netperfmeter
 Requires: net-snmp-utils
 Requires: net-tools
 Requires: nmap
-Requires: (ntpsec or ntpdate)
 Requires: pxz
 Requires: reprepro
 Requires: rsplib-docs
@@ -99,7 +98,6 @@ Requires: virt-what
 Requires: whois
 Requires: wireshark-cli
 Recommends: grub2-tools
-Recommends: reiserfs-utils
 
 %description management
 This metapackage contains basic software for MELODIC system management.
