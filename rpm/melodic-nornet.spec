@@ -1,5 +1,5 @@
 Name: melodic-nornet
-Version: 1.2.1
+Version: 1.2.2~rc2
 Release: 1
 Summary: MELODIC/NorNet Integration
 Group: Applications/Internet
@@ -61,43 +61,7 @@ mv %{buildroot}/usr/share/melodic-desktop/Splash/melodic-version %{buildroot}/et
 %package management
 Summary: Management tools for the MELODIC system environment
 Group: Applications/Internet
-Requires: bash-completion
-Requires: bc
-Requires: bridge-utils
-Requires: btrfs-progs
-Requires: bwm-ng
-Requires: colordiff
-Requires: cronie
-Requires: ethtool
-Requires: git
-Requires: gpm
-Requires: hping3
-Requires: htop
-Requires: joe
-Requires: jq
-Requires: libidn
-Requires: lksctp-tools
-Requires: mlocate
-Requires: netperfmeter
-Requires: net-snmp-utils
-Requires: net-tools
-Requires: nmap
-Requires: pxz
-Requires: reprepro
-Requires: rsplib-docs
-Requires: rsplib-services
-Requires: rsplib-tools
-Requires: smartmontools
-Requires: subnetcalc
-Requires: tcpdump
-Requires: tftp
-Requires: traceroute
-Requires: tree
-Requires: vconfig
-Requires: virt-what
-Requires: whois
-Requires: wireshark-cli
-Recommends: grub2-tools
+Requires: nornet-management
 
 %description management
 This metapackage contains basic software for MELODIC system management.
@@ -123,52 +87,9 @@ if [ -e /usr/sbin/grub2-mkconfig ] ; then /usr/sbin/grub2-mkconfig -o /boot/grub
 %package development
 Summary: Development tools for the MELODIC system environment
 Group: Applications/Internet
+BuildArch: noarch
 Requires: %{name}-management = %{version}-%{release}
-Requires: autoconf
-Requires: automake
-Requires: banner
-Requires: bison
-Requires: bzip2-devel
-Requires: clang
-Requires: cmake
-Requires: (createrepo_c or createrepo)
-Requires: debhelper
-Requires: dejavu-sans-fonts
-Requires: dejavu-sans-mono-fonts
-Requires: dejavu-serif-fonts
-Requires: devscripts
-Requires: flex
-Requires: gcc
-Requires: gcc-c++
-Requires: gdb
-Requires: ghostscript
-Requires: gimp
-Requires: glib2-devel
-Requires: gnupg
-Requires: gnuplot
-Requires: google-noto-cjk-fonts
-Requires: google-noto-sans-fonts
-Requires: google-noto-serif-fonts
-Requires: GraphicsMagick
-Requires: libcurl-devel
-Requires: libpcap-devel
-Requires: libtool
-Requires: lksctp-tools-devel
-Requires: make
-Requires: mock
-Requires: openssl-devel
-Requires: pbuilder
-Requires: perl-Image-ExifTool
-Requires: pkg-config
-Requires: python3
-Requires: qt5-qtbase-devel
-Requires: quilt
-Requires: R-base
-Requires: rpm
-Requires: texlive-epstopdf-bin
-Requires: urw-base35-fonts
-Requires: valgrind
-Recommends: rsplib-devel
+Requires: nornet-development
 
 
 %description development

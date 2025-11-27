@@ -21,9 +21,7 @@ Rules-Requires-Root: no
 
 Package: melodic-management
 Architecture: all
-Depends: fail2ban,
-         gdisk,
-         nornet-management,
+Depends: nornet-management,
          ${misc:Depends}
 Recommends: grub2-common,
             tshark
@@ -35,16 +33,7 @@ Description: Management Tools tools for the MELODIC system environment
 
 Package: melodic-development
 Architecture: all
-Depends: cmake,
-         fonts-dejavu,
-         fonts-noto-cjk,
-         fonts-noto-hinted,
-         ghostscript,
-         gimp,
-         graphicsmagick,
-         gsfonts,
-         libimage-exiftool-perl,
-         melodic-management (= ${binary:Version}),
+Depends: melodic-management (= ${binary:Version}),
          nornet-development,
          ${misc:Depends}
 Description: Development Tools tools for the MELODIC system environment
