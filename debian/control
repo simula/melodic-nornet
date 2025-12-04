@@ -6,7 +6,7 @@ Homepage: https://www.melodic.cloud/
 Vcs-Git: https://github.com/simula/melodic-nornet.git
 Vcs-Browser: https://github.com/simula/melodic-nornet
 Build-Depends: cmake,
-               debhelper (>= 12),
+               debhelper-compat (= 13),
                fonts-dejavu,
                fonts-noto-cjk,
                fonts-noto-hinted,

@@ -1,8 +1,8 @@
-melodic-nornet (1.2.2~rc2-1ubuntu1) resolute; urgency=medium
+melodic-nornet (1.2.2~rc3-1ubuntu1) resolute; urgency=medium
 
   * New upstream release.
 
- -- Thomas Dreibholz <thomas.dreibholz@gmail.com>  Thu, 27 Nov 2025 10:03:46 +0100
+ -- Thomas Dreibholz <thomas.dreibholz@gmail.com>  Fri, 28 Nov 2025 15:59:19 +0100
 
 melodic-nornet (1.2.1-1ubuntu1) questing; urgency=medium
 
