@@ -32,6 +32,10 @@ BuildArch: noarch
 # TEST ONLY:
 %define _unpackaged_files_terminate_build 0
 
+Requires: %{name}-management
+Requires: %{name}-development
+Requires: %{name}-desktop
+
 
 %description
 This package contains software for MELODIC system management.
@@ -56,6 +60,8 @@ mv %{buildroot}/usr/share/melodic-desktop/Splash/Desktop1-*.jpeg     %{buildroot
 mkdir -p %{buildroot}/etc/melodic
 mv %{buildroot}/usr/share/melodic-desktop/Splash/melodic-version %{buildroot}/etc/melodic
 # ===========================================================================
+
+%files
 
 
 %package management
