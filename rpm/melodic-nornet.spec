@@ -25,6 +25,7 @@ BuildRequires: google-noto-serif-fonts
 BuildRequires: GraphicsMagick
 BuildRequires: perl-Image-ExifTool
 BuildRequires: urw-base35-fonts
+BuildRequires: util-linux
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 BuildArch: noarch
